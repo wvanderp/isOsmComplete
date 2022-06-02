@@ -1,0 +1,32 @@
+{
+  "comparisons": {
+    "worldwide": [
+      {
+        "name": "McDonald's",
+        "expected": 38000,
+        "actual": 28600,
+        "expectedSource": "https://corporate.mcdonalds.com/corpmcd/franchising-overview.html",
+        "actualSource": "taginfo",
+        "description": "McDonald's is the largest fast food chain in the world. There corporate website says that the company has 38,000 stores in the world. Are they all in osm?"
+      }
+    ],
+    "NL": [
+      {
+        "name": "Car chargers",
+        "expected": 94065,
+        "actual": 4225,
+        "expectedSource": "https://www.rvo.nl/onderwerpen/duurzaam-ondernemen/energie-en-milieu-innovaties/elektrisch-rijden/stand-van-zaken/cijfers",
+        "actualSource": "taginfo",
+        "description": "Electric car charging station will be more important than ever. The Netherlands has 94065 car chargers. Are they all in osm?"
+      },
+      {
+        "name": "hospital",
+        "expected": 308,
+        "actual": 200,
+        "expectedSource": "https://www.zorgkaartnederland.nl/ziekenhuis",
+        "actualSource": "taginfo",
+        "description": "The Netherlands has 308 hospitals. Are they all in osm?"
+      }
+    ]
+  }
+}

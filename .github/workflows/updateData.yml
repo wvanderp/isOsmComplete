@@ -1,0 +1,45 @@
+name: Update
+
+on:
+  schedule:
+    - cron: '12 5 * * *'
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-node@v2-beta
+      with:
+        node-version: '16'
+
+    - uses: actions/cache@v2
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+
+    - name: npm install
+      run: npm install
+      
+    - name: npm run collect
+      run: npm run collect
+
+    - name: push changes to remote
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+        git pull
+        git add -A
+
+        if [ -z "$(git status --porcelain)" ]; then 
+          echo "No changes"
+        else 
+          git commit -m "updated the data"
+          git push
+        fi
+      
+        
