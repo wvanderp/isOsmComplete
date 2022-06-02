@@ -26,6 +26,14 @@
         "expectedSource": "https://www.zorgkaartnederland.nl/ziekenhuis",
         "actualSource": "taginfo",
         "description": "The Netherlands has 308 hospitals. Are they all in osm?"
+      },
+      {
+        "name": "Wind turbines",
+        "expected": 3467,
+        "actual": 2983,
+        "expectedSource": "https://windstats.nl/kaart/",
+        "actualSource": "taginfo",
+        "description": "wind energy is the new hotness. but are they all present? "
       }
     ]
   }

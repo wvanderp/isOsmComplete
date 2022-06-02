@@ -1,7 +1,7 @@
 {
-  "name": "webcam-map",
+  "name": "is-osm-complete",
   "version": "0.1.0",
-  "description": "A map of webcams based on osm",
+  "description": "A website for checking completeness of a osm",
   "author": "",
   "license": "MIT",
   "browserslist": [
@@ -10,11 +10,11 @@
   ],
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",
-    "@types/node": "^17.0.36",
-    "@types/react": "^18.0.9",
+    "@types/node": "^17.0.38",
+    "@types/react": "^18.0.10",
     "@types/react-dom": "^18.0.5",
-    "@typescript-eslint/eslint-plugin": "^5.26.0",
-    "@typescript-eslint/parser": "^5.26.0",
+    "@typescript-eslint/eslint-plugin": "^5.27.0",
+    "@typescript-eslint/parser": "^5.27.0",
     "eslint": "^8.16.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-import-resolver-typescript": "^2.7.1",
@@ -42,8 +42,8 @@
   },
   "scripts": {
     "app": "parcel serve app/index.html",
-    "build": "parcel build --no-source-maps --dist-dir ./build src/index.html",
-    "lint": "npm run tsc && eslint --ext ts,tsx,json,js src/",
+    "build": "parcel build --no-source-maps --public-url /isOsmComplete --dist-dir ./gitBuild app/index.html",
+    "lint": "npm run tsc && eslint --ext ts,tsx,json,js app/",
     "tsc": "tsc --noEmit",
     "collect": "ts-node collect",
     "lintData": "ts-node utils/lint/"

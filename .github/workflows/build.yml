@@ -2,9 +2,9 @@ name: Build
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
   workflow_run:
     workflows: ["update"]
     branches: [main]
@@ -31,8 +31,8 @@ jobs:
     - name: npm install
       run: npm install
       
-    - name: npm run buildGit
-      run: npm run buildGit
+    - name: npm run build
+      run: npm run build
       
     - name: push changes to remote
       run: |
@@ -40,10 +40,10 @@ jobs:
         git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
     - name: git add
-      run: git add build && git commit -m "Initial build subtree commit"
+      run: git add gitBuild && git commit -m "Initial build subtree commit"
 
     - name: git push
       run: |
-        git subtree split --prefix build -b gh-pages
+        git subtree split --prefix gitBuild -b gh-pages
         git push -f origin gh-pages:gh-pages
         git branch -D gh-pages
