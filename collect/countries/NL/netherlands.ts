@@ -27,8 +27,8 @@ export default async function worldwide(): Promise<Comparison[]> {
             'Wind turbines',
             'generator:source',
             'wind',
-            3467,
-            'https://windstats.nl/kaart/',
+            2144 + 462,
+            'https://nl.wikipedia.org/wiki/Windturbines_in_Nederland',
             'wind energy is the new hotness. but are they all present? ',
             taginfoServer
         )
