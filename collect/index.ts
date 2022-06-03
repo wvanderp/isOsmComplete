@@ -2,13 +2,15 @@ import fs from 'fs';
 import path from 'path';
 import worldwide from './countries/worldwide/worldwide';
 import netherlands from './countries/NL/netherlands';
+import greatBrittan from './countries/GB/greatBrittan';
 import { ComparisonData } from './types';
 
 (async () => {
     const data: ComparisonData = {
         comparisons: {
             worldwide: await worldwide(),
-            NL: await netherlands()
+            NL: await netherlands(),
+            GB: await greatBrittan()
         }
     };
 
