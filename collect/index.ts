@@ -2,7 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import worldwide from './countries/worldwide/worldwide';
 import netherlands from './countries/NL/netherlands';
-import greatBrittan from './countries/GB/greatBrittan';
+import greatBrittan from './countries/GB/greatBritain';
 import { ComparisonData } from './types';
 
 (async () => {
