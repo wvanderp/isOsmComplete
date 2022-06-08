@@ -3,6 +3,7 @@ import path from 'path';
 import worldwide from './countries/worldwide/worldwide';
 import netherlands from './countries/NL/netherlands';
 import greatBrittan from './countries/GB/greatBritain';
+import Europe from './countries/EU/EU';
 import { ComparisonData } from './types';
 
 (async () => {
@@ -10,7 +11,8 @@ import { ComparisonData } from './types';
         comparisons: {
             worldwide: await worldwide(),
             NL: await netherlands(),
-            GB: await greatBrittan()
+            GB: await greatBrittan(),
+            EU: await Europe()
         }
     };
 
