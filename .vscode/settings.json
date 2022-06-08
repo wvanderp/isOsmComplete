@@ -1,7 +1,10 @@
 {
     "cSpell.words": [
         "Donalds",
-        "taginfo"
+        "fastned",
+        "netherlands",
+        "taginfo",
+        "wikidata"
     ],
     "yaml.schemas": {
         "https://json.schemastore.org/github-workflow.json": "vscode-vfs://github/github-actions[bot]/isOsmComplete/.github/workflows/build.yml"

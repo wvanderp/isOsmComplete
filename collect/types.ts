@@ -9,7 +9,7 @@ export interface Comparison {
     description: string;
 }
 
-export type CountryCodes = Alpha2Code | 'worldwide'
+export type CountryCodes = Alpha2Code | 'worldwide' | 'EU'
 
 export interface ComparisonData {
     comparisons: Partial<Record<CountryCodes, Comparison[]>>;

@@ -11,7 +11,7 @@ export default async function greatBrittan(): Promise<Comparison[]> {
             'pub',
             47200,
             'https://commonslibrary.parliament.uk/research-briefings/cbp-8591/',
-            'Are all the locations for brittans favoret pass time in osm?',
+            'Are all the locations for Britten\'s favoriet pass time in osm?',
             taginfoServer
         )
     ];

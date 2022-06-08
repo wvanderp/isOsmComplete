@@ -16,6 +16,7 @@ function countryCodeToEmoji(code: CountryCodes): string {
 
 function countryCodeToName(code: CountryCodes): string {
     if (code === 'worldwide') return 'Worldwide';
+    if (code === 'EU') return 'European Union';
     return countries.getName(code, 'en');
 }
 
