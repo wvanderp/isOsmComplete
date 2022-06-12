@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [ main ]
   workflow_run:
-    workflows: ["update"]
+    workflows: ["Collect"]
     branches: [main]
     types: 
       - completed
@@ -36,11 +36,12 @@ jobs:
       
     - name: npm run build
       run: npm run build
-      
+
     - name: push changes to remote
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
 
     - name: git add
       run: git add gitBuild && git commit -m "Initial build subtree commit"
