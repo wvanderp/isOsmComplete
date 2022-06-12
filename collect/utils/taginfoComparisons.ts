@@ -47,6 +47,12 @@ export async function taginfoComparisonKeyOnly(
         actual: count,
         expectedSource,
         actualSource: 'taginfo',
-        description
+        description,
+        extra: {
+            type: 'taginfo',
+            key,
+            value,
+            taginfoServer: server
+        }
     };
 }

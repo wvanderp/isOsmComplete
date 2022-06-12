@@ -7,7 +7,21 @@ export interface Comparison {
     expectedSource: string;
     actualSource: string;
     description: string;
+    extra?: unknown;
 }
+
+export type TaginfoComparison = Comparison & {
+    extra: {
+        type: 'taginfo';
+        key: string;
+        value: string;
+        taginfoServer: string;
+    };
+}
+
+// @ts-expect-error - this is a type assertion test
+export const isTaginfoComparison = (a: unknown): a is TaginfoComparison => a.extra.type === 'taginfo';
+
 
 export type CountryCodes = Alpha2Code | 'worldwide' | 'EU'
 

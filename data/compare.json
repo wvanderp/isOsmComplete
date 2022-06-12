@@ -33,7 +33,12 @@
         "actual": 4347,
         "expectedSource": "https://www.rvo.nl/onderwerpen/duurzaam-ondernemen/energie-en-milieu-innovaties/elektrisch-rijden/stand-van-zaken/cijfers",
         "actualSource": "taginfo",
-        "description": "Electric car charging station will be more important than ever. The Netherlands has 94065 car chargers. Are they all in osm?"
+        "description": "Electric car charging station will be more important than ever. The Netherlands has 94065 car chargers. Are they all in osm?",
+        "extra": {
+          "key": "amenity",
+          "value": "charging_station",
+          "taginfoServer": "https://taginfo.geofabrik.de/europe/netherlands"
+        }
       },
       {
         "name": "hospital",
@@ -41,7 +46,12 @@
         "actual": 192,
         "expectedSource": "https://www.zorgkaartnederland.nl/ziekenhuis",
         "actualSource": "taginfo",
-        "description": "The Netherlands has 308 hospitals. Are they all in osm?"
+        "description": "The Netherlands has 308 hospitals. Are they all in osm?",
+        "extra": {
+          "key": "amenity",
+          "value": "hospital",
+          "taginfoServer": "https://taginfo.geofabrik.de/europe/netherlands"
+        }
       },
       {
         "name": "Wind turbines",
@@ -49,7 +59,12 @@
         "actual": 3000,
         "expectedSource": "https://nl.wikipedia.org/wiki/Windturbines_in_Nederland",
         "actualSource": "taginfo",
-        "description": "wind energy is the new hotness. but are they all present? "
+        "description": "wind energy is the new hotness. but are they all present? ",
+        "extra": {
+          "key": "generator:source",
+          "value": "wind",
+          "taginfoServer": "https://taginfo.geofabrik.de/europe/netherlands"
+        }
       }
     ],
     "GB": [
@@ -59,7 +74,12 @@
         "actual": 38803,
         "expectedSource": "https://commonslibrary.parliament.uk/research-briefings/cbp-8591/",
         "actualSource": "taginfo",
-        "description": "Are all the locations for Britten's favoriet pass time in osm?"
+        "description": "Are all the locations for Britten's favoriet pass time in osm?",
+        "extra": {
+          "key": "amenity",
+          "value": "pub",
+          "taginfoServer": "https://taginfo.openstreetmap.org.uk"
+        }
       }
     ],
     "EU": [
@@ -69,7 +89,12 @@
         "actual": 209,
         "expectedSource": "https://fastnedcharging.com/hq/nl/fastned-ziet-verkopen-met-159-stijgen-in-eerste-kwartaal-2022/",
         "actualSource": "taginfo",
-        "description": "fastned is a provider of charging stations in Europe. What is the charge of fastned in osm?"
+        "description": "fastned is a provider of charging stations in Europe. What is the charge of fastned in osm?",
+        "extra": {
+          "key": "operator:wikidata",
+          "value": "Q19935749",
+          "taginfoServer": "https://taginfo.geofabrik.de/europe"
+        }
       }
     ]
   }
