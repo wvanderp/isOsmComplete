@@ -1,5 +1,14 @@
-import taginfo from '../api/taginfo';
+import taginfoKeyValue, { taginfoKey } from '../api/taginfo';
 import { Comparison } from '../types';
+
+function cleanServer(server: string): string {
+    if (server[server.length - 1] === '/') {
+        // eslint-disable-next-line no-param-reassign
+        server = server.slice(0, -1);
+    }
+
+    return server;
+}
 
 export default async function taginfoComparisons(
     name: string,
@@ -10,11 +19,27 @@ export default async function taginfoComparisons(
     description: string,
     server = 'https://taginfo.openstreetmap.org'
 ): Promise<Comparison> {
-    if (server[server.length - 1] === '/') {
-        server = server.slice(0, -1);
-    }
+    const count = await taginfoKeyValue(key, value, cleanServer(server));
 
-    const count = await taginfo(key, value, server);
+    return {
+        name,
+        expected,
+        actual: count,
+        expectedSource,
+        actualSource: 'taginfo',
+        description
+    };
+}
+
+export async function taginfoComparisonKeyOnly(
+    name: string,
+    key: string,
+    expected: number,
+    expectedSource: string,
+    description: string,
+    server = 'https://taginfo.openstreetmap.org'
+): Promise<Comparison> {
+    const count = await taginfoKey(key, cleanServer(server));
 
     return {
         name,

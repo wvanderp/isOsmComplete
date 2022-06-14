@@ -5,7 +5,7 @@ import { countryCodeEmoji } from 'country-code-emoji';
 import countries from 'i18n-iso-countries';
 import english from 'i18n-iso-countries/langs/en.json';
 
-import {Comparison, CountryCodes} from '../collect/types';
+import { Comparison, CountryCodes } from '../collect/types';
 
 countries.registerLocale(english);
 
@@ -58,8 +58,9 @@ function Comparison(props: {
                     max={props.comparison.expected}
                 />
                 <CardText>
-                    Expected: {props.comparison.expected} <br/>
-                    Actual: {props.comparison.actual}<br/>
+                    Expected: {props.comparison.expected} <br />
+                    Actual: {props.comparison.actual}<br />
+                    Percentage: {Math.floor((props.comparison.actual / props.comparison.expected) * 100)}% <br />
 
                     <a href={props.comparison.expectedSource}>Source of Expected</a>
                 </CardText>
@@ -68,7 +69,7 @@ function Comparison(props: {
     );
 }
 
-function ProgressBar(props: {value: number, max: number}) {
+function ProgressBar(props: { value: number, max: number }) {
     if (props.value > props.max) {
         return (
             <Progress multi>

@@ -1,5 +1,5 @@
 import { Comparison } from '../../types';
-import taginfoComparisons from '../../utils/taginfoComparisons';
+import taginfoComparisons, { taginfoComparisonKeyOnly } from '../../utils/taginfoComparisons';
 
 export default async function worldwide(): Promise<Comparison[]> {
     return [
@@ -10,6 +10,13 @@ export default async function worldwide(): Promise<Comparison[]> {
             38000,
             'https://corporate.mcdonalds.com/corpmcd/franchising-overview.html',
             'McDonald\'s is the largest fast food chain in the world. There corporate website says that the company has 38,000 stores in the world. Are they all in osm?'
+        ),
+        await taginfoComparisonKeyOnly(
+            'Match google on building',
+            'building',
+            1600000000,
+            'https://youtu.be/nP-nMZpLM1A?t=409',
+            'Google, in there 2022 keynote, claim that they have 1,600,000,000 buildings. Are we even close with osm?'
         )
     ];
 }

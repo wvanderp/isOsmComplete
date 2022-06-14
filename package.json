@@ -43,7 +43,7 @@
   "scripts": {
     "app": "parcel serve app/index.html",
     "build": "parcel build --no-source-maps --public-url /isOsmComplete --dist-dir ./gitBuild app/index.html",
-    "lint": "npm run tsc && eslint --ext ts,tsx,json,js app/",
+    "lint": "npm run tsc && eslint --ext ts,tsx,json,js app/ collect/",
     "tsc": "tsc --noEmit",
     "collect": "ts-node collect",
     "lintData": "ts-node utils/lint/"
