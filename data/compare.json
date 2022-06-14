@@ -35,6 +35,7 @@
         "actualSource": "taginfo",
         "description": "Electric car charging station will be more important than ever. The Netherlands has 94065 car chargers. Are they all in osm?",
         "extra": {
+          "type": "taginfo",
           "key": "amenity",
           "value": "charging_station",
           "taginfoServer": "https://taginfo.geofabrik.de/europe/netherlands"
@@ -48,6 +49,7 @@
         "actualSource": "taginfo",
         "description": "The Netherlands has 308 hospitals. Are they all in osm?",
         "extra": {
+          "type": "taginfo",
           "key": "amenity",
           "value": "hospital",
           "taginfoServer": "https://taginfo.geofabrik.de/europe/netherlands"
@@ -61,6 +63,7 @@
         "actualSource": "taginfo",
         "description": "wind energy is the new hotness. but are they all present? ",
         "extra": {
+          "type": "taginfo",
           "key": "generator:source",
           "value": "wind",
           "taginfoServer": "https://taginfo.geofabrik.de/europe/netherlands"
@@ -76,6 +79,7 @@
         "actualSource": "taginfo",
         "description": "Are all the locations for Britten's favoriet pass time in osm?",
         "extra": {
+          "type": "taginfo",
           "key": "amenity",
           "value": "pub",
           "taginfoServer": "https://taginfo.openstreetmap.org.uk"
@@ -91,6 +95,7 @@
         "actualSource": "taginfo",
         "description": "fastned is a provider of charging stations in Europe. What is the charge of fastned in osm?",
         "extra": {
+          "type": "taginfo",
           "key": "operator:wikidata",
           "value": "Q19935749",
           "taginfoServer": "https://taginfo.geofabrik.de/europe"
