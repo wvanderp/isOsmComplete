@@ -1,3 +1,3 @@
 # isOsmComplete
 
-this repo is published on https://github-actions[bot].github.io/isOsmComplete/
+this repo is published on https://wvanderp.github.io/isOsmComplete/
