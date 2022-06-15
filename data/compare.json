@@ -10,12 +10,12 @@
         "description": "McDonald's is the largest fast food chain in the world. There corporate website says that the company has 38,000 stores in the world. Are they all in osm?"
       },
       {
-        "name": "match google on building",
+        "name": "Match google on building",
         "expected": 1600000000,
         "actual": 515793034,
         "expectedSource": "https://youtu.be/nP-nMZpLM1A?t=409",
         "actualSource": "taginfo",
-        "description": "Google  in there 2022 keynote claim that they have 16,000,000,000 buildings. are we even close with osm?"
+        "description": "Google, in there 2022 keynote, claim that they have 1,600,000,000 buildings. Are we even close with osm?"
       }
     ],
     "NL": [
