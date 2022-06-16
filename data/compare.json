@@ -4,7 +4,7 @@
       {
         "name": "McDonald's",
         "expected": 38000,
-        "actual": 28654,
+        "actual": 28659,
         "expectedSource": "https://corporate.mcdonalds.com/corpmcd/franchising-overview.html",
         "actualSource": "taginfo",
         "description": "McDonald's is the largest fast food chain in the world. There corporate website says that the company has 38,000 stores in the world. Are they all in osm?"
@@ -12,7 +12,7 @@
       {
         "name": "Match google on building",
         "expected": 1600000000,
-        "actual": 515793034,
+        "actual": 516024178,
         "expectedSource": "https://youtu.be/nP-nMZpLM1A?t=409",
         "actualSource": "taginfo",
         "description": "Google, in there 2022 keynote, claim that they have 1,600,000,000 buildings. Are we even close with osm?"
@@ -22,7 +22,7 @@
       {
         "name": "Car chargers",
         "expected": 94065,
-        "actual": 4308,
+        "actual": 4312,
         "expectedSource": "https://www.rvo.nl/onderwerpen/duurzaam-ondernemen/energie-en-milieu-innovaties/elektrisch-rijden/stand-van-zaken/cijfers",
         "actualSource": "taginfo",
         "description": "Electric car charging station will be more important than ever. The Netherlands has 94065 car chargers. Are they all in osm?"
@@ -38,7 +38,7 @@
       {
         "name": "Wind turbines",
         "expected": 2606,
-        "actual": 2998,
+        "actual": 3000,
         "expectedSource": "https://nl.wikipedia.org/wiki/Windturbines_in_Nederland",
         "actualSource": "taginfo",
         "description": "wind energy is the new hotness. but are they all present? "
@@ -58,7 +58,7 @@
       {
         "name": "fastned charger in the eu",
         "expected": 200,
-        "actual": 128,
+        "actual": 182,
         "expectedSource": "https://fastnedcharging.com/hq/nl/fastned-ziet-verkopen-met-159-stijgen-in-eerste-kwartaal-2022/",
         "actualSource": "taginfo",
         "description": "fastned is a provider of charging stations in Europe. What is the charge of fastned in osm?"
