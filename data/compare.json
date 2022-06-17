@@ -4,7 +4,7 @@
       {
         "name": "McDonald's",
         "expected": 38000,
-        "actual": 28659,
+        "actual": 28668,
         "expectedSource": "https://corporate.mcdonalds.com/corpmcd/franchising-overview.html",
         "actualSource": "taginfo",
         "description": "McDonald's is the largest fast food chain in the world. There corporate website says that the company has 38,000 stores in the world. Are they all in osm?"
@@ -12,7 +12,7 @@
       {
         "name": "Match google on building",
         "expected": 1600000000,
-        "actual": 516024178,
+        "actual": 516203288,
         "expectedSource": "https://youtu.be/nP-nMZpLM1A?t=409",
         "actualSource": "taginfo",
         "description": "Google, in there 2022 keynote, claim that they have 1,600,000,000 buildings. Are we even close with osm?"
@@ -22,7 +22,7 @@
       {
         "name": "Car chargers",
         "expected": 94065,
-        "actual": 4312,
+        "actual": 4320,
         "expectedSource": "https://www.rvo.nl/onderwerpen/duurzaam-ondernemen/energie-en-milieu-innovaties/elektrisch-rijden/stand-van-zaken/cijfers",
         "actualSource": "taginfo",
         "description": "Electric car charging station will be more important than ever. The Netherlands has 94065 car chargers. Are they all in osm?"
@@ -48,7 +48,7 @@
       {
         "name": "pubs in the UK",
         "expected": 47200,
-        "actual": 38816,
+        "actual": 38807,
         "expectedSource": "https://commonslibrary.parliament.uk/research-briefings/cbp-8591/",
         "actualSource": "taginfo",
         "description": "Are all the locations for Britten's favoriet pass time in osm?"
