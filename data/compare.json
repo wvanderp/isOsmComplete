@@ -4,7 +4,7 @@
       {
         "name": "McDonald's",
         "expected": 38000,
-        "actual": 28689,
+        "actual": 28697,
         "expectedSource": "https://corporate.mcdonalds.com/corpmcd/franchising-overview.html",
         "actualSource": "taginfo",
         "description": "McDonald's is the largest fast food chain in the world. There corporate website says that the company has 38,000 stores in the world. Are they all in osm?"
@@ -12,10 +12,18 @@
       {
         "name": "Match google on building",
         "expected": 1600000000,
-        "actual": 516749048,
+        "actual": 516879380,
         "expectedSource": "https://youtu.be/nP-nMZpLM1A?t=409",
         "actualSource": "taginfo",
         "description": "Google, in there 2022 keynote, claim that they have 1,600,000,000 buildings. Are we even close with osm?"
+      },
+      {
+        "name": "Stolpersteine",
+        "expected": 90000,
+        "actual": 25848,
+        "expectedSource": "https://www.goethe.de/ins/nl/nl/kul/kue/22217305/22263584.html",
+        "actualSource": "taginfo",
+        "description": "Stolpersteine are monuments to the victims of world war 2. they should be in osm."
       }
     ],
     "NL": [
