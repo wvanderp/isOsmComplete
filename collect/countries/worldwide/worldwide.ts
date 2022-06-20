@@ -17,6 +17,15 @@ export default async function worldwide(): Promise<Comparison[]> {
             1600000000,
             'https://youtu.be/nP-nMZpLM1A?t=409',
             'Google, in there 2022 keynote, claim that they have 1,600,000,000 buildings. Are we even close with osm?'
+        ),
+        await taginfoComparisons(
+            'Stolpersteine',
+            'memorial:type',
+            'stolperstein',
+            90000,
+            'https://www.goethe.de/ins/nl/nl/kul/kue/22217305/22263584.html',
+            'Stolpersteine are monuments to the victims of world war 2. they should be in osm.'
         )
     ];
 }
+
