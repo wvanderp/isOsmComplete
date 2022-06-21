@@ -1,6 +1,7 @@
 import { Alpha2Code } from 'i18n-iso-countries';
 
 export interface Comparison {
+    id: string;
     name: string;
     expected: number;
     actual: number;
@@ -21,7 +22,6 @@ export type TaginfoComparison = Comparison & {
 
 // @ts-expect-error - this is a type assertion test
 export const isTaginfoComparison = (a: unknown): a is TaginfoComparison => a.extra.type === 'taginfo';
-
 
 export type CountryCodes = Alpha2Code | 'worldwide' | 'EU'
 

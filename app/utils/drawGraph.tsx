@@ -1,7 +1,7 @@
 // @ts-nocheck
 import React from 'react';
 import * as d3 from 'd3';
-import TaginfoChronology from '../../type/taginfoChronology';
+import { GraphData } from './downloadGraphData';
 
 function tomorrow() {
     const d = new Date();
@@ -10,37 +10,25 @@ function tomorrow() {
 }
 
 export default function draw_chronology_chart(
-    uncleanData: TaginfoChronology['data'],
-    filter: 'all' | 'nodes' | 'ways' | 'relations',
+    uncleanData: GraphData[],
     goal = 0
 ): React.ReactNode {
+    console.log(uncleanData)
     const w = 900;
     const h = 400;
     const margin = { top: 10, right: 15, bottom: 60, left: 80 };
 
-    if (uncleanData[0].date > '2007-10-07') {
-        uncleanData.unshift({ date: '2007-10-07', nodes: 0, ways: 0, relations: 0 });
-    }
+    uncleanData.push({ date: tomorrow(), value: d3.max(uncleanData, (d) => d.value) });
 
-    uncleanData.push({ date: tomorrow(), nodes: 0, ways: 0, relations: 0 });
-
-    let sum = 0;
-
-    const data = uncleanData.map((d) => {
-        sum += filter === 'all' ? d.nodes + d.ways + d.relations : d[filter];
-        return {
-            ...d,
-            sum,
-            date: new Date(d.date)
-        };
-    });
+    const data = uncleanData.map((d) => ({
+        ...d,
+        date: new Date(d.date)
+    }));
 
     const t0 = data[0].date;
     const t1 = data[data.length - 1].date;
 
-    const max = Math.max(d3.max(data, (d) => d.sum), goal);
-
-    console.log(max)
+    const max = Math.max(d3.max(data, (d) => d.value), goal);
 
     const scale_x = d3.scaleTime()
         .domain([t0, t1])
@@ -55,7 +43,7 @@ export default function draw_chronology_chart(
 
     const line = d3.line().curve(d3.curveStepAfter)
         .x((d) => scale_x(d.date))
-        .y((d) => scale_y(d.sum));
+        .y((d) => scale_y(d.value));
 
     // d3.select('#chart-chronology svg').remove();
 
@@ -98,7 +86,7 @@ export default function draw_chronology_chart(
     if (goal !== 0) {
         chart.append('line')
             .style('stroke', 'green')
-            .attr('x1', scale_x(new Date('2007-10-07')))
+            .attr('x1', scale_x(data[0].date))
             .attr('y1', scale_y(goal))
             .attr('x2', scale_x(new Date(tomorrow())))
             .attr('y2', scale_y(goal));

@@ -6,9 +6,8 @@ import countries from 'i18n-iso-countries';
 import english from 'i18n-iso-countries/langs/en.json';
 
 import { Comparison, CountryCodes, isTaginfoComparison, TaginfoComparison } from '../collect/types';
-import axios from 'axios';
 import draw_chronology_chart from './utils/drawGraph';
-import TaginfoChronology from '../type/taginfoChronology';
+import downloadGraphData from './utils/downloadGraphData';
 
 countries.registerLocale(english);
 
@@ -46,8 +45,7 @@ export default function Country(props: {
 function Comparison(props: {
     comparison: Comparison;
 }) {
-    const graph = isTaginfoComparison(props.comparison) ? <Graph comparison={props.comparison} /> : null;
-    console.log(graph, isTaginfoComparison(props.comparison), props.comparison);
+    const graph = <Graph comparison={props.comparison} />;
     return (
         <Card color="light">
 
@@ -106,20 +104,12 @@ function ProgressBar(props: { value: number, max: number }) {
     );
 }
 
-function Graph({ comparison }: { comparison: TaginfoComparison }) {
+function Graph({ comparison }: { comparison: Comparison }) {
     const [graph, setGraph] = React.useState<React.ReactNode>(null);
     useEffect(() => {
-        const url = `${comparison.extra.taginfoServer
-            }/api/4/tag/chronology?key=${comparison.extra.key}&value=${comparison.extra.value}`;
-
-        axios.get<TaginfoChronology>(url).then(
-            (response) => {
-                const { data } = response;
-                if (data.total === 0) {
-                    setGraph(<p>No data</p>);
-                    return;
-                }
-                setGraph(draw_chronology_chart(data.data, 'all', comparison.expected));
+        downloadGraphData(comparison.id).then(
+            (data) => {
+                setGraph(draw_chronology_chart(data, comparison.expected));
             }
         );
     }, [comparison]);
