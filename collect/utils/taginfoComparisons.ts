@@ -1,5 +1,6 @@
 import taginfoKeyValue, { taginfoKey } from '../api/taginfo';
 import { Comparison } from '../types';
+import getHash from './getHash';
 
 function cleanServer(server: string): string {
     if (server[server.length - 1] === '/') {
@@ -22,6 +23,7 @@ export default async function taginfoComparisons(
     const count = await taginfoKeyValue(key, value, cleanServer(server));
 
     return {
+        id: getHash(`${key}${value}${server}`),
         name,
         expected,
         actual: count,
@@ -42,6 +44,7 @@ export async function taginfoComparisonKeyOnly(
     const count = await taginfoKey(key, cleanServer(server));
 
     return {
+        id: getHash(`${key}${server}`),
         name,
         expected,
         actual: count,

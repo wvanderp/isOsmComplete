@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Card, CardBody, CardText, CardTitle, Progress } from 'reactstrap';
 
 import { countryCodeEmoji } from 'country-code-emoji';
 import countries from 'i18n-iso-countries';
 import english from 'i18n-iso-countries/langs/en.json';
 
-import { Comparison, CountryCodes } from '../collect/types';
+import { Comparison, CountryCodes, isTaginfoComparison, TaginfoComparison } from '../collect/types';
+import draw_chronology_chart from './utils/drawGraph';
+import downloadGraphData from './utils/downloadGraphData';
 
 countries.registerLocale(english);
 
@@ -43,6 +45,7 @@ export default function Country(props: {
 function Comparison(props: {
     comparison: Comparison;
 }) {
+    const graph = <Graph comparison={props.comparison} />;
     return (
         <Card color="light">
 
@@ -64,6 +67,7 @@ function Comparison(props: {
 
                     <a href={props.comparison.expectedSource}>Source of Expected</a>
                 </CardText>
+                {graph}
             </CardBody>
         </Card>
     );
@@ -97,5 +101,22 @@ function ProgressBar(props: { value: number, max: number }) {
             value={props.value}
             max={props.max}
         />
+    );
+}
+
+function Graph({ comparison }: { comparison: Comparison }) {
+    const [graph, setGraph] = React.useState<React.ReactNode>(null);
+    useEffect(() => {
+        downloadGraphData(comparison.id).then(
+            (data) => {
+                setGraph(draw_chronology_chart(data, comparison.expected));
+            }
+        );
+    }, [comparison]);
+
+    return (
+        <div>
+            {graph}
+        </div>
     );
 }
