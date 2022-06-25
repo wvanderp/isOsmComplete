@@ -5,7 +5,7 @@
         "id": "1dee8eae20d649fa9820c6c583ac06f11a53aa74ff1d59e31a9ffea52da3c7ca",
         "name": "McDonald's",
         "expected": 38000,
-        "actual": 28701,
+        "actual": 28718,
         "expectedSource": "https://corporate.mcdonalds.com/corpmcd/franchising-overview.html",
         "actualSource": "taginfo",
         "description": "McDonald's is the largest fast food chain in the world. There corporate website says that the company has 38,000 stores in the world. Are they all in osm?"
@@ -14,7 +14,7 @@
         "id": "f86b36460a37c5a45dea617f3fbd10c18027319318d2283be3f8318a7a793bca",
         "name": "Match google on building",
         "expected": 1600000000,
-        "actual": 517127702,
+        "actual": 517787186,
         "expectedSource": "https://youtu.be/nP-nMZpLM1A?t=409",
         "actualSource": "taginfo",
         "description": "Google, in there 2022 keynote, claim that they have 1,600,000,000 buildings. Are we even close with osm?"
@@ -34,7 +34,7 @@
         "id": "f7d1f5de77e30dc158daba5aaff8df3e3b26786d230abbf2060db9cabddbc289",
         "name": "Car chargers",
         "expected": 94065,
-        "actual": 4348,
+        "actual": 4366,
         "expectedSource": "https://www.rvo.nl/onderwerpen/duurzaam-ondernemen/energie-en-milieu-innovaties/elektrisch-rijden/stand-van-zaken/cijfers",
         "actualSource": "taginfo",
         "description": "Electric car charging station will be more important than ever. The Netherlands has 94065 car chargers. Are they all in osm?"
@@ -52,7 +52,7 @@
         "id": "c200f563eb19c5289b8e9718d826241b552e46f71d284293af431480e3900f5e",
         "name": "Wind turbines",
         "expected": 2865,
-        "actual": 3000,
+        "actual": 3005,
         "expectedSource": "https://nl.wikipedia.org/wiki/Windturbines_in_Nederland",
         "actualSource": "taginfo",
         "description": "wind energy is the new hotness. but are they all present? "
@@ -63,7 +63,7 @@
         "id": "a337e1deb30f4c626181a554a8315b4fa9f5928207b4e6d60b18b71b57509c9d",
         "name": "pubs in the UK",
         "expected": 47200,
-        "actual": 38801,
+        "actual": 38800,
         "expectedSource": "https://commonslibrary.parliament.uk/research-briefings/cbp-8591/",
         "actualSource": "taginfo",
         "description": "Are all the locations for Britten's favoriet pass time in osm?"
