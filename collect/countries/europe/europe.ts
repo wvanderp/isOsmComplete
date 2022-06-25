@@ -6,7 +6,7 @@ const taginfoServer = 'https://taginfo.geofabrik.de/europe/';
 export default async function EU(): Promise<Comparison[]> {
     return [
         await taginfoComparisons(
-            'fastned charger in the eu',
+            'Fastned charger in the eu',
             'operator:wikidata',
             'Q19935749',
             200,

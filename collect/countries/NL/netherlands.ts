@@ -15,7 +15,7 @@ export default async function worldwide(): Promise<Comparison[]> {
             taginfoServer
         ),
         await taginfoComparisons(
-            'hospital',
+            'Hospitals',
             'amenity',
             'hospital',
             308,

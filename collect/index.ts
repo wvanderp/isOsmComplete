@@ -32,13 +32,16 @@ function saveGraphData(data: ComparisonData) {
     for (const comparison of comparisons) {
         const file = path.join(dataDirectory, `${comparison.id}.csv`);
 
-        const line = `${comparison.actual}\n`;
-        const lastLine = fs.existsSync(file) ? fs.readFileSync(file).toString().split('\n').slice(-2, -1)[0] : '';
+        const lastLine = fs.existsSync(file) ? fs.readFileSync(file).toString().split('\n').slice(-1)[0] : ',';
 
         const dataObject = new Date();
         const date = `${dataObject.getFullYear()}-${dataObject.getMonth() + 1}-${dataObject.getDate()}`;
-        if (line.trim() !== lastLine.trim()) {
-            fs.appendFileSync(file, `${date},${comparison.actual}\n`);
+
+        const line = `\n${date},${comparison.actual}`;
+        const [lastDate, lastActual] = lastLine.trim().split(',');
+
+        if ((lastActual !== comparison.actual.toString() && (lastDate !== date))) {
+            fs.appendFileSync(file, line);
         }
     }
 }
