@@ -5,7 +5,7 @@
         "id": "1dee8eae20d649fa9820c6c583ac06f11a53aa74ff1d59e31a9ffea52da3c7ca",
         "name": "McDonald's",
         "expected": 38000,
-        "actual": 28722,
+        "actual": 28726,
         "expectedSource": "https://corporate.mcdonalds.com/corpmcd/franchising-overview.html",
         "actualSource": "taginfo",
         "description": "McDonald's is the largest fast food chain in the world. There corporate website says that the company has 38,000 stores in the world. Are they all in osm?"
@@ -14,7 +14,7 @@
         "id": "f86b36460a37c5a45dea617f3fbd10c18027319318d2283be3f8318a7a793bca",
         "name": "Match google on building",
         "expected": 1600000000,
-        "actual": 517988964,
+        "actual": 529040198,
         "expectedSource": "https://youtu.be/nP-nMZpLM1A?t=409",
         "actualSource": "taginfo",
         "description": "Google, in there 2022 keynote, claim that they have 1,600,000,000 buildings. Are we even close with osm?"
@@ -23,7 +23,7 @@
         "id": "58ca58265cde4f8cc2d782abb54393103bd11a89e5c6fd65f2f066be8b3a9041",
         "name": "Stolpersteine",
         "expected": 90000,
-        "actual": 25849,
+        "actual": 25957,
         "expectedSource": "https://www.goethe.de/ins/nl/nl/kul/kue/22217305/22263584.html",
         "actualSource": "taginfo",
         "description": "Stolpersteine are monuments to the victims of world war 2. they should be in osm."
@@ -34,7 +34,7 @@
         "id": "f7d1f5de77e30dc158daba5aaff8df3e3b26786d230abbf2060db9cabddbc289",
         "name": "Car chargers",
         "expected": 94065,
-        "actual": 4373,
+        "actual": 4634,
         "expectedSource": "https://www.rvo.nl/onderwerpen/duurzaam-ondernemen/energie-en-milieu-innovaties/elektrisch-rijden/stand-van-zaken/cijfers",
         "actualSource": "taginfo",
         "description": "Electric car charging station will be more important than ever. The Netherlands has 94065 car chargers. Are they all in osm?"
@@ -43,7 +43,7 @@
         "id": "b79ce00c71cd062b5c051b02c8290f746b0baf5962816c044d868eefb40fa20f",
         "name": "Hospitals",
         "expected": 308,
-        "actual": 192,
+        "actual": 195,
         "expectedSource": "https://www.zorgkaartnederland.nl/ziekenhuis",
         "actualSource": "taginfo",
         "description": "The Netherlands has 308 hospitals. Are they all in osm?"
@@ -63,7 +63,7 @@
         "id": "a337e1deb30f4c626181a554a8315b4fa9f5928207b4e6d60b18b71b57509c9d",
         "name": "Pubs in the UK",
         "expected": 47200,
-        "actual": 38800,
+        "actual": 38805,
         "expectedSource": "https://commonslibrary.parliament.uk/research-briefings/cbp-8591/",
         "actualSource": "taginfo",
         "description": "Are all the locations for Britten's favorite pass time in osm?"
@@ -74,7 +74,7 @@
         "id": "16f17dead727d54cdeea1a744885af7be858826c05e1ac342da754d457dd1b15",
         "name": "Fastned charger in the eu",
         "expected": 200,
-        "actual": 209,
+        "actual": 210,
         "expectedSource": "https://fastnedcharging.com/hq/nl/fastned-ziet-verkopen-met-159-stijgen-in-eerste-kwartaal-2022/",
         "actualSource": "taginfo",
         "description": "fastned is a provider of charging stations in Europe. What is the charge of fastned in osm?"
