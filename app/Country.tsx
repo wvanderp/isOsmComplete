@@ -5,7 +5,7 @@ import { countryCodeEmoji } from 'country-code-emoji';
 import countries from 'i18n-iso-countries';
 import english from 'i18n-iso-countries/langs/en.json';
 
-import { Comparison, CountryCodes, isTaginfoComparison, TaginfoComparison } from '../collect/types';
+import { Comparison, CountryCodes } from '../collect/types';
 import draw_chronology_chart from './utils/drawGraph';
 import downloadGraphData from './utils/downloadGraphData';
 
@@ -13,7 +13,7 @@ countries.registerLocale(english);
 
 function countryCodeToEmoji(code: CountryCodes): string {
     if (code === 'worldwide') return '🌎';
-    if (code === 'London') return '🇬🇧🎡💂🏼‍♂️'
+    if (code === 'london') return '🇬🇧🎡💂🏼‍♂️';
     return countryCodeEmoji(code);
 }
 

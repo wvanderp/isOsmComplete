@@ -29,7 +29,7 @@ export default async function worldwide(): Promise<Comparison[]> {
             'wind',
             2403 + 462,
             'https://nl.wikipedia.org/wiki/Windturbines_in_Nederland',
-            'wind energy is the new hotness. but are they all present? ',
+            'Wind energy is the new hotness. But are they all present? ',
             taginfoServer
         )
     ];
