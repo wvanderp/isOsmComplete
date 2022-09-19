@@ -1,9 +1,13 @@
 import fs from 'fs';
 import path from 'path';
+
 import worldwide from './countries/worldwide/worldwide';
 import netherlands from './countries/NL/netherlands';
 import greatBritten from './countries/GB/greatBritain';
 import Europe from './countries/europe/europe';
+import london from './countries/GB/London';
+
+
 import { ComparisonData } from './types';
 
 const directory = path.join(__dirname, '../data');
@@ -12,9 +16,10 @@ const directory = path.join(__dirname, '../data');
     const data: ComparisonData = {
         comparisons: {
             worldwide: await worldwide(),
-            NL: await netherlands(),
+            EU: await Europe(),
             GB: await greatBritten(),
-            EU: await Europe()
+            london: await london(),
+            NL: await netherlands(),
         }
     };
 

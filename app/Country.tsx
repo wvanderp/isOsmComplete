@@ -13,12 +13,14 @@ countries.registerLocale(english);
 
 function countryCodeToEmoji(code: CountryCodes): string {
     if (code === 'worldwide') return '🌎';
+    if (code === 'London') return '🇬🇧🎡💂🏼‍♂️'
     return countryCodeEmoji(code);
 }
 
 function countryCodeToName(code: CountryCodes): string {
     if (code === 'worldwide') return 'Worldwide';
     if (code === 'EU') return 'European Union';
+    if (code === 'london') return 'London'
     return countries.getName(code, 'en');
 }
 
