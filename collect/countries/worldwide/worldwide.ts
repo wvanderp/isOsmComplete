@@ -25,6 +25,14 @@ export default async function worldwide(): Promise<Comparison[]> {
             90000,
             'https://www.goethe.de/ins/nl/nl/kul/kue/22217305/22263584.html',
             'Stolpersteine are monuments to the victims of world war two. They should be in osm.'
+        ),
+        await taginfoComparisons(
+            'IKEA stores',
+            'brand:wikidata',
+            'Q54078',
+            466,
+            'https://en.wikipedia.org/wiki/List_of_countries_with_IKEA_stores',
+            'IKEA is a furniture store. They have 466 stores in 63 countries. Are they all in osm?'
         )
     ];
 }
