@@ -23,8 +23,8 @@ export default function App() {
 
     return (
         <>
-            <h1>is osm complete?</h1>
-            <p>this site tracks how complete osm really is</p>
+            <h1>Is osm complete?</h1>
+            <p>This site tracks how complete osm really is.</p>
             {countries}
         </>
     );

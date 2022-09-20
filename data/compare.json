@@ -5,7 +5,7 @@
         "id": "1dee8eae20d649fa9820c6c583ac06f11a53aa74ff1d59e31a9ffea52da3c7ca",
         "name": "McDonald's",
         "expected": 38000,
-        "actual": 28732,
+        "actual": 28741,
         "expectedSource": "https://corporate.mcdonalds.com/corpmcd/franchising-overview.html",
         "actualSource": "taginfo",
         "description": "McDonald's is the largest fast food chain in the world. There corporate website says that the company has 38,000 stores in the world. Are they all in osm?"
@@ -14,7 +14,7 @@
         "id": "f86b36460a37c5a45dea617f3fbd10c18027319318d2283be3f8318a7a793bca",
         "name": "Match Google on building",
         "expected": 1600000000,
-        "actual": 529291185,
+        "actual": 529450575,
         "expectedSource": "https://youtu.be/nP-nMZpLM1A?t=409",
         "actualSource": "taginfo",
         "description": "Google, in there 2022 keynote, claim that they have 1,600,000,000 buildings. Are we even close with osm?"
@@ -27,6 +27,15 @@
         "expectedSource": "https://www.goethe.de/ins/nl/nl/kul/kue/22217305/22263584.html",
         "actualSource": "taginfo",
         "description": "Stolpersteine are monuments to the victims of world war two. They should be in osm."
+      },
+      {
+        "id": "c137124d24f3874495f349c25a2d019d3edb545c0eebc649852940747257d53a",
+        "name": "IKEA stores",
+        "expected": 466,
+        "actual": 602,
+        "expectedSource": "https://en.wikipedia.org/wiki/List_of_countries_with_IKEA_stores",
+        "actualSource": "taginfo",
+        "description": "IKEA is a furniture store. They have 466 stores in 63 countries. Are they all in osm?"
       }
     ],
     "EU": [
@@ -45,7 +54,7 @@
         "id": "a337e1deb30f4c626181a554a8315b4fa9f5928207b4e6d60b18b71b57509c9d",
         "name": "Pubs in the UK",
         "expected": 47200,
-        "actual": 38803,
+        "actual": 38800,
         "expectedSource": "https://commonslibrary.parliament.uk/research-briefings/cbp-8591/",
         "actualSource": "taginfo",
         "description": "Are all the locations for Britten's favorite pass time in osm?"
@@ -56,7 +65,7 @@
         "id": "8308f65b11b2f3da270e8cbac0702add3b032ce3350b9a4b3f0c504de7d5b0b2",
         "name": "Surveillance cameras in London",
         "expected": 691000,
-        "actual": 1293,
+        "actual": 1294,
         "expectedSource": "https://www.cctv.co.uk/how-many-cctv-cameras-are-there-in-london/",
         "actualSource": "taginfo",
         "description": "London might be the most watched city in the world. but who watches the watcher?"
@@ -85,7 +94,7 @@
         "id": "c200f563eb19c5289b8e9718d826241b552e46f71d284293af431480e3900f5e",
         "name": "Wind turbines",
         "expected": 2865,
-        "actual": 3005,
+        "actual": 3009,
         "expectedSource": "https://nl.wikipedia.org/wiki/Windturbines_in_Nederland",
         "actualSource": "taginfo",
         "description": "Wind energy is the new hotness. But are they all present? "
