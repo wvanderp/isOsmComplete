@@ -12,7 +12,7 @@
       },
       {
         "id": "f86b36460a37c5a45dea617f3fbd10c18027319318d2283be3f8318a7a793bca",
-        "name": "Match google on building",
+        "name": "Match Google on building",
         "expected": 1600000000,
         "actual": 529291185,
         "expectedSource": "https://youtu.be/nP-nMZpLM1A?t=409",
@@ -26,18 +26,18 @@
         "actual": 25957,
         "expectedSource": "https://www.goethe.de/ins/nl/nl/kul/kue/22217305/22263584.html",
         "actualSource": "taginfo",
-        "description": "Stolpersteine are monuments to the victims of world war 2. they should be in osm."
+        "description": "Stolpersteine are monuments to the victims of world war two. They should be in osm."
       }
     ],
     "EU": [
       {
         "id": "16f17dead727d54cdeea1a744885af7be858826c05e1ac342da754d457dd1b15",
-        "name": "Fastned charger in the eu",
+        "name": "Fastned charger in the EU",
         "expected": 200,
-        "actual": 210,
+        "actual": 211,
         "expectedSource": "https://fastnedcharging.com/hq/nl/fastned-ziet-verkopen-met-159-stijgen-in-eerste-kwartaal-2022/",
         "actualSource": "taginfo",
-        "description": "fastned is a provider of charging stations in Europe. What is the charge of fastned in osm?"
+        "description": "Fastned is a provider of charging stations in Europe. What is the charge of Fastned in osm?"
       }
     ],
     "GB": [
@@ -88,7 +88,7 @@
         "actual": 3005,
         "expectedSource": "https://nl.wikipedia.org/wiki/Windturbines_in_Nederland",
         "actualSource": "taginfo",
-        "description": "wind energy is the new hotness. but are they all present? "
+        "description": "Wind energy is the new hotness. But are they all present? "
       }
     ]
   }
