@@ -20,7 +20,7 @@ function countryCodeToEmoji(code: CountryCodes): string {
 function countryCodeToName(code: CountryCodes): string {
     if (code === 'worldwide') return 'Worldwide';
     if (code === 'EU') return 'European Union';
-    if (code === 'london') return 'London'
+    if (code === 'london') return 'London';
     return countries.getName(code, 'en');
 }
 

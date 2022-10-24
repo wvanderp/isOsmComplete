@@ -171,6 +171,7 @@
     "unicorn/numeric-separators-style": "off",
     "react/jsx-one-expression-per-line": "off",
     "@typescript-eslint/no-use-before-define": "off", 
-    "no-restricted-syntax": "off"
+    "no-restricted-syntax": "off",
+    "unicorn/prefer-top-level-await": "off"
   }
 }

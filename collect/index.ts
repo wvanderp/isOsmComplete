@@ -7,7 +7,6 @@ import greatBritten from './countries/GB/greatBritain';
 import Europe from './countries/europe/europe';
 import london from './countries/GB/London';
 
-
 import { ComparisonData } from './types';
 
 const directory = path.join(__dirname, '../data');
@@ -19,7 +18,7 @@ const directory = path.join(__dirname, '../data');
             EU: await Europe(),
             GB: await greatBritten(),
             london: await london(),
-            NL: await netherlands(),
+            NL: await netherlands()
         }
     };
 
