@@ -20,6 +20,9 @@ export default async function taginfoComparisons(
     description: string,
     server = 'https://taginfo.openstreetmap.org'
 ): Promise<Comparison> {
+    // eslint-disable-next-line no-console
+    console.log(`starting on ${name}`);
+
     const count = await taginfoKeyValue(key, value, cleanServer(server));
 
     return {

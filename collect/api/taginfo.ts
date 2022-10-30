@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { TagInfo } from '../types';
+import randomDelay from '../utils/delay';
 
 export default async function taginfoKeyValue(key: string, value: string, server = 'https://taginfo.openstreetmap.org'): Promise<number> {
     const queryUrl = `${server}/api/4/tag/stats?key=${key}&value=${value}`;
@@ -12,6 +13,8 @@ export async function taginfoKey(key: string, server = 'https://taginfo.openstre
 }
 
 async function callApi(url: string): Promise<number> {
+    randomDelay(1000, 10000);
+
     const response = await axios.get<TagInfo>(url);
     const count = response.data.data.find((x) => x.type === 'all')?.count;
 
