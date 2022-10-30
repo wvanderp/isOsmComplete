@@ -5,7 +5,7 @@
         "id": "1dee8eae20d649fa9820c6c583ac06f11a53aa74ff1d59e31a9ffea52da3c7ca",
         "name": "McDonald's",
         "expected": 38000,
-        "actual": 29123,
+        "actual": 29164,
         "expectedSource": "https://corporate.mcdonalds.com/corpmcd/franchising-overview.html",
         "actualSource": "taginfo",
         "description": "McDonald's is the largest fast food chain in the world. There corporate website says that the company has 38,000 stores in the world. Are they all in osm?"
@@ -14,7 +14,7 @@
         "id": "f86b36460a37c5a45dea617f3fbd10c18027319318d2283be3f8318a7a793bca",
         "name": "Match Google on building",
         "expected": 1600000000,
-        "actual": 533819929,
+        "actual": 534358933,
         "expectedSource": "https://youtu.be/nP-nMZpLM1A?t=409",
         "actualSource": "taginfo",
         "description": "Google, in there 2022 keynote, claim that they have 1,600,000,000 buildings. Are we even close with osm?"
@@ -23,7 +23,7 @@
         "id": "58ca58265cde4f8cc2d782abb54393103bd11a89e5c6fd65f2f066be8b3a9041",
         "name": "Stolpersteine",
         "expected": 90000,
-        "actual": 26090,
+        "actual": 26087,
         "expectedSource": "https://www.goethe.de/ins/nl/nl/kul/kue/22217305/22263584.html",
         "actualSource": "taginfo",
         "description": "Stolpersteine are monuments to the victims of world war two. They should be in osm."
@@ -32,7 +32,7 @@
         "id": "c137124d24f3874495f349c25a2d019d3edb545c0eebc649852940747257d53a",
         "name": "IKEA stores",
         "expected": 466,
-        "actual": 619,
+        "actual": 618,
         "expectedSource": "https://en.wikipedia.org/wiki/List_of_countries_with_IKEA_stores",
         "actualSource": "taginfo",
         "description": "IKEA is a furniture store. They have 466 stores in 63 countries. Are they all in osm?"
@@ -54,7 +54,7 @@
         "id": "a337e1deb30f4c626181a554a8315b4fa9f5928207b4e6d60b18b71b57509c9d",
         "name": "Pubs in the UK",
         "expected": 47200,
-        "actual": 38858,
+        "actual": 38864,
         "expectedSource": "https://commonslibrary.parliament.uk/research-briefings/cbp-8591/",
         "actualSource": "taginfo",
         "description": "Are all the locations for Britten's favorite pass time in osm?"
@@ -76,7 +76,7 @@
         "id": "f7d1f5de77e30dc158daba5aaff8df3e3b26786d230abbf2060db9cabddbc289",
         "name": "Car chargers",
         "expected": 94065,
-        "actual": 4853,
+        "actual": 4888,
         "expectedSource": "https://www.rvo.nl/onderwerpen/duurzaam-ondernemen/energie-en-milieu-innovaties/elektrisch-rijden/stand-van-zaken/cijfers",
         "actualSource": "taginfo",
         "description": "Electric car charging station will be more important than ever. The Netherlands has 94065 car chargers. Are they all in osm?"
