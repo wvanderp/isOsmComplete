@@ -56,3 +56,29 @@ export async function taginfoComparisonKeyOnly(
         description
     };
 }
+
+export async function taginfoComparisonMultipleTags(
+    name: string,
+    key: string,
+    tags: string[],
+    expected: number,
+    expectedSource: string,
+    description: string,
+    server = 'https://taginfo.openstreetmap.org'
+): Promise<Comparison> {
+    const taginfos = await Promise.all(
+        tags.map((tag) => taginfoKeyValue(key, tag, cleanServer(server)))
+    );
+
+    const count = taginfos.reduce((a, b) => a + b, 0);
+
+    return {
+        id: getHash(`${key}${tags.join('')}${server}`),
+        name,
+        expected,
+        actual: count,
+        expectedSource,
+        actualSource: 'taginfo',
+        description
+    };
+}

@@ -1,12 +1,13 @@
 import { Comparison } from '../../types';
-import taginfoComparisons, { taginfoComparisonKeyOnly } from '../../utils/taginfoComparisons';
+import { brandWikidata } from '../../utils/osmTags';
+import taginfoComparisons, { taginfoComparisonKeyOnly, taginfoComparisonMultipleTags } from '../../utils/taginfoComparisons';
 
 export default async function worldwide(): Promise<Comparison[]> {
     return [
-        await taginfoComparisons(
+        await taginfoComparisonMultipleTags(
             'McDonald\'s',
-            'brand:wikidata',
-            'Q38076',
+            brandWikidata,
+            ['Q38076', 'Q12061542'],
             38000,
             'https://corporate.mcdonalds.com/corpmcd/franchising-overview.html',
             'McDonald\'s is the largest fast food chain in the world. There corporate website says that the company has 38,000 stores in the world. Are they all in osm?'
@@ -28,11 +29,35 @@ export default async function worldwide(): Promise<Comparison[]> {
         ),
         await taginfoComparisons(
             'IKEA stores',
-            'brand:wikidata',
+            brandWikidata,
             'Q54078',
-            466,
-            'https://en.wikipedia.org/wiki/List_of_countries_with_IKEA_stores',
+            460,
+            'https://about.ikea.com/en/about-us',
             'IKEA is a furniture store. They have 466 stores in 63 countries. Are they all in osm?'
+        ),
+        await taginfoComparisons(
+            '7-Eleven stores',
+            brandWikidata,
+            'Q259340',
+            78029,
+            'https://en.wikipedia.org/wiki/7-Eleven',
+            'A 7-Eleven is always nearby. because there are 78,029 of them in 18 countries. is your closest 7-Eleven in osm?'
+        ),
+        await taginfoComparisons(
+            'Subway stores',
+            brandWikidata,
+            'Q244457',
+            36821,
+            'https://en.wikipedia.org/wiki/Subway_(restaurant)',
+            'Subway and McDonald\'s are the two largest fast food chains in the world. who has more stores?'
+        ),
+        await taginfoComparisons(
+            'Starbucks',
+            brandWikidata,
+            'Q37158',
+            35711,
+            'https://s22.q4cdn.com/869488222/files/doc_financials/2022/q4/Q4-FY22-Earnings-Release-Final-11.3.2022.pdf',
+            'Starbucks seems to be everywhere. But can you find them all in osm?'
         )
     ];
 }

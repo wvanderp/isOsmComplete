@@ -3,24 +3,30 @@ import { CountryCodes } from '../collect/types';
 import data from '../data/compare.json';
 import Country from './Country';
 
-const prioritizedCountries = new Set([
+const prioritizedCountries = [
     'worldwide',
     'EU'
-]);
+];
 
 export default function App() {
+    // Sort countries by prioritizedCountries and then alphabetically
     const countries = Object.entries(data.comparisons)
-        .sort((a, b) => {
-            if (prioritizedCountries.has(a[0]) && !prioritizedCountries.has(b[0])) {
-                return -1;
+        .sort(([a], [b]) => {
+            const aIndex = prioritizedCountries.indexOf(a);
+            const bIndex = prioritizedCountries.indexOf(b);
+            if (aIndex === -1 && bIndex === -1) {
+                return a.localeCompare(b);
             }
-            if (prioritizedCountries.has(b[0]) && !prioritizedCountries.has(a[0])) {
+            if (aIndex === -1) {
                 return 1;
             }
-            return (a[0] === b[0] ? 1 : -1);
+            if (bIndex === -1) {
+                return -1;
+            }
+            return aIndex - bIndex;
         })
-        .map((country) => <Country key={country[0]} code={country[0] as CountryCodes} comparisons={country[1]} />);
-
+    .map((country) => <Country key={country[0]} code={country[0] as CountryCodes} comparisons={country[1]} />);
+    console.log(countries);
     return (
         <>
             <h1>Is osm complete?</h1>

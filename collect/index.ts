@@ -3,7 +3,7 @@ import path from 'path';
 
 import worldwide from './countries/worldwide/worldwide';
 import netherlands from './countries/NL/netherlands';
-import greatBritten from './countries/GB/greatBritain';
+import greatBritain from './countries/GB/greatBritain';
 import Europe from './countries/europe/europe';
 import london from './countries/GB/London';
 
@@ -16,7 +16,7 @@ const directory = path.join(__dirname, '../data');
         comparisons: {
             worldwide: await worldwide(),
             EU: await Europe(),
-            GB: await greatBritten(),
+            GB: await greatBritain(),
             london: await london(),
             NL: await netherlands()
         }

@@ -9,7 +9,8 @@ export default async function worldwide(): Promise<Comparison[]> {
             'Car chargers',
             'amenity',
             'charging_station',
-            94065,
+            // normal + fast
+            106891 + 3238,
             'https://www.rvo.nl/onderwerpen/duurzaam-ondernemen/energie-en-milieu-innovaties/elektrisch-rijden/stand-van-zaken/cijfers',
             'Electric car charging station will be more important than ever. The Netherlands has 94065 car chargers. Are they all in osm?',
             taginfoServer
@@ -27,9 +28,9 @@ export default async function worldwide(): Promise<Comparison[]> {
             'Wind turbines',
             'generator:source',
             'wind',
-            2403 + 462,
+            2415 + 462,
             'https://nl.wikipedia.org/wiki/Windturbines_in_Nederland',
-            'Wind energy is the new hotness. But are they all present? ',
+            'Wind energy is the new hotness. But are they all present?',
             taginfoServer
         )
     ];
