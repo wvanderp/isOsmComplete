@@ -25,12 +25,12 @@ export default function App() {
             }
             return aIndex - bIndex;
         })
-    .map((country) => <Country key={country[0]} code={country[0] as CountryCodes} comparisons={country[1]} />);
-    console.log(countries);
+        .map((country) => <Country key={country[0]} code={country[0] as CountryCodes} comparisons={country[1]} />);
+
     return (
         <>
-            <h1>Is osm complete?</h1>
-            <p>This site tracks how complete osm really is.</p>
+            <h1>Is OSM Complete?</h1>
+            <p>This site tracks how complete OSM really is.</p>
             {countries}
         </>
     );
