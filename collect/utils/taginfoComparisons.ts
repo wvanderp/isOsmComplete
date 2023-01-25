@@ -11,6 +11,8 @@ function cleanServer(server: string): string {
     return server;
 }
 
+const osmTagInfoServer = 'https://taginfo.openstreetmap.org';
+
 export default async function taginfoComparisons(
     name: string,
     key: string,
@@ -18,7 +20,7 @@ export default async function taginfoComparisons(
     expected: number,
     expectedSource: string,
     description: string,
-    server = 'https://taginfo.openstreetmap.org'
+    server = osmTagInfoServer
 ): Promise<Comparison> {
     // eslint-disable-next-line no-console
     console.log(`starting on ${name}`);
@@ -42,7 +44,7 @@ export async function taginfoComparisonKeyOnly(
     expected: number,
     expectedSource: string,
     description: string,
-    server = 'https://taginfo.openstreetmap.org'
+    server = osmTagInfoServer
 ): Promise<Comparison> {
     const count = await taginfoKey(key, cleanServer(server));
 
@@ -64,7 +66,7 @@ export async function taginfoComparisonMultipleTags(
     expected: number,
     expectedSource: string,
     description: string,
-    server = 'https://taginfo.openstreetmap.org'
+    server = osmTagInfoServer
 ): Promise<Comparison> {
     const taginfos = await Promise.all(
         tags.map((tag) => taginfoKeyValue(key, tag, cleanServer(server)))

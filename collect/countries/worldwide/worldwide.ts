@@ -1,6 +1,7 @@
 import { Comparison } from '../../types';
 import { brandWikidata } from '../../utils/osmTags';
 import taginfoComparisons, { taginfoComparisonKeyOnly, taginfoComparisonMultipleTags } from '../../utils/taginfoComparisons';
+import airports from './airports';
 
 export default async function worldwide(): Promise<Comparison[]> {
     return [
@@ -58,6 +59,7 @@ export default async function worldwide(): Promise<Comparison[]> {
             35711,
             'https://s22.q4cdn.com/869488222/files/doc_financials/2022/q4/Q4-FY22-Earnings-Release-Final-11.3.2022.pdf',
             'Starbucks seems to be everywhere. But can you find them all in osm?'
-        )
+        ),
+        ...(await airports())
     ];
 }
