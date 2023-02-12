@@ -5,7 +5,7 @@
         "id": "bc00755018404ae08e7791edeacb749806f755a7a684108cdc730b7dc96d35bd",
         "name": "McDonald's",
         "expected": 38000,
-        "actual": 30093,
+        "actual": 30167,
         "expectedSource": "https://corporate.mcdonalds.com/corpmcd/franchising-overview.html",
         "actualSource": "taginfo",
         "description": "McDonald's is the largest fast food chain in the world. There corporate website says that the company has 38,000 stores in the world. Are they all in osm?"
@@ -14,7 +14,7 @@
         "id": "f86b36460a37c5a45dea617f3fbd10c18027319318d2283be3f8318a7a793bca",
         "name": "Match Google on building",
         "expected": 1600000000,
-        "actual": 545309047,
+        "actual": 548139710,
         "expectedSource": "https://youtu.be/nP-nMZpLM1A?t=409",
         "actualSource": "taginfo",
         "description": "Google, in there 2022 keynote, claim that they have 1,600,000,000 buildings. Are we even close with osm?"
@@ -23,7 +23,7 @@
         "id": "58ca58265cde4f8cc2d782abb54393103bd11a89e5c6fd65f2f066be8b3a9041",
         "name": "Stolpersteine",
         "expected": 90000,
-        "actual": 26443,
+        "actual": 26102,
         "expectedSource": "https://www.goethe.de/ins/nl/nl/kul/kue/22217305/22263584.html",
         "actualSource": "taginfo",
         "description": "Stolpersteine are monuments to the victims of world war two. They should be in osm."
@@ -32,7 +32,7 @@
         "id": "c137124d24f3874495f349c25a2d019d3edb545c0eebc649852940747257d53a",
         "name": "IKEA stores",
         "expected": 460,
-        "actual": 647,
+        "actual": 651,
         "expectedSource": "https://about.ikea.com/en/about-us",
         "actualSource": "taginfo",
         "description": "IKEA is a furniture store. They have 466 stores in 63 countries. Are they all in osm?"
@@ -41,7 +41,7 @@
         "id": "34d881bb4626ac285c1c64c08944d6d8883e5bfdef1d5bb2c0d2eeab9db0d20e",
         "name": "7-Eleven stores",
         "expected": 78029,
-        "actual": 31902,
+        "actual": 32134,
         "expectedSource": "https://en.wikipedia.org/wiki/7-Eleven",
         "actualSource": "taginfo",
         "description": "A 7-Eleven is always nearby. because there are 78,029 of them in 18 countries. is your closest 7-Eleven in osm?"
@@ -50,7 +50,7 @@
         "id": "ceafc782f32e77207571d2c2de651c13d6f8704acbe2221a9a7af3dd68313bf8",
         "name": "Subway stores",
         "expected": 36821,
-        "actual": 20978,
+        "actual": 21017,
         "expectedSource": "https://en.wikipedia.org/wiki/Subway_(restaurant)",
         "actualSource": "taginfo",
         "description": "Subway and McDonald's are the two largest fast food chains in the world. who has more stores?"
@@ -59,7 +59,7 @@
         "id": "0aa0000d49cbd3eaabb7d62b87d0695922a6cdc09c0f80d1684aadaeb49f4e95",
         "name": "Starbucks",
         "expected": 35711,
-        "actual": 17630,
+        "actual": 17687,
         "expectedSource": "https://s22.q4cdn.com/869488222/files/doc_financials/2022/q4/Q4-FY22-Earnings-Release-Final-11.3.2022.pdf",
         "actualSource": "taginfo",
         "description": "Starbucks seems to be everywhere. But can you find them all in osm?"
@@ -67,8 +67,8 @@
       {
         "id": "0a275c5789b11d5b72921303db8373e97342f2d81af43e22d3c768d58df03206",
         "name": "Airports with IATA codes",
-        "expected": 8862,
-        "actual": 9966,
+        "expected": 8863,
+        "actual": 9970,
         "expectedSource": "https://davidmegginson.github.io/ourairports-data/airports.csv",
         "actualSource": "taginfo",
         "description": "The number of airports with IATA codes in OSM"
@@ -77,7 +77,7 @@
         "id": "45bc39b4b3b48b01c0818ca97beabb4aad95ee48232cd8c79603a6c02a84dafc",
         "name": "Airports with ICAO codes",
         "expected": 20223,
-        "actual": 16171,
+        "actual": 16238,
         "expectedSource": "https://davidmegginson.github.io/ourairports-data/airports.csv",
         "actualSource": "taginfo",
         "description": "The number of airports with ICAO codes in OSM"
@@ -88,7 +88,7 @@
         "id": "16f17dead727d54cdeea1a744885af7be858826c05e1ac342da754d457dd1b15",
         "name": "Fastned charger in the EU",
         "expected": 244,
-        "actual": 213,
+        "actual": 215,
         "expectedSource": "https://fastnedcharging.com/hq/nl/fastned-ziet-omzet-bijna-verdrievoudigen-en-ontvangt-onderscheidingen-in-drie-landen-tijdens-4e-kwartaal-2022/",
         "actualSource": "taginfo",
         "description": "Fastned is a provider of charging stations in Europe. What is the charge of Fastned in osm?"
@@ -99,7 +99,7 @@
         "id": "a337e1deb30f4c626181a554a8315b4fa9f5928207b4e6d60b18b71b57509c9d",
         "name": "Pubs in the UK",
         "expected": 47200,
-        "actual": 38856,
+        "actual": 38853,
         "expectedSource": "https://commonslibrary.parliament.uk/research-briefings/cbp-8591/",
         "actualSource": "taginfo",
         "description": "Are all the locations for Britten's favorite pass time in osm?"
@@ -108,7 +108,7 @@
         "id": "8ab3af57b360141906f5a9350327ce03cef6aeecd90f25a37f06e79be77e6527",
         "name": "Royal Mail post boxes",
         "expected": 115000,
-        "actual": 18654,
+        "actual": 18762,
         "expectedSource": "https://personal.help.royalmail.com/app/answers/detail/a_id/135/~/royal-mails-postbox-network---your-questions-answered",
         "actualSource": "taginfo",
         "description": "Are all the Royal Mail post boxes in osm?"
@@ -119,7 +119,7 @@
         "id": "8308f65b11b2f3da270e8cbac0702add3b032ce3350b9a4b3f0c504de7d5b0b2",
         "name": "Surveillance cameras in London",
         "expected": 691000,
-        "actual": 1323,
+        "actual": 1327,
         "expectedSource": "https://www.cctv.co.uk/how-many-cctv-cameras-are-there-in-london/",
         "actualSource": "taginfo",
         "description": "London might be the most watched city in the world. but who watches the watcher?"
@@ -130,7 +130,7 @@
         "id": "f7d1f5de77e30dc158daba5aaff8df3e3b26786d230abbf2060db9cabddbc289",
         "name": "Car chargers",
         "expected": 110129,
-        "actual": 5723,
+        "actual": 5970,
         "expectedSource": "https://www.rvo.nl/onderwerpen/duurzaam-ondernemen/energie-en-milieu-innovaties/elektrisch-rijden/stand-van-zaken/cijfers",
         "actualSource": "taginfo",
         "description": "Electric car charging station will be more important than ever. The Netherlands has 94065 car chargers. Are they all in osm?"
@@ -139,7 +139,7 @@
         "id": "b79ce00c71cd062b5c051b02c8290f746b0baf5962816c044d868eefb40fa20f",
         "name": "Hospitals",
         "expected": 308,
-        "actual": 195,
+        "actual": 183,
         "expectedSource": "https://www.zorgkaartnederland.nl/ziekenhuis",
         "actualSource": "taginfo",
         "description": "The Netherlands has 308 hospitals. Are they all in osm?"
@@ -148,7 +148,7 @@
         "id": "c200f563eb19c5289b8e9718d826241b552e46f71d284293af431480e3900f5e",
         "name": "Wind turbines",
         "expected": 2877,
-        "actual": 3171,
+        "actual": 3187,
         "expectedSource": "https://nl.wikipedia.org/wiki/Windturbines_in_Nederland",
         "actualSource": "taginfo",
         "description": "Wind energy is the new hotness. But are they all present?"
