@@ -1,5 +1,5 @@
 import { Comparison } from '../../types';
-import taginfoComparisons from '../../utils/taginfoComparisons';
+import taginfoComparisons, { taginfoComparisonMultipleTags } from '../../utils/taginfoComparisons';
 
 const taginfoServer = 'https://taginfo.geofabrik.de/europe/netherlands/';
 
@@ -12,16 +12,16 @@ export default async function worldwide(): Promise<Comparison[]> {
             // normal + fast
             106891 + 3238,
             'https://www.rvo.nl/onderwerpen/duurzaam-ondernemen/energie-en-milieu-innovaties/elektrisch-rijden/stand-van-zaken/cijfers',
-            'Electric car charging station will be more important than ever. The Netherlands has 94065 car chargers. Are they all in osm?',
+            'Electric car charging station will be more important than ever. The Netherlands has 110129 car chargers. Are they all in osm?',
             taginfoServer
         ),
-        await taginfoComparisons(
+        await taginfoComparisonMultipleTags(
             'Hospitals',
             'amenity',
-            'hospital',
-            308,
-            'https://www.zorgkaartnederland.nl/ziekenhuis',
-            'The Netherlands has 308 hospitals. Are they all in osm?',
+            ['hospital', 'clinic'],
+            308 + 425, // hospitals + clinics
+            'https://www.zorgkaartnederland.nl/ziekenhuis', // and https://www.zorgkaartnederland.nl/overige-kliniek
+            'The Netherlands has 580 hospitals and clinics. Are they all in osm?',
             taginfoServer
         ),
         await taginfoComparisons(

@@ -5,7 +5,7 @@
         "id": "bc00755018404ae08e7791edeacb749806f755a7a684108cdc730b7dc96d35bd",
         "name": "McDonald's",
         "expected": 38000,
-        "actual": 30167,
+        "actual": 30172,
         "expectedSource": "https://corporate.mcdonalds.com/corpmcd/franchising-overview.html",
         "actualSource": "taginfo",
         "description": "McDonald's is the largest fast food chain in the world. There corporate website says that the company has 38,000 stores in the world. Are they all in osm?"
@@ -14,7 +14,7 @@
         "id": "f86b36460a37c5a45dea617f3fbd10c18027319318d2283be3f8318a7a793bca",
         "name": "Match Google on building",
         "expected": 1600000000,
-        "actual": 548139710,
+        "actual": 548349880,
         "expectedSource": "https://youtu.be/nP-nMZpLM1A?t=409",
         "actualSource": "taginfo",
         "description": "Google, in there 2022 keynote, claim that they have 1,600,000,000 buildings. Are we even close with osm?"
@@ -23,7 +23,7 @@
         "id": "58ca58265cde4f8cc2d782abb54393103bd11a89e5c6fd65f2f066be8b3a9041",
         "name": "Stolpersteine",
         "expected": 90000,
-        "actual": 26102,
+        "actual": 26115,
         "expectedSource": "https://www.goethe.de/ins/nl/nl/kul/kue/22217305/22263584.html",
         "actualSource": "taginfo",
         "description": "Stolpersteine are monuments to the victims of world war two. They should be in osm."
@@ -50,7 +50,7 @@
         "id": "ceafc782f32e77207571d2c2de651c13d6f8704acbe2221a9a7af3dd68313bf8",
         "name": "Subway stores",
         "expected": 36821,
-        "actual": 21017,
+        "actual": 21020,
         "expectedSource": "https://en.wikipedia.org/wiki/Subway_(restaurant)",
         "actualSource": "taginfo",
         "description": "Subway and McDonald's are the two largest fast food chains in the world. who has more stores?"
@@ -59,7 +59,7 @@
         "id": "0aa0000d49cbd3eaabb7d62b87d0695922a6cdc09c0f80d1684aadaeb49f4e95",
         "name": "Starbucks",
         "expected": 35711,
-        "actual": 17687,
+        "actual": 17689,
         "expectedSource": "https://s22.q4cdn.com/869488222/files/doc_financials/2022/q4/Q4-FY22-Earnings-Release-Final-11.3.2022.pdf",
         "actualSource": "taginfo",
         "description": "Starbucks seems to be everywhere. But can you find them all in osm?"
@@ -67,8 +67,8 @@
       {
         "id": "0a275c5789b11d5b72921303db8373e97342f2d81af43e22d3c768d58df03206",
         "name": "Airports with IATA codes",
-        "expected": 8863,
-        "actual": 9970,
+        "expected": 8864,
+        "actual": 9971,
         "expectedSource": "https://davidmegginson.github.io/ourairports-data/airports.csv",
         "actualSource": "taginfo",
         "description": "The number of airports with IATA codes in OSM"
@@ -76,8 +76,8 @@
       {
         "id": "45bc39b4b3b48b01c0818ca97beabb4aad95ee48232cd8c79603a6c02a84dafc",
         "name": "Airports with ICAO codes",
-        "expected": 20223,
-        "actual": 16238,
+        "expected": 20224,
+        "actual": 16240,
         "expectedSource": "https://davidmegginson.github.io/ourairports-data/airports.csv",
         "actualSource": "taginfo",
         "description": "The number of airports with ICAO codes in OSM"
@@ -130,16 +130,16 @@
         "id": "f7d1f5de77e30dc158daba5aaff8df3e3b26786d230abbf2060db9cabddbc289",
         "name": "Car chargers",
         "expected": 110129,
-        "actual": 5970,
+        "actual": 5985,
         "expectedSource": "https://www.rvo.nl/onderwerpen/duurzaam-ondernemen/energie-en-milieu-innovaties/elektrisch-rijden/stand-van-zaken/cijfers",
         "actualSource": "taginfo",
-        "description": "Electric car charging station will be more important than ever. The Netherlands has 94065 car chargers. Are they all in osm?"
+        "description": "Electric car charging station will be more important than ever. The Netherlands has 110129 car chargers. Are they all in osm?"
       },
       {
-        "id": "b79ce00c71cd062b5c051b02c8290f746b0baf5962816c044d868eefb40fa20f",
+        "id": "3b2f809bde0f76363b9dd906fc368946685e56a3e8a9fda979b040c9d0ebb251",
         "name": "Hospitals",
-        "expected": 308,
-        "actual": 183,
+        "expected": 733,
+        "actual": 580,
         "expectedSource": "https://www.zorgkaartnederland.nl/ziekenhuis",
         "actualSource": "taginfo",
         "description": "The Netherlands has 308 hospitals. Are they all in osm?"
