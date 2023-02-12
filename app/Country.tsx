@@ -47,7 +47,6 @@ export default function Country(props: {
 function Comparison(props: {
     comparison: Comparison;
 }) {
-    const graph = <Graph comparison={props.comparison} />;
     return (
         <Card color="light">
 
@@ -69,7 +68,7 @@ function Comparison(props: {
 
                     <a href={props.comparison.expectedSource}>Source of Expected</a>
                 </CardText>
-                {graph}
+                <Graph comparison={props.comparison} />
             </CardBody>
         </Card>
     );

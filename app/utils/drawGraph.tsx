@@ -17,7 +17,7 @@ export default function draw_chronology_chart(
     const h = 400;
     const margin = { top: 10, right: 15, bottom: 60, left: 80 };
 
-    uncleanData.push({ date: tomorrow(), value: d3.max(uncleanData, (d) => d.value) });
+    uncleanData.push({ date: tomorrow(), value: d3.max(uncleanData, (d) => d.value) ?? 0 });
 
     const data = uncleanData.map((d) => ({
         ...d,
@@ -27,13 +27,14 @@ export default function draw_chronology_chart(
     const t0 = data[0].date;
     const t1 = data[data.length - 1].date;
 
-    const max = Math.max(d3.max(data, (d) => d.value), goal);
+    const max = Math.max(d3.max(data, (d) => d.value) ?? 0, goal);
 
     const scale_x = d3.scaleTime()
         .domain([t0, t1])
         .range([0, w]);
 
     const axis_x = d3.axisBottom(scale_x)
+        // @ts-expect-error error in the type definition
         .tickFormat(d3.timeFormat('%b %Y'));
 
     const scale_y = d3.scaleLinear()
