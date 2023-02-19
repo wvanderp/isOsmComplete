@@ -20,6 +20,7 @@ export default async function taginfoComparisons(
     expected: number,
     expectedSource: string,
     description: string,
+    tags: string[],
     server = osmTagInfoServer
 ): Promise<Comparison> {
     // eslint-disable-next-line no-console
@@ -34,6 +35,7 @@ export default async function taginfoComparisons(
         actual: count,
         expectedSource,
         actualSource: 'taginfo',
+        tags,
         description
     };
 }
@@ -44,6 +46,7 @@ export async function taginfoComparisonKeyOnly(
     expected: number,
     expectedSource: string,
     description: string,
+    tags: string[],
     server = osmTagInfoServer
 ): Promise<Comparison> {
     const count = await taginfoKey(key, cleanServer(server));
@@ -55,6 +58,7 @@ export async function taginfoComparisonKeyOnly(
         actual: count,
         expectedSource,
         actualSource: 'taginfo',
+        tags,
         description
     };
 }
@@ -62,25 +66,27 @@ export async function taginfoComparisonKeyOnly(
 export async function taginfoComparisonMultipleTags(
     name: string,
     key: string,
-    tags: string[],
+    osmTags: string[],
     expected: number,
     expectedSource: string,
     description: string,
+    tags: string[],
     server = osmTagInfoServer
 ): Promise<Comparison> {
     const taginfos = await Promise.all(
-        tags.map((tag) => taginfoKeyValue(key, tag, cleanServer(server)))
+        osmTags.map((tag) => taginfoKeyValue(key, tag, cleanServer(server)))
     );
 
     const count = taginfos.reduce((a, b) => a + b, 0);
 
     return {
-        id: getHash(`${key}${tags.join('')}${server}`),
+        id: getHash(`${key}${osmTags.join('')}${server}`),
         name,
         expected,
         actual: count,
         expectedSource,
         actualSource: 'taginfo',
+        tags,
         description
     };
 }

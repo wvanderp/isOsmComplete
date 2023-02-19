@@ -3,7 +3,8 @@ import axios from 'axios';
 import { parse } from 'csv-parse/sync';
 
 import { Comparison } from '../../types';
-import {taginfoComparisonKeyOnly} from '../../utils/taginfoComparisons';
+import appendCountry from '../../utils/appendCountry';
+import { taginfoComparisonKeyOnly } from '../../utils/taginfoComparisons';
 
 const airportCsvUrl = 'https://davidmegginson.github.io/ourairports-data/airports.csv';
 
@@ -39,20 +40,25 @@ export default async function airports(): Promise<Comparison[]> {
     const iataCount = airportsData.filter((a) => a.iata_code && a.iata_code !== '').length;
     const icaoCount = airportsData.filter((a) => a.ident.match(/[A-Z]{4}/)).length;
 
-    return [
-        await taginfoComparisonKeyOnly(
-            'Airports with IATA codes',
-            'iata',
-            iataCount,
-            airportCsvUrl,
-            'The number of airports with IATA codes in OSM'
-        ),
-        await taginfoComparisonKeyOnly(
-            'Airports with ICAO codes',
-            'icao',
-            icaoCount,
-            airportCsvUrl,
-            'The number of airports with ICAO codes in OSM'
-        )
-    ];
+    return appendCountry(
+        'worldwide',
+        [
+            await taginfoComparisonKeyOnly(
+                'Airports with IATA codes ✈️',
+                'iata',
+                iataCount,
+                airportCsvUrl,
+                'The number of airports with IATA codes in OSM',
+                ['✈️']
+            ),
+            await taginfoComparisonKeyOnly(
+                'Airports with ICAO codes ✈️',
+                'icao',
+                icaoCount,
+                airportCsvUrl,
+                'The number of airports with ICAO codes in OSM',
+                ['✈️']
+            )
+        ]
+    );
 }

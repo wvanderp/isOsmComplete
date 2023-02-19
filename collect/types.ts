@@ -8,7 +8,9 @@ export interface Comparison {
     expectedSource: string;
     actualSource: string;
     description: string;
+    country?: string;
     extra?: unknown;
+    tags?: string[];
 }
 
 export type TaginfoComparison = Comparison & {
@@ -23,11 +25,7 @@ export type TaginfoComparison = Comparison & {
 // @ts-expect-error - this is a type assertion test
 export const isTaginfoComparison = (a: unknown): a is TaginfoComparison => a.extra.type === 'taginfo';
 
-export type CountryCodes = Alpha2Code | 'worldwide' | 'EU' | 'london'
-
-export interface ComparisonData {
-    comparisons: Partial<Record<CountryCodes, Comparison[]>>;
-}
+export type CountryCodes = Alpha2Code | 'worldwide' | 'EU' | 'London'
 
 ///  taginfo
 

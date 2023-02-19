@@ -54,7 +54,7 @@
   "scripts": {
     "app": "npm run clean && parcel serve app/index.html -p 3001",
     "build": "npm run clean &&  parcel build --no-source-maps --public-url /isOsmComplete --dist-dir ./gitBuild app/index.html",
-    "lint": "npm run tsc && eslint --ext ts,tsx,json,js app/ collect/",
+    "lint": "npm run tsc && eslint --ext ts,tsx,js app/ collect/",
     "tsc": "tsc --noEmit",
     "collect": "ts-node collect",
     "clean": "rimraf .parcel-cache dist gitBuild"

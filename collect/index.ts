@@ -6,30 +6,36 @@ import netherlands from './countries/NL/netherlands';
 import greatBritain from './countries/GB/greatBritain';
 import Europe from './countries/europe/europe';
 import london from './countries/GB/London';
+import unitedStates from './countries/US/unitedStates';
 
-import { ComparisonData } from './types';
+import { Comparison } from './types';
 
 const directory = path.join(__dirname, '../data');
+const tagsFile = path.join(__dirname, 'tags.json');
 
 (async () => {
-    const data: ComparisonData = {
-        comparisons: {
-            worldwide: await worldwide(),
-            EU: await Europe(),
-            GB: await greatBritain(),
-            london: await london(),
-            NL: await netherlands()
-        }
-    };
+    const data: Comparison[] = [
+        ...(await worldwide()),
+        ...(await Europe()),
+        ...(await greatBritain()),
+        ...(await london()),
+        ...(await netherlands()),
+        ...(await unitedStates())
+    ];
 
     saveGraphData(data);
 
+    lintTags(data);
+
+    // save the data
     fs.mkdirSync(directory, { recursive: true });
     fs.writeFileSync(`${directory}/compare.json`, JSON.stringify(data, null, 2));
+
+    // copy the tags file
+    fs.copyFileSync(tagsFile, `${directory}/tags.json`);
 })();
 
-function saveGraphData(data: ComparisonData) {
-    const comparisons = Object.values(data.comparisons).flat();
+function saveGraphData(comparisons: Comparison[]) {
     const dataDirectory = path.join(directory, 'graphs');
     fs.mkdirSync(dataDirectory, { recursive: true });
 
@@ -46,6 +52,20 @@ function saveGraphData(data: ComparisonData) {
 
         if ((lastActual !== comparison.actual.toString() && (lastDate !== date))) {
             fs.appendFileSync(file, line);
+        }
+    }
+}
+
+// loads the tag explanation file and checks if all tags are explained
+function lintTags(data: Comparison[]) {
+    const tags = data.flatMap((d) => d.tags ?? []);
+
+    const tagExplanations = JSON.parse(fs.readFileSync(tagsFile).toString()) as Record<string, string>;
+
+    for (const tag of tags) {
+        if (!tagExplanations[tag]) {
+            // eslint-disable-next-line no-console
+            console.warn(`Tag ${tag} is not explained`);
         }
     }
 }
