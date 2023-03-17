@@ -74,7 +74,7 @@ function Comparison(props: {
     );
 }
 
-function ProgressBar(props: { value: number, max: number }) {
+export function ProgressBar(props: { value: number, max: number }) {
     if (props.value > props.max) {
         return (
             <Progress multi>

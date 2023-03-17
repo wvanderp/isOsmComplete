@@ -1,6 +1,6 @@
 import React from 'react';
 import { Comparison, CountryCodes } from '../collect/types';
-import Country from './Country';
+import Country, { ProgressBar } from './Country';
 
 import data from '../data/compare.json';
 import tags from '../data/tags.json';
@@ -27,11 +27,11 @@ function sortCountries(a: [string, unknown], b: [string, unknown]) {
 
 function FilterButton(
     props: {
-         text: string,
-          state: string[],
-           setState: (state: string[]) => void,
-           alt?: string
-        }
+        text: string,
+        state: string[],
+        setState: (state: string[]) => void,
+        alt?: string
+    }
 ) {
     return (
         <button
@@ -116,6 +116,11 @@ export default function App() {
         .sort(sortCountries)
         .flatMap((country) => <Country key={country[0]} code={country[0] as CountryCodes} comparisons={country[1]} />);
 
+    // calculate the total average of all countries
+    const totalAverage = data
+        .map((comparison) => (comparison.actual / comparison.expected) * 100)
+        .reduce((a, b) => a + b, 0) / data.length;
+
     return (
         <>
             <h1>Is OSM Complete?</h1>
@@ -124,10 +129,18 @@ export default function App() {
                 It compares the number of features in OSM to the number of features in the official data sources.
             </p>
 
-            <b>Filters</b><br />
-            <span>Country:</span>{countryButtons}<br />
-            <span>tag:</span>{tagButtons}<br />
+            <div>
+                <b>Global average</b><br />
+                <span>OSM has {totalAverage.toFixed(2)}% of the features of the official data sources</span>
+                <ProgressBar value={totalAverage} max={100} />
+            </div>
+            <br />
 
+            <div>
+                <b>Filters</b><br />
+                <span>Country:</span>{countryButtons}<br />
+                <span>tag:</span>{tagButtons}<br />
+            </div>
             {countries}
         </>
     );
