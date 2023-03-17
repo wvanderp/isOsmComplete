@@ -1,23 +1,9 @@
 [
   {
-    "id": "bc00755018404ae08e7791edeacb749806f755a7a684108cdc730b7dc96d35bd",
-    "name": "McDonald's",
-    "expected": 38000,
-    "actual": 30353,
-    "expectedSource": "https://corporate.mcdonalds.com/corpmcd/franchising-overview.html",
-    "actualSource": "taginfo",
-    "tags": [
-      "🍔",
-      "🛍️"
-    ],
-    "description": "McDonald's is the largest fast food chain in the world. There corporate website says that the company has 38,000 stores in the world. Are they all in osm?",
-    "country": "worldwide"
-  },
-  {
     "id": "f86b36460a37c5a45dea617f3fbd10c18027319318d2283be3f8318a7a793bca",
     "name": "Match Google on building",
     "expected": 1600000000,
-    "actual": 552897839,
+    "actual": 553021652,
     "expectedSource": "https://youtu.be/nP-nMZpLM1A?t=409",
     "actualSource": "taginfo",
     "tags": [],
@@ -28,7 +14,7 @@
     "id": "58ca58265cde4f8cc2d782abb54393103bd11a89e5c6fd65f2f066be8b3a9041",
     "name": "Stolpersteine",
     "expected": 90000,
-    "actual": 26473,
+    "actual": 26481,
     "expectedSource": "https://www.goethe.de/ins/nl/nl/kul/kue/22217305/22263584.html",
     "actualSource": "taginfo",
     "tags": [],
@@ -43,7 +29,7 @@
     "expectedSource": "https://about.ikea.com/en/about-us",
     "actualSource": "taginfo",
     "tags": [
-      "🛍️"
+      "🛒"
     ],
     "description": "IKEA is a furniture store. They have 466 stores in 63 countries. Are they all in osm?",
     "country": "worldwide"
@@ -52,11 +38,11 @@
     "id": "34d881bb4626ac285c1c64c08944d6d8883e5bfdef1d5bb2c0d2eeab9db0d20e",
     "name": "7-Eleven stores",
     "expected": 78029,
-    "actual": 32497,
+    "actual": 32501,
     "expectedSource": "https://en.wikipedia.org/wiki/7-Eleven",
     "actualSource": "taginfo",
     "tags": [
-      "🛍️",
+      "🛒",
       "🍔"
     ],
     "description": "A 7-Eleven is always nearby. because there are 78,029 of them in 18 countries. is your closest 7-Eleven in osm?",
@@ -66,12 +52,12 @@
     "id": "ceafc782f32e77207571d2c2de651c13d6f8704acbe2221a9a7af3dd68313bf8",
     "name": "Subway stores",
     "expected": 36821,
-    "actual": 21096,
+    "actual": 21094,
     "expectedSource": "https://en.wikipedia.org/wiki/Subway_(restaurant)",
     "actualSource": "taginfo",
     "tags": [
       "🍔",
-      "🛍️"
+      "🛒"
     ],
     "description": "Subway and McDonald's are the two largest fast food chains in the world. who has more stores?",
     "country": "worldwide"
@@ -80,14 +66,56 @@
     "id": "0aa0000d49cbd3eaabb7d62b87d0695922a6cdc09c0f80d1684aadaeb49f4e95",
     "name": "Starbucks",
     "expected": 35711,
-    "actual": 17895,
+    "actual": 17900,
     "expectedSource": "https://s22.q4cdn.com/869488222/files/doc_financials/2022/q4/Q4-FY22-Earnings-Release-Final-11.3.2022.pdf",
     "actualSource": "taginfo",
     "tags": [
-      "🛍️",
+      "🛒",
       "🍔"
     ],
     "description": "Starbucks seems to be everywhere. But can you find them all in osm?",
+    "country": "worldwide"
+  },
+  {
+    "id": "bc00755018404ae08e7791edeacb749806f755a7a684108cdc730b7dc96d35bd",
+    "name": "McDonald's",
+    "expected": 38000,
+    "actual": 30352,
+    "expectedSource": "https://corporate.mcdonalds.com/corpmcd/franchising-overview.html",
+    "actualSource": "taginfo",
+    "tags": [
+      "🍔",
+      "🛒"
+    ],
+    "description": "McDonald's is the largest fast food chain in the world. There corporate website says that the company has 38,000 stores in the world. Are they all in osm?",
+    "country": "worldwide"
+  },
+  {
+    "id": "ff163beb19543f2cb53c300637cac009272968c01b3511a40effa32489074e82",
+    "name": "KFC",
+    "expected": 27000,
+    "actual": 12859,
+    "expectedSource": "https://www.yum.com/wps/portal/yumbrands/Yumbrands/company/our-brands/kfc",
+    "actualSource": "taginfo",
+    "tags": [
+      "🍔",
+      "🛒"
+    ],
+    "description": "KFC expanded out of Kentucky in 1964. They now have 27,000 stores in 135 countries. Are they all in osm?",
+    "country": "worldwide"
+  },
+  {
+    "id": "ebf58077453c74c27a1a8384024439568732ce333c09c0899c6156177657d513",
+    "name": "Burger King",
+    "expected": 18700,
+    "actual": 12554,
+    "expectedSource": "https://www.rbi.com/English/brands/default.aspx",
+    "actualSource": "taginfo",
+    "tags": [
+      "🍔",
+      "🛒"
+    ],
+    "description": "Burger King is a fast food chain. They have 18,000 stores in 100 countries. Are they all in osm?",
     "country": "worldwide"
   },
   {
@@ -107,7 +135,7 @@
     "id": "45bc39b4b3b48b01c0818ca97beabb4aad95ee48232cd8c79603a6c02a84dafc",
     "name": "Airports with ICAO codes ✈️",
     "expected": 20252,
-    "actual": 16212,
+    "actual": 16213,
     "expectedSource": "https://davidmegginson.github.io/ourairports-data/airports.csv",
     "actualSource": "taginfo",
     "tags": [
@@ -133,12 +161,12 @@
     "id": "a337e1deb30f4c626181a554a8315b4fa9f5928207b4e6d60b18b71b57509c9d",
     "name": "Pubs in the UK",
     "expected": 47200,
-    "actual": 38844,
+    "actual": 38842,
     "expectedSource": "https://commonslibrary.parliament.uk/research-briefings/cbp-8591/",
     "actualSource": "taginfo",
     "tags": [
       "🍺",
-      "🛍️"
+      "🛒"
     ],
     "description": "Are all the locations for Britten's favorite pass time in osm?",
     "country": "GB"
@@ -147,7 +175,7 @@
     "id": "8ab3af57b360141906f5a9350327ce03cef6aeecd90f25a37f06e79be77e6527",
     "name": "Royal Mail post boxes",
     "expected": 115000,
-    "actual": 18805,
+    "actual": 18813,
     "expectedSource": "https://personal.help.royalmail.com/app/answers/detail/a_id/135/~/royal-mails-postbox-network---your-questions-answered",
     "actualSource": "taginfo",
     "tags": [
@@ -219,6 +247,73 @@
       "✈️"
     ],
     "description": "Do all the airports in the US have a faa tag?",
+    "country": "US"
+  },
+  {
+    "id": "3044d4af204432db18919ede34562e9769874fbee8d5590bbca2ab9f0dd6c07c",
+    "name": "Walmart",
+    "expected": 4717,
+    "actual": 5446,
+    "expectedSource": "https://corporate.walmart.com/about/location-facts",
+    "actualSource": "taginfo",
+    "tags": [
+      "🛒"
+    ],
+    "description": "Walmart is the largest company in the world by revenue. Are all the Walmart stores in the US tagged?",
+    "country": "US"
+  },
+  {
+    "id": "0cb75428a28a7a7134fc0ffa95a12a8218dbc509cc0b42fd3ac33fa5ef265218",
+    "name": "Dollar General",
+    "expected": 18190,
+    "actual": 5908,
+    "expectedSource": "https://investor.dollargeneral.com/websites/dollargeneral/English/0/investor-relations.html",
+    "actualSource": "taginfo",
+    "tags": [
+      "🛒"
+    ],
+    "description": "This General stor, also know as DG Market, DGX and pOpshelf, sells everything for $1. How much money would we have if we got a dollar for every Dollar General store on the map?",
+    "country": "US"
+  },
+  {
+    "id": "379ba2ca4c7d0337d1273d190099c2843209c939cf66c2461b879b2c61b5bde3",
+    "name": "Dollar Tree",
+    "expected": 15840,
+    "actual": 3516,
+    "expectedSource": "https://corporate.dollartree.com/_assets/_e019a55beaa640d513e0240de36a677a/dollartreeinfo/db/893/9106/annual_report/DT_2021_Form+10-K_FINAL_5.11.22.pdf",
+    "actualSource": "taginfo",
+    "tags": [
+      "🛒"
+    ],
+    "description": "Dollar Tree is the largest company in the world by revenue. Are all the Dollar Tree stores in the US tagged?",
+    "country": "US"
+  },
+  {
+    "id": "e1351eb279786fb2199ff3187501f3524187f954a542b7053c9d5cccd897584d",
+    "name": "CVS",
+    "expected": 9900,
+    "actual": 7411,
+    "expectedSource": "https://s2.q4cdn.com/447711729/files/doc_financials/2021/ar/CVS2021_Annual-Report.pdf",
+    "actualSource": "taginfo",
+    "tags": [
+      "🛒",
+      "🏥"
+    ],
+    "description": "Having a pharmacy in every corner of the US is a great thing. Does every corner of OSM have a CVS pharmacy?",
+    "country": "US"
+  },
+  {
+    "id": "ca6ca53604d6f26bfddacf0b0a3fbec625fb69fbd8cfa4eba712920d224ddc8e",
+    "name": "Walgreens",
+    "expected": 4717,
+    "actual": 7819,
+    "expectedSource": "https://s1.q4cdn.com/343380161/files/doc_financials/2022/ar/WBA-2022-Annual-Report.pdf",
+    "actualSource": "taginfo",
+    "tags": [
+      "🛒",
+      "🏥"
+    ],
+    "description": "Having a pharmacy in every corner of the US is a great thing. Does every corner of OSM have a Walgreens pharmacy?",
     "country": "US"
   }
 ]
