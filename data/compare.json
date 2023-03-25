@@ -3,7 +3,7 @@
     "id": "f86b36460a37c5a45dea617f3fbd10c18027319318d2283be3f8318a7a793bca",
     "name": "Match Google on building",
     "expected": 1600000000,
-    "actual": 553685628,
+    "actual": 553945567,
     "expectedSource": "https://youtu.be/nP-nMZpLM1A?t=409",
     "actualSource": "taginfo",
     "tags": [],
@@ -14,7 +14,7 @@
     "id": "58ca58265cde4f8cc2d782abb54393103bd11a89e5c6fd65f2f066be8b3a9041",
     "name": "Stolpersteine",
     "expected": 90000,
-    "actual": 26512,
+    "actual": 26501,
     "expectedSource": "https://www.goethe.de/ins/nl/nl/kul/kue/22217305/22263584.html",
     "actualSource": "taginfo",
     "tags": [],
@@ -38,7 +38,7 @@
     "id": "34d881bb4626ac285c1c64c08944d6d8883e5bfdef1d5bb2c0d2eeab9db0d20e",
     "name": "7-Eleven stores",
     "expected": 78029,
-    "actual": 32541,
+    "actual": 32560,
     "expectedSource": "https://en.wikipedia.org/wiki/7-Eleven",
     "actualSource": "taginfo",
     "tags": [
@@ -52,7 +52,7 @@
     "id": "ceafc782f32e77207571d2c2de651c13d6f8704acbe2221a9a7af3dd68313bf8",
     "name": "Subway stores",
     "expected": 36821,
-    "actual": 21111,
+    "actual": 21116,
     "expectedSource": "https://en.wikipedia.org/wiki/Subway_(restaurant)",
     "actualSource": "taginfo",
     "tags": [
@@ -66,7 +66,7 @@
     "id": "0aa0000d49cbd3eaabb7d62b87d0695922a6cdc09c0f80d1684aadaeb49f4e95",
     "name": "Starbucks",
     "expected": 35711,
-    "actual": 17938,
+    "actual": 17937,
     "expectedSource": "https://s22.q4cdn.com/869488222/files/doc_financials/2022/q4/Q4-FY22-Earnings-Release-Final-11.3.2022.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -80,7 +80,7 @@
     "id": "bc00755018404ae08e7791edeacb749806f755a7a684108cdc730b7dc96d35bd",
     "name": "McDonald's",
     "expected": 38000,
-    "actual": 30374,
+    "actual": 30377,
     "expectedSource": "https://corporate.mcdonalds.com/corpmcd/franchising-overview.html",
     "actualSource": "taginfo",
     "tags": [
@@ -108,7 +108,7 @@
     "id": "ebf58077453c74c27a1a8384024439568732ce333c09c0899c6156177657d513",
     "name": "Burger King",
     "expected": 18700,
-    "actual": 12567,
+    "actual": 12570,
     "expectedSource": "https://www.rbi.com/English/brands/default.aspx",
     "actualSource": "taginfo",
     "tags": [
@@ -122,7 +122,7 @@
     "id": "0a275c5789b11d5b72921303db8373e97342f2d81af43e22d3c768d58df03206",
     "name": "Airports with IATA codes ✈️",
     "expected": 8874,
-    "actual": 9989,
+    "actual": 9992,
     "expectedSource": "https://davidmegginson.github.io/ourairports-data/airports.csv",
     "actualSource": "taginfo",
     "tags": [
@@ -134,8 +134,8 @@
   {
     "id": "45bc39b4b3b48b01c0818ca97beabb4aad95ee48232cd8c79603a6c02a84dafc",
     "name": "Airports with ICAO codes ✈️",
-    "expected": 20255,
-    "actual": 16248,
+    "expected": 20256,
+    "actual": 16249,
     "expectedSource": "https://davidmegginson.github.io/ourairports-data/airports.csv",
     "actualSource": "taginfo",
     "tags": [
@@ -161,7 +161,7 @@
     "id": "a337e1deb30f4c626181a554a8315b4fa9f5928207b4e6d60b18b71b57509c9d",
     "name": "Pubs in the UK",
     "expected": 47200,
-    "actual": 38836,
+    "actual": 38838,
     "expectedSource": "https://commonslibrary.parliament.uk/research-briefings/cbp-8591/",
     "actualSource": "taginfo",
     "tags": [
@@ -175,7 +175,7 @@
     "id": "8ab3af57b360141906f5a9350327ce03cef6aeecd90f25a37f06e79be77e6527",
     "name": "Royal Mail post boxes",
     "expected": 115000,
-    "actual": 18822,
+    "actual": 18824,
     "expectedSource": "https://personal.help.royalmail.com/app/answers/detail/a_id/135/~/royal-mails-postbox-network---your-questions-answered",
     "actualSource": "taginfo",
     "tags": [
@@ -201,7 +201,7 @@
     "id": "f7d1f5de77e30dc158daba5aaff8df3e3b26786d230abbf2060db9cabddbc289",
     "name": "Car chargers",
     "expected": 110129,
-    "actual": 6297,
+    "actual": 6301,
     "expectedSource": "https://www.rvo.nl/onderwerpen/duurzaam-ondernemen/energie-en-milieu-innovaties/elektrisch-rijden/stand-van-zaken/cijfers",
     "actualSource": "taginfo",
     "tags": [
@@ -214,7 +214,7 @@
     "id": "3b2f809bde0f76363b9dd906fc368946685e56a3e8a9fda979b040c9d0ebb251",
     "name": "Hospitals",
     "expected": 733,
-    "actual": 585,
+    "actual": 587,
     "expectedSource": "https://www.zorgkaartnederland.nl/ziekenhuis",
     "actualSource": "taginfo",
     "tags": [
