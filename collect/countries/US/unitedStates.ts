@@ -34,7 +34,7 @@ export default async function unitedStates(): Promise<Comparison[]> {
                 'Q145168', // DG Market, DGX not in Wikidata
                 18190, // combining Dollar General, DG Market, DGX and pOpshelf
                 'https://investor.dollargeneral.com/websites/dollargeneral/English/0/investor-relations.html',
-                'This General stor, also know as DG Market, DGX and pOpshelf, sells everything for $1. How much money would we have if we got a dollar for every Dollar General store on the map?',
+                'This General store, also know as DG Market, DGX and pOpshelf, sells everything for $1. How much money would we have if we got a dollar for every Dollar General store on the map?',
                 ['🛒'],
                 taginfoServer
             ),

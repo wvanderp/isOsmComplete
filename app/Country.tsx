@@ -113,7 +113,7 @@ function Graph({ comparison }: { comparison: Comparison }) {
                 setGraph(draw_chronology_chart(data, comparison.expected));
             }
         );
-    }, [comparison]);
+    }, [comparison, window.innerWidth]);
 
     return (
         <div>

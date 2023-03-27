@@ -13,7 +13,7 @@ export default function draw_chronology_chart(
     uncleanData: GraphData[],
     goal = 0
 ): React.ReactNode {
-    const w = 900;
+    const w = window.innerWidth * 0.8;
     const h = 400;
     const margin = { top: 10, right: 15, bottom: 60, left: 80 };
 

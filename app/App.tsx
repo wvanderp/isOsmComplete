@@ -5,6 +5,12 @@ import Country, { ProgressBar } from './Country';
 import data from '../data/compare.json';
 import tags from '../data/tags.json';
 
+// @ts-expect-error -- static files are not supported by typescript
+import logo from '../static/logo.svg';
+
+// eslint-disable-next-line unicorn/prevent-abbreviations
+import pkg from '../package.json';
+
 const prioritizedCountries = [
     'worldwide',
     'EU'
@@ -30,6 +36,7 @@ function FilterButton(
         text: string,
         state: string[],
         setState: (state: string[]) => void,
+        // eslint-disable-next-line react/require-default-props -- alt is optional and if its undefined it will be ignored
         alt?: string
     }
 ) {
@@ -123,10 +130,16 @@ export default function App() {
 
     return (
         <>
-            <h1>Is OSM Complete?</h1>
+            <div className="header">
+                <img src={logo} alt="OSM Complete Logo" className="logo" />
+                <h1>Is OSM Complete?</h1>
+            </div>
             <p>
                 This site tracks how complete OSM really is. <br />
-                It compares the number of features in OSM to the number of features in the official data sources.
+                It compares the number of features in OSM to the number of features in the official data sources. <br />
+                <br />
+
+                You can suggest more sources over on our <a href={pkg.repository.url}>GitHub</a>. <br />
             </p>
 
             <div>
