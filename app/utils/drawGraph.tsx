@@ -1,7 +1,10 @@
 // @ts-nocheck
 import React from 'react';
 import * as d3 from 'd3';
-import { GraphData } from './downloadGraphData';
+// eslint-disable-next-line no-console -- see https://github.com/parcel-bundler/parcel/issues/8792
+console.log(d3);
+
+// eslint-disable-next-line import/first -- for the d3 bug
 
 function tomorrow() {
     const d = new Date();
