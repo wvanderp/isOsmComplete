@@ -161,7 +161,7 @@
     "id": "a337e1deb30f4c626181a554a8315b4fa9f5928207b4e6d60b18b71b57509c9d",
     "name": "Pubs in the UK",
     "expected": 47200,
-    "actual": 38848,
+    "actual": 38847,
     "expectedSource": "https://commonslibrary.parliament.uk/research-briefings/cbp-8591/",
     "actualSource": "taginfo",
     "tags": [
@@ -201,7 +201,7 @@
     "id": "f7d1f5de77e30dc158daba5aaff8df3e3b26786d230abbf2060db9cabddbc289",
     "name": "Car chargers",
     "expected": 110129,
-    "actual": 6433,
+    "actual": 6449,
     "expectedSource": "https://www.rvo.nl/onderwerpen/duurzaam-ondernemen/energie-en-milieu-innovaties/elektrisch-rijden/stand-van-zaken/cijfers",
     "actualSource": "taginfo",
     "tags": [
@@ -240,7 +240,7 @@
     "id": "50dc6d308d80fe320bc89398b5944f37099ac594cb0ea1915db004118e27ec64",
     "name": "faa tags ✈️",
     "expected": 26648,
-    "actual": 9009,
+    "actual": 9008,
     "expectedSource": "https://www.faa.gov/air_traffic/flight_info/aeronav/aero_data/Loc_ID_Search/Encodes_Decodes/",
     "actualSource": "taginfo",
     "tags": [
@@ -266,7 +266,7 @@
     "id": "0cb75428a28a7a7134fc0ffa95a12a8218dbc509cc0b42fd3ac33fa5ef265218",
     "name": "Dollar General",
     "expected": 18190,
-    "actual": 5946,
+    "actual": 5971,
     "expectedSource": "https://investor.dollargeneral.com/websites/dollargeneral/English/0/investor-relations.html",
     "actualSource": "taginfo",
     "tags": [
@@ -279,7 +279,7 @@
     "id": "379ba2ca4c7d0337d1273d190099c2843209c939cf66c2461b879b2c61b5bde3",
     "name": "Dollar Tree",
     "expected": 15840,
-    "actual": 3540,
+    "actual": 3546,
     "expectedSource": "https://corporate.dollartree.com/_assets/_e019a55beaa640d513e0240de36a677a/dollartreeinfo/db/893/9106/annual_report/DT_2021_Form+10-K_FINAL_5.11.22.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -292,7 +292,7 @@
     "id": "e1351eb279786fb2199ff3187501f3524187f954a542b7053c9d5cccd897584d",
     "name": "CVS",
     "expected": 9900,
-    "actual": 7423,
+    "actual": 7424,
     "expectedSource": "https://s2.q4cdn.com/447711729/files/doc_financials/2021/ar/CVS2021_Annual-Report.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -306,7 +306,7 @@
     "id": "ca6ca53604d6f26bfddacf0b0a3fbec625fb69fbd8cfa4eba712920d224ddc8e",
     "name": "Walgreens",
     "expected": 4717,
-    "actual": 7828,
+    "actual": 7833,
     "expectedSource": "https://s1.q4cdn.com/343380161/files/doc_financials/2022/ar/WBA-2022-Annual-Report.pdf",
     "actualSource": "taginfo",
     "tags": [
