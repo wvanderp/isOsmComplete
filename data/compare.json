@@ -3,7 +3,7 @@
     "id": "f86b36460a37c5a45dea617f3fbd10c18027319318d2283be3f8318a7a793bca",
     "name": "Match Google on building",
     "expected": 1600000000,
-    "actual": 555948391,
+    "actual": 556118584,
     "expectedSource": "https://youtu.be/nP-nMZpLM1A?t=409",
     "actualSource": "taginfo",
     "tags": [],
@@ -38,7 +38,7 @@
     "id": "34d881bb4626ac285c1c64c08944d6d8883e5bfdef1d5bb2c0d2eeab9db0d20e",
     "name": "7-Eleven stores",
     "expected": 78029,
-    "actual": 32729,
+    "actual": 32738,
     "expectedSource": "https://en.wikipedia.org/wiki/7-Eleven",
     "actualSource": "taginfo",
     "tags": [
@@ -52,7 +52,7 @@
     "id": "ceafc782f32e77207571d2c2de651c13d6f8704acbe2221a9a7af3dd68313bf8",
     "name": "Subway stores",
     "expected": 36821,
-    "actual": 21198,
+    "actual": 21200,
     "expectedSource": "https://en.wikipedia.org/wiki/Subway_(restaurant)",
     "actualSource": "taginfo",
     "tags": [
@@ -80,7 +80,7 @@
     "id": "bc00755018404ae08e7791edeacb749806f755a7a684108cdc730b7dc96d35bd",
     "name": "McDonald's",
     "expected": 38000,
-    "actual": 30420,
+    "actual": 30422,
     "expectedSource": "https://corporate.mcdonalds.com/corpmcd/franchising-overview.html",
     "actualSource": "taginfo",
     "tags": [
@@ -94,7 +94,7 @@
     "id": "ff163beb19543f2cb53c300637cac009272968c01b3511a40effa32489074e82",
     "name": "KFC",
     "expected": 27000,
-    "actual": 12907,
+    "actual": 12909,
     "expectedSource": "https://www.yum.com/wps/portal/yumbrands/Yumbrands/company/our-brands/kfc",
     "actualSource": "taginfo",
     "tags": [
@@ -135,7 +135,7 @@
     "id": "45bc39b4b3b48b01c0818ca97beabb4aad95ee48232cd8c79603a6c02a84dafc",
     "name": "Airports with ICAO codes ✈️",
     "expected": 20260,
-    "actual": 16253,
+    "actual": 16255,
     "expectedSource": "https://davidmegginson.github.io/ourairports-data/airports.csv",
     "actualSource": "taginfo",
     "tags": [
