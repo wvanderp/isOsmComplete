@@ -16,7 +16,7 @@ export default async function worldwide(): Promise<Comparison[]> {
                 106891 + 3238,
                 'https://www.rvo.nl/onderwerpen/duurzaam-ondernemen/energie-en-milieu-innovaties/elektrisch-rijden/stand-van-zaken/cijfers',
                 'Electric car charging station will be more important than ever. The Netherlands has 110129 car chargers. Are they all in osm?',
-                ['🔋'],
+                ['🔋', '🚗'],
                 taginfoServer
             ),
             await taginfoComparisonMultipleTags(
@@ -38,6 +38,15 @@ export default async function worldwide(): Promise<Comparison[]> {
                 'Wind energy is the new hotness. But are they all present?',
                 ['⚡'],
                 taginfoServer
+            ),
+            await taginfoComparisons(
+                'Traffic enforcement camera',
+                'highway',
+                'speed_camera',
+                615,
+                'https://www.rtlnieuws.nl/nieuws/nederland/artikel/5214097/flitspaal-cjib-boetes-overtredingen-snelheid-bon-auto-politie',
+                'Getting a ticket is really annoying! Maybe osm can help you obey the law extremely locally.',
+                ['🚗']
             )
         ]
     );
