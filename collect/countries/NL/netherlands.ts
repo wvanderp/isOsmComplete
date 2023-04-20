@@ -46,7 +46,8 @@ export default async function worldwide(): Promise<Comparison[]> {
                 615,
                 'https://www.rtlnieuws.nl/nieuws/nederland/artikel/5214097/flitspaal-cjib-boetes-overtredingen-snelheid-bon-auto-politie',
                 'Getting a ticket is really annoying! Maybe osm can help you obey the law extremely locally.',
-                ['🚗']
+                ['🚗'],
+                taginfoServer
             )
         ]
     );
