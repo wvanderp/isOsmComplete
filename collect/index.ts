@@ -7,6 +7,7 @@ import greatBritain from './countries/GB/greatBritain';
 import Europe from './countries/europe/europe';
 import london from './countries/GB/London';
 import unitedStates from './countries/US/unitedStates';
+import canada from './countries/CA/canada';
 
 import { Comparison } from './types';
 
