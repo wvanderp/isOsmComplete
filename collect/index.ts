@@ -20,7 +20,8 @@ const tagsFile = path.join(__dirname, 'tags.json');
         ...(await greatBritain()),
         ...(await london()),
         ...(await netherlands()),
-        ...(await unitedStates())
+        ...(await unitedStates()),
+        ...(await canada())
     ];
 
     saveGraphData(data);
