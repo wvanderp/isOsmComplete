@@ -34,6 +34,7 @@ export default function Country(props: {
 
     return (
         <>
+            <hr />
             <h1>
                 {countryCodeToEmoji(props.code)}
                 {' '}
@@ -61,7 +62,7 @@ function Comparison(props: {
                     value={props.comparison.actual}
                     max={props.comparison.expected}
                 />
-                <CardText>
+                <CardText className="cardText">
                     Expected: {props.comparison.expected} <br />
                     Actual: {props.comparison.actual}<br />
                     Percentage: {Math.floor((props.comparison.actual / props.comparison.expected) * 100)}% <br />

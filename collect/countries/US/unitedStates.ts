@@ -10,11 +10,11 @@ export default async function unitedStates(): Promise<Comparison[]> {
         'US',
         [
             await taginfoComparisonKeyOnly(
-                'faa tags ✈️',
+                'FAA tags ✈️',
                 'faa',
                 26648,
                 'https://www.faa.gov/air_traffic/flight_info/aeronav/aero_data/Loc_ID_Search/Encodes_Decodes/',
-                'Do all the airports in the US have a faa tag?',
+                'Do all the airports in the US have a FAA tag?',
                 ['✈️'],
                 taginfoServer
             ),
@@ -44,7 +44,7 @@ export default async function unitedStates(): Promise<Comparison[]> {
                 'Q5289230',
                 7824 + 8016, // dollar tree and family dollar
                 'https://corporate.dollartree.com/_assets/_e019a55beaa640d513e0240de36a677a/dollartreeinfo/db/893/9106/annual_report/DT_2021_Form+10-K_FINAL_5.11.22.pdf',
-                'Dollar Tree is the largest company in the world by revenue. Are all the Dollar Tree stores in the US tagged?',
+                'Dollar Tree pop out of the ground like... trees. But are these Dollar trees documented?',
                 ['🛒'],
                 taginfoServer
             ),
@@ -64,7 +64,7 @@ export default async function unitedStates(): Promise<Comparison[]> {
                 'Q1591889',
                 4717, // only in the US
                 'https://s1.q4cdn.com/343380161/files/doc_financials/2022/ar/WBA-2022-Annual-Report.pdf',
-                'Having a pharmacy in every corner of the US is a great thing. Does every corner of OSM have a Walgreens pharmacy?',
+                'Walgreens is the second largest pharmacy store chain in the US. Are all the Walgreens stores in the US tagged?',
                 ['🛒', '🏥'],
                 taginfoServer
             )

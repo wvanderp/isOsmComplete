@@ -23,7 +23,7 @@ export default async function worldwide(): Promise<Comparison[]> {
                 'Hospitals',
                 'amenity',
                 ['hospital', 'clinic'],
-                308 + 425, // hospitals + clinics
+                308 + 437, // hospitals + clinics
                 'https://www.zorgkaartnederland.nl/ziekenhuis', // and https://www.zorgkaartnederland.nl/overige-kliniek
                 'The Netherlands has 580 hospitals and clinics. Are they all in osm?',
                 ['🏥'],
