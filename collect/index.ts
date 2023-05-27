@@ -44,7 +44,7 @@ function saveGraphData(comparisons: Comparison[]) {
     for (const comparison of comparisons) {
         const file = path.join(dataDirectory, `${comparison.id}.csv`);
 
-        const lastLine = fs.existsSync(file) ? fs.readFileSync(file).toString().split('\n').slice(-1)[0] : ',';
+        const lastLine = fs.existsSync(file) ? fs.readFileSync(file).toString().split('\n').at(-1) : ',';
 
         const dataObject = new Date();
         const date = `${dataObject.getFullYear()}-${dataObject.getMonth() + 1}-${dataObject.getDate()}`;
@@ -68,6 +68,12 @@ function lintTags(data: Comparison[]) {
         if (!tagExplanations[tag]) {
             // eslint-disable-next-line no-console
             console.warn(`Tag ${tag} is not explained`);
+        }
+
+        // the first character of the tag should be uppercase
+        if (tag[0] !== tag[0].toUpperCase()) {
+            // eslint-disable-next-line no-console
+            console.warn(`Tag ${tag} does not start with an uppercase character`);
         }
     }
 }

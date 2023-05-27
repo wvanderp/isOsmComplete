@@ -3,7 +3,7 @@
     "id": "f86b36460a37c5a45dea617f3fbd10c18027319318d2283be3f8318a7a793bca",
     "name": "Match Google on building",
     "expected": 1600000000,
-    "actual": 562021346,
+    "actual": 562165776,
     "expectedSource": "https://youtu.be/nP-nMZpLM1A?t=409",
     "actualSource": "taginfo",
     "tags": [],
@@ -22,10 +22,10 @@
     "country": "worldwide"
   },
   {
-    "id": "c137124d24f3874495f349c25a2d019d3edb545c0eebc649852940747257d53a",
+    "id": "a18d3e40ae9fc681bce81114b28db33c050281ab197e033ee141a6990a55a738",
     "name": "IKEA stores",
     "expected": 460,
-    "actual": 675,
+    "actual": 525,
     "expectedSource": "https://about.ikea.com/en/about-us",
     "actualSource": "taginfo",
     "tags": [
@@ -38,7 +38,7 @@
     "id": "34d881bb4626ac285c1c64c08944d6d8883e5bfdef1d5bb2c0d2eeab9db0d20e",
     "name": "7-Eleven stores",
     "expected": 78029,
-    "actual": 33149,
+    "actual": 33152,
     "expectedSource": "https://en.wikipedia.org/wiki/7-Eleven",
     "actualSource": "taginfo",
     "tags": [
@@ -52,7 +52,7 @@
     "id": "ceafc782f32e77207571d2c2de651c13d6f8704acbe2221a9a7af3dd68313bf8",
     "name": "Subway stores",
     "expected": 36821,
-    "actual": 21341,
+    "actual": 21336,
     "expectedSource": "https://en.wikipedia.org/wiki/Subway_(restaurant)",
     "actualSource": "taginfo",
     "tags": [
@@ -66,7 +66,7 @@
     "id": "0aa0000d49cbd3eaabb7d62b87d0695922a6cdc09c0f80d1684aadaeb49f4e95",
     "name": "Starbucks",
     "expected": 35711,
-    "actual": 18136,
+    "actual": 18137,
     "expectedSource": "https://s22.q4cdn.com/869488222/files/doc_financials/2022/q4/Q4-FY22-Earnings-Release-Final-11.3.2022.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -80,7 +80,7 @@
     "id": "bc00755018404ae08e7791edeacb749806f755a7a684108cdc730b7dc96d35bd",
     "name": "McDonald's",
     "expected": 38000,
-    "actual": 30598,
+    "actual": 30600,
     "expectedSource": "https://corporate.mcdonalds.com/corpmcd/franchising-overview.html",
     "actualSource": "taginfo",
     "tags": [
@@ -94,7 +94,7 @@
     "id": "ff163beb19543f2cb53c300637cac009272968c01b3511a40effa32489074e82",
     "name": "KFC",
     "expected": 27000,
-    "actual": 13037,
+    "actual": 13039,
     "expectedSource": "https://www.yum.com/wps/portal/yumbrands/Yumbrands/company/our-brands/kfc",
     "actualSource": "taginfo",
     "tags": [
@@ -108,7 +108,7 @@
     "id": "ebf58077453c74c27a1a8384024439568732ce333c09c0899c6156177657d513",
     "name": "Burger King",
     "expected": 18700,
-    "actual": 12752,
+    "actual": 12753,
     "expectedSource": "https://www.rbi.com/English/brands/default.aspx",
     "actualSource": "taginfo",
     "tags": [
@@ -119,10 +119,24 @@
     "country": "worldwide"
   },
   {
+    "id": "31c595718596611477fce49ad647ab29e4ca80d55b56e3f2f15be9f9943d8b4b",
+    "name": "Tesla superchargers",
+    "expected": 45169,
+    "actual": 1969,
+    "expectedSource": "https://tesla-cdn.thron.com/static/ZXSBN8_TSLA_Q1_2023_Update_ABMJPG.pdf",
+    "actualSource": "taginfo",
+    "tags": [
+      "🔋",
+      "🚗"
+    ],
+    "description": "When you want to charge your tesla but the middle screen is dead and you don't have the app. You can find a supercharger in osm. Or can you?",
+    "country": "worldwide"
+  },
+  {
     "id": "0a275c5789b11d5b72921303db8373e97342f2d81af43e22d3c768d58df03206",
     "name": "Airports with IATA codes ✈️",
     "expected": 8871,
-    "actual": 9981,
+    "actual": 9982,
     "expectedSource": "https://davidmegginson.github.io/ourairports-data/airports.csv",
     "actualSource": "taginfo",
     "tags": [
@@ -162,7 +176,7 @@
     "id": "a337e1deb30f4c626181a554a8315b4fa9f5928207b4e6d60b18b71b57509c9d",
     "name": "Pubs in the UK",
     "expected": 47200,
-    "actual": 38729,
+    "actual": 38728,
     "expectedSource": "https://commonslibrary.parliament.uk/research-briefings/cbp-8591/",
     "actualSource": "taginfo",
     "tags": [

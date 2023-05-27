@@ -1,6 +1,7 @@
 import { Comparison } from '../../types';
 import appendCountry from '../../utils/appendCountry';
 import { brandWikidata } from '../../utils/osmTags';
+import { overpassComparisonMultiple } from '../../utils/overpassComparisons';
 import taginfoComparisons, { taginfoComparisonKeyOnly, taginfoComparisonMultipleTags } from '../../utils/taginfoComparisons';
 import airports from './airports';
 
@@ -26,10 +27,9 @@ export default async function worldwide(): Promise<Comparison[]> {
                 []
             ),
 
-            await taginfoComparisons(
+            await overpassComparisonMultiple(
                 'IKEA stores',
-                brandWikidata,
-                'Q54078',
+                [[brandWikidata, 'Q54078'], ['shop', 'furniture']],
                 460,
                 'https://about.ikea.com/en/about-us',
                 'IKEA is a furniture store. They have 466 stores in 63 countries. Are they all in osm?',
@@ -88,6 +88,15 @@ export default async function worldwide(): Promise<Comparison[]> {
                 'https://www.rbi.com/English/brands/default.aspx',
                 'Burger King is a fast food chain. They have 18,000 stores in 100 countries. Are they all in osm?',
                 ['🍔', '🛒']
+            ),
+            await taginfoComparisons(
+                'Tesla superchargers',
+                'brand:wikipedia',
+                'en:Tesla Supercharger',
+                45169,
+                'https://tesla-cdn.thron.com/static/ZXSBN8_TSLA_Q1_2023_Update_ABMJPG.pdf', // page 6
+                'When you want to charge your tesla but the middle screen is dead and you don\'t have the app. You can find a supercharger in osm. Or can you?',
+                ['🔋', '🚗']
             ),
 
             ...(await airports())

@@ -5,3 +5,4 @@ dist
 build
 .parcel-cache
 scratch.ts
+scrap.ts

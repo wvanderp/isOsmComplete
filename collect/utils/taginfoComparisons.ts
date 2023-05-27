@@ -3,7 +3,7 @@ import { Comparison } from '../types';
 import getHash from './getHash';
 
 function cleanServer(server: string): string {
-    if (server[server.length - 1] === '/') {
+    if (server.at(-1) === '/') {
         // eslint-disable-next-line no-param-reassign
         server = server.slice(0, -1);
     }
