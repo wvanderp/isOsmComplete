@@ -11,7 +11,6 @@ export default async function overpassComparison(
     description: string,
     tags: string[]
 ): Promise<Comparison> {
-    // eslint-disable-next-line no-console
     console.log(`starting on ${name}`);
 
     const count = await overpassSimpleQuery([[key, value]]);
@@ -36,7 +35,6 @@ export async function overpassComparisonMultiple(
     description: string,
     tags: string[]
 ): Promise<Comparison> {
-    // eslint-disable-next-line no-console
     console.log(`starting on ${name}`);
 
     const count = await overpassSimpleQuery(query);

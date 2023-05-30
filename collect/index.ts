@@ -66,13 +66,11 @@ function lintTags(data: Comparison[]) {
 
     for (const tag of tags) {
         if (!tagExplanations[tag]) {
-            // eslint-disable-next-line no-console
             console.warn(`Tag ${tag} is not explained`);
         }
 
         // the first character of the tag should be uppercase
         if (tag[0] !== tag[0].toUpperCase()) {
-            // eslint-disable-next-line no-console
             console.warn(`Tag ${tag} does not start with an uppercase character`);
         }
     }

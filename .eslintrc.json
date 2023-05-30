@@ -70,6 +70,15 @@
         // Any is used to mock some vars and it gives warnings about it that are unwanted
         "@typescript-eslint/no-explicit-any": "off"
       }
+    },
+    {
+      "files": [
+        "collect/**/*"
+      ],
+      "rules": {
+        // this is not production code so we can use anything we want
+        "no-console": "off"
+      }
     }
   ],
   "rules": {

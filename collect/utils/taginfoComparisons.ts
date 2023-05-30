@@ -23,7 +23,6 @@ export default async function taginfoComparisons(
     tags: string[],
     server = osmTagInfoServer
 ): Promise<Comparison> {
-    // eslint-disable-next-line no-console
     console.log(`starting on ${name}`);
 
     const count = await taginfoKeyValue(key, value, cleanServer(server));

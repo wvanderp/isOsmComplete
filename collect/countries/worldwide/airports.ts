@@ -9,7 +9,6 @@ import { taginfoComparisonKeyOnly } from '../../utils/taginfoComparisons';
 const airportCsvUrl = 'https://davidmegginson.github.io/ourairports-data/airports.csv';
 
 export default async function airports(): Promise<Comparison[]> {
-    // eslint-disable-next-line no-console
     console.log('starting on airports');
     const airportCsv = await axios.get<string>(airportCsvUrl);
 
