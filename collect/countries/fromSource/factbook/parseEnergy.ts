@@ -1,4 +1,3 @@
-import fs from 'fs';
 import { FactbookCountry } from './FactBookCountry';
 
 type returnData = {

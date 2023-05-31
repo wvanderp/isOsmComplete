@@ -44,7 +44,7 @@ function saveGraphData(comparisons: Comparison[]) {
     for (const comparison of comparisons) {
         const file = path.join(dataDirectory, `${comparison.id}.csv`);
 
-        const lastLine = fs.existsSync(file) ? fs.readFileSync(file).toString().split('\n').at(-1) : ',';
+        const lastLine = fs.existsSync(file) ? fs.readFileSync(file).toString().split('\n').at(-1) ?? ',' : ',';
 
         const dataObject = new Date();
         const date = `${dataObject.getFullYear()}-${dataObject.getMonth() + 1}-${dataObject.getDate()}`;
