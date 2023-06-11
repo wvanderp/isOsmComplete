@@ -89,10 +89,9 @@ export default async function worldwide(): Promise<Comparison[]> {
                 'Burger King is a fast food chain. They have 18,000 stores in 100 countries. Are they all in osm?',
                 ['🍔', '🛒']
             ),
-            await taginfoComparisons(
+            await overpassComparisonMultiple(
                 'Tesla superchargers',
-                'brand:wikipedia',
-                'en:Tesla Supercharger',
+                [['amenity', 'charging_station'], ['brand:wikidata', 'Q478214']],
                 45169,
                 'https://tesla-cdn.thron.com/static/ZXSBN8_TSLA_Q1_2023_Update_ABMJPG.pdf', // page 6
                 'When you want to charge your tesla but the middle screen is dead and you don\'t have the app. You can find a supercharger in osm. Or can you?',
