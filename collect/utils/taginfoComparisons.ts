@@ -2,16 +2,7 @@ import taginfoKeyValue, { taginfoKey } from '../api/taginfo';
 import { Comparison } from '../types';
 import getHash from './getHash';
 
-function cleanServer(server: string): string {
-    if (server.at(-1) === '/') {
-        // eslint-disable-next-line no-param-reassign
-        server = server.slice(0, -1);
-    }
-
-    return server;
-}
-
-const osmTagInfoServer = 'https://taginfo.openstreetmap.org';
+export const osmTagInfoServer = 'https://taginfo.openstreetmap.org';
 
 export default async function taginfoComparisons(
     name: string,
@@ -25,7 +16,7 @@ export default async function taginfoComparisons(
 ): Promise<Comparison> {
     console.log(`starting on ${name}`);
 
-    const count = await taginfoKeyValue(key, value, cleanServer(server));
+    const count = await taginfoKeyValue(key, value, server);
 
     return {
         id: getHash(`${key}${value}${server}`),
@@ -48,7 +39,7 @@ export async function taginfoComparisonKeyOnly(
     tags: string[],
     server = osmTagInfoServer
 ): Promise<Comparison> {
-    const count = await taginfoKey(key, cleanServer(server));
+    const count = await taginfoKey(key, server);
 
     return {
         id: getHash(`${key}${server}`),
@@ -73,7 +64,7 @@ export async function taginfoComparisonMultipleTags(
     server = osmTagInfoServer
 ): Promise<Comparison> {
     const taginfos = await Promise.all(
-        osmTags.map((tag) => taginfoKeyValue(key, tag, cleanServer(server)))
+        osmTags.map((tag) => taginfoKeyValue(key, tag, server))
     );
 
     const count = taginfos.reduce((a, b) => a + b, 0);

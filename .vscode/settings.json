@@ -9,11 +9,13 @@
         "nocheck",
         "rapideditor",
         "sonarjs",
+        "sparql",
         "stolperstein",
         "Stolpersteine",
         "taginfo",
         "taginfos",
         "unzipper",
+        "wikibase",
         "wikidata"
     ],
     "yaml.schemas": {

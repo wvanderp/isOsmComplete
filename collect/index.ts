@@ -11,9 +11,9 @@ import canada from './countries/CA/canada';
 
 // import factbook from './countries/fromSource/factbook/factbook';
 import airports from './countries/fromSource/ourAirportData/ourAirport';
+import wikidata from './countries/fromSource/wikidata/wikidata';
 
 import { Comparison } from './types';
-
 
 const directory = path.join(__dirname, '../data');
 const tagsFile = path.join(__dirname, 'tags.json');
@@ -30,7 +30,8 @@ const tagsFile = path.join(__dirname, 'tags.json');
 
         // fromSource
         // ...(await factbook())
-        ...(await airports())
+        ...(await airports()),
+        ...(await wikidata())
     ];
 
     saveGraphData(data);

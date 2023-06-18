@@ -358,5 +358,17 @@
     ],
     "description": "The number of airports with ICAO codes in OSM",
     "country": "worldwide"
+  },
+  {
+    "id": "df5d2597b3dcba2f5cc91947bb3904598bc27fcb732edcd76093ca0f1ea4e98f",
+    "name": "Museums",
+    "expected": 85251,
+    "actual": 95297,
+    "expectedSource": "Wikidata query service",
+    "actualSource": "taginfo",
+    "description": "The number of museums in the world",
+    "tags": [
+      "🏛️"
+    ]
   }
 ]
