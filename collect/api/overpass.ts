@@ -6,11 +6,10 @@ export default async function overpassSimpleQuery(queries: [string, string][]): 
     const queryPart = queries.map(([key, value]) => `["${key}"="${value}"]`).join('');
     const query = `[out:json][timeout:25];(nwr${queryPart};);out count;`;
 
-    const queryUrl = 'https://overpass-api.de/api/interpreter';
-    return callApi(queryUrl, query);
+    return callApi(query);
 }
 
-async function callApi(url: string, query: string): Promise<number> {
+async function callApi(query: string): Promise<number> {
     randomDelay(1000, 10000);
 
     const data = await overpassJson(query) as OverpassCount;

@@ -9,7 +9,11 @@ import london from './countries/GB/London';
 import unitedStates from './countries/US/unitedStates';
 import canada from './countries/CA/canada';
 
+// import factbook from './countries/fromSource/factbook/factbook';
+import airports from './countries/fromSource/ourAirportData/ourAirport';
+
 import { Comparison } from './types';
+
 
 const directory = path.join(__dirname, '../data');
 const tagsFile = path.join(__dirname, 'tags.json');
@@ -22,7 +26,11 @@ const tagsFile = path.join(__dirname, 'tags.json');
         ...(await london()),
         ...(await netherlands()),
         ...(await unitedStates()),
-        ...(await canada())
+        ...(await canada()),
+
+        // fromSource
+        // ...(await factbook())
+        ...(await airports())
     ];
 
     saveGraphData(data);

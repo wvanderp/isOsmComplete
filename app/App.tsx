@@ -136,7 +136,7 @@ export default function App() {
             </div>
             <p>
                 This site tracks how complete OSM really is. <br />
-                It compares the number of features in OSM to the number of features in the official data sources. <br />
+                It compares the number of features in OSM to the number of features in the official data sources.<br />
                 <br />
 
                 You can suggest more sources over on our <a href={pkg.repository.url}>GitHub</a>. <br />
@@ -144,7 +144,7 @@ export default function App() {
 
             <div>
                 <b>Global average</b><br />
-                <span>OSM has {totalAverage.toFixed(2)}% of the features of the official data sources</span>
+                <span>OSM has {totalAverage.toFixed(2)}% of the features of the official data sources</span><br />
                 <ProgressBar value={totalAverage} max={100} />
             </div>
             <br />
@@ -152,7 +152,7 @@ export default function App() {
             <div>
                 <b>Filters</b><br />
                 <span>Country:</span>{countryButtons}<br />
-                <span>tag:</span>{tagButtons}<br />
+                <span>Tag:</span>{tagButtons}<br />
             </div>
             {countries}
         </>

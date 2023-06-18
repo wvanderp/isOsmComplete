@@ -3,7 +3,6 @@ import appendCountry from '../../utils/appendCountry';
 import { brandWikidata } from '../../utils/osmTags';
 import { overpassComparisonMultiple } from '../../utils/overpassComparisons';
 import taginfoComparisons, { taginfoComparisonKeyOnly, taginfoComparisonMultipleTags } from '../../utils/taginfoComparisons';
-import airports from './airports';
 
 export default async function worldwide(): Promise<Comparison[]> {
     return appendCountry(
@@ -96,9 +95,7 @@ export default async function worldwide(): Promise<Comparison[]> {
                 'https://tesla-cdn.thron.com/static/ZXSBN8_TSLA_Q1_2023_Update_ABMJPG.pdf', // page 6
                 'When you want to charge your tesla but the middle screen is dead and you don\'t have the app. You can find a supercharger in osm. Or can you?',
                 ['🔋', '🚗']
-            ),
-
-            ...(await airports())
+            )
         ]
     );
 }

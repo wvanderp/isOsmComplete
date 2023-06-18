@@ -2,9 +2,9 @@
 import axios from 'axios';
 import { parse } from 'csv-parse/sync';
 
-import { Comparison } from '../../types';
-import appendCountry from '../../utils/appendCountry';
-import { taginfoComparisonKeyOnly } from '../../utils/taginfoComparisons';
+import { Comparison } from '../../../types';
+import appendCountry from '../../../utils/appendCountry';
+import { taginfoComparisonKeyOnly } from '../../../utils/taginfoComparisons';
 
 const airportCsvUrl = 'https://davidmegginson.github.io/ourairports-data/airports.csv';
 

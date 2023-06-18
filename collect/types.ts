@@ -1,16 +1,16 @@
 import { Alpha2Code } from 'i18n-iso-countries';
 
 export interface Comparison {
-    id: string;
-    name: string;
-    expected: number;
-    actual: number;
-    expectedSource: string;
-    actualSource: string;
-    description: string;
-    country?: string;
-    extra?: unknown;
-    tags?: string[];
+    id: string; // hash of the comparison
+    name: string; // name of the comparison
+    expected: number; // expected value
+    actual: number; // actual value (from osm)
+    expectedSource: string; // where the expected value came from
+    actualSource: string; // where the actual value came from (osm, taginfo, etc)
+    description: string; // description of the comparison
+    country?: string; // country code
+    extra?: unknown; // extra data see below
+    tags?: string[]; // tags to add to the comparison (in emoji)
 }
 
 export type TaginfoComparison = Comparison & {
