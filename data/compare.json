@@ -362,7 +362,7 @@
   {
     "id": "df5d2597b3dcba2f5cc91947bb3904598bc27fcb732edcd76093ca0f1ea4e98f",
     "name": "Museums",
-    "expected": 86054,
+    "expected": 86055,
     "actual": 97100,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",
