@@ -1,4 +1,4 @@
-import {resolve} from 'path';
+import path from 'path';
 import {readdir} from 'fs/promises';
 
 /**
@@ -15,7 +15,7 @@ export default async function* directoryWalk(directory: string): AsyncGenerator<
     // Iterate through each file/folder in the directory.
     for (const dirent of dirents) {
         // Get the full path to the file/folder.
-        const result = resolve(directory, dirent.name);
+        const result = path.resolve(directory, dirent.name);
 
         // If the file/folder is a directory, iterate through its files/folders.
         if (dirent.isDirectory()) {

@@ -3,7 +3,7 @@
     "id": "f86b36460a37c5a45dea617f3fbd10c18027319318d2283be3f8318a7a793bca",
     "name": "Match Google on building",
     "expected": 1600000000,
-    "actual": 573800799,
+    "actual": 573999344,
     "expectedSource": "https://youtu.be/nP-nMZpLM1A?t=409",
     "actualSource": "taginfo",
     "tags": [],
@@ -150,7 +150,7 @@
     "id": "a337e1deb30f4c626181a554a8315b4fa9f5928207b4e6d60b18b71b57509c9d",
     "name": "Pubs in the UK",
     "expected": 47200,
-    "actual": 38727,
+    "actual": 38724,
     "expectedSource": "https://commonslibrary.parliament.uk/research-briefings/cbp-8591/",
     "actualSource": "taginfo",
     "tags": [
@@ -177,7 +177,7 @@
     "id": "8308f65b11b2f3da270e8cbac0702add3b032ce3350b9a4b3f0c504de7d5b0b2",
     "name": "Surveillance cameras in London",
     "expected": 691000,
-    "actual": 1370,
+    "actual": 1372,
     "expectedSource": "https://www.cctv.co.uk/how-many-cctv-cameras-are-there-in-london/",
     "actualSource": "taginfo",
     "tags": [
@@ -190,7 +190,7 @@
     "id": "f7d1f5de77e30dc158daba5aaff8df3e3b26786d230abbf2060db9cabddbc289",
     "name": "Car chargers",
     "expected": 110129,
-    "actual": 7707,
+    "actual": 7725,
     "expectedSource": "https://www.rvo.nl/onderwerpen/duurzaam-ondernemen/energie-en-milieu-innovaties/elektrisch-rijden/stand-van-zaken/cijfers",
     "actualSource": "taginfo",
     "tags": [
@@ -204,7 +204,7 @@
     "id": "3b2f809bde0f76363b9dd906fc368946685e56a3e8a9fda979b040c9d0ebb251",
     "name": "Hospitals",
     "expected": 745,
-    "actual": 608,
+    "actual": 609,
     "expectedSource": "https://www.zorgkaartnederland.nl/ziekenhuis",
     "actualSource": "taginfo",
     "tags": [
@@ -350,7 +350,7 @@
     "id": "45bc39b4b3b48b01c0818ca97beabb4aad95ee48232cd8c79603a6c02a84dafc",
     "name": "Airports with ICAO codes ✈️",
     "expected": 20285,
-    "actual": 16575,
+    "actual": 16573,
     "expectedSource": "https://davidmegginson.github.io/ourairports-data/airports.csv",
     "actualSource": "taginfo",
     "tags": [
@@ -362,13 +362,14 @@
   {
     "id": "df5d2597b3dcba2f5cc91947bb3904598bc27fcb732edcd76093ca0f1ea4e98f",
     "name": "Museums",
-    "expected": 86051,
-    "actual": 97088,
+    "expected": 86054,
+    "actual": 97100,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",
     "description": "The number of museums in the world",
     "tags": [
       "🏛️"
-    ]
+    ],
+    "country": "worldwide"
   }
 ]

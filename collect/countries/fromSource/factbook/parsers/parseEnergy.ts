@@ -26,7 +26,7 @@ export function genericEnergyParser(string_: string): number {
     if (parts.length === 1) {
         // special case for 100W or 1000.0MW
         // split into 100 and W or 1000.0 and MW
-        const number = parts[0].match(/[0-9\.]+/)?.[0];
+        const number = parts[0].match(/[\d.]+/)?.[0];
         const unit = parts[0].match(/[A-Za-z]+/)?.[0];
 
         parts[0] = number ?? '';
