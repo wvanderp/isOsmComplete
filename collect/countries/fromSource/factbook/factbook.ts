@@ -88,7 +88,8 @@ export default async function factbook(): Promise<Comparison[]> {
                 actualSource: 'OpenStreetMap via overpass',
                 description: 'Every country produces Electricity, so all the electricity generators in OpenStreetMap should add up to the total production in the CIA World Factbook.',
                 country: countryCode,
-                tags: ['⚡']
+                tags: ['⚡'],
+                lastUpdated: '2023-06-18'
             };
 
             return comparison;

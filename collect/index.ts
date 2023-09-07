@@ -2,12 +2,14 @@ import fs from 'fs';
 import path from 'path';
 
 import worldwide from './countries/worldwide/worldwide';
-import netherlands from './countries/NL/netherlands';
-import greatBritain from './countries/GB/greatBritain';
-import Europe from './countries/europe/europe';
-import london from './countries/GB/London';
-import unitedStates from './countries/US/unitedStates';
+import europe from './countries/europe/europe';
+
 import canada from './countries/CA/canada';
+import greatBritain from './countries/GB/greatBritain';
+import london from './countries/GB/London';
+import netherlands from './countries/NL/netherlands';
+import unitedStates from './countries/US/unitedStates';
+import vietnam from './countries/VN/Vietnam';
 
 // import factbook from './countries/fromSource/factbook/factbook';
 import airports from './countries/fromSource/ourAirportData/ourAirport';
@@ -21,12 +23,14 @@ const tagsFile = path.join(__dirname, 'tags.json');
 (async () => {
     const data: Comparison[] = [
         ...(await worldwide()),
-        ...(await Europe()),
+        ...(await europe()),
+
+        ...(await canada()),
         ...(await greatBritain()),
         ...(await london()),
         ...(await netherlands()),
         ...(await unitedStates()),
-        ...(await canada()),
+        ...(await vietnam()),
 
         // fromSource
         // ...(await factbook())

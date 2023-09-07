@@ -5,6 +5,7 @@
         "Donalds",
         "Factbook",
         "fastned",
+        "geldmaat",
         "netherlands",
         "nocheck",
         "rapideditor",
@@ -20,5 +21,8 @@
     ],
     "yaml.schemas": {
         "https://json.schemastore.org/github-workflow.json": "vscode-vfs://github/github-actions[bot]/isOsmComplete/.github/workflows/build.yml"
+    },
+    "search.exclude": {
+        "data/**/*":true
     }
 }

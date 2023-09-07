@@ -9,7 +9,8 @@ export default async function overpassComparison(
     expected: number,
     expectedSource: string,
     description: string,
-    tags: string[]
+    tags: string[],
+    lastUpdated: string
 ): Promise<Comparison> {
     console.log(`starting on ${name}`);
 
@@ -23,7 +24,8 @@ export default async function overpassComparison(
         expectedSource,
         actualSource: 'taginfo',
         tags,
-        description
+        description,
+        lastUpdated
     };
 }
 
@@ -33,7 +35,8 @@ export async function overpassComparisonMultiple(
     expected: number,
     expectedSource: string,
     description: string,
-    tags: string[]
+    tags: string[],
+    lastUpdated: string
 ): Promise<Comparison> {
     console.log(`starting on ${name}`);
 
@@ -47,6 +50,7 @@ export async function overpassComparisonMultiple(
         expectedSource,
         actualSource: 'taginfo',
         tags,
-        description
+        description,
+        lastUpdated
     };
 }

@@ -12,6 +12,7 @@ export default async function taginfoComparisons(
     expectedSource: string,
     description: string,
     tags: string[],
+    lastUpdated: string,
     server = osmTagInfoServer
 ): Promise<Comparison> {
     console.log(`starting on ${name}`);
@@ -26,7 +27,8 @@ export default async function taginfoComparisons(
         expectedSource,
         actualSource: 'taginfo',
         tags,
-        description
+        description,
+        lastUpdated
     };
 }
 
@@ -37,6 +39,7 @@ export async function taginfoComparisonKeyOnly(
     expectedSource: string,
     description: string,
     tags: string[],
+    lastUpdated: string,
     server = osmTagInfoServer
 ): Promise<Comparison> {
     const count = await taginfoKey(key, server);
@@ -49,7 +52,8 @@ export async function taginfoComparisonKeyOnly(
         expectedSource,
         actualSource: 'taginfo',
         tags,
-        description
+        description,
+        lastUpdated
     };
 }
 
@@ -61,6 +65,7 @@ export async function taginfoComparisonMultipleTags(
     expectedSource: string,
     description: string,
     tags: string[],
+    lastUpdated: string,
     server = osmTagInfoServer
 ): Promise<Comparison> {
     const taginfos = await Promise.all(
@@ -77,6 +82,7 @@ export async function taginfoComparisonMultipleTags(
         expectedSource,
         actualSource: 'taginfo',
         tags,
-        description
+        description,
+        lastUpdated
     };
 }

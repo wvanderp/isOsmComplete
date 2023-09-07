@@ -19,7 +19,8 @@ export default async function museum(): Promise<Comparison[]> {
                 'tourism',
                 'museum',
                 'The number of museums in the world',
-                ['🏛️']
+                ['🏛️'],
+                '2023-06-18'
             )
         ]
     );

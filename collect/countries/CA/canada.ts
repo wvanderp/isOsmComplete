@@ -13,7 +13,8 @@ export default async function canada(): Promise<Comparison[]> {
                 // the document is called CANADA FLIGHT SUPPLEMENT and if you search for 'RWY DATA' you can subtract the other uses
                 'https://www.navcanada.ca/en/ecfs_07_en.pdf',
                 'Canada is a bit special and designed their own codes for airports. Luckily there are only only a few to add.',
-                ['✈️']
+                ['✈️'],
+                '2023-05-25'
             )
         ]
     );

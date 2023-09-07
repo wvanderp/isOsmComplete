@@ -8,6 +8,7 @@ export interface Comparison {
     expectedSource: string; // where the expected value came from
     actualSource: string; // where the actual value came from (osm, taginfo, etc)
     description: string; // description of the comparison
+    lastUpdated: string; // when the comparison was last updated
     country?: string; // country code
     extra?: unknown; // extra data see below
     tags?: string[]; // tags to add to the comparison (in emoji)

@@ -48,7 +48,8 @@ export default async function airports(): Promise<Comparison[]> {
                 iataCount,
                 airportCsvUrl,
                 'The number of airports with IATA codes in OSM',
-                ['✈️']
+                ['✈️'],
+                '2023-02-19'
             ),
             await taginfoComparisonKeyOnly(
                 'Airports with ICAO codes ✈️',
@@ -56,7 +57,8 @@ export default async function airports(): Promise<Comparison[]> {
                 icaoCount,
                 airportCsvUrl,
                 'The number of airports with ICAO codes in OSM',
-                ['✈️']
+                ['✈️'],
+                '2023-02-19'
             )
         ]
     );

@@ -33,6 +33,10 @@ const markerSchema = {
             },
             country: {
                 type: 'string'
+            },
+            lastUpdated: {
+                type: 'string',
+                pattern: '^[0-9]{4}-[0-9]{2}-[0-9]{2}$'
             }
         },
         required: [
@@ -44,7 +48,8 @@ const markerSchema = {
             'actualSource',
             'tags',
             'description',
-            'country'
+            'country',
+            'lastUpdated'
         ]
     }
 };

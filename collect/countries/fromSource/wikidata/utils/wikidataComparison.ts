@@ -11,6 +11,7 @@ export default async function wikidataComparison(
     value: string,
     description: string,
     tags: string[],
+    lastUpdated: string,
     server = osmTagInfoServer
 ): Promise<Comparison> {
     const { data } = await axios.post<{ results: { bindings: { count: { value: string } }[] } }>(
@@ -28,6 +29,7 @@ export default async function wikidataComparison(
         expectedSource: 'Wikidata query service',
         actualSource: 'taginfo',
         description,
-        tags
+        tags,
+        lastUpdated
     };
 }

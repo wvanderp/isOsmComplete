@@ -17,6 +17,7 @@ export default async function greatBritain(): Promise<Comparison[]> {
                 'https://commonslibrary.parliament.uk/research-briefings/cbp-8591/',
                 'Are all the locations for Britten\'s favorite pass time in osm?',
                 ['🍺', '🛒'],
+                '2023-02-19',
                 taginfoServer
             ),
             await taginfoComparisons(
@@ -27,6 +28,7 @@ export default async function greatBritain(): Promise<Comparison[]> {
                 'https://personal.help.royalmail.com/app/answers/detail/a_id/135/~/royal-mails-postbox-network---your-questions-answered',
                 'Are all the Royal Mail post boxes in osm?',
                 ['📮'],
+                '2023-02-19',
                 taginfoServer
             )
         ]
