@@ -61,8 +61,8 @@ export default async function worldwide(): Promise<Comparison[]> {
                 'Starbucks',
                 brandWikidata,
                 'Q37158',
-                35711,
-                'https://s22.q4cdn.com/869488222/files/doc_financials/2022/q4/Q4-FY22-Earnings-Release-Final-11.3.2022.pdf',
+                37222,
+                'https://investor.starbucks.com/press-releases/financial-releases/press-release-details/2023/Starbucks-Reports-Q3-Fiscal-2023-Results/default.aspx',
                 'Starbucks seems to be everywhere. But can you find them all in osm?',
                 ['🛒', '🍔'],
                 '2023-02-19'
@@ -71,11 +71,11 @@ export default async function worldwide(): Promise<Comparison[]> {
                 'McDonald\'s',
                 brandWikidata,
                 ['Q38076', 'Q12061542'],
-                38000,
-                'https://corporate.mcdonalds.com/corpmcd/franchising-overview.html',
+                40275,
+                'https://corporate.mcdonalds.com/content/dam/sites/corp/nfl/pdf/MCD_2023_Annual_Report.pdf',
                 'McDonald\'s is the largest fast food chain in the world. There corporate website says that the company has 38,000 stores in the world. Are they all in osm?',
                 ['🍔', '🛒'],
-                '2023-03-17'
+                '2023-09-22'
             ),
             await taginfoComparisons(
                 'KFC',

@@ -7,6 +7,7 @@ import dataSchema from './dataSchema';
 
 import data from '../../data/compare.json';
 import tags from '../../data/tags.json';
+import { Comparison } from '../types';
 
 let unhappy = false;
 
@@ -106,6 +107,24 @@ for (const file of graphDataFilesWithExtension) {
         }
     }
 }
+
+// --------------------------------------------
+// find the oldest date in the data
+
+const oldestDate = data.reduce<[Date, Comparison]>((accumulator, current) => {
+    const date = new Date(current.lastUpdated);
+    if (Number.isNaN(date.getTime())) {
+        return accumulator;
+    }
+
+    if (date < accumulator[0]) {
+        return [date, current];
+    }
+
+    return accumulator;
+}, [new Date(), data[0]]);
+
+console.log(`The oldest date in the data is ${oldestDate[0].toISOString()} in ${oldestDate[1].name}`);
 
 // --------------------------------------------
 // exit with the correct exit code

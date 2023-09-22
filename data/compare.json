@@ -3,14 +3,14 @@
     "id": "f86b36460a37c5a45dea617f3fbd10c18027319318d2283be3f8318a7a793bca",
     "name": "Match Google on building",
     "expected": 1600000000,
-    "actual": 577373933,
+    "actual": 577533015,
     "expectedSource": "https://youtu.be/nP-nMZpLM1A?t=409",
     "actualSource": "taginfo",
     "tags": [
       "🏠"
     ],
     "description": "Google, in there 2022 keynote, claim that they have 1,600,000,000 buildings. Are we even close with osm?",
-    "lastUpdated": "2023-02-19",
+    "lastUpdated": "2023-09-22",
     "country": "worldwide"
   },
   {
@@ -72,9 +72,9 @@
   {
     "id": "0aa0000d49cbd3eaabb7d62b87d0695922a6cdc09c0f80d1684aadaeb49f4e95",
     "name": "Starbucks",
-    "expected": 35711,
+    "expected": 37222,
     "actual": 18619,
-    "expectedSource": "https://s22.q4cdn.com/869488222/files/doc_financials/2022/q4/Q4-FY22-Earnings-Release-Final-11.3.2022.pdf",
+    "expectedSource": "https://investor.starbucks.com/press-releases/financial-releases/press-release-details/2023/Starbucks-Reports-Q3-Fiscal-2023-Results/default.aspx",
     "actualSource": "taginfo",
     "tags": [
       "🛒",
@@ -87,16 +87,16 @@
   {
     "id": "bc00755018404ae08e7791edeacb749806f755a7a684108cdc730b7dc96d35bd",
     "name": "McDonald's",
-    "expected": 38000,
+    "expected": 40275,
     "actual": 31071,
-    "expectedSource": "https://corporate.mcdonalds.com/corpmcd/franchising-overview.html",
+    "expectedSource": "https://corporate.mcdonalds.com/content/dam/sites/corp/nfl/pdf/MCD_2023_Annual_Report.pdf",
     "actualSource": "taginfo",
     "tags": [
       "🍔",
       "🛒"
     ],
     "description": "McDonald's is the largest fast food chain in the world. There corporate website says that the company has 38,000 stores in the world. Are they all in osm?",
-    "lastUpdated": "2023-03-17",
+    "lastUpdated": "2023-09-22",
     "country": "worldwide"
   },
   {
@@ -133,7 +133,7 @@
     "id": "72b7bf05d23320f5325ae692c0c8de3fb12445f9c049e002e5dbe1976f8f1f4b",
     "name": "Tesla superchargers",
     "expected": 5265,
-    "actual": 813,
+    "actual": 814,
     "expectedSource": "https://tesla-cdn.thron.com/static/ZXSBN8_TSLA_Q1_2023_Update_ABMJPG.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -177,7 +177,7 @@
     "id": "a337e1deb30f4c626181a554a8315b4fa9f5928207b4e6d60b18b71b57509c9d",
     "name": "Pubs in the UK",
     "expected": 47200,
-    "actual": 38755,
+    "actual": 38758,
     "expectedSource": "https://commonslibrary.parliament.uk/research-briefings/cbp-8591/",
     "actualSource": "taginfo",
     "tags": [
@@ -192,7 +192,7 @@
     "id": "8ab3af57b360141906f5a9350327ce03cef6aeecd90f25a37f06e79be77e6527",
     "name": "Royal Mail post boxes",
     "expected": 115000,
-    "actual": 18942,
+    "actual": 18943,
     "expectedSource": "https://personal.help.royalmail.com/app/answers/detail/a_id/135/~/royal-mails-postbox-network---your-questions-answered",
     "actualSource": "taginfo",
     "tags": [
@@ -277,7 +277,7 @@
   {
     "id": "e7d8dcb81f8e7a0928bc383d6a65baad8de9196b69a40749b4811e34d95a75d6",
     "name": "Geldmaat ATMs",
-    "expected": 778,
+    "expected": 777,
     "actual": 742,
     "expectedSource": "https://ii0d2f1pfc.execute-api.eu-west-1.amazonaws.com/prod/locations",
     "actualSource": "taginfo",
@@ -292,7 +292,7 @@
     "id": "50dc6d308d80fe320bc89398b5944f37099ac594cb0ea1915db004118e27ec64",
     "name": "FAA tags ✈️",
     "expected": 26648,
-    "actual": 9348,
+    "actual": 9350,
     "expectedSource": "https://www.faa.gov/air_traffic/flight_info/aeronav/aero_data/Loc_ID_Search/Encodes_Decodes/",
     "actualSource": "taginfo",
     "tags": [
@@ -320,7 +320,7 @@
     "id": "0cb75428a28a7a7134fc0ffa95a12a8218dbc509cc0b42fd3ac33fa5ef265218",
     "name": "Dollar General",
     "expected": 18190,
-    "actual": 7108,
+    "actual": 7110,
     "expectedSource": "https://investor.dollargeneral.com/websites/dollargeneral/English/0/investor-relations.html",
     "actualSource": "taginfo",
     "tags": [
@@ -334,7 +334,7 @@
     "id": "379ba2ca4c7d0337d1273d190099c2843209c939cf66c2461b879b2c61b5bde3",
     "name": "Dollar Tree",
     "expected": 15840,
-    "actual": 3772,
+    "actual": 3775,
     "expectedSource": "https://corporate.dollartree.com/_assets/_e019a55beaa640d513e0240de36a677a/dollartreeinfo/db/893/9106/annual_report/DT_2021_Form+10-K_FINAL_5.11.22.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -348,7 +348,7 @@
     "id": "e1351eb279786fb2199ff3187501f3524187f954a542b7053c9d5cccd897584d",
     "name": "CVS",
     "expected": 9900,
-    "actual": 7850,
+    "actual": 7852,
     "expectedSource": "https://s2.q4cdn.com/447711729/files/doc_financials/2021/ar/CVS2021_Annual-Report.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -363,7 +363,7 @@
     "id": "ca6ca53604d6f26bfddacf0b0a3fbec625fb69fbd8cfa4eba712920d224ddc8e",
     "name": "Walgreens",
     "expected": 4717,
-    "actual": 8153,
+    "actual": 8155,
     "expectedSource": "https://s1.q4cdn.com/343380161/files/doc_financials/2022/ar/WBA-2022-Annual-Report.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -407,8 +407,8 @@
   {
     "id": "0a275c5789b11d5b72921303db8373e97342f2d81af43e22d3c768d58df03206",
     "name": "Airports with IATA codes ✈️",
-    "expected": 8889,
-    "actual": 10069,
+    "expected": 8890,
+    "actual": 10095,
     "expectedSource": "https://davidmegginson.github.io/ourairports-data/airports.csv",
     "actualSource": "taginfo",
     "tags": [
@@ -421,8 +421,8 @@
   {
     "id": "45bc39b4b3b48b01c0818ca97beabb4aad95ee48232cd8c79603a6c02a84dafc",
     "name": "Airports with ICAO codes ✈️",
-    "expected": 20298,
-    "actual": 16752,
+    "expected": 20304,
+    "actual": 16822,
     "expectedSource": "https://davidmegginson.github.io/ourairports-data/airports.csv",
     "actualSource": "taginfo",
     "tags": [
@@ -435,8 +435,8 @@
   {
     "id": "df5d2597b3dcba2f5cc91947bb3904598bc27fcb732edcd76093ca0f1ea4e98f",
     "name": "Museums",
-    "expected": 86229,
-    "actual": 97392,
+    "expected": 86238,
+    "actual": 97410,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",
     "description": "The number of museums in the world",
