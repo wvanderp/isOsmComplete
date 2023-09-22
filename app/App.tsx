@@ -12,7 +12,7 @@ import logo from '../static/logo.svg';
 import pkg from '../package.json';
 
 const prioritizedCountries = [
-    'worldwide',
+    'Worldwide',
     'EU'
 ];
 
@@ -62,7 +62,7 @@ function FilterButton(
 }
 
 export default function App() {
-    //Set up the state for the filter buttons
+    // Set up the state for the filter buttons
     const [countryFilter, setCountryFilter] = React.useState<string[]>([]);
     const countryButtons = data
         .map((comparison) => comparison.country)
@@ -76,7 +76,7 @@ export default function App() {
             />
         ));
 
-    //Setup state for the tag filter buttons
+    // Setup state for the tag filter buttons
     const [tagFilter, setTagFilter] = React.useState<string[]>([]);
     const tagButtons = Object.values(data)
         .flat()
@@ -136,8 +136,9 @@ export default function App() {
             </div>
             <p>
                 How complete is OSM, really?
-                That's the question this website sets out to answer. We compare the number of features in OSM to the number of features in official data sources,
-                and the results are... well, let's say we're not quite there yet.<br />
+                That&apos;s the question this website sets out to answer.
+                We compare the number of features in OSM to the number of features in official data sources,
+                and the results are... well, let&apos;s say we&apos;re not quite there yet.<br />
                 <br />
 
                 You can suggest more sources over on our <a href={pkg.repository.url}>GitHub</a>. <br />
@@ -146,10 +147,13 @@ export default function App() {
             <div>
                 <ProgressBar value={totalAverage} max={100} />
                 <b>Global Average Completeness: {totalAverage.toFixed(2)}%</b><br />
-                Our analysis indicates that OpenStreetMap comprises approximately {totalAverage.toFixed(2)}% of the features found in official data sources worldwide.
+                Our analysis indicates that OpenStreetMap comprises approximately {totalAverage.toFixed(2)}%
+                of the features found in official data sources worldwide.
+
             </div>
             <p>
-                Below, you find specific sources. In the graph, we have the goal in green and OpenStreetmap in blue over time.
+                Below, you find specific sources.
+                In the graph, we have the goal in green and OpenStreetMap in blue over time.
                 You can filter the data to only see your favorite country or topic.
             </p>
             <br />

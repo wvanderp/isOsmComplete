@@ -15,27 +15,27 @@ export default async function worldwide(): Promise<Comparison[]> {
                 'https://youtu.be/nP-nMZpLM1A?t=409',
                 'Google, in there 2022 keynote, claim that they have 1,600,000,000 buildings. Are we even close with osm?',
                 ['🏠'],
-                '2023-02-19'
+                '2023-09-23'
             ),
             await taginfoComparisons(
                 'Stolpersteine',
                 'memorial:type',
                 'stolperstein',
-                90000,
-                'https://www.goethe.de/ins/nl/nl/kul/kue/22217305/22263584.html',
+                100000,
+                'https://www.timesofisrael.com/holocaust-memorial-project-marks-milestone-with-100000-stumbling-blocks/',
                 'Stolpersteine are monuments to the victims of world war two. They should be in osm.',
                 [],
-                '2023-02-19'
+                '2023-06-01'
             ),
 
             await overpassComparisonMultiple(
                 'IKEA stores',
                 [[brandWikidata, 'Q54078'], ['shop', 'furniture']],
-                460,
-                'https://about.ikea.com/en/about-us',
+                462,
+                'https://www.ikea.com/global/en/newsroom/corporate/ikea-80th-anniversary-assembling-a-better-future-together-230728/',
                 'IKEA is a furniture store. They have 466 stores in 63 countries. Are they all in osm?',
                 ['🛒'],
-                '2023-02-19'
+                '2023-06-28'
             ),
             await taginfoComparisons(
                 '7-Eleven stores',
