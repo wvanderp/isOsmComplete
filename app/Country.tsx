@@ -48,6 +48,12 @@ export default function Country(props: {
 function Comparison(props: {
     comparison: Comparison;
 }) {
+    // replace {{actual}} with actual value
+    const cardDescription = props.comparison.description.replace(
+        '{{actual}}',
+        props.comparison.actual.toString()
+    );
+
     return (
         <Card color="light">
 
@@ -56,7 +62,7 @@ function Comparison(props: {
                     {props.comparison.name}
                 </CardTitle>
                 <CardText>
-                    {props.comparison.description}
+                    {cardDescription}
                 </CardText>
                 <ProgressBar
                     value={props.comparison.actual}

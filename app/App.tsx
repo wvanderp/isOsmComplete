@@ -137,20 +137,20 @@ export default function App() {
             <p>
                 How complete is OSM, really?
                 That&apos;s the question this website sets out to answer.
-                We compare the number of features in OSM to the number of features in official data sources,
+                We compare the number of features in OpenStreetMap to the number of features in official data sources,
                 and the results are... well, let&apos;s say we&apos;re not quite there yet.<br />
                 <br />
 
                 You can suggest more sources over on our <a href={pkg.repository.url}>GitHub</a>. <br />
             </p>
+            <ProgressBar value={totalAverage} max={100} /><br/>
 
-            <div>
-                <ProgressBar value={totalAverage} max={100} />
-                <b>Global Average Completeness: {totalAverage.toFixed(2)}%</b><br />
+            <p>
+                <b>Global Average Completeness: {totalAverage.toFixed(2)}%</b><br /><br />
                 Our analysis indicates that OpenStreetMap comprises approximately {totalAverage.toFixed(2)}%
                 of the features found in official data sources worldwide.
 
-            </div>
+            </p>
             <p>
                 Below, you find specific sources.
                 In the graph, we have the goal in green and OpenStreetMap in blue over time.

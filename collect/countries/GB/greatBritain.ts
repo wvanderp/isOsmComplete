@@ -30,6 +30,17 @@ export default async function greatBritain(): Promise<Comparison[]> {
                 ['📮'],
                 '2023-02-19',
                 taginfoServer
+            ),
+            await taginfoComparisons(
+                'Tesco',
+                brandWikidata,
+                'Q487494',
+                3712,
+                'https://www.tescoplc.com/media/u1wlq2qf/tesco-plc-annual-report-2023.pdf',
+                'Are all the Tesco stores in osm?',
+                ['🛒'],
+                '2023-04-12',
+                taginfoServer
             )
         ]
     );

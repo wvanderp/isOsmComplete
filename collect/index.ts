@@ -16,6 +16,7 @@ import airports from './countries/fromSource/ourAirportData/ourAirport';
 import wikidata from './countries/fromSource/wikidata/wikidata';
 
 import { Comparison } from './types';
+import germany from './countries/DE/germany';
 
 const directory = path.join(__dirname, '../data');
 const tagsFile = path.join(__dirname, 'tags.json');
@@ -31,6 +32,7 @@ const tagsFile = path.join(__dirname, 'tags.json');
         ...(await netherlands()),
         ...(await unitedStates()),
         ...(await vietnam()),
+        ...(await germany()),
 
         // fromSource
         // ...(await factbook())

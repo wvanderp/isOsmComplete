@@ -22,21 +22,21 @@
     "actualSource": "taginfo",
     "tags": [],
     "description": "Stolpersteine are monuments to the victims of world war two. They should be in osm.",
-    "lastUpdated": "2023-09-23",
+    "lastUpdated": "2023-06-01",
     "country": "Worldwide"
   },
   {
     "id": "a18d3e40ae9fc681bce81114b28db33c050281ab197e033ee141a6990a55a738",
     "name": "IKEA stores",
-    "expected": 460,
+    "expected": 462,
     "actual": 545,
-    "expectedSource": "https://about.ikea.com/en/about-us",
+    "expectedSource": "https://www.ikea.com/global/en/newsroom/corporate/ikea-80th-anniversary-assembling-a-better-future-together-230728/",
     "actualSource": "taginfo",
     "tags": [
       "🛒"
     ],
-    "description": "IKEA is a furniture store. They have 466 stores in 63 countries. Are they all in osm?",
-    "lastUpdated": "2023-02-19",
+    "description": "IKEA is a furniture store. They have {{actual}} stores in 63 countries. Are they all in osm?",
+    "lastUpdated": "2023-06-28",
     "country": "Worldwide"
   },
   {
@@ -50,7 +50,7 @@
       "🛒",
       "🍔"
     ],
-    "description": "A 7-Eleven is always nearby. because there are 78,029 of them in 18 countries. is your closest 7-Eleven in osm?",
+    "description": "A 7-Eleven is always nearby. Because there are {{actual}} of them in 18 countries. Is your closest 7-Eleven in osm?",
     "lastUpdated": "2023-02-19",
     "country": "Worldwide"
   },
@@ -81,7 +81,7 @@
       "🍔"
     ],
     "description": "Starbucks seems to be everywhere. But can you find them all in osm?",
-    "lastUpdated": "2023-02-19",
+    "lastUpdated": "2023-08-01",
     "country": "Worldwide"
   },
   {
@@ -110,7 +110,7 @@
       "🍔",
       "🛒"
     ],
-    "description": "KFC expanded out of Kentucky in 1964. They now have 27,000 stores in 135 countries. Are they all in osm?",
+    "description": "KFC expanded out of Kentucky in 1964. They now have {{actual}} stores in 135 countries. Are they all in osm?",
     "lastUpdated": "2023-03-17",
     "country": "Worldwide"
   },
@@ -125,7 +125,7 @@
       "🍔",
       "🛒"
     ],
-    "description": "Burger King is a fast food chain. They have 18,000 stores in 100 countries. Are they all in osm?",
+    "description": "Burger King is a fast food chain. They have {{actual}} stores in 100 countries. Are they all in osm?",
     "lastUpdated": "2023-03-17",
     "country": "Worldwide"
   },
@@ -140,7 +140,7 @@
       "🔋",
       "🚗"
     ],
-    "description": "When you want to charge your tesla but the middle screen is dead and you don't have the app. You can find a supercharger in osm. Or can you?",
+    "description": "When you want to charge your Tesla but the middle screen is dead and you don't have the app. You can find a supercharger in osm. Or can you?",
     "lastUpdated": "2023-05-27",
     "country": "Worldwide"
   },
@@ -203,6 +203,20 @@
     "country": "GB"
   },
   {
+    "id": "ac2a2c4fb6a7f4a3fb67165c0fbd314a8d63c90d51a52aeee3ae27aab23cdb5d",
+    "name": "Tesco",
+    "expected": 3712,
+    "actual": 958,
+    "expectedSource": "https://www.tescoplc.com/media/u1wlq2qf/tesco-plc-annual-report-2023.pdf",
+    "actualSource": "taginfo",
+    "tags": [
+      "🛒"
+    ],
+    "description": "Are all the Tesco stores in osm?",
+    "lastUpdated": "2023-04-12",
+    "country": "GB"
+  },
+  {
     "id": "8308f65b11b2f3da270e8cbac0702add3b032ce3350b9a4b3f0c504de7d5b0b2",
     "name": "Surveillance cameras in London",
     "expected": 691000,
@@ -219,7 +233,7 @@
   {
     "id": "f7d1f5de77e30dc158daba5aaff8df3e3b26786d230abbf2060db9cabddbc289",
     "name": "Car chargers",
-    "expected": 110129,
+    "expected": 143592,
     "actual": 7907,
     "expectedSource": "https://www.rvo.nl/onderwerpen/duurzaam-ondernemen/energie-en-milieu-innovaties/elektrisch-rijden/stand-van-zaken/cijfers",
     "actualSource": "taginfo",
@@ -227,21 +241,21 @@
       "🔋",
       "🚗"
     ],
-    "description": "Electric car charging station will be more important than ever. The Netherlands has 110129 car chargers. Are they all in osm?",
-    "lastUpdated": "2023-02-19",
+    "description": "Electric car charging station will be more important than ever. The Netherlands has {{actual}} car chargers. Are they all in osm?",
+    "lastUpdated": "2023-09-12",
     "country": "NL"
   },
   {
     "id": "3b2f809bde0f76363b9dd906fc368946685e56a3e8a9fda979b040c9d0ebb251",
     "name": "Hospitals",
-    "expected": 745,
+    "expected": 747,
     "actual": 609,
     "expectedSource": "https://www.zorgkaartnederland.nl/ziekenhuis",
     "actualSource": "taginfo",
     "tags": [
       "🏥"
     ],
-    "description": "The Netherlands has 580 hospitals and clinics. Are they all in osm?",
+    "description": "The Netherlands has {{actual}} hospitals and clinics. Are they all in osm?",
     "lastUpdated": "2023-02-19",
     "country": "NL"
   },
@@ -272,6 +286,48 @@
     ],
     "description": "Getting a ticket is really annoying! Maybe osm can help you obey the law extremely locally.",
     "lastUpdated": "2023-04-20",
+    "country": "NL"
+  },
+  {
+    "id": "ead8161c6dc7bb68b88d9f6239b9a23d6d88609db8d08ef63e92c7a857c49ebf",
+    "name": "Albert Heijn's",
+    "expected": 1228,
+    "actual": 1035,
+    "expectedSource": "https://media.aholddelhaize.com/media/vy4neu1n/ar-2022-ahold-delhaize-interactive-final.pdf?t=638143108570530000",
+    "actualSource": "taginfo",
+    "tags": [
+      "🛒"
+    ],
+    "description": "Albert Heijn is the biggest supermarket chain in the Netherlands. Are they all in osm?",
+    "lastUpdated": "2023-02-28",
+    "country": "NL"
+  },
+  {
+    "id": "4a1554040eaec3dc35889fa2e2fc76dbd9c6cc6503d3245c7cf1f0a0cb5ba9a3",
+    "name": "Gall & Gall",
+    "expected": 603,
+    "actual": 483,
+    "expectedSource": "https://media.aholddelhaize.com/media/vy4neu1n/ar-2022-ahold-delhaize-interactive-final.pdf?t=638143108570530000",
+    "actualSource": "taginfo",
+    "tags": [
+      "🛒"
+    ],
+    "description": "Gall & Gall is a liquor store chain in the Netherlands. Are they all in osm?",
+    "lastUpdated": "2023-02-28",
+    "country": "NL"
+  },
+  {
+    "id": "9e76c9c845933391d28e5a0deccdb683535b7cc1a29d4781e9cf7d4f6b8d05a4",
+    "name": "Etos",
+    "expected": 522,
+    "actual": 508,
+    "expectedSource": "https://media.aholddelhaize.com/media/vy4neu1n/ar-2022-ahold-delhaize-interactive-final.pdf?t=638143108570530000",
+    "actualSource": "taginfo",
+    "tags": [
+      "🛒"
+    ],
+    "description": "Etos is a drugstore chain in the Netherlands. Are they all in osm?",
+    "lastUpdated": "2023-02-28",
     "country": "NL"
   },
   {
@@ -385,7 +441,7 @@
       "🍔",
       "🛒"
     ],
-    "description": "McDonald' was never able to enter the Vietnamese market. They only managed to open 25 stores. To console them, we should have them all in osm.",
+    "description": "McDonald' was never able to enter the Vietnamese market. They only managed to open {{actual}} stores. To console them, we should have them all in osm.",
     "lastUpdated": "2023-09-07",
     "country": "VN"
   },
@@ -400,9 +456,37 @@
       "🍔",
       "🛒"
     ],
-    "description": "Burger King is also not very successful in Vietnam. They only have 11 stores. Are they all in osm?",
+    "description": "Burger King is also not very successful in Vietnam. They only have {{actual}} stores. Are they all in osm?",
     "lastUpdated": "2023-09-07",
     "country": "VN"
+  },
+  {
+    "id": "e0b35c3a6a71ddb4e3198f4c44f33f50bbb76812400356d46e10158bf4c46c72",
+    "name": "REWE",
+    "expected": 47200,
+    "actual": 3631,
+    "expectedSource": "https://www.rewe-group.com/content/uploads/2023/06/rewe-group-financial-report-2022.pdf?t=2023092210",
+    "actualSource": "taginfo",
+    "tags": [
+      "🛒"
+    ],
+    "description": "Are all the REWE stores in osm?",
+    "lastUpdated": "2023-06-01",
+    "country": "DE"
+  },
+  {
+    "id": "02f3ff763d5a7db0fd00d1c369664e73ca31d41e244a7fc550f49684551161bc",
+    "name": "PENNY",
+    "expected": 2135,
+    "actual": 1880,
+    "expectedSource": "https://www.rewe-group.com/content/uploads/2023/06/rewe-group-financial-report-2022.pdf?t=2023092210",
+    "actualSource": "taginfo",
+    "tags": [
+      "🛒"
+    ],
+    "description": "Are all the PENNY stores in osm?",
+    "lastUpdated": "2023-06-01",
+    "country": "DE"
   },
   {
     "id": "0a275c5789b11d5b72921303db8373e97342f2d81af43e22d3c768d58df03206",

@@ -33,7 +33,7 @@ export default async function worldwide(): Promise<Comparison[]> {
                 [[brandWikidata, 'Q54078'], ['shop', 'furniture']],
                 462,
                 'https://www.ikea.com/global/en/newsroom/corporate/ikea-80th-anniversary-assembling-a-better-future-together-230728/',
-                'IKEA is a furniture store. They have 466 stores in 63 countries. Are they all in osm?',
+                'IKEA is a furniture store. They have {{actual}} stores in 63 countries. Are they all in osm?',
                 ['🛒'],
                 '2023-06-28'
             ),
@@ -43,7 +43,7 @@ export default async function worldwide(): Promise<Comparison[]> {
                 'Q259340',
                 78029,
                 'https://en.wikipedia.org/wiki/7-Eleven',
-                'A 7-Eleven is always nearby. because there are 78,029 of them in 18 countries. is your closest 7-Eleven in osm?',
+                'A 7-Eleven is always nearby. Because there are {{actual}} of them in 18 countries. Is your closest 7-Eleven in osm?',
                 ['🛒', '🍔'],
                 '2023-02-19'
             ),
@@ -65,7 +65,7 @@ export default async function worldwide(): Promise<Comparison[]> {
                 'https://investor.starbucks.com/press-releases/financial-releases/press-release-details/2023/Starbucks-Reports-Q3-Fiscal-2023-Results/default.aspx',
                 'Starbucks seems to be everywhere. But can you find them all in osm?',
                 ['🛒', '🍔'],
-                '2023-02-19'
+                '2023-08-01'
             ),
             await taginfoComparisonMultipleTags(
                 'McDonald\'s',
@@ -83,7 +83,7 @@ export default async function worldwide(): Promise<Comparison[]> {
                 'Q524757',
                 27000,
                 'https://www.yum.com/wps/portal/yumbrands/Yumbrands/company/our-brands/kfc',
-                'KFC expanded out of Kentucky in 1964. They now have 27,000 stores in 135 countries. Are they all in osm?',
+                'KFC expanded out of Kentucky in 1964. They now have {{actual}} stores in 135 countries. Are they all in osm?',
                 ['🍔', '🛒'],
                 '2023-03-17'
             ),
@@ -93,7 +93,7 @@ export default async function worldwide(): Promise<Comparison[]> {
                 'Q177054',
                 18700,
                 'https://www.rbi.com/English/brands/default.aspx',
-                'Burger King is a fast food chain. They have 18,000 stores in 100 countries. Are they all in osm?',
+                'Burger King is a fast food chain. They have {{actual}} stores in 100 countries. Are they all in osm?',
                 ['🍔', '🛒'],
                 '2023-03-17'
             ),
@@ -102,7 +102,7 @@ export default async function worldwide(): Promise<Comparison[]> {
                 [['amenity', 'charging_station'], ['brand:wikidata', 'Q478214']],
                 5265,
                 'https://tesla-cdn.thron.com/static/ZXSBN8_TSLA_Q1_2023_Update_ABMJPG.pdf', // page 6
-                'When you want to charge your tesla but the middle screen is dead and you don\'t have the app. You can find a supercharger in osm. Or can you?',
+                'When you want to charge your Tesla but the middle screen is dead and you don\'t have the app. You can find a supercharger in osm. Or can you?',
                 ['🔋', '🚗'],
                 '2023-05-27'
             )

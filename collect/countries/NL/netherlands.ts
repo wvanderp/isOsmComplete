@@ -1,9 +1,12 @@
+/* eslint-disable sonarjs/no-duplicate-string */
 import { Comparison } from '../../types';
 import appendCountry from '../../utils/appendCountry';
+import { brandWikidata } from '../../utils/osmTags';
 import taginfoComparisons, { taginfoComparisonMultipleTags } from '../../utils/taginfoComparisons';
 import geldmaat from './geldmaat';
 
 const taginfoServer = 'https://taginfo.geofabrik.de/europe/netherlands/';
+const taginfoServerEuropa = 'https://taginfo.geofabrik.de/europe';
 
 export default async function netherlands(): Promise<Comparison[]> {
     return appendCountry(
@@ -14,20 +17,20 @@ export default async function netherlands(): Promise<Comparison[]> {
                 'amenity',
                 'charging_station',
                 // normal + fast
-                106891 + 3238,
+                138717 + 4875,
                 'https://www.rvo.nl/onderwerpen/duurzaam-ondernemen/energie-en-milieu-innovaties/elektrisch-rijden/stand-van-zaken/cijfers',
-                'Electric car charging station will be more important than ever. The Netherlands has 110129 car chargers. Are they all in osm?',
+                'Electric car charging station will be more important than ever. The Netherlands has {{actual}} car chargers. Are they all in osm?',
                 ['🔋', '🚗'],
-                '2023-02-19',
+                '2023-09-12',
                 taginfoServer
             ),
             await taginfoComparisonMultipleTags(
                 'Hospitals',
                 'amenity',
                 ['hospital', 'clinic'],
-                308 + 437, // hospitals + clinics
+                305 + 442, // hospitals + clinics
                 'https://www.zorgkaartnederland.nl/ziekenhuis', // and https://www.zorgkaartnederland.nl/overige-kliniek
-                'The Netherlands has 580 hospitals and clinics. Are they all in osm?',
+                'The Netherlands has {{actual}} hospitals and clinics. Are they all in osm?',
                 ['🏥'],
                 '2023-02-19',
                 taginfoServer
@@ -52,6 +55,40 @@ export default async function netherlands(): Promise<Comparison[]> {
                 'Getting a ticket is really annoying! Maybe osm can help you obey the law extremely locally.',
                 ['🚗', '👀'],
                 '2023-04-20',
+                taginfoServer
+            ),
+            await taginfoComparisonMultipleTags(
+                "Albert Heijn's",
+                brandWikidata,
+                ['Q1653985', 'Q78163765'],
+                1228,
+                'https://media.aholddelhaize.com/media/vy4neu1n/ar-2022-ahold-delhaize-interactive-final.pdf?t=638143108570530000',
+                'Albert Heijn is the biggest supermarket chain in the Netherlands. Are they all in osm?',
+                ['🛒'],
+                '2023-02-28',
+                // use the europe server because Albert Heijn is also in Belgium
+                taginfoServerEuropa
+            ),
+            await taginfoComparisons(
+                'Gall & Gall',
+                brandWikidata,
+                'Q13639185',
+                603,
+                'https://media.aholddelhaize.com/media/vy4neu1n/ar-2022-ahold-delhaize-interactive-final.pdf?t=638143108570530000',
+                'Gall & Gall is a liquor store chain in the Netherlands. Are they all in osm?',
+                ['🛒'],
+                '2023-02-28',
+                taginfoServer
+            ),
+            await taginfoComparisons(
+                'Etos',
+                brandWikidata,
+                'Q2609459',
+                522,
+                'https://media.aholddelhaize.com/media/vy4neu1n/ar-2022-ahold-delhaize-interactive-final.pdf?t=638143108570530000',
+                'Etos is a drugstore chain in the Netherlands. Are they all in osm?',
+                ['🛒'],
+                '2023-02-28',
                 taginfoServer
             ),
 
