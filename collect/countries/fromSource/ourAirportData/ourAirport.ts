@@ -40,7 +40,7 @@ export default async function airports(): Promise<Comparison[]> {
     const icaoCount = airportsData.filter((a) => a.ident.match(/[A-Z]{4}/)).length;
 
     return appendCountry(
-        'worldwide',
+        'Worldwide',
         [
             await taginfoComparisonKeyOnly(
                 'Airports with IATA codes ✈️',

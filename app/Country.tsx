@@ -12,13 +12,13 @@ import downloadGraphData from './utils/downloadGraphData';
 countries.registerLocale(english);
 
 function countryCodeToEmoji(code: CountryCodes): string {
-    if (code === 'worldwide') return '🌎';
+    if (code === 'Worldwide') return '🌎';
     if (code === 'London') return '🇬🇧🎡💂🏼‍♂️';
     return countryCodeEmoji(code);
 }
 
 function countryCodeToName(code: CountryCodes): string {
-    if (code === 'worldwide') return 'Worldwide';
+    if (code === 'Worldwide') return 'Worldwide';
     if (code === 'EU') return 'European Union';
     if (code === 'London') return 'London';
     return countries.getName(code, 'en');

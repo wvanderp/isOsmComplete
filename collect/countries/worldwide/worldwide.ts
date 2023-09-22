@@ -6,7 +6,7 @@ import taginfoComparisons, { taginfoComparisonKeyOnly, taginfoComparisonMultiple
 
 export default async function worldwide(): Promise<Comparison[]> {
     return appendCountry(
-        'worldwide',
+        'Worldwide',
         [
             await taginfoComparisonKeyOnly(
                 'Match Google on building',

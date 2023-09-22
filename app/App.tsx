@@ -36,7 +36,7 @@ function FilterButton(
         text: string,
         state: string[],
         setState: (state: string[]) => void,
-        // eslint-disable-next-line react/require-default-props -- alt is optional and if its undefined it will be ignored
+        // eslint-disable-next-line react/require-default-props -- alt is optional, and if it's undefined, it will be ignored
         alt?: string
     }
 ) {
@@ -62,7 +62,7 @@ function FilterButton(
 }
 
 export default function App() {
-    // set up the state for the filter buttons
+    //Set up the state for the filter buttons
     const [countryFilter, setCountryFilter] = React.useState<string[]>([]);
     const countryButtons = data
         .map((comparison) => comparison.country)
@@ -76,7 +76,7 @@ export default function App() {
             />
         ));
 
-    // setup state for the tag filter buttons
+    //Setup state for the tag filter buttons
     const [tagFilter, setTagFilter] = React.useState<string[]>([]);
     const tagButtons = Object.values(data)
         .flat()
@@ -135,18 +135,23 @@ export default function App() {
                 <h1>Is OSM Complete?</h1>
             </div>
             <p>
-                This site tracks how complete OSM really is. <br />
-                It compares the number of features in OSM to the number of features in the official data sources.<br />
+                How complete is OSM, really?
+                That's the question this website sets out to answer. We compare the number of features in OSM to the number of features in official data sources,
+                and the results are... well, let's say we're not quite there yet.<br />
                 <br />
 
                 You can suggest more sources over on our <a href={pkg.repository.url}>GitHub</a>. <br />
             </p>
 
             <div>
-                <b>Global average</b><br />
-                <span>OSM has {totalAverage.toFixed(2)}% of the features of the official data sources</span><br />
                 <ProgressBar value={totalAverage} max={100} />
+                <b>Global Average Completeness: {totalAverage.toFixed(2)}%</b><br />
+                Our analysis indicates that OpenStreetMap comprises approximately {totalAverage.toFixed(2)}% of the features found in official data sources worldwide.
             </div>
+            <p>
+                Below, you find specific sources. In the graph, we have the goal in green and OpenStreetmap in blue over time.
+                You can filter the data to only see your favorite country or topic.
+            </p>
             <br />
 
             <div>

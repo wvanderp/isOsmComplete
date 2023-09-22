@@ -11,7 +11,7 @@ WHERE
 
 export default async function museum(): Promise<Comparison[]> {
     return appendCountry(
-        'worldwide',
+        'Worldwide',
         [
             await wikidataComparison(
                 'Museums',
