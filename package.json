@@ -71,7 +71,7 @@
     "app": "npm run clean && parcel serve app/index.html -p 3001",
     "build": "npm run clean &&  parcel build --no-source-maps --public-url /isOsmComplete --dist-dir ./gitBuild app/index.html && ts-node ./scripts/postProcess.ts",
     "lint": "npm run tsc && eslint --ext ts,tsx,js app/ collect/",
-    "lintData": "ts-node collect/lint/lint.ts",
+    "lintData": "ts-node -T collect/lint/lint.ts",
     "tsc": "tsc --noEmit",
     "collect": "ts-node collect && npm run lintData",
     "clean": "rimraf .parcel-cache dist gitBuild",

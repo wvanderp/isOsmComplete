@@ -45,17 +45,17 @@ export default async function worldwide(): Promise<Comparison[]> {
                 'https://en.wikipedia.org/wiki/7-Eleven',
                 'A 7-Eleven is always nearby. Because there are {{actual}} of them in 18 countries. Is your closest 7-Eleven in osm?',
                 ['🛒', '🍔'],
-                '2023-02-19'
+                '2023-09-24'
             ),
             await taginfoComparisons(
                 'Subway stores',
                 brandWikidata,
                 'Q244457',
-                36821,
-                'https://en.wikipedia.org/wiki/Subway_(restaurant)',
+                37000,
+                'https://www.subway.com/en-us/contactus/subwayfaqs/about-subway',
                 'Subway and McDonald\'s are the two largest fast food chains in the world. who has more stores?',
                 ['🍔', '🛒'],
-                '2023-02-19'
+                '2023-09-24'
             ),
             await taginfoComparisons(
                 'Starbucks',

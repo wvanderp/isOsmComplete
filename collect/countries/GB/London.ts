@@ -6,7 +6,7 @@ const taginfoServer = 'https://taginfo.geofabrik.de/europe/great-britain/england
 
 export default async function london(): Promise<Comparison[]> {
     return appendCountry(
-        'London',
+        'GB',
         [
             await taginfoComparisons(
                 'Surveillance cameras in London',

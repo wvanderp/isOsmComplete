@@ -26,7 +26,7 @@ export type TaginfoComparison = Comparison & {
 // @ts-expect-error - this is a type assertion test
 export const isTaginfoComparison = (a: unknown): a is TaginfoComparison => a.extra.type === 'taginfo';
 
-export type CountryCodes = Alpha2Code | 'Worldwide' | 'EU' | 'London'
+export type CountryCodes = Alpha2Code | 'Worldwide' | 'EU';
 
 ///  taginfo
 

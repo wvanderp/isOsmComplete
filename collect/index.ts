@@ -6,7 +6,6 @@ import europe from './countries/europe/europe';
 
 import canada from './countries/CA/canada';
 import greatBritain from './countries/GB/greatBritain';
-import london from './countries/GB/London';
 import netherlands from './countries/NL/netherlands';
 import unitedStates from './countries/US/unitedStates';
 import vietnam from './countries/VN/Vietnam';
@@ -28,7 +27,6 @@ const tagsFile = path.join(__dirname, 'tags.json');
 
         ...(await canada()),
         ...(await greatBritain()),
-        ...(await london()),
         ...(await netherlands()),
         ...(await unitedStates()),
         ...(await vietnam()),

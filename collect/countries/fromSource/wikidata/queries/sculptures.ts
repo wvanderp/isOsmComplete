@@ -6,21 +6,22 @@ const sparqlQuery = `
 SELECT (count(?item) as ?count)
 WHERE
 {
-    ?item wdt:P31/wdt:P279* wd:Q33506 .
+    ?item wdt:P31/wdt:P279* wd:Q860861 .
+    ?item wdt:P625 ?coord
 }`;
 
-export default async function museum(): Promise<Comparison[]> {
+export default async function sculptures(): Promise<Comparison[]> {
     return appendCountry(
         'Worldwide',
         [
             await wikidataComparison(
-                'Museums',
+                'Sculptures',
                 sparqlQuery,
-                'tourism',
-                'museum',
-                'The number of museums in the world',
-                ['🏛️', '🎨'],
-                '2023-06-18'
+                'artwork_type',
+                'sculpture',
+                'It is always nice to have some art in your city. Is your local sculpture in osm?',
+                ['🎨'],
+                '2023-09-24'
             )
         ]
     );
