@@ -3,7 +3,7 @@
     "id": "f86b36460a37c5a45dea617f3fbd10c18027319318d2283be3f8318a7a793bca",
     "name": "Match Google on building",
     "expected": 1600000000,
-    "actual": 577533015,
+    "actual": 577668570,
     "expectedSource": "https://youtu.be/nP-nMZpLM1A?t=409",
     "actualSource": "taginfo",
     "tags": [
@@ -43,7 +43,7 @@
     "id": "34d881bb4626ac285c1c64c08944d6d8883e5bfdef1d5bb2c0d2eeab9db0d20e",
     "name": "7-Eleven stores",
     "expected": 78029,
-    "actual": 34261,
+    "actual": 34276,
     "expectedSource": "https://en.wikipedia.org/wiki/7-Eleven",
     "actualSource": "taginfo",
     "tags": [
@@ -58,7 +58,7 @@
     "id": "ceafc782f32e77207571d2c2de651c13d6f8704acbe2221a9a7af3dd68313bf8",
     "name": "Subway stores",
     "expected": 36821,
-    "actual": 21770,
+    "actual": 21775,
     "expectedSource": "https://en.wikipedia.org/wiki/Subway_(restaurant)",
     "actualSource": "taginfo",
     "tags": [
@@ -73,7 +73,7 @@
     "id": "0aa0000d49cbd3eaabb7d62b87d0695922a6cdc09c0f80d1684aadaeb49f4e95",
     "name": "Starbucks",
     "expected": 37222,
-    "actual": 18619,
+    "actual": 18627,
     "expectedSource": "https://investor.starbucks.com/press-releases/financial-releases/press-release-details/2023/Starbucks-Reports-Q3-Fiscal-2023-Results/default.aspx",
     "actualSource": "taginfo",
     "tags": [
@@ -88,7 +88,7 @@
     "id": "bc00755018404ae08e7791edeacb749806f755a7a684108cdc730b7dc96d35bd",
     "name": "McDonald's",
     "expected": 40275,
-    "actual": 31071,
+    "actual": 31077,
     "expectedSource": "https://corporate.mcdonalds.com/content/dam/sites/corp/nfl/pdf/MCD_2023_Annual_Report.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -103,7 +103,7 @@
     "id": "ff163beb19543f2cb53c300637cac009272968c01b3511a40effa32489074e82",
     "name": "KFC",
     "expected": 27000,
-    "actual": 13483,
+    "actual": 13493,
     "expectedSource": "https://www.yum.com/wps/portal/yumbrands/Yumbrands/company/our-brands/kfc",
     "actualSource": "taginfo",
     "tags": [
@@ -118,7 +118,7 @@
     "id": "ebf58077453c74c27a1a8384024439568732ce333c09c0899c6156177657d513",
     "name": "Burger King",
     "expected": 18700,
-    "actual": 13097,
+    "actual": 13100,
     "expectedSource": "https://www.rbi.com/English/brands/default.aspx",
     "actualSource": "taginfo",
     "tags": [
@@ -133,7 +133,7 @@
     "id": "72b7bf05d23320f5325ae692c0c8de3fb12445f9c049e002e5dbe1976f8f1f4b",
     "name": "Tesla superchargers",
     "expected": 5265,
-    "actual": 812,
+    "actual": 813,
     "expectedSource": "https://tesla-cdn.thron.com/static/ZXSBN8_TSLA_Q1_2023_Update_ABMJPG.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -177,7 +177,7 @@
     "id": "a337e1deb30f4c626181a554a8315b4fa9f5928207b4e6d60b18b71b57509c9d",
     "name": "Pubs in the UK",
     "expected": 47200,
-    "actual": 38758,
+    "actual": 38759,
     "expectedSource": "https://commonslibrary.parliament.uk/research-briefings/cbp-8591/",
     "actualSource": "taginfo",
     "tags": [
@@ -206,7 +206,7 @@
     "id": "ac2a2c4fb6a7f4a3fb67165c0fbd314a8d63c90d51a52aeee3ae27aab23cdb5d",
     "name": "Tesco",
     "expected": 3712,
-    "actual": 958,
+    "actual": 959,
     "expectedSource": "https://www.tescoplc.com/media/u1wlq2qf/tesco-plc-annual-report-2023.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -333,7 +333,7 @@
   {
     "id": "e7d8dcb81f8e7a0928bc383d6a65baad8de9196b69a40749b4811e34d95a75d6",
     "name": "Geldmaat ATMs",
-    "expected": 777,
+    "expected": 776,
     "actual": 742,
     "expectedSource": "https://ii0d2f1pfc.execute-api.eu-west-1.amazonaws.com/prod/locations",
     "actualSource": "taginfo",
@@ -376,7 +376,7 @@
     "id": "0cb75428a28a7a7134fc0ffa95a12a8218dbc509cc0b42fd3ac33fa5ef265218",
     "name": "Dollar General",
     "expected": 18190,
-    "actual": 7110,
+    "actual": 7127,
     "expectedSource": "https://investor.dollargeneral.com/websites/dollargeneral/English/0/investor-relations.html",
     "actualSource": "taginfo",
     "tags": [
@@ -404,7 +404,7 @@
     "id": "e1351eb279786fb2199ff3187501f3524187f954a542b7053c9d5cccd897584d",
     "name": "CVS",
     "expected": 9900,
-    "actual": 7852,
+    "actual": 7853,
     "expectedSource": "https://s2.q4cdn.com/447711729/files/doc_financials/2021/ar/CVS2021_Annual-Report.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -419,7 +419,7 @@
     "id": "ca6ca53604d6f26bfddacf0b0a3fbec625fb69fbd8cfa4eba712920d224ddc8e",
     "name": "Walgreens",
     "expected": 4717,
-    "actual": 8155,
+    "actual": 8157,
     "expectedSource": "https://s1.q4cdn.com/343380161/files/doc_financials/2022/ar/WBA-2022-Annual-Report.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -492,7 +492,7 @@
     "id": "0a275c5789b11d5b72921303db8373e97342f2d81af43e22d3c768d58df03206",
     "name": "Airports with IATA codes ✈️",
     "expected": 8890,
-    "actual": 10095,
+    "actual": 10071,
     "expectedSource": "https://davidmegginson.github.io/ourairports-data/airports.csv",
     "actualSource": "taginfo",
     "tags": [
@@ -505,7 +505,7 @@
   {
     "id": "45bc39b4b3b48b01c0818ca97beabb4aad95ee48232cd8c79603a6c02a84dafc",
     "name": "Airports with ICAO codes ✈️",
-    "expected": 20304,
+    "expected": 20309,
     "actual": 16822,
     "expectedSource": "https://davidmegginson.github.io/ourairports-data/airports.csv",
     "actualSource": "taginfo",
@@ -519,8 +519,8 @@
   {
     "id": "df5d2597b3dcba2f5cc91947bb3904598bc27fcb732edcd76093ca0f1ea4e98f",
     "name": "Museums",
-    "expected": 86239,
-    "actual": 97410,
+    "expected": 86252,
+    "actual": 97430,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",
     "description": "The number of museums in the world",
