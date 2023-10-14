@@ -91,6 +91,17 @@ export default async function netherlands(): Promise<Comparison[]> {
                 '2023-02-28',
                 taginfoServer
             ),
+            await taginfoComparisons(
+                'Civil defense siren',
+                'emergency',
+                'siren',
+                4278,
+                'https://www.brandweer.nl/onderwerpen/sirenes/',
+                'At this critical point in time, facing extinction in The Netherlands they deserve to be mapped.',
+                ['🛒'],
+                '2023-02-28',
+                taginfoServer
+            ),
 
             // from other files
             await geldmaat()
