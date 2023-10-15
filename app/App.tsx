@@ -8,7 +8,6 @@ import tags from '../data/tags.json';
 // @ts-expect-error -- static files are not supported by typescript
 import logo from '../static/logo.svg';
 
-// eslint-disable-next-line unicorn/prevent-abbreviations
 import pkg from '../package.json';
 
 const prioritizedCountries = [

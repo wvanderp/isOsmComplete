@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { parse } from 'csv-parse/sync';
 import { Comparison } from '../../types';
-import appendCountry from '../../utils/appendCountry';
+import appendCountry from '../../utils/appendData';
 import { taginfoComparisonKeyOnly, taginfoComparisonMultipleTags } from '../../utils/taginfoComparisons';
 
 const sourceUrl = 'https://data.europa.eu/data/datasets/6k2ldtwgaa2lvoudvtbbq?locale=en';

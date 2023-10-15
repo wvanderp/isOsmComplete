@@ -1,5 +1,5 @@
 import { Comparison } from '../../types';
-import appendCountry from '../../utils/appendCountry';
+import appendCountry from '../../utils/appendData';
 import taginfoComparisons from '../../utils/taginfoComparisons';
 
 const taginfoServer = 'https://taginfo.geofabrik.de/europe:great-britain:england:greater-london';

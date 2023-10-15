@@ -531,6 +531,35 @@
     "country": "DE"
   },
   {
+    "id": "8ac45dae95ef22e2d219113f4e80215c865efa2424a819760f3f577e0cea5c1d",
+    "name": "Bakeries in France 🍞🥐🥖",
+    "expected": 56553,
+    "actual": 27505,
+    "expectedSource": "https://github.com/wvanderp/isOsmComplete/issues/1",
+    "actualSource": "taginfo",
+    "tags": [
+      "🛒"
+    ],
+    "description": "Tu aimes les baguettes? 🥖🥖🥖 Then you better make sure that osm knows where the closest baker is?",
+    "lastUpdated": "2023-10-15",
+    "thanks": "Merci beaucoup à [@Binnette](https://github.com/Binnette) for the suggestion and providing the data!",
+    "country": "FR"
+  },
+  {
+    "id": "5ce04cef2ca40847c768a5ce35ae256894db2ca41eada68e24b108df0e46f9fa",
+    "name": "Eiffel Tower",
+    "expected": 1,
+    "actual": 1,
+    "expectedSource": "https://www.google.com/search?q=how+many+eiffel+towers+are+there%3F",
+    "actualSource": "taginfo",
+    "tags": [
+      "🏛️"
+    ],
+    "description": "The one and only Eiffel Tower. Did we remember to add it to osm?",
+    "lastUpdated": "2023-10-15",
+    "country": "FR"
+  },
+  {
     "id": "0a275c5789b11d5b72921303db8373e97342f2d81af43e22d3c768d58df03206",
     "name": "Airports with IATA codes ✈️",
     "expected": 8890,
@@ -576,7 +605,7 @@
   {
     "id": "6ea4be580cc1cecfb7e0f67fac16e5963aebc743d6397e6259874592938ee3db",
     "name": "Sculptures",
-    "expected": 391765,
+    "expected": 391639,
     "actual": 80226,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",

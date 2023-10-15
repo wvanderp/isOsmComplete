@@ -1,6 +1,6 @@
 /* eslint-disable sonarjs/no-duplicate-string */
 import { Comparison } from '../../types';
-import appendCountry from '../../utils/appendCountry';
+import appendCountry from '../../utils/appendData';
 import { brandWikidata } from '../../utils/osmTags';
 import taginfoComparisons, { taginfoComparisonMultipleTags } from '../../utils/taginfoComparisons';
 import geldmaat from './geldmaat';

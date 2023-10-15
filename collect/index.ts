@@ -16,6 +16,7 @@ import wikidata from './countries/fromSource/wikidata/wikidata';
 
 import { Comparison } from './types';
 import germany from './countries/DE/germany';
+import france from './countries/FR/france';
 
 const directory = path.join(__dirname, '../data');
 const tagsFile = path.join(__dirname, 'tags.json');
@@ -31,6 +32,7 @@ const tagsFile = path.join(__dirname, 'tags.json');
         ...(await unitedStates()),
         ...(await vietnam()),
         ...(await germany()),
+        ...(await france()),
 
         // fromSource
         // ...(await factbook())

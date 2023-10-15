@@ -6,3 +6,13 @@ export default function appendCountry(
 ): Comparison[] {
     return comparison.map((c) => ({ ...c, country }));
 }
+
+export function appendThanks(
+    comparison: Comparison,
+    thanks: string
+): Comparison {
+    return {
+        ...comparison,
+        thanks
+    };
+}

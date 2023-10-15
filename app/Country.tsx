@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { Card, CardBody, CardText, CardTitle, Progress } from 'reactstrap';
 
+import showdown from 'showdown';
+
 import { countryCodeEmoji } from 'country-code-emoji';
 import countries from 'i18n-iso-countries';
 import english from 'i18n-iso-countries/langs/en.json';
@@ -10,6 +12,7 @@ import draw_chronology_chart from './utils/drawGraph';
 import downloadGraphData from './utils/downloadGraphData';
 
 countries.registerLocale(english);
+const markdownConverter = new showdown.Converter();
 
 function countryCodeToEmoji(code: CountryCodes): string {
     if (code === 'Worldwide') return '🌎';
@@ -71,9 +74,12 @@ function Comparison(props: {
                     Actual: {props.comparison.actual}<br />
                     Percentage: {Math.floor((props.comparison.actual / props.comparison.expected) * 100)}% <br />
 
-                    <a href={props.comparison.expectedSource}>Source of Expected</a>
+                    { /* eslint-disable-next-line react/jsx-no-target-blank -- I love seeing the referrer my self so I will give it to others */}
+                    <a href={props.comparison.expectedSource} target="_blank" rel="noopener">Source of Expected</a>
                 </CardText>
                 <Graph comparison={props.comparison} />
+                {/* eslint-disable-next-line react/no-danger -- this is markdown */ }
+                <div id="thanks" dangerouslySetInnerHTML={{__html: props.comparison.thanks ? markdownConverter.makeHtml(props.comparison.thanks) : ''}} />
             </CardBody>
         </Card>
     );

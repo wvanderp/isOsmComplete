@@ -1,5 +1,5 @@
 import { Comparison } from '../../types';
-import appendCountry from '../../utils/appendCountry';
+import appendCountry from '../../utils/appendData';
 import { brandWikidata } from '../../utils/osmTags';
 import taginfoComparisons from '../../utils/taginfoComparisons';
 

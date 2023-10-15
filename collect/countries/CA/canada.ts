@@ -1,5 +1,5 @@
 import { Comparison } from '../../types';
-import appendCountry from '../../utils/appendCountry';
+import appendCountry from '../../utils/appendData';
 import { taginfoComparisonKeyOnly } from '../../utils/taginfoComparisons';
 
 export default async function canada(): Promise<Comparison[]> {

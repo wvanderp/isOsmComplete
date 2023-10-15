@@ -1,5 +1,5 @@
 import { Comparison } from '../../../../types';
-import appendCountry from '../../../../utils/appendCountry';
+import appendCountry from '../../../../utils/appendData';
 import wikidataComparison from '../utils/wikidataComparison';
 
 const sparqlQuery = `

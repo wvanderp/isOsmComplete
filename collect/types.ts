@@ -12,6 +12,7 @@ export interface Comparison {
     country?: string; // country code
     extra?: unknown; // extra data see below
     tags?: string[]; // tags to add to the comparison (in emoji)
+    thanks?: string; // a message to thank the contributor
 }
 
 export type TaginfoComparison = Comparison & {
