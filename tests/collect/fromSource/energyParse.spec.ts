@@ -20,7 +20,7 @@ const testCases = [
     { input: '10.0kw', output: 10000},
     { input: '1,000.0mw', output: 1000000000},
 
-    { input: '1,000.2 million kW (2017 est.)', output: 1000200000000},
+    { input: '1,000.2 million kW (2017 est.)', output: 1000200000000}
 ];
 
 describe('genericEnergyParser', () => {

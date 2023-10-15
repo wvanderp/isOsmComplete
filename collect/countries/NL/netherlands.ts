@@ -5,7 +5,7 @@ import { brandWikidata } from '../../utils/osmTags';
 import taginfoComparisons, { taginfoComparisonMultipleTags } from '../../utils/taginfoComparisons';
 import geldmaat from './geldmaat';
 
-const taginfoServer = 'https://taginfo.geofabrik.de/europe/netherlands/';
+const taginfoServer = 'https://taginfo.geofabrik.de/europe:netherlands/';
 const taginfoServerEuropa = 'https://taginfo.geofabrik.de/europe';
 
 export default async function netherlands(): Promise<Comparison[]> {

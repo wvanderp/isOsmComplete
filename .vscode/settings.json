@@ -5,27 +5,30 @@
         "Donalds",
         "Etos",
         "Factbook",
-        "fastned",
-        "geldmaat",
+        "FastNed",
+        "Geldmaat",
         "Heijn",
-        "netherlands",
+        "Netherlands",
         "nocheck",
         "rapideditor",
         "REWE",
         "sonarjs",
         "sparql",
-        "stolperstein",
         "Stolpersteine",
-        "taginfo",
-        "taginfos",
+        "Taginfo",
+        "Taginfos",
         "unzipper",
-        "wikibase",
-        "wikidata"
+        "Wikibase",
+        "Wikidata",
+        "pOpshelf"
     ],
     "yaml.schemas": {
         "https://json.schemastore.org/github-workflow.json": "vscode-vfs://github/github-actions[bot]/isOsmComplete/.github/workflows/build.yml"
     },
     "search.exclude": {
         "data/**/*":true
+    },
+    "[csv]": {
+        "files.insertFinalNewline": false,
     }
 }

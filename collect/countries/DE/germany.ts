@@ -3,7 +3,7 @@ import appendCountry from '../../utils/appendCountry';
 import { brandWikidata } from '../../utils/osmTags';
 import taginfoComparisons from '../../utils/taginfoComparisons';
 
-const taginfoServer = 'https://taginfo.geofabrik.de/europe/germany';
+const taginfoServer = 'https://taginfo.geofabrik.de/europe:germany';
 
 export default async function germany(): Promise<Comparison[]> {
     return appendCountry(

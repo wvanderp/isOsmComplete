@@ -3,7 +3,7 @@ import appendCountry from '../../utils/appendCountry';
 import { brandWikidata } from '../../utils/osmTags';
 import taginfoComparisons, { taginfoComparisonKeyOnly } from '../../utils/taginfoComparisons';
 
-const taginfoServer = 'https://taginfo.geofabrik.de/north-america/us/';
+const taginfoServer = 'https://taginfo.geofabrik.de/north-america:us/';
 
 export default async function unitedStates(): Promise<Comparison[]> {
     return appendCountry(
@@ -23,11 +23,22 @@ export default async function unitedStates(): Promise<Comparison[]> {
                 'Walmart',
                 brandWikidata,
                 'Q483551',
-                4717, // only in the US
+                4616, // only in the US
                 'https://corporate.walmart.com/about/location-facts',
                 'Walmart is the largest company in the world by revenue. Are all the Walmart stores in the US tagged?',
                 ['🛒'],
-                '2023-03-17',
+                '2023-10-15',
+                taginfoServer
+            ),
+            await taginfoComparisons(
+                'sam\'s club',
+                brandWikidata,
+                'Q1972120',
+                599, // only in the US
+                'https://corporate.walmart.com/about/location-facts',
+                'Sam\'s Club is a membership-only retail warehouse club. Are all of Sam\'s clubhouses in the US tagged?',
+                ['🛒'],
+                '2023-10-15',
                 taginfoServer
             ),
             await taginfoComparisons(

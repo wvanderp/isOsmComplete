@@ -109,7 +109,49 @@ for (const file of graphDataFilesWithExtension) {
 }
 
 // --------------------------------------------
+// see if all the csv files are in data.json
+console.log('Are all the csv files in data.json?...');
+
+const graphDataFilesTwo = fs.readdirSync(graphDataPath);
+const graphDataFilesWithExtensionTwo = graphDataFilesTwo.filter((file) => file.endsWith('.csv'));
+const graphDataFilesWithoutExtensionTwo = graphDataFilesWithExtensionTwo.map((file) => file.replace('.csv', ''));
+
+const dataIDS = new Set(data.map((item) => item.id));
+
+// eslint-disable-next-line unicorn/prefer-spread
+const missingIDs = graphDataFilesWithoutExtensionTwo.filter((id) => !dataIDS.has(id));
+
+if (missingIDs.length > 0) {
+    console.log('The following ids are in graph data but not in data.json');
+    console.log(missingIDs);
+    unhappy = true;
+}
+
+// --------------------------------------------
+// checking for duplicate ids in data.json
+console.log('Checking for duplicate ids in data.json...');
+
+const ids = new Set<string>();
+const duplicateIds = new Set<string>();
+
+for (const item of data) {
+    if (ids.has(item.id)) {
+        duplicateIds.add(item.id);
+    } else {
+        ids.add(item.id);
+    }
+}
+
+if (duplicateIds.size > 0) {
+    console.log('The following ids are duplicated in data.json');
+    console.log(duplicateIds);
+    unhappy = true;
+}
+
+// --------------------------------------------
 // find the oldest date in the data
+
+console.log('Finding the oldest date in the data...');
 
 const oldestDate = data.reduce<[Date, Comparison]>((accumulator, current) => {
     const date = new Date(current.lastUpdated);
