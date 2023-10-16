@@ -133,7 +133,7 @@
     "id": "72b7bf05d23320f5325ae692c0c8de3fb12445f9c049e002e5dbe1976f8f1f4b",
     "name": "Tesla superchargers",
     "expected": 5265,
-    "actual": 844,
+    "actual": 846,
     "expectedSource": "https://tesla-cdn.thron.com/static/ZXSBN8_TSLA_Q1_2023_Update_ABMJPG.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -248,7 +248,7 @@
     "id": "618d455f20de0fc57391795eb6857e7ad0343ae82314129cded8f49d1e780184",
     "name": "Car chargers",
     "expected": 143592,
-    "actual": 8148,
+    "actual": 8150,
     "expectedSource": "https://www.rvo.nl/onderwerpen/duurzaam-ondernemen/energie-en-milieu-innovaties/elektrisch-rijden/stand-van-zaken/cijfers",
     "actualSource": "taginfo",
     "tags": [
@@ -348,7 +348,7 @@
     "id": "23178549810ddfaaae84a0f38a238565476ee6426edc61ba20622a9825d7f22c",
     "name": "Civil defense siren",
     "expected": 4278,
-    "actual": 4044,
+    "actual": 4045,
     "expectedSource": "https://www.brandweer.nl/onderwerpen/sirenes/",
     "actualSource": "taginfo",
     "tags": [
@@ -390,7 +390,7 @@
     "id": "672c11a3ce96b3a1220ab8c35eb8cee0959397cccc7ee8f3a718d0b3bbd7fdaf",
     "name": "Walmart",
     "expected": 4616,
-    "actual": 5560,
+    "actual": 5561,
     "expectedSource": "https://corporate.walmart.com/about/location-facts",
     "actualSource": "taginfo",
     "tags": [
@@ -418,7 +418,7 @@
     "id": "3f9e77cd45a114b1e686eeba3cbca311458f447e3a19a8212f440adfa6ca3757",
     "name": "Dollar General",
     "expected": 18190,
-    "actual": 7313,
+    "actual": 7323,
     "expectedSource": "https://investor.dollargeneral.com/websites/dollargeneral/English/0/investor-relations.html",
     "actualSource": "taginfo",
     "tags": [
@@ -432,7 +432,7 @@
     "id": "8f49d6617105144092570d23ddb7f8648887e839d5350af8b72cd7549eb16e60",
     "name": "Dollar Tree",
     "expected": 15840,
-    "actual": 3822,
+    "actual": 3825,
     "expectedSource": "https://corporate.dollartree.com/_assets/_e019a55beaa640d513e0240de36a677a/dollartreeinfo/db/893/9106/annual_report/DT_2021_Form+10-K_FINAL_5.11.22.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -446,7 +446,7 @@
     "id": "431c3520a26be03937166e9dbfed5a56d41e24de9e0f2530c7bea24eb70af3a6",
     "name": "CVS",
     "expected": 9900,
-    "actual": 7883,
+    "actual": 7888,
     "expectedSource": "https://s2.q4cdn.com/447711729/files/doc_financials/2021/ar/CVS2021_Annual-Report.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -461,7 +461,7 @@
     "id": "9dbf8e0d4c94858e8b152c16048d24705a9f3a744229e49ea85f8bae7e5ccead",
     "name": "Walgreens",
     "expected": 4717,
-    "actual": 8216,
+    "actual": 8221,
     "expectedSource": "https://s1.q4cdn.com/343380161/files/doc_financials/2022/ar/WBA-2022-Annual-Report.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -534,7 +534,7 @@
     "id": "8ac45dae95ef22e2d219113f4e80215c865efa2424a819760f3f577e0cea5c1d",
     "name": "Bakeries in France 🍞🥐🥖",
     "expected": 56553,
-    "actual": 27505,
+    "actual": 27504,
     "expectedSource": "https://github.com/wvanderp/isOsmComplete/issues/1",
     "actualSource": "taginfo",
     "tags": [
@@ -590,7 +590,7 @@
   {
     "id": "df5d2597b3dcba2f5cc91947bb3904598bc27fcb732edcd76093ca0f1ea4e98f",
     "name": "Museums",
-    "expected": 86448,
+    "expected": 86455,
     "actual": 97721,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",
@@ -605,7 +605,7 @@
   {
     "id": "6ea4be580cc1cecfb7e0f67fac16e5963aebc743d6397e6259874592938ee3db",
     "name": "Sculptures",
-    "expected": 391639,
+    "expected": 391523,
     "actual": 80226,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",
