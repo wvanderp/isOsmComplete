@@ -19,7 +19,7 @@ export default async function netherlands(): Promise<Comparison[]> {
                 // normal + fast
                 138717 + 4875,
                 'https://www.rvo.nl/onderwerpen/duurzaam-ondernemen/energie-en-milieu-innovaties/elektrisch-rijden/stand-van-zaken/cijfers',
-                'Electric car charging stations will be more important than ever. The Netherlands has {{actual}} car chargers. Are they all in osm?',
+                'Electric car charging stations will be more important than ever. The Netherlands has {{actual}} car chargers. Are they all in OSM?',
                 ['🔋', '🚗'],
                 '2023-09-12',
                 taginfoServer
@@ -30,7 +30,7 @@ export default async function netherlands(): Promise<Comparison[]> {
                 ['hospital', 'clinic'],
                 305 + 442, // hospitals + clinics
                 'https://www.zorgkaartnederland.nl/ziekenhuis', // and https://www.zorgkaartnederland.nl/overige-kliniek
-                'The Netherlands has {{actual}} hospitals and clinics. Are they all in osm?',
+                'The Netherlands has {{actual}} hospitals and clinics. Are they all in OSM?',
                 ['🏥'],
                 '2023-02-19',
                 taginfoServer
@@ -52,7 +52,7 @@ export default async function netherlands(): Promise<Comparison[]> {
                 'speed_camera',
                 615,
                 'https://www.rtlnieuws.nl/nieuws/nederland/artikel/5214097/flitspaal-cjib-boetes-overtredingen-snelheid-bon-auto-politie',
-                'Getting a ticket is really annoying! Maybe osm can help you obey the law extremely locally.',
+                'Getting a ticket is really annoying! Maybe OSM can help you obey the law extremely locally.',
                 ['🚗', '👀'],
                 '2023-04-20',
                 taginfoServer
@@ -63,7 +63,7 @@ export default async function netherlands(): Promise<Comparison[]> {
                 ['Q1653985', 'Q78163765'],
                 1228,
                 'https://media.aholddelhaize.com/media/vy4neu1n/ar-2022-ahold-delhaize-interactive-final.pdf?t=638143108570530000',
-                'Albert Heijn is the biggest supermarket chain in the Netherlands. Are they all in osm?',
+                'Albert Heijn is the biggest supermarket chain in the Netherlands. Are they all in OSM?',
                 ['🛒'],
                 '2023-02-28',
                 // use the europe server because Albert Heijn is also in Belgium
@@ -75,7 +75,7 @@ export default async function netherlands(): Promise<Comparison[]> {
                 'Q13639185',
                 603,
                 'https://media.aholddelhaize.com/media/vy4neu1n/ar-2022-ahold-delhaize-interactive-final.pdf?t=638143108570530000',
-                'Gall & Gall is a liquor store chain in the Netherlands. Are they all in osm?',
+                'Gall & Gall is a liquor store chain in the Netherlands. Are they all in OSM?',
                 ['🛒'],
                 '2023-02-28',
                 taginfoServer
@@ -86,7 +86,7 @@ export default async function netherlands(): Promise<Comparison[]> {
                 'Q2609459',
                 522,
                 'https://media.aholddelhaize.com/media/vy4neu1n/ar-2022-ahold-delhaize-interactive-final.pdf?t=638143108570530000',
-                'Etos is a drugstore chain in the Netherlands. Are they all in osm?',
+                'Etos is a drugstore chain in the Netherlands. Are they all in OSM?',
                 ['🛒'],
                 '2023-02-28',
                 taginfoServer

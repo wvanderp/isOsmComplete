@@ -9,7 +9,7 @@
     "tags": [
       "🏠"
     ],
-    "description": "Google, in their 2022 keynote, claim that they have 1,600,000,000 buildings. Are we even close with osm?",
+    "description": "Google, in their 2022 keynote, claim that they have 1,600,000,000 buildings. Are we even close with OSM?",
     "lastUpdated": "2023-09-23",
     "country": "Worldwide"
   },
@@ -21,7 +21,7 @@
     "expectedSource": "https://www.timesofisrael.com/holocaust-memorial-project-marks-milestone-with-100000-stumbling-blocks/",
     "actualSource": "taginfo",
     "tags": [],
-    "description": "Stolpersteine are monuments to the victims of world war two. They should be in osm.",
+    "description": "Stolpersteine are monuments to the victims of world war two. They should be in OSM.",
     "lastUpdated": "2023-06-01",
     "country": "Worldwide"
   },
@@ -35,7 +35,7 @@
     "tags": [
       "🛒"
     ],
-    "description": "IKEA is a furniture store. They have {{actual}} stores in 63 countries. Are they all in osm?",
+    "description": "IKEA is a furniture store. They have {{actual}} stores in 63 countries. Are they all in OSM?",
     "lastUpdated": "2023-06-28",
     "country": "Worldwide"
   },
@@ -50,7 +50,7 @@
       "🛒",
       "🍔"
     ],
-    "description": "A 7-Eleven is always nearby. Because there are {{actual}} of them in 18 countries. Is your closest 7-Eleven in osm?",
+    "description": "A 7-Eleven is always nearby. Because there are {{actual}} of them in 18 countries. Is your closest 7-Eleven in OSM?",
     "lastUpdated": "2023-09-24",
     "country": "Worldwide"
   },
@@ -80,7 +80,7 @@
       "🛒",
       "🍔"
     ],
-    "description": "Starbucks seems to be everywhere. But can you find them all in osm?",
+    "description": "Starbucks seems to be everywhere. But can you find them all in OSM?",
     "lastUpdated": "2023-08-01",
     "country": "Worldwide"
   },
@@ -95,7 +95,7 @@
       "🍔",
       "🛒"
     ],
-    "description": "McDonald's is the largest fast food chain in the world. Their corporate website says that the company has 38,000 stores in the world. Are they all in osm?",
+    "description": "McDonald's is the largest fast food chain in the world. Their corporate website says that the company has 38,000 stores in the world. Are they all in OSM?",
     "lastUpdated": "2023-09-22",
     "country": "Worldwide"
   },
@@ -110,7 +110,7 @@
       "🍔",
       "🛒"
     ],
-    "description": "KFC expanded out of Kentucky in 1964. They now have {{actual}} stores in 135 countries. Are they all in osm?",
+    "description": "KFC expanded out of Kentucky in 1964. They now have {{actual}} stores in 135 countries. Are they all in OSM?",
     "lastUpdated": "2023-03-17",
     "country": "Worldwide"
   },
@@ -125,7 +125,7 @@
       "🍔",
       "🛒"
     ],
-    "description": "Burger King is a fast food chain. They have {{actual}} stores in 100 countries. Are they all in osm?",
+    "description": "Burger King is a fast food chain. They have {{actual}} stores in 100 countries. Are they all in OSM?",
     "lastUpdated": "2023-03-17",
     "country": "Worldwide"
   },
@@ -140,7 +140,7 @@
       "🔋",
       "🚗"
     ],
-    "description": "When you want to charge your Tesla but the middle screen is dead and you don't have the app, you can find a supercharger in osm. Or can you?",
+    "description": "When you want to charge your Tesla but the middle screen is dead and you don't have the app, you can find a supercharger in OSM. Or can you?",
     "lastUpdated": "2023-05-27",
     "country": "Worldwide"
   },
@@ -155,7 +155,7 @@
       "🔋",
       "🚗"
     ],
-    "description": "Fastned is a provider of charging stations in Europe. What is the charge of Fastned in osm?",
+    "description": "Fastned is a provider of charging stations in Europe. What is the charge of Fastned in OSM?",
     "lastUpdated": "2023-09-24",
     "country": "EU"
   },
@@ -198,7 +198,7 @@
       "🍺",
       "🛒"
     ],
-    "description": "Are all the locations for Britain's favorite pastime in osm?",
+    "description": "Are all the locations for Britain's favorite pastime in OSM?",
     "lastUpdated": "2023-09-24",
     "country": "GB"
   },
@@ -212,7 +212,7 @@
     "tags": [
       "📮"
     ],
-    "description": "Are all the Royal Mail post boxes in osm?",
+    "description": "Are all the Royal Mail post boxes in OSM?",
     "lastUpdated": "2023-09-22",
     "country": "GB"
   },
@@ -226,7 +226,7 @@
     "tags": [
       "🛒"
     ],
-    "description": "Are all the Tesco stores in osm?",
+    "description": "Are all the Tesco stores in OSM?",
     "lastUpdated": "2023-09-24",
     "country": "GB"
   },
@@ -255,7 +255,7 @@
       "🔋",
       "🚗"
     ],
-    "description": "Electric car charging stations will be more important than ever. The Netherlands has {{actual}} car chargers. Are they all in osm?",
+    "description": "Electric car charging stations will be more important than ever. The Netherlands has {{actual}} car chargers. Are they all in OSM?",
     "lastUpdated": "2023-09-12",
     "country": "NL"
   },
@@ -269,7 +269,7 @@
     "tags": [
       "🏥"
     ],
-    "description": "The Netherlands has {{actual}} hospitals and clinics. Are they all in osm?",
+    "description": "The Netherlands has {{actual}} hospitals and clinics. Are they all in OSM?",
     "lastUpdated": "2023-02-19",
     "country": "NL"
   },
@@ -298,7 +298,7 @@
       "🚗",
       "👀"
     ],
-    "description": "Getting a ticket is really annoying! Maybe osm can help you obey the law extremely locally.",
+    "description": "Getting a ticket is really annoying! Maybe OSM can help you obey the law extremely locally.",
     "lastUpdated": "2023-04-20",
     "country": "NL"
   },
@@ -312,7 +312,7 @@
     "tags": [
       "🛒"
     ],
-    "description": "Albert Heijn is the biggest supermarket chain in the Netherlands. Are they all in osm?",
+    "description": "Albert Heijn is the biggest supermarket chain in the Netherlands. Are they all in OSM?",
     "lastUpdated": "2023-02-28",
     "country": "NL"
   },
@@ -326,7 +326,7 @@
     "tags": [
       "🛒"
     ],
-    "description": "Gall & Gall is a liquor store chain in the Netherlands. Are they all in osm?",
+    "description": "Gall & Gall is a liquor store chain in the Netherlands. Are they all in OSM?",
     "lastUpdated": "2023-02-28",
     "country": "NL"
   },
@@ -340,7 +340,7 @@
     "tags": [
       "🛒"
     ],
-    "description": "Etos is a drugstore chain in the Netherlands. Are they all in osm?",
+    "description": "Etos is a drugstore chain in the Netherlands. Are they all in OSM?",
     "lastUpdated": "2023-02-28",
     "country": "NL"
   },
@@ -483,7 +483,7 @@
       "🍔",
       "🛒"
     ],
-    "description": "McDonald's was never able to enter the Vietnamese market. They only managed to open {{actual}} stores. To console them, we should have them all in osm.",
+    "description": "McDonald's was never able to enter the Vietnamese market. They only managed to open {{actual}} stores. To console them, we should have them all in OSM.",
     "lastUpdated": "2023-09-07",
     "country": "VN"
   },
@@ -498,7 +498,7 @@
       "🍔",
       "🛒"
     ],
-    "description": "Burger King is also not very successful in Vietnam. They only have {{actual}} stores. Are they all in osm?",
+    "description": "Burger King is also not very successful in Vietnam. They only have {{actual}} stores. Are they all in OSM?",
     "lastUpdated": "2023-09-07",
     "country": "VN"
   },
@@ -512,7 +512,7 @@
     "tags": [
       "🛒"
     ],
-    "description": "Are all the REWE stores in osm?",
+    "description": "Are all the REWE stores in OSM?",
     "lastUpdated": "2023-06-01",
     "country": "DE"
   },
@@ -526,7 +526,7 @@
     "tags": [
       "🛒"
     ],
-    "description": "Are all the PENNY stores in osm?",
+    "description": "Are all the PENNY stores in OSM?",
     "lastUpdated": "2023-06-01",
     "country": "DE"
   },
@@ -540,7 +540,7 @@
     "tags": [
       "🛒"
     ],
-    "description": "Tu aimes les baguettes? 🥖🥖🥖 Then you better make sure that osm knows where the closest baker is.",
+    "description": "Tu aimes les baguettes? 🥖🥖🥖 Then you better make sure that OSM knows where the closest baker is.",
     "lastUpdated": "2023-10-15",
     "thanks": "Merci beaucoup à [@Binnette](https://github.com/Binnette) for the suggestion and for providing the data!",
     "country": "FR"
@@ -555,7 +555,7 @@
     "tags": [
       "🏛️"
     ],
-    "description": "The one and only Eiffel Tower. Did we remember to add it to osm?",
+    "description": "The one and only Eiffel Tower. Did we remember to add it to OSM?",
     "lastUpdated": "2023-10-15",
     "country": "FR"
   },
@@ -609,7 +609,7 @@
     "actual": 80425,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",
-    "description": "It is always nice to have some art in your city. Is your local sculpture in osm?",
+    "description": "It is always nice to have some art in your city. Is your local sculpture in OSM?",
     "tags": [
       "🎨"
     ],

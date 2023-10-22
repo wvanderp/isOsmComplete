@@ -4,9 +4,9 @@ export interface Comparison {
     id: string; // hash of the comparison
     name: string; // name of the comparison
     expected: number; // expected value
-    actual: number; // actual value (from osm)
+    actual: number; // actual value (from OSM)
     expectedSource: string; // where the expected value came from
-    actualSource: string; // where the actual value came from (osm, taginfo, etc)
+    actualSource: string; // where the actual value came from (OSM, taginfo, etc)
     description: string; // description of the comparison
     lastUpdated: string; // when the comparison was last updated
     country?: string; // country code

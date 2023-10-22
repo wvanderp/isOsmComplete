@@ -16,7 +16,7 @@ export default async function france(): Promise<Comparison[]> {
                     bakery,
                     56553,
                     'https://github.com/wvanderp/isOsmComplete/issues/1',
-                    'Tu aimes les baguettes? 🥖🥖🥖 Then you better make sure that osm knows where the closest baker is.',
+                    'Tu aimes les baguettes? 🥖🥖🥖 Then you better make sure that OSM knows where the closest baker is.',
                     ['🛒'],
                     '2023-10-15',
                     taginfoServer
@@ -29,7 +29,7 @@ export default async function france(): Promise<Comparison[]> {
                 'Q243',
                 1,
                 'https://www.google.com/search?q=how+many+eiffel+towers+are+there%3F',
-                'The one and only Eiffel Tower. Did we remember to add it to osm?',
+                'The one and only Eiffel Tower. Did we remember to add it to OSM?',
                 ['🏛️'],
                 '2023-10-15'
             )
