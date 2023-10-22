@@ -16,12 +16,12 @@ export default async function france(): Promise<Comparison[]> {
                     bakery,
                     56553,
                     'https://github.com/wvanderp/isOsmComplete/issues/1',
-                    'Tu aimes les baguettes? 🥖🥖🥖 Then you better make sure that osm knows where the closest baker is?',
+                    'Tu aimes les baguettes? 🥖🥖🥖 Then you better make sure that osm knows where the closest baker is.',
                     ['🛒'],
                     '2023-10-15',
                     taginfoServer
                 ),
-                'Merci beaucoup à [@Binnette](https://github.com/Binnette) for the suggestion and providing the data!'
+                'Merci beaucoup à [@Binnette](https://github.com/Binnette) for the suggestion and for providing the data!'
             ),
             await taginfoComparisons(
                 'Eiffel Tower',

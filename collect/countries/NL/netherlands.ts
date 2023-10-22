@@ -19,7 +19,7 @@ export default async function netherlands(): Promise<Comparison[]> {
                 // normal + fast
                 138717 + 4875,
                 'https://www.rvo.nl/onderwerpen/duurzaam-ondernemen/energie-en-milieu-innovaties/elektrisch-rijden/stand-van-zaken/cijfers',
-                'Electric car charging station will be more important than ever. The Netherlands has {{actual}} car chargers. Are they all in osm?',
+                'Electric car charging stations will be more important than ever. The Netherlands has {{actual}} car chargers. Are they all in osm?',
                 ['🔋', '🚗'],
                 '2023-09-12',
                 taginfoServer

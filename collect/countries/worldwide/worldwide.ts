@@ -13,7 +13,7 @@ export default async function worldwide(): Promise<Comparison[]> {
                 'building',
                 1600000000,
                 'https://youtu.be/nP-nMZpLM1A?t=409',
-                'Google, in there 2022 keynote, claim that they have 1,600,000,000 buildings. Are we even close with osm?',
+                'Google, in their 2022 keynote, claim that they have 1,600,000,000 buildings. Are we even close with osm?',
                 ['🏠'],
                 '2023-09-23'
             ),
@@ -53,7 +53,7 @@ export default async function worldwide(): Promise<Comparison[]> {
                 'Q244457',
                 37000,
                 'https://www.subway.com/en-us/contactus/subwayfaqs/about-subway',
-                'Subway and McDonald\'s are the two largest fast food chains in the world. who has more stores?',
+                'Subway and McDonald\'s are the two largest fast food chains in the world. Who has more stores?',
                 ['🍔', '🛒'],
                 '2023-09-24'
             ),
@@ -73,7 +73,7 @@ export default async function worldwide(): Promise<Comparison[]> {
                 ['Q38076', 'Q12061542'],
                 40275,
                 'https://corporate.mcdonalds.com/content/dam/sites/corp/nfl/pdf/MCD_2023_Annual_Report.pdf',
-                'McDonald\'s is the largest fast food chain in the world. There corporate website says that the company has 38,000 stores in the world. Are they all in osm?',
+                'McDonald\'s is the largest fast food chain in the world. Their corporate website says that the company has 38,000 stores in the world. Are they all in osm?',
                 ['🍔', '🛒'],
                 '2023-09-22'
             ),
@@ -102,7 +102,7 @@ export default async function worldwide(): Promise<Comparison[]> {
                 [['amenity', 'charging_station'], ['brand:wikidata', 'Q478214']],
                 5265,
                 'https://tesla-cdn.thron.com/static/ZXSBN8_TSLA_Q1_2023_Update_ABMJPG.pdf', // page 6
-                'When you want to charge your Tesla but the middle screen is dead and you don\'t have the app. You can find a supercharger in osm. Or can you?',
+                'When you want to charge your Tesla but the middle screen is dead and you don\'t have the app, you can find a supercharger in osm. Or can you?',
                 ['🔋', '🚗'],
                 '2023-05-27'
             )

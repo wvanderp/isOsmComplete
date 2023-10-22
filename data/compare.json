@@ -9,7 +9,7 @@
     "tags": [
       "🏠"
     ],
-    "description": "Google, in there 2022 keynote, claim that they have 1,600,000,000 buildings. Are we even close with osm?",
+    "description": "Google, in their 2022 keynote, claim that they have 1,600,000,000 buildings. Are we even close with osm?",
     "lastUpdated": "2023-09-23",
     "country": "Worldwide"
   },
@@ -65,7 +65,7 @@
       "🍔",
       "🛒"
     ],
-    "description": "Subway and McDonald's are the two largest fast food chains in the world. who has more stores?",
+    "description": "Subway and McDonald's are the two largest fast food chains in the world. Who has more stores?",
     "lastUpdated": "2023-09-24",
     "country": "Worldwide"
   },
@@ -95,7 +95,7 @@
       "🍔",
       "🛒"
     ],
-    "description": "McDonald's is the largest fast food chain in the world. There corporate website says that the company has 38,000 stores in the world. Are they all in osm?",
+    "description": "McDonald's is the largest fast food chain in the world. Their corporate website says that the company has 38,000 stores in the world. Are they all in osm?",
     "lastUpdated": "2023-09-22",
     "country": "Worldwide"
   },
@@ -140,7 +140,7 @@
       "🔋",
       "🚗"
     ],
-    "description": "When you want to charge your Tesla but the middle screen is dead and you don't have the app. You can find a supercharger in osm. Or can you?",
+    "description": "When you want to charge your Tesla but the middle screen is dead and you don't have the app, you can find a supercharger in osm. Or can you?",
     "lastUpdated": "2023-05-27",
     "country": "Worldwide"
   },
@@ -198,7 +198,7 @@
       "🍺",
       "🛒"
     ],
-    "description": "Are all the locations for Britten's favorite pass time in osm?",
+    "description": "Are all the locations for Britain's favorite pastime in osm?",
     "lastUpdated": "2023-09-24",
     "country": "GB"
   },
@@ -255,7 +255,7 @@
       "🔋",
       "🚗"
     ],
-    "description": "Electric car charging station will be more important than ever. The Netherlands has {{actual}} car chargers. Are they all in osm?",
+    "description": "Electric car charging stations will be more important than ever. The Netherlands has {{actual}} car chargers. Are they all in osm?",
     "lastUpdated": "2023-09-12",
     "country": "NL"
   },
@@ -382,7 +382,7 @@
     "tags": [
       "✈️"
     ],
-    "description": "Do all the airports in the US have a FAA tag?",
+    "description": "Do all the airports in the US have an FAA tag?",
     "lastUpdated": "2023-05-25",
     "country": "US"
   },
@@ -483,7 +483,7 @@
       "🍔",
       "🛒"
     ],
-    "description": "McDonald' was never able to enter the Vietnamese market. They only managed to open {{actual}} stores. To console them, we should have them all in osm.",
+    "description": "McDonald's was never able to enter the Vietnamese market. They only managed to open {{actual}} stores. To console them, we should have them all in osm.",
     "lastUpdated": "2023-09-07",
     "country": "VN"
   },
@@ -540,9 +540,9 @@
     "tags": [
       "🛒"
     ],
-    "description": "Tu aimes les baguettes? 🥖🥖🥖 Then you better make sure that osm knows where the closest baker is?",
+    "description": "Tu aimes les baguettes? 🥖🥖🥖 Then you better make sure that osm knows where the closest baker is.",
     "lastUpdated": "2023-10-15",
-    "thanks": "Merci beaucoup à [@Binnette](https://github.com/Binnette) for the suggestion and providing the data!",
+    "thanks": "Merci beaucoup à [@Binnette](https://github.com/Binnette) for the suggestion and for providing the data!",
     "country": "FR"
   },
   {
