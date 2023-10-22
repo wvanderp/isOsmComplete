@@ -45,11 +45,11 @@ export default async function unitedStates(): Promise<Comparison[]> {
                 'Dollar General',
                 brandWikidata,
                 'Q145168', // DG Market, DGX not in Wikidata
-                18190, // combining Dollar General, DG Market, DGX and pOpshelf
+                19294, // combining Dollar General, DG Market, DGX and pOpshelf
                 'https://investor.dollargeneral.com/websites/dollargeneral/English/0/investor-relations.html',
                 'This General store, also know as DG Market, DGX and pOpshelf, sells everything for $1. How much money would we have if we got a dollar for every Dollar General store on the map?',
                 ['🛒'],
-                '2023-03-17',
+                '2023-10-23',
                 taginfoServer
             ),
             await taginfoComparisons(

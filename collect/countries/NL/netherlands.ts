@@ -19,7 +19,7 @@ export default async function netherlands(): Promise<Comparison[]> {
                 // normal + fast
                 138717 + 4875,
                 'https://www.rvo.nl/onderwerpen/duurzaam-ondernemen/energie-en-milieu-innovaties/elektrisch-rijden/stand-van-zaken/cijfers',
-                'Electric car charging stations will be more important than ever. The Netherlands has {{actual}} car chargers. Are they all in OSM?',
+                'Electric car charging stations will be more important than ever. The Netherlands has {{expected}} car chargers. Are they all in OSM?',
                 ['🔋', '🚗'],
                 '2023-09-12',
                 taginfoServer
@@ -30,7 +30,7 @@ export default async function netherlands(): Promise<Comparison[]> {
                 ['hospital', 'clinic'],
                 305 + 442, // hospitals + clinics
                 'https://www.zorgkaartnederland.nl/ziekenhuis', // and https://www.zorgkaartnederland.nl/overige-kliniek
-                'The Netherlands has {{actual}} hospitals and clinics. Are they all in OSM?',
+                'The Netherlands has {{expected}} hospitals and clinics. Are they all in OSM?',
                 ['🏥'],
                 '2023-02-19',
                 taginfoServer

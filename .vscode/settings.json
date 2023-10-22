@@ -10,6 +10,7 @@
         "Heijn",
         "Netherlands",
         "nocheck",
+        "pOpshelf",
         "rapideditor",
         "REWE",
         "sonarjs",
@@ -20,7 +21,7 @@
         "unzipper",
         "Wikibase",
         "Wikidata",
-        "pOpshelf"
+        "wvdp"
     ],
     "yaml.schemas": {
         "https://json.schemastore.org/github-workflow.json": "vscode-vfs://github/github-actions[bot]/isOsmComplete/.github/workflows/build.yml"

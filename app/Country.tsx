@@ -49,11 +49,10 @@ export default function Country(props: {
 function Comparison(props: {
     comparison: Comparison;
 }) {
-    // replace {{actual}} with actual value
-    const cardDescription = props.comparison.description.replace(
-        '{{actual}}',
-        props.comparison.actual.toString()
-    );
+    // replace the templates in the description with the actual values
+    const cardDescription = props.comparison.description
+        .replace('{{actual}}', props.comparison.actual.toString())
+        .replace('{{expected}}', props.comparison.expected.toString());
 
     return (
         <Card color="light">
