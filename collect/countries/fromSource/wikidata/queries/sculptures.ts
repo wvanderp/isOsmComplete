@@ -19,7 +19,7 @@ export default async function sculptures(): Promise<Comparison[]> {
                 sparqlQuery,
                 'artwork_type',
                 'sculpture',
-                'It is always nice to have some art in your city. Is your local sculpture in osm?',
+                'It is always nice to have some art in your city. Is your local sculpture in OSM?',
                 ['🎨'],
                 '2023-09-24'
             )

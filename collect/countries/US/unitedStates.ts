@@ -14,7 +14,7 @@ export default async function unitedStates(): Promise<Comparison[]> {
                 'faa',
                 26648,
                 'https://www.faa.gov/air_traffic/flight_info/aeronav/aero_data/Loc_ID_Search/Encodes_Decodes/',
-                'Do all the airports in the US have a FAA tag?',
+                'Do all the airports in the US have an FAA tag?',
                 ['✈️'],
                 '2023-05-25',
                 taginfoServer

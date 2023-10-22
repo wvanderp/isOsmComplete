@@ -45,7 +45,7 @@ export default async function factbook(): Promise<Comparison[]> {
 
     fs.writeFileSync(`${factbookDirectory}/factbookEnergyList.json`, JSON.stringify(factbookEnergyList, null, 2));
 
-    // get the energy data from osm
+    // get the energy data from OSM
     const osmEnergyList = await getEnergyProduction();
 
     fs.writeFileSync(`${factbookDirectory}/osmEnergyList.json`, JSON.stringify(osmEnergyList, null, 2));

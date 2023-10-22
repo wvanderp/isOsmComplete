@@ -15,7 +15,7 @@ export default async function europe(): Promise<Comparison[]> {
                 'Q19935749',
                 272,
                 'https://fastnedcharging.com/hq/nl/fastned-bereikt-mijlpaal-van-positief-onderliggend-ebitda-resultaat/',
-                'Fastned is a provider of charging stations in Europe. What is the charge of Fastned in osm?',
+                'Fastned is a provider of charging stations in Europe. What is the charge of Fastned in OSM?',
                 ['🔋', '🚗'],
                 '2023-09-24',
                 taginfoServer
