@@ -65,3 +65,43 @@ export interface OverpassCount {
         }
     ]
 }
+
+// politie api
+
+export interface PolitieApi {
+    iterator: {
+        last: boolean;
+        offset: number;
+      };
+    politiebureaus: PolitiebureausEntity[];
+  }
+  interface PolitiebureausEntity {
+    displayName?: null;
+    links?: null;
+    uid: string;
+    url: string;
+    publicatiedatum: string;
+    availabletranslations?: null;
+    naam: string;
+    bezoekadres: BezoekadresOrPostadres;
+    postadres: BezoekadresOrPostadres;
+    openingstijden: string;
+    telefoonnummer: string;
+    faxnummer: string;
+    twitterurl: string;
+    facebookurl: string;
+    extrainformatie: string;
+    afbeelding: {
+        url: string;
+        alttext?: string | null;
+      };
+    locaties?: {
+        latitude: number;
+        longitude: number;
+      }[];
+  }
+interface BezoekadresOrPostadres {
+    postadres: string;
+    postcode: string;
+    plaats: string;
+  }

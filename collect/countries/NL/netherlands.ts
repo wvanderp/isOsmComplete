@@ -3,6 +3,7 @@ import { Comparison } from '../../types';
 import appendCountry from '../../utils/appendData';
 import { brandWikidata } from '../../utils/osmTags';
 import taginfoComparisons, { taginfoComparisonMultipleTags } from '../../utils/taginfoComparisons';
+import dutchJudicialSystem from './dutchJudicialSystem';
 import geldmaat from './geldmaat';
 
 const taginfoServer = 'https://taginfo.geofabrik.de/europe:netherlands/';
@@ -104,7 +105,8 @@ export default async function netherlands(): Promise<Comparison[]> {
             ),
 
             // from other files
-            await geldmaat()
+            await geldmaat(),
+            ...(await dutchJudicialSystem())
         ]
     );
 }

@@ -3,7 +3,7 @@
     "id": "f86b36460a37c5a45dea617f3fbd10c18027319318d2283be3f8318a7a793bca",
     "name": "Match Google on building",
     "expected": 1600000000,
-    "actual": 581241604,
+    "actual": 581361897,
     "expectedSource": "https://youtu.be/nP-nMZpLM1A?t=409",
     "actualSource": "taginfo",
     "tags": [
@@ -133,7 +133,7 @@
     "id": "72b7bf05d23320f5325ae692c0c8de3fb12445f9c049e002e5dbe1976f8f1f4b",
     "name": "Tesla superchargers",
     "expected": 5265,
-    "actual": 856,
+    "actual": 857,
     "expectedSource": "https://tesla-cdn.thron.com/static/ZXSBN8_TSLA_Q1_2023_Update_ABMJPG.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -142,6 +142,20 @@
     ],
     "description": "When you want to charge your Tesla but the middle screen is dead and you don't have the app, you can find a supercharger in OSM. Or can you?",
     "lastUpdated": "2023-05-27",
+    "country": "Worldwide"
+  },
+  {
+    "id": "73c662317d2a4e93f6b2d96626dd2667624f8fe48292bce3a735025fb3df82c4",
+    "name": "Data centers",
+    "expected": 8000,
+    "actual": 2327,
+    "expectedSource": "https://www.usitc.gov/publications/332/executive_briefings/ebot_data_centers_around_the_world.pdf",
+    "actualSource": "taginfo",
+    "tags": [
+      "🌐"
+    ],
+    "description": "Data centers are the backbone of the internet. There are {{expected}} of them in the world. Are they all in OSM?",
+    "lastUpdated": "2023-08-01",
     "country": "Worldwide"
   },
   {
@@ -163,7 +177,7 @@
     "id": "3998d87875c0030f4b6fceeb92752a73cf67085bfbf4951c78f9cea93a3552b1",
     "name": "Retail stores in Europe",
     "expected": 2748159,
-    "actual": 5351021,
+    "actual": 5352736,
     "expectedSource": "https://data.europa.eu/data/datasets/6k2ldtwgaa2lvoudvtbbq?locale=en",
     "actualSource": "taginfo",
     "tags": [
@@ -248,7 +262,7 @@
     "id": "618d455f20de0fc57391795eb6857e7ad0343ae82314129cded8f49d1e780184",
     "name": "Car chargers",
     "expected": 143592,
-    "actual": 8228,
+    "actual": 8233,
     "expectedSource": "https://www.rvo.nl/onderwerpen/duurzaam-ondernemen/energie-en-milieu-innovaties/elektrisch-rijden/stand-van-zaken/cijfers",
     "actualSource": "taginfo",
     "tags": [
@@ -348,7 +362,7 @@
     "id": "23178549810ddfaaae84a0f38a238565476ee6426edc61ba20622a9825d7f22c",
     "name": "Civil defense siren",
     "expected": 4278,
-    "actual": 4069,
+    "actual": 4075,
     "expectedSource": "https://www.brandweer.nl/onderwerpen/sirenes/",
     "actualSource": "taginfo",
     "tags": [
@@ -370,6 +384,62 @@
     ],
     "description": "Geldmaat is a provider of ATMs in the Netherlands. What is the number of Geldmaat ATMs in OSM?",
     "lastUpdated": "2023-09-07",
+    "country": "NL"
+  },
+  {
+    "id": "2d7d693f20708d0bd0673b98979bef31728cbbada8fcf74dc512c135dfc07d04",
+    "name": "palaces of justice in the Netherlands",
+    "expected": 31,
+    "actual": 47,
+    "expectedSource": "https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Rechtbanken",
+    "actualSource": "taginfo",
+    "tags": [
+      "⚖️"
+    ],
+    "description": "In the Netherlands courts are sometime called palaces of justice. We expect {{expected}} of them.",
+    "lastUpdated": "2023-10-26",
+    "country": "NL"
+  },
+  {
+    "id": "910291ad6b615144a5cca4463175c2fbfb0f7eed8a2f6770f8cdbd622cae7810",
+    "name": "police stations in the Netherlands",
+    "expected": 100,
+    "actual": 476,
+    "expectedSource": "https://api.politie.nl/v4/politiebureaus/all",
+    "actualSource": "taginfo",
+    "tags": [
+      "⚖️"
+    ],
+    "description": "The Netherlands has {{expected}} police stations. Are they all in OSM?",
+    "lastUpdated": "2023-10-26",
+    "country": "NL"
+  },
+  {
+    "id": "f8893b7dedf3c700a59a6124ea5fe52d4f1177cd94e4c190cd82efa3e5a51f23",
+    "name": "fire stations in the Netherlands",
+    "expected": 949,
+    "actual": 1000,
+    "expectedSource": "https://kerncijfers.nipv.nl/mosaic/kerncijfers-veiligheidsregio-s/kerncijfers-kazernes",
+    "actualSource": "taginfo",
+    "tags": [
+      "🚒"
+    ],
+    "description": "The Netherlands has {{expected}} fire stations. Are they all in OSM?",
+    "lastUpdated": "2023-10-26",
+    "country": "NL"
+  },
+  {
+    "id": "a11d416ecb8b6694ce2e2d8f3f204051fd4ac6a33ea188486e8671787cc63be3",
+    "name": "prisons in the Netherlands",
+    "expected": 46,
+    "actual": 61,
+    "expectedSource": "https://www.dji.nl/locaties",
+    "actualSource": "taginfo",
+    "tags": [
+      "⚖️"
+    ],
+    "description": "The Netherlands has {{expected}} prisons. Are they all in OSM?",
+    "lastUpdated": "2023-10-26",
     "country": "NL"
   },
   {
@@ -506,7 +576,7 @@
     "id": "5b0731306e515667e43a1bff6d2ae879f80da3791d96eef8abb59f6c30304876",
     "name": "REWE",
     "expected": 47200,
-    "actual": 3638,
+    "actual": 3637,
     "expectedSource": "https://www.rewe-group.com/content/uploads/2023/06/rewe-group-financial-report-2022.pdf?t=2023092210",
     "actualSource": "taginfo",
     "tags": [
@@ -520,7 +590,7 @@
     "id": "eff3c039efd5fc3fdd18a79fe91422c4024bcf602215b91d7691d00697409296",
     "name": "PENNY",
     "expected": 2135,
-    "actual": 1883,
+    "actual": 1884,
     "expectedSource": "https://www.rewe-group.com/content/uploads/2023/06/rewe-group-financial-report-2022.pdf?t=2023092210",
     "actualSource": "taginfo",
     "tags": [
@@ -534,7 +604,7 @@
     "id": "8ac45dae95ef22e2d219113f4e80215c865efa2424a819760f3f577e0cea5c1d",
     "name": "Bakeries in France 🍞🥐🥖",
     "expected": 56553,
-    "actual": 27539,
+    "actual": 27537,
     "expectedSource": "https://github.com/wvanderp/isOsmComplete/issues/1",
     "actualSource": "taginfo",
     "tags": [
@@ -576,7 +646,7 @@
   {
     "id": "45bc39b4b3b48b01c0818ca97beabb4aad95ee48232cd8c79603a6c02a84dafc",
     "name": "Airports with ICAO codes ✈️",
-    "expected": 20411,
+    "expected": 20418,
     "actual": 17225,
     "expectedSource": "https://davidmegginson.github.io/ourairports-data/airports.csv",
     "actualSource": "taginfo",
@@ -590,8 +660,8 @@
   {
     "id": "df5d2597b3dcba2f5cc91947bb3904598bc27fcb732edcd76093ca0f1ea4e98f",
     "name": "Museums",
-    "expected": 86595,
-    "actual": 97825,
+    "expected": 86611,
+    "actual": 97832,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",
     "description": "The number of museums in the world",
@@ -605,8 +675,8 @@
   {
     "id": "6ea4be580cc1cecfb7e0f67fac16e5963aebc743d6397e6259874592938ee3db",
     "name": "Sculptures",
-    "expected": 391962,
-    "actual": 80574,
+    "expected": 392013,
+    "actual": 80628,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",
     "description": "It is always nice to have some art in your city. Is your local sculpture in OSM?",

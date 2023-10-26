@@ -105,6 +105,16 @@ export default async function worldwide(): Promise<Comparison[]> {
                 'When you want to charge your Tesla but the middle screen is dead and you don\'t have the app, you can find a supercharger in OSM. Or can you?',
                 ['🔋', '🚗'],
                 '2023-05-27'
+            ),
+            await taginfoComparisons(
+                'Data centers',
+                'telecom',
+                'data_center',
+                8000,
+                'https://www.usitc.gov/publications/332/executive_briefings/ebot_data_centers_around_the_world.pdf',
+                'Data centers are the backbone of the internet. There are {{expected}} of them in the world. Are they all in OSM?',
+                ['🌐'],
+                '2023-08-01'
             )
         ]
     );
