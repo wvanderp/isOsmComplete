@@ -36,11 +36,38 @@ function averageToInt(array: number[]): number {
     return Math.round(array.reduce((a, b) => a + b, 0) / array.length);
 }
 
-export default async function dutchJudicialSystem(): Promise<Comparison[]> {
+// get the number of police stations in the Netherlands
+async function getPoliceStations(): Promise<number> {
     // Politiebureaus
+    // https://www.politie.nl/binaries/content/assets/politie/onderwerpen/algemeen/politieapi.pdf
     const api = 'https://api.politie.nl/v4/politiebureaus/all';
-    const {data} = await axios.get<PolitieApi>(api);
-    const politiebureausExpected = data.politiebureaus.length;
+    let policeApiData: PolitieApi = {
+        iterator: {
+            last: false,
+            offset: 0
+        },
+        politiebureaus: []
+    };
+    let policeStations = 0;
+
+    while (!policeApiData.iterator.last) {
+        const response = await axios.get<PolitieApi>(api, {
+            params: {
+                offset: policeApiData.iterator.offset
+            }
+        });
+
+        policeApiData = response.data;
+        const policeLength = policeApiData.politiebureaus.length;
+        policeStations += policeLength;
+        policeApiData.iterator.offset += policeLength;
+    }
+
+    return policeStations;
+}
+
+export default async function dutchJudicialSystem(): Promise<Comparison[]> {
+    const policeStationsExpected = await getPoliceStations();
 
     return appendCountry(
         'NL',
@@ -61,7 +88,7 @@ export default async function dutchJudicialSystem(): Promise<Comparison[]> {
                 'police stations in the Netherlands',
                 'amenity',
                 'police',
-                politiebureausExpected,
+                policeStationsExpected,
                 // click on all links and count the police stations
                 'https://api.politie.nl/v4/politiebureaus/all',
                 'The Netherlands has {{expected}} police stations. Are they all in OSM?',
