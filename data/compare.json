@@ -575,7 +575,7 @@
   {
     "id": "5b0731306e515667e43a1bff6d2ae879f80da3791d96eef8abb59f6c30304876",
     "name": "REWE",
-    "expected": 47200,
+    "expected": 3749,
     "actual": 3637,
     "expectedSource": "https://www.rewe-group.com/content/uploads/2023/06/rewe-group-financial-report-2022.pdf?t=2023092210",
     "actualSource": "taginfo",
