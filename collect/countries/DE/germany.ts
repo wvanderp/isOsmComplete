@@ -13,7 +13,7 @@ export default async function germany(): Promise<Comparison[]> {
                 'REWE',
                 brandWikidata,
                 'Q16968817',
-                47200,
+                3749, // 3733 german retail locations and 16 convenience locations
                 'https://www.rewe-group.com/content/uploads/2023/06/rewe-group-financial-report-2022.pdf?t=2023092210',
                 'Are all the REWE stores in OSM?',
                 ['🛒'],
