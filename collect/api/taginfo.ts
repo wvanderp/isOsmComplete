@@ -23,23 +23,24 @@ export async function taginfoKey(key: string, server = 'https://taginfo.openstre
 
 async function callApi(url: string): Promise<number> {
     try {
-    randomDelay(1000, 10000);
+        randomDelay(1000, 10000);
 
-    const response = await axios.get<TagInfo>(url);
-    const count = response.data.data.find((x) => x.type === 'all')?.count;
+        const response = await axios.get<TagInfo>(url);
+        const count = response.data.data.find((x) => x.type === 'all')?.count;
 
-    if (count === undefined) {
-        throw new Error(`Could not find count for ${url}`);
+        if (count === undefined) {
+            throw new Error(`Could not find count for ${url}`);
+        }
+
+        return count;
+    } catch (error) {
+        if (axios.isAxiosError(error)) {
+            const axiosError = error as AxiosError;
+            throw new Error(
+                `Error calling ${url}: ${axiosError.response?.statusText} (${axiosError.response?.status})`
+            );
+        }
+
+        throw error;
     }
-
-    return count;
-} catch (error){
-    if (axios.isAxiosError(error)) {
-        const axiosError = error as AxiosError;
-        console.error(`Error calling ${url}: ${axiosError.response?.statusText} (${axiosError.response?.status})`);
-        process.exit(1);
-    }
-
-    throw error;
-}
 }
