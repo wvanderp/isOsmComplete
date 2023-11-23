@@ -34,7 +34,7 @@
         "https://json.schemastore.org/github-workflow.json": "vscode-vfs://github/github-actions[bot]/isOsmComplete/.github/workflows/build.yml"
     },
     "search.exclude": {
-        "data/**/*":true
+        // "data/**/*":true
     },
     "[csv]": {
         "files.insertFinalNewline": false,

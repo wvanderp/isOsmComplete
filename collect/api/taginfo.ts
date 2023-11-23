@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios, { AxiosError } from 'axios';
 import { TagInfo } from '../types';
 import randomDelay from '../utils/delay';
 
@@ -22,6 +22,7 @@ export async function taginfoKey(key: string, server = 'https://taginfo.openstre
 }
 
 async function callApi(url: string): Promise<number> {
+    try {
     randomDelay(1000, 10000);
 
     const response = await axios.get<TagInfo>(url);
@@ -32,4 +33,13 @@ async function callApi(url: string): Promise<number> {
     }
 
     return count;
+} catch (error){
+    if (axios.isAxiosError(error)) {
+        const axiosError = error as AxiosError;
+        console.error(`Error calling ${url}: ${axiosError.response?.statusText} (${axiosError.response?.status})`);
+        process.exit(1);
+    }
+
+    throw error;
+}
 }
