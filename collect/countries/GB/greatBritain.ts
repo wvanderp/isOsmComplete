@@ -1,10 +1,10 @@
 import { Comparison } from '../../types';
 import appendCountry from '../../utils/appendData';
-import { brandWikidata } from '../../utils/osmTags';
+import { brandWikidata, operatorWikidata } from '../../utils/osmTags';
 import taginfoComparisons from '../../utils/taginfoComparisons';
 import london from './London';
 
-const taginfoServer = 'https://taginfo.openstreetmap.org.uk/';
+const taginfoServer = 'https://taginfo.geofabrik.de/europe:united-kingdom';
 
 export default async function greatBritain(): Promise<Comparison[]> {
     return appendCountry(
@@ -41,6 +41,17 @@ export default async function greatBritain(): Promise<Comparison[]> {
                 'Are all the Tesco stores in OSM?',
                 ['🛒'],
                 '2023-09-24',
+                taginfoServer
+            ),
+            await taginfoComparisons(
+                'National Car Parks',
+                operatorWikidata,
+                'Q6971273',
+                642,
+                'https://www.ncp.co.uk/help-centre/about-us/',
+                'NCP claims to sprinkle "beautiful" parking spots all over Britain. Fancy using OSM to uncover the one they deem closest to your majestic presence?',
+                ['🚗'],
+                '2023-11-23',
                 taginfoServer
             ),
 

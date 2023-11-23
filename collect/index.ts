@@ -5,8 +5,11 @@ import worldwide from './countries/worldwide/worldwide';
 import europe from './countries/europe/europe';
 
 import canada from './countries/CA/canada';
+import france from './countries/FR/france';
+import germany from './countries/DE/germany';
 import greatBritain from './countries/GB/greatBritain';
 import netherlands from './countries/NL/netherlands';
+import russia from './countries/RU/russia';
 import unitedStates from './countries/US/unitedStates';
 import vietnam from './countries/VN/Vietnam';
 
@@ -15,8 +18,6 @@ import airports from './countries/fromSource/ourAirportData/ourAirport';
 import wikidata from './countries/fromSource/wikidata/wikidata';
 
 import { Comparison } from './types';
-import germany from './countries/DE/germany';
-import france from './countries/FR/france';
 
 const directory = path.join(__dirname, '../data');
 const tagsFile = path.join(__dirname, 'tags.json');
@@ -27,12 +28,13 @@ const tagsFile = path.join(__dirname, 'tags.json');
         ...(await europe()),
 
         ...(await canada()),
+        ...(await france()),
+        ...(await germany()),
         ...(await greatBritain()),
         ...(await netherlands()),
+        ...(await russia()),
         ...(await unitedStates()),
         ...(await vietnam()),
-        ...(await germany()),
-        ...(await france()),
 
         // fromSource
         // ...(await factbook())
