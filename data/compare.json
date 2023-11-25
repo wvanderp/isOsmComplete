@@ -3,7 +3,7 @@
     "id": "f86b36460a37c5a45dea617f3fbd10c18027319318d2283be3f8318a7a793bca",
     "name": "Match Google on building",
     "expected": 1600000000,
-    "actual": 584531824,
+    "actual": 584645420,
     "expectedSource": "https://youtu.be/nP-nMZpLM1A?t=409",
     "actualSource": "taginfo",
     "tags": [
@@ -43,7 +43,7 @@
     "id": "34d881bb4626ac285c1c64c08944d6d8883e5bfdef1d5bb2c0d2eeab9db0d20e",
     "name": "7-Eleven stores",
     "expected": 78029,
-    "actual": 35818,
+    "actual": 35832,
     "expectedSource": "https://en.wikipedia.org/wiki/7-Eleven",
     "actualSource": "taginfo",
     "tags": [
@@ -58,7 +58,7 @@
     "id": "ceafc782f32e77207571d2c2de651c13d6f8704acbe2221a9a7af3dd68313bf8",
     "name": "Subway stores",
     "expected": 37000,
-    "actual": 21987,
+    "actual": 21989,
     "expectedSource": "https://www.subway.com/en-us/contactus/subwayfaqs/about-subway",
     "actualSource": "taginfo",
     "tags": [
@@ -73,7 +73,7 @@
     "id": "0aa0000d49cbd3eaabb7d62b87d0695922a6cdc09c0f80d1684aadaeb49f4e95",
     "name": "Starbucks",
     "expected": 37222,
-    "actual": 18909,
+    "actual": 18913,
     "expectedSource": "https://investor.starbucks.com/press-releases/financial-releases/press-release-details/2023/Starbucks-Reports-Q3-Fiscal-2023-Results/default.aspx",
     "actualSource": "taginfo",
     "tags": [
@@ -88,7 +88,7 @@
     "id": "bc00755018404ae08e7791edeacb749806f755a7a684108cdc730b7dc96d35bd",
     "name": "McDonald's",
     "expected": 40275,
-    "actual": 31299,
+    "actual": 31309,
     "expectedSource": "https://corporate.mcdonalds.com/content/dam/sites/corp/nfl/pdf/MCD_2023_Annual_Report.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -103,7 +103,7 @@
     "id": "ff163beb19543f2cb53c300637cac009272968c01b3511a40effa32489074e82",
     "name": "KFC",
     "expected": 27000,
-    "actual": 13630,
+    "actual": 13635,
     "expectedSource": "https://www.yum.com/wps/portal/yumbrands/Yumbrands/company/our-brands/kfc",
     "actualSource": "taginfo",
     "tags": [
@@ -118,7 +118,7 @@
     "id": "ebf58077453c74c27a1a8384024439568732ce333c09c0899c6156177657d513",
     "name": "Burger King",
     "expected": 18700,
-    "actual": 13238,
+    "actual": 13244,
     "expectedSource": "https://www.rbi.com/English/brands/default.aspx",
     "actualSource": "taginfo",
     "tags": [
@@ -177,7 +177,7 @@
     "id": "3998d87875c0030f4b6fceeb92752a73cf67085bfbf4951c78f9cea93a3552b1",
     "name": "Retail stores in Europe",
     "expected": 2748159,
-    "actual": 5387160,
+    "actual": 5388379,
     "expectedSource": "https://data.europa.eu/data/datasets/6k2ldtwgaa2lvoudvtbbq?locale=en",
     "actualSource": "taginfo",
     "tags": [
@@ -205,7 +205,7 @@
     "id": "8ac45dae95ef22e2d219113f4e80215c865efa2424a819760f3f577e0cea5c1d",
     "name": "Bakeries in France 🍞🥐🥖",
     "expected": 56553,
-    "actual": 27606,
+    "actual": 27602,
     "expectedSource": "https://github.com/wvanderp/isOsmComplete/issues/1",
     "actualSource": "taginfo",
     "tags": [
@@ -262,7 +262,7 @@
     "id": "154c2bbd2b34ed2924ae6fefbc7a995465c3e80817984f658d2598095d80c9bb",
     "name": "Pubs in the UK",
     "expected": 47200,
-    "actual": 39185,
+    "actual": 39183,
     "expectedSource": "https://commonslibrary.parliament.uk/research-briefings/cbp-8591/",
     "actualSource": "taginfo",
     "tags": [
@@ -333,7 +333,7 @@
     "id": "618d455f20de0fc57391795eb6857e7ad0343ae82314129cded8f49d1e780184",
     "name": "Car chargers",
     "expected": 143592,
-    "actual": 8608,
+    "actual": 8614,
     "expectedSource": "https://www.rvo.nl/onderwerpen/duurzaam-ondernemen/energie-en-milieu-innovaties/elektrisch-rijden/stand-van-zaken/cijfers",
     "actualSource": "taginfo",
     "tags": [
@@ -391,7 +391,7 @@
     "id": "ead8161c6dc7bb68b88d9f6239b9a23d6d88609db8d08ef63e92c7a857c49ebf",
     "name": "Albert Heijn's",
     "expected": 1228,
-    "actual": 1076,
+    "actual": 1077,
     "expectedSource": "https://media.aholddelhaize.com/media/vy4neu1n/ar-2022-ahold-delhaize-interactive-final.pdf?t=638143108570530000",
     "actualSource": "taginfo",
     "tags": [
@@ -446,8 +446,8 @@
   {
     "id": "7d7cc1074bdd3b5e2609fe5f1c5b941f78e42281f270b579ffa71ff2a5ae831a",
     "name": "Geldmaat ATMs",
-    "expected": 777,
-    "actual": 826,
+    "expected": 778,
+    "actual": 827,
     "expectedSource": "https://ii0d2f1pfc.execute-api.eu-west-1.amazonaws.com/prod/locations",
     "actualSource": "taginfo",
     "tags": [
@@ -675,7 +675,7 @@
     "id": "45bc39b4b3b48b01c0818ca97beabb4aad95ee48232cd8c79603a6c02a84dafc",
     "name": "Airports with ICAO codes ✈️",
     "expected": 20575,
-    "actual": 17291,
+    "actual": 17298,
     "expectedSource": "https://davidmegginson.github.io/ourairports-data/airports.csv",
     "actualSource": "taginfo",
     "tags": [
@@ -688,8 +688,8 @@
   {
     "id": "df5d2597b3dcba2f5cc91947bb3904598bc27fcb732edcd76093ca0f1ea4e98f",
     "name": "Museums",
-    "expected": 87045,
-    "actual": 98140,
+    "expected": 87056,
+    "actual": 98144,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",
     "description": "The number of museums in the world",
@@ -703,8 +703,8 @@
   {
     "id": "6ea4be580cc1cecfb7e0f67fac16e5963aebc743d6397e6259874592938ee3db",
     "name": "Sculptures",
-    "expected": 393601,
-    "actual": 81741,
+    "expected": 393614,
+    "actual": 81764,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",
     "description": "It is always nice to have some art in your city. Is your local sculpture in OSM?",
