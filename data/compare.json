@@ -217,31 +217,17 @@
     "country": "CA"
   },
   {
-    "id": "31cf1c8bbd3ac261e476247c4ebbcc2b791e9381f86dbcf61abf925af675aca7",
+    "id": "dace299682b6e90a3ec0b6e29d2ea57da76e3a7f30223cc01164bad12ae8f7d2",
     "name": "Train stations",
     "expected": 5470,
-    "actual": 17020,
+    "actual": 5798,
     "expectedSource": "https://en.wikipedia.org/wiki/Rail_transport_in_China#cite_note-CNCRCC-4",
     "actualSource": "taginfo",
     "tags": [
       "🚂"
     ],
     "description": "China transports a lot of people by train. Can the find their stations in OSM?",
-    "lastUpdated": "2023-09-24",
-    "country": "CN"
-  },
-  {
-    "id": "e80eec9e24c5c93f6956d470999794e2735b188a40089ded8d9b78a527fd4e91",
-    "name": "Airports",
-    "expected": 357,
-    "actual": 683,
-    "expectedSource": "https://en.wikipedia.org/wiki/List_of_airports_in_China",
-    "actualSource": "taginfo",
-    "tags": [
-      "✈️"
-    ],
-    "description": "China has a lot of airports. Are they all in OSM?",
-    "lastUpdated": "2023-09-24",
+    "lastUpdated": "2023-11-28",
     "country": "CN"
   },
   {
@@ -731,7 +717,7 @@
   {
     "id": "df5d2597b3dcba2f5cc91947bb3904598bc27fcb732edcd76093ca0f1ea4e98f",
     "name": "Museums",
-    "expected": 87102,
+    "expected": 87105,
     "actual": 98177,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",
@@ -746,7 +732,7 @@
   {
     "id": "6ea4be580cc1cecfb7e0f67fac16e5963aebc743d6397e6259874592938ee3db",
     "name": "Sculptures",
-    "expected": 393777,
+    "expected": 393796,
     "actual": 81888,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",

@@ -1,34 +1,23 @@
 import { Comparison } from '../../types';
 import appendCountry from '../../utils/appendData';
-import taginfoComparisons from '../../utils/taginfoComparisons';
+import { overpassComparisonMultiple } from '../../utils/overpassComparisons';
 
-const taginfoServer = 'https://taginfo.geofabrik.de/asia:china';
+// const taginfoServer = 'https://taginfo.geofabrik.de/asia:china';
+const chinaArea = 3600270056;
 
 export default async function china(): Promise<Comparison[]> {
     return appendCountry(
         'CN',
         [
-            await taginfoComparisons(
+            await overpassComparisonMultiple(
                 'Train stations',
-                'railway',
-                'station',
+                [['railway', 'station'], ['train', 'yes']],
                 5470,
                 'https://en.wikipedia.org/wiki/Rail_transport_in_China#cite_note-CNCRCC-4',
                 'China transports a lot of people by train. Can the find their stations in OSM?',
                 ['🚂'],
                 '2023-11-28',
-                taginfoServer
-            ),
-            await taginfoComparisons(
-                'Airports',
-                'aeroway',
-                'aerodrome',
-                255 + 102,
-                'https://en.wikipedia.org/wiki/List_of_airports_in_China',
-                'China has a lot of airports. Are they all in OSM?',
-                ['✈️'],
-                '2023-11-28',
-                taginfoServer
+                chinaArea
             )
         ]
     );

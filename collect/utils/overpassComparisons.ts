@@ -10,11 +10,12 @@ export default async function overpassComparison(
     expectedSource: string,
     description: string,
     tags: string[],
-    lastUpdated: string
+    lastUpdated: string,
+    area?: number
 ): Promise<Comparison> {
     console.log(`starting on ${name}`);
 
-    const count = await overpassSimpleQuery([[key, value]]);
+    const count = await overpassSimpleQuery([[key, value]], area);
 
     return {
         id: getHash(`${key}${value}`),
@@ -36,11 +37,12 @@ export async function overpassComparisonMultiple(
     expectedSource: string,
     description: string,
     tags: string[],
-    lastUpdated: string
+    lastUpdated: string,
+    area?: number
 ): Promise<Comparison> {
     console.log(`starting on ${name}`);
 
-    const count = await overpassSimpleQuery(query);
+    const count = await overpassSimpleQuery(query, area);
 
     return {
         id: getHash(JSON.stringify(query)),
