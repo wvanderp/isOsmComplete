@@ -9,7 +9,7 @@
     "tags": [
       "🏠"
     ],
-    "description": "Google, in their 2022 keynote, claim that they have 1,600,000,000 buildings. Are we even close with OSM?",
+    "description": "Google, in its 2022 keynote, claims that they have 1,600,000,000 buildings. Are we even close with OSM?",
     "lastUpdated": "2023-09-23",
     "country": "Worldwide"
   },
@@ -21,7 +21,7 @@
     "expectedSource": "https://www.timesofisrael.com/holocaust-memorial-project-marks-milestone-with-100000-stumbling-blocks/",
     "actualSource": "taginfo",
     "tags": [],
-    "description": "Stolpersteine are monuments to the victims of world war two. They should be in OSM.",
+    "description": "Stolpersteine are monuments to the victims of World War Two. They should be in OSM.",
     "lastUpdated": "2023-06-01",
     "country": "Worldwide"
   },
@@ -65,7 +65,7 @@
       "🍔",
       "🛒"
     ],
-    "description": "Subway and McDonald's are the two largest fast food chains in the world. Who has more stores?",
+    "description": "Subway and McDonald's are the two largest fast-food chains in the world. Who has more stores?",
     "lastUpdated": "2023-09-24",
     "country": "Worldwide"
   },
@@ -95,7 +95,7 @@
       "🍔",
       "🛒"
     ],
-    "description": "McDonald's is the largest fast food chain in the world. Their corporate website says that the company has 38,000 stores in the world. Are they all in OSM?",
+    "description": "McDonald's is the largest fast-food chain in the world. Their corporate website says that the company has 38,000 stores in the world. Are they all in OSM?",
     "lastUpdated": "2023-09-22",
     "country": "Worldwide"
   },
@@ -125,7 +125,7 @@
       "🍔",
       "🛒"
     ],
-    "description": "Burger King is a fast food chain. They have {{expected}} stores in 100 countries. Are they all in OSM?",
+    "description": "Burger King is a fast-food chain. They have {{expected}} stores in 100 countries. Are they all in OSM?",
     "lastUpdated": "2023-03-17",
     "country": "Worldwide"
   },
@@ -156,6 +156,21 @@
     ],
     "description": "Data centers are the backbone of the internet. There are {{expected}} of them in the world. Are they all in OSM?",
     "lastUpdated": "2023-08-01",
+    "country": "Worldwide"
+  },
+  {
+    "id": "ed897f43e805d3b55c3d7356a3421f53aea469e83c629cc476decc4dff2d3a57",
+    "name": "UNESCO World Heritage Sites",
+    "expected": 1199,
+    "actual": 2372,
+    "expectedSource": "https://whc.unesco.org/en/list/",
+    "actualSource": "taginfo",
+    "tags": [
+      "🌳",
+      "🏛️"
+    ],
+    "description": "UNESCO World Heritage Sites are places of special cultural or physical significance. They have marked {{expected}} of them. Can you find them all in OSM?",
+    "lastUpdated": "2023-11-28",
     "country": "Worldwide"
   },
   {
@@ -197,9 +212,37 @@
     "tags": [
       "✈️"
     ],
-    "description": "Canada is a bit special and designed their own codes for airports. Luckily there are only only a few to add.",
+    "description": "Canada is a bit special and designed their own codes for airports. Luckily, there are only a few to add.",
     "lastUpdated": "2023-05-25",
     "country": "CA"
+  },
+  {
+    "id": "31cf1c8bbd3ac261e476247c4ebbcc2b791e9381f86dbcf61abf925af675aca7",
+    "name": "Train stations",
+    "expected": 5470,
+    "actual": 17020,
+    "expectedSource": "https://en.wikipedia.org/wiki/Rail_transport_in_China#cite_note-CNCRCC-4",
+    "actualSource": "taginfo",
+    "tags": [
+      "🚂"
+    ],
+    "description": "China transports a lot of people by train. Can the find their stations in OSM?",
+    "lastUpdated": "2023-09-24",
+    "country": "CN"
+  },
+  {
+    "id": "e80eec9e24c5c93f6956d470999794e2735b188a40089ded8d9b78a527fd4e91",
+    "name": "Airports",
+    "expected": 357,
+    "actual": 683,
+    "expectedSource": "https://en.wikipedia.org/wiki/List_of_airports_in_China",
+    "actualSource": "taginfo",
+    "tags": [
+      "✈️"
+    ],
+    "description": "China has a lot of airports. Are they all in OSM?",
+    "lastUpdated": "2023-09-24",
+    "country": "CN"
   },
   {
     "id": "8ac45dae95ef22e2d219113f4e80215c865efa2424a819760f3f577e0cea5c1d",
@@ -439,7 +482,7 @@
     "tags": [
       "🛒"
     ],
-    "description": "At this critical point in time, facing extinction in The Netherlands they deserve to be mapped.",
+    "description": "At this critical point in time, facing extinction in The Netherlands, they deserve to be mapped.",
     "lastUpdated": "2023-02-28",
     "country": "NL"
   },
@@ -467,7 +510,7 @@
     "tags": [
       "⚖️"
     ],
-    "description": "In the Netherlands courts are sometime called palaces of justice. We expect {{expected}} of them.",
+    "description": "In the Netherlands, courts are sometimes called palaces of justice. We expect {{expected}} of them.",
     "lastUpdated": "2023-10-26",
     "country": "NL"
   },
@@ -523,7 +566,7 @@
     "tags": [
       "🛒"
     ],
-    "description": "Pyaterochka (Пятёрочка), literly translated to five, is a russian conviniance store. There should be {{expected}} of them in osm.",
+    "description": "Pyaterochka (Пятёрочка), literally translated to five, is a Russian convenience store. There should be {{expected}} of them in osm.",
     "lastUpdated": "2023-11-23",
     "country": "RU"
   },
@@ -579,7 +622,7 @@
     "tags": [
       "🛒"
     ],
-    "description": "This General store, also know as DG Market, DGX and pOpshelf, sells everything for $1. How much money would we have if we got a dollar for every Dollar General store on the map?",
+    "description": "This General store, also known as DG Market, DGX, and pOpshelf, sells everything for $1. How much money would we have if we got a dollar for every Dollar General store on the map?",
     "lastUpdated": "2023-10-23",
     "country": "US"
   },
@@ -703,7 +746,7 @@
   {
     "id": "6ea4be580cc1cecfb7e0f67fac16e5963aebc743d6397e6259874592938ee3db",
     "name": "Sculptures",
-    "expected": 393724,
+    "expected": 393777,
     "actual": 81888,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",

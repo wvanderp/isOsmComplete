@@ -29,8 +29,7 @@ there are many sites offering statistics. they are often government or ngo sites
 
 ## some ideas
 
-- Amazon forfillment centers
-- UNESCO World Heritage Sites
+- Amazon fulfillment centers
 - metro stations / train stations
 - apple stores
-- us natational parks
+- us national parks

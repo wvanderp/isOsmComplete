@@ -115,6 +115,16 @@ export default async function worldwide(): Promise<Comparison[]> {
                 'Data centers are the backbone of the internet. There are {{expected}} of them in the world. Are they all in OSM?',
                 ['🌐'],
                 '2023-08-01'
+            ),
+            await taginfoComparisons(
+                'UNESCO World Heritage Sites',
+                'heritage:operator',
+                'whc',
+                1199,
+                'https://whc.unesco.org/en/list/',
+                'UNESCO World Heritage Sites are places of special cultural or physical significance. They have marked {{expected}} of them. Can you find them all in OSM?',
+                ['🌳', '🏛️'],
+                '2023-11-28'
             )
         ]
     );

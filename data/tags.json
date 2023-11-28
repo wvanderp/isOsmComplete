@@ -1,5 +1,5 @@
 {
-    "🍔": "Fast food",
+    "🍔": "Fast-food",
     "🛒": "Shops",
     "✈️": "Aviation related",
     "🔋": "EV charging",
@@ -15,5 +15,6 @@
     "🎨": "Art",
     "🌐": "Internet infrastructure",
     "⚖️": "Judicial System",
-    "🚒": "Fire stations"
+    "🚒": "Fire stations",
+    "🌳": "Nature"
 }
