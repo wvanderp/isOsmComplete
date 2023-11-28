@@ -26,3 +26,11 @@ there are many sites offering statistics. they are often government or ngo sites
 <https://gruppe.schwarz/en>
 <https://corporate.walmart.com/about>
 <https://duo.nl/open_onderwijsdata/>
+
+## some ideas
+
+- Amazon forfillment centers
+- UNESCO World Heritage Sites
+- metro stations / train stations
+- apple stores
+- us natational parks

@@ -13,7 +13,7 @@ export default async function worldwide(): Promise<Comparison[]> {
                 'building',
                 1600000000,
                 'https://youtu.be/nP-nMZpLM1A?t=409',
-                'Google, in their 2022 keynote, claim that they have 1,600,000,000 buildings. Are we even close with OSM?',
+                'Google, in its 2022 keynote, claims that they have 1,600,000,000 buildings. Are we even close with OSM?',
                 ['🏠'],
                 '2023-09-23'
             ),
@@ -23,7 +23,7 @@ export default async function worldwide(): Promise<Comparison[]> {
                 'stolperstein',
                 100000,
                 'https://www.timesofisrael.com/holocaust-memorial-project-marks-milestone-with-100000-stumbling-blocks/',
-                'Stolpersteine are monuments to the victims of world war two. They should be in OSM.',
+                'Stolpersteine are monuments to the victims of World War Two. They should be in OSM.',
                 [],
                 '2023-06-01'
             ),
@@ -53,7 +53,7 @@ export default async function worldwide(): Promise<Comparison[]> {
                 'Q244457',
                 37000,
                 'https://www.subway.com/en-us/contactus/subwayfaqs/about-subway',
-                'Subway and McDonald\'s are the two largest fast food chains in the world. Who has more stores?',
+                'Subway and McDonald\'s are the two largest fast-food chains in the world. Who has more stores?',
                 ['🍔', '🛒'],
                 '2023-09-24'
             ),
@@ -73,7 +73,7 @@ export default async function worldwide(): Promise<Comparison[]> {
                 ['Q38076', 'Q12061542'],
                 40275,
                 'https://corporate.mcdonalds.com/content/dam/sites/corp/nfl/pdf/MCD_2023_Annual_Report.pdf',
-                'McDonald\'s is the largest fast food chain in the world. Their corporate website says that the company has 38,000 stores in the world. Are they all in OSM?',
+                'McDonald\'s is the largest fast-food chain in the world. Their corporate website says that the company has 38,000 stores in the world. Are they all in OSM?',
                 ['🍔', '🛒'],
                 '2023-09-22'
             ),
@@ -93,7 +93,7 @@ export default async function worldwide(): Promise<Comparison[]> {
                 'Q177054',
                 18700,
                 'https://www.rbi.com/English/brands/default.aspx',
-                'Burger King is a fast food chain. They have {{expected}} stores in 100 countries. Are they all in OSM?',
+                'Burger King is a fast-food chain. They have {{expected}} stores in 100 countries. Are they all in OSM?',
                 ['🍔', '🛒'],
                 '2023-03-17'
             ),

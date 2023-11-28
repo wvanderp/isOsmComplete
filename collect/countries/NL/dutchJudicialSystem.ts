@@ -79,7 +79,7 @@ export default async function dutchJudicialSystem(): Promise<Comparison[]> {
                 courthousesExpected,
                 // click on all links and count the courthouses
                 'https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Rechtbanken',
-                'In the Netherlands courts are sometime called palaces of justice. We expect {{expected}} of them.',
+                'In the Netherlands, courts are sometimes called palaces of justice. We expect {{expected}} of them.',
                 ['⚖️'],
                 '2023-10-26',
                 taginfoServer
