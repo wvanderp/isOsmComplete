@@ -1,4 +1,6 @@
 /* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable sonarjs/no-duplicate-string */
+
 import axios from 'axios';
 import { parse } from 'csv-parse/sync';
 
