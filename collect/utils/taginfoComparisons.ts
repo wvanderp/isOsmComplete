@@ -68,6 +68,8 @@ export async function taginfoComparisonMultipleTags(
     lastUpdated: string,
     server = osmTagInfoServer
 ): Promise<Comparison> {
+    console.log(`starting on ${name}`);
+
     const taginfos = await Promise.all(
         osmTags.map((tag) => taginfoKeyValue(key, tag, server))
     );

@@ -6,6 +6,9 @@ import { taginfoComparisonKeyOnly, taginfoComparisonMultipleTags } from '../../u
 
 const sourceUrl = 'https://data.europa.eu/data/datasets/6k2ldtwgaa2lvoudvtbbq?locale=en';
 const dataUrl = 'https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/dt_oth_n47_r2?format=SDMX-CSV';
+
+const taginfoServer = 'https://taginfo.geofabrik.de/europe/';
+
 export default async function retailStoresInEurope(): Promise<Comparison[]> {
     console.log('starting on Retail stores in Europe');
 
@@ -27,16 +30,17 @@ export default async function retailStoresInEurope(): Promise<Comparison[]> {
         OBS_FLAG: string;
     }[];
 
-
-    const currentCatogories = data
+    const catagories = data
         .filter((a) => a.TIME_PERIOD === 2017)
-        .map((a) => [a.nace_r2, Number.parseInt(current.OBS_VALUE, 10)])
         .filter((a) => typeof a.OBS_VALUE === 'number' && !Number.isNaN(a.OBS_VALUE))
-        .reduce((acc, curr) => acc[curr[0]] = curr[0], {});
+        .reduce<Record<string, number>>((accumulator, current) => {
+            accumulator[current.nace_r2] = accumulator[current.nace_r2] || 0;
+            accumulator[current.nace_r2] += Number(current.OBS_VALUE);
+            return accumulator;
+        }, {});
 
     // should remove G47.9, G47.8 witch are stalls and markets, and non store shops
-
-    const retailStoresCount = currentCatogories["G47"] - (currentCatogories['G478'] + currentCatogories['G479']);
+    const retailStoresCount = catagories.G47 - (catagories.G478 + catagories.G479);
 
     // car shops are not included in the retail stores
     const carShopsCount = await taginfoComparisonMultipleTags(
@@ -47,7 +51,8 @@ export default async function retailStoresInEurope(): Promise<Comparison[]> {
         sourceUrl,
         'How many car shops are in Europe?',
         ['🚗'],
-        '2023-09-24'
+        '2023-09-24',
+        taginfoServer
     );
 
     const all = await taginfoComparisonKeyOnly(
@@ -57,7 +62,8 @@ export default async function retailStoresInEurope(): Promise<Comparison[]> {
         sourceUrl,
         'How much shopping can be done in Europe?',
         ['🛒'],
-        '2023-09-24'
+        '2023-09-24',
+        taginfoServer
     );
 
     const comparison = {

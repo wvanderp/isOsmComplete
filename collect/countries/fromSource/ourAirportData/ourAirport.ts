@@ -4,7 +4,7 @@ import { parse } from 'csv-parse/sync';
 
 import { Comparison } from '../../../types';
 import appendCountry from '../../../utils/appendData';
-import { taginfoComparisonKeyOnly } from '../../../utils/taginfoComparisons';
+import { taginfoComparisonKeyOnly, taginfoComparisonMultipleTags } from '../../../utils/taginfoComparisons';
 
 const airportCsvUrl = 'https://davidmegginson.github.io/ourairports-data/airports.csv';
 
@@ -18,7 +18,7 @@ export default async function airports(): Promise<Comparison[]> {
     }) as {
         id: number;
         ident: string;
-        type: string;
+        type: 'balloonport' | 'closed' | 'heliport' | 'large_airport' | 'medium_airport' | 'seaplane_base' | 'small_airport';
         name: string;
         latitude_deg: number;
         longitude_deg: number;
@@ -39,6 +39,10 @@ export default async function airports(): Promise<Comparison[]> {
     const iataCount = airportsData.filter((a) => a.iata_code && a.iata_code !== '').length;
     const icaoCount = airportsData.filter((a) => a.ident.match(/[A-Z]{4}/)).length;
 
+    const airportsCount = airportsData
+        .filter((a) => a.type !== 'closed')
+        .length;
+
     return appendCountry(
         'Worldwide',
         [
@@ -49,7 +53,7 @@ export default async function airports(): Promise<Comparison[]> {
                 airportCsvUrl,
                 'The number of airports with IATA codes in OSM',
                 ['✈️'],
-                '2023-02-19'
+                '2023-12-05'
             ),
             await taginfoComparisonKeyOnly(
                 'Airports with ICAO codes ✈️',
@@ -58,7 +62,17 @@ export default async function airports(): Promise<Comparison[]> {
                 airportCsvUrl,
                 'The number of airports with ICAO codes in OSM',
                 ['✈️'],
-                '2023-02-19'
+                '2023-12-05'
+            ),
+            await taginfoComparisonMultipleTags(
+                'Match ourAirports on airports',
+                'aeroway',
+                ['aerodrome', 'airstrip', 'heliport'],
+                airportsCount,
+                airportCsvUrl,
+                'ourAirports in a crowdsourced database of airports. lets see if osm can add something to it.',
+                ['✈️'],
+                '2023-12-05'
             )
         ]
     );

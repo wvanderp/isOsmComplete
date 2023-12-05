@@ -3,7 +3,7 @@
     "id": "f86b36460a37c5a45dea617f3fbd10c18027319318d2283be3f8318a7a793bca",
     "name": "Match Google on building",
     "expected": 1600000000,
-    "actual": 585543589,
+    "actual": 585641232,
     "expectedSource": "https://youtu.be/nP-nMZpLM1A?t=409",
     "actualSource": "taginfo",
     "tags": [
@@ -28,15 +28,15 @@
   {
     "id": "a18d3e40ae9fc681bce81114b28db33c050281ab197e033ee141a6990a55a738",
     "name": "IKEA stores",
-    "expected": 462,
+    "expected": 468,
     "actual": 549,
-    "expectedSource": "https://www.ikea.com/global/en/newsroom/corporate/ikea-80th-anniversary-assembling-a-better-future-together-230728/",
-    "actualSource": "taginfo",
+    "expectedSource": "https://www.ikea.com/global/en/our-business/how-we-work/",
+    "actualSource": "overpass",
     "tags": [
       "🛒"
     ],
     "description": "IKEA is a furniture store. They have {{expected}} stores in 63 countries. Are they all in OSM?",
-    "lastUpdated": "2023-06-28",
+    "lastUpdated": "2023-12-05",
     "country": "Worldwide"
   },
   {
@@ -135,7 +135,7 @@
     "expected": 5265,
     "actual": 895,
     "expectedSource": "https://tesla-cdn.thron.com/static/ZXSBN8_TSLA_Q1_2023_Update_ABMJPG.pdf",
-    "actualSource": "taginfo",
+    "actualSource": "overpass",
     "tags": [
       "🔋",
       "🚗"
@@ -189,10 +189,10 @@
     "country": "EU"
   },
   {
-    "id": "3998d87875c0030f4b6fceeb92752a73cf67085bfbf4951c78f9cea93a3552b1",
+    "id": "fcba5aaec2e6bac985428897470d2881bb4d9df7668db7fdc1e0f2fd416afb01",
     "name": "Retail stores in Europe",
-    "expected": 2748159,
-    "actual": 5399074,
+    "expected": 2575171,
+    "actual": 2627207,
     "expectedSource": "https://data.europa.eu/data/datasets/6k2ldtwgaa2lvoudvtbbq?locale=en",
     "actualSource": "taginfo",
     "tags": [
@@ -222,7 +222,7 @@
     "expected": 5470,
     "actual": 5799,
     "expectedSource": "https://en.wikipedia.org/wiki/Rail_transport_in_China#cite_note-CNCRCC-4",
-    "actualSource": "taginfo",
+    "actualSource": "overpass",
     "tags": [
       "🚂"
     ],
@@ -234,7 +234,7 @@
     "id": "8ac45dae95ef22e2d219113f4e80215c865efa2424a819760f3f577e0cea5c1d",
     "name": "Bakeries in France 🍞🥐🥖",
     "expected": 56553,
-    "actual": 27633,
+    "actual": 27639,
     "expectedSource": "https://github.com/wvanderp/isOsmComplete/issues/1",
     "actualSource": "taginfo",
     "tags": [
@@ -277,7 +277,7 @@
     "id": "eff3c039efd5fc3fdd18a79fe91422c4024bcf602215b91d7691d00697409296",
     "name": "PENNY",
     "expected": 2135,
-    "actual": 1891,
+    "actual": 1892,
     "expectedSource": "https://www.rewe-group.com/content/uploads/2023/06/rewe-group-financial-report-2022.pdf?t=2023092210",
     "actualSource": "taginfo",
     "tags": [
@@ -291,7 +291,7 @@
     "id": "154c2bbd2b34ed2924ae6fefbc7a995465c3e80817984f658d2598095d80c9bb",
     "name": "Pubs in the UK",
     "expected": 47200,
-    "actual": 39181,
+    "actual": 39180,
     "expectedSource": "https://commonslibrary.parliament.uk/research-briefings/cbp-8591/",
     "actualSource": "taginfo",
     "tags": [
@@ -362,7 +362,7 @@
     "id": "618d455f20de0fc57391795eb6857e7ad0343ae82314129cded8f49d1e780184",
     "name": "Car chargers",
     "expected": 143592,
-    "actual": 8767,
+    "actual": 8768,
     "expectedSource": "https://www.rvo.nl/onderwerpen/duurzaam-ondernemen/energie-en-milieu-innovaties/elektrisch-rijden/stand-van-zaken/cijfers",
     "actualSource": "taginfo",
     "tags": [
@@ -376,7 +376,7 @@
   {
     "id": "b36e45ea67ee7caebab45e72995bc4bd94b4452bd4cc5432d64bf1f39c4d5db5",
     "name": "Hospitals",
-    "expected": 747,
+    "expected": 752,
     "actual": 611,
     "expectedSource": "https://www.zorgkaartnederland.nl/ziekenhuis",
     "actualSource": "taginfo",
@@ -384,13 +384,13 @@
       "🏥"
     ],
     "description": "The Netherlands has {{expected}} hospitals and clinics. Are they all in OSM?",
-    "lastUpdated": "2023-02-19",
+    "lastUpdated": "2023-12-05",
     "country": "NL"
   },
   {
     "id": "902133b15f0e1713baf285972581ebe1e8ae52860098b1a90212e544f516baf2",
     "name": "Wind turbines",
-    "expected": 2877,
+    "expected": 2971,
     "actual": 3329,
     "expectedSource": "https://nl.wikipedia.org/wiki/Windturbines_in_Nederland",
     "actualSource": "taginfo",
@@ -398,7 +398,7 @@
       "⚡"
     ],
     "description": "Wind energy is the new hotness. But are they all present?",
-    "lastUpdated": "2023-02-19",
+    "lastUpdated": "2023-12-05",
     "country": "NL"
   },
   {
@@ -427,7 +427,7 @@
       "🛒"
     ],
     "description": "Albert Heijn is the biggest supermarket chain in the Netherlands. Are they all in OSM?",
-    "lastUpdated": "2023-02-28",
+    "lastUpdated": "2023-12-05",
     "country": "NL"
   },
   {
@@ -441,7 +441,7 @@
       "🛒"
     ],
     "description": "Gall & Gall is a liquor store chain in the Netherlands. Are they all in OSM?",
-    "lastUpdated": "2023-02-28",
+    "lastUpdated": "2023-12-05",
     "country": "NL"
   },
   {
@@ -455,14 +455,14 @@
       "🛒"
     ],
     "description": "Etos is a drugstore chain in the Netherlands. Are they all in OSM?",
-    "lastUpdated": "2023-02-28",
+    "lastUpdated": "2023-12-05",
     "country": "NL"
   },
   {
     "id": "23178549810ddfaaae84a0f38a238565476ee6426edc61ba20622a9825d7f22c",
     "name": "Civil defense siren",
     "expected": 4278,
-    "actual": 4096,
+    "actual": 4095,
     "expectedSource": "https://www.brandweer.nl/onderwerpen/sirenes/",
     "actualSource": "taginfo",
     "tags": [
@@ -697,28 +697,42 @@
       "✈️"
     ],
     "description": "The number of airports with IATA codes in OSM",
-    "lastUpdated": "2023-02-19",
+    "lastUpdated": "2023-12-05",
     "country": "Worldwide"
   },
   {
     "id": "45bc39b4b3b48b01c0818ca97beabb4aad95ee48232cd8c79603a6c02a84dafc",
     "name": "Airports with ICAO codes ✈️",
     "expected": 20581,
-    "actual": 17309,
+    "actual": 17312,
     "expectedSource": "https://davidmegginson.github.io/ourairports-data/airports.csv",
     "actualSource": "taginfo",
     "tags": [
       "✈️"
     ],
     "description": "The number of airports with ICAO codes in OSM",
-    "lastUpdated": "2023-02-19",
+    "lastUpdated": "2023-12-05",
+    "country": "Worldwide"
+  },
+  {
+    "id": "f0c59ddec204c478382d6632125f2afaa12f1bf052d5e5401e461002b4989a73",
+    "name": "Match ourAirports on airports",
+    "expected": 66745,
+    "actual": 51206,
+    "expectedSource": "https://davidmegginson.github.io/ourairports-data/airports.csv",
+    "actualSource": "taginfo",
+    "tags": [
+      "✈️"
+    ],
+    "description": "OurAirports in a crowdsourced database of airports. Lets see if osm can add something to it.",
+    "lastUpdated": "2023-12-05",
     "country": "Worldwide"
   },
   {
     "id": "df5d2597b3dcba2f5cc91947bb3904598bc27fcb732edcd76093ca0f1ea4e98f",
     "name": "Museums",
-    "expected": 87132,
-    "actual": 98245,
+    "expected": 87135,
+    "actual": 98257,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",
     "description": "The number of museums in the world",
@@ -732,8 +746,8 @@
   {
     "id": "6ea4be580cc1cecfb7e0f67fac16e5963aebc743d6397e6259874592938ee3db",
     "name": "Sculptures",
-    "expected": 394076,
-    "actual": 82043,
+    "expected": 394092,
+    "actual": 82104,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",
     "description": "It is always nice to have some art in your city. Is your local sculpture in OSM?",

@@ -35,3 +35,9 @@ there are many sites offering statistics. they are often government or ngo sites
 - metro stations / train stations
 - apple stores
 - us national parks
+
+## code fixes
+
+make a generic wikidata query compare function
+
+centralize the taginfo servers

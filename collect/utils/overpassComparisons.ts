@@ -23,7 +23,7 @@ export default async function overpassComparison(
         expected,
         actual: count,
         expectedSource,
-        actualSource: 'taginfo',
+        actualSource: 'overpass',
         tags,
         description,
         lastUpdated
@@ -50,7 +50,7 @@ export async function overpassComparisonMultiple(
         expected,
         actual: count,
         expectedSource,
-        actualSource: 'taginfo',
+        actualSource: 'overpass',
         tags,
         description,
         lastUpdated

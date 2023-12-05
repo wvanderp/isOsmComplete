@@ -66,7 +66,7 @@ export default async function netherlands(): Promise<Comparison[]> {
                 'https://media.aholddelhaize.com/media/vy4neu1n/ar-2022-ahold-delhaize-interactive-final.pdf?t=638143108570530000',
                 'Albert Heijn is the biggest supermarket chain in the Netherlands. Are they all in OSM?',
                 ['🛒'],
-                '2023-02-28',
+                '2023-12-05',
                 // use the europe server because Albert Heijn is also in Belgium
                 taginfoServerEuropa
             ),
@@ -78,7 +78,7 @@ export default async function netherlands(): Promise<Comparison[]> {
                 'https://media.aholddelhaize.com/media/vy4neu1n/ar-2022-ahold-delhaize-interactive-final.pdf?t=638143108570530000',
                 'Gall & Gall is a liquor store chain in the Netherlands. Are they all in OSM?',
                 ['🛒'],
-                '2023-02-28',
+                '2023-12-05',
                 taginfoServer
             ),
             await taginfoComparisons(
@@ -89,7 +89,7 @@ export default async function netherlands(): Promise<Comparison[]> {
                 'https://media.aholddelhaize.com/media/vy4neu1n/ar-2022-ahold-delhaize-interactive-final.pdf?t=638143108570530000',
                 'Etos is a drugstore chain in the Netherlands. Are they all in OSM?',
                 ['🛒'],
-                '2023-02-28',
+                '2023-12-05',
                 taginfoServer
             ),
             await taginfoComparisons(
