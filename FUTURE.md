@@ -27,6 +27,8 @@ there are many sites offering statistics. they are often government or ngo sites
 <https://corporate.walmart.com/about>
 <https://duo.nl/open_onderwijsdata/>
 
+<https://opendata.cbs.nl/statline/#/CBS/nl/navigatieScherm/recent>
+
 ## some ideas
 
 - Amazon fulfillment centers

@@ -27,13 +27,16 @@ export default async function retailStoresInEurope(): Promise<Comparison[]> {
         OBS_FLAG: string;
     }[];
 
-    const retailStoresCount = data
+
+    const currentCatogories = data
         .filter((a) => a.TIME_PERIOD === 2017)
-        .filter((a) => a.nace_r2 === 'G47')
-        // filter out all non-numeric values
+        .map((a) => [a.nace_r2, Number.parseInt(current.OBS_VALUE, 10)])
         .filter((a) => typeof a.OBS_VALUE === 'number' && !Number.isNaN(a.OBS_VALUE))
-        // @ts-expect-error - we checked for numbers above
-        .reduce((accumulator, current) => accumulator + Number.parseInt(current.OBS_VALUE, 10), 0);
+        .reduce((acc, curr) => acc[curr[0]] = curr[0], {});
+
+    // should remove G47.9, G47.8 witch are stalls and markets, and non store shops
+
+    const retailStoresCount = currentCatogories["G47"] - (currentCatogories['G478'] + currentCatogories['G479']);
 
     // car shops are not included in the retail stores
     const carShopsCount = await taginfoComparisonMultipleTags(

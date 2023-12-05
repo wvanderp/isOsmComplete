@@ -29,22 +29,22 @@ export default async function netherlands(): Promise<Comparison[]> {
                 'Hospitals',
                 'amenity',
                 ['hospital', 'clinic'],
-                305 + 442, // hospitals + clinics
+                307 + 445, // hospitals + clinics
                 'https://www.zorgkaartnederland.nl/ziekenhuis', // and https://www.zorgkaartnederland.nl/overige-kliniek
                 'The Netherlands has {{expected}} hospitals and clinics. Are they all in OSM?',
                 ['🏥'],
-                '2023-02-19',
+                '2023-12-05',
                 taginfoServer
             ),
             await taginfoComparisons(
                 'Wind turbines',
                 'generator:source',
                 'wind',
-                2415 + 462,
-                'https://nl.wikipedia.org/wiki/Windturbines_in_Nederland',
+                2509 + 462, // land 2022 + sea 2020
+                'https://nl.wikipedia.org/wiki/Windturbines_in_Nederland', // https://opendata.cbs.nl/statline/#/CBS/nl/dataset/70960NED/table
                 'Wind energy is the new hotness. But are they all present?',
                 ['⚡'],
-                '2023-02-19',
+                '2023-12-05',
                 taginfoServer
             ),
             await taginfoComparisons(

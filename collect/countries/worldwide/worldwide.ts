@@ -31,11 +31,11 @@ export default async function worldwide(): Promise<Comparison[]> {
             await overpassComparisonMultiple(
                 'IKEA stores',
                 [[brandWikidata, 'Q54078'], ['shop', 'furniture']],
-                462,
-                'https://www.ikea.com/global/en/newsroom/corporate/ikea-80th-anniversary-assembling-a-better-future-together-230728/',
+                468,
+                'https://www.ikea.com/global/en/our-business/how-we-work/',
                 'IKEA is a furniture store. They have {{expected}} stores in 63 countries. Are they all in OSM?',
                 ['🛒'],
-                '2023-06-28'
+                '2023-12-05'
             ),
             await taginfoComparisons(
                 '7-Eleven stores',
