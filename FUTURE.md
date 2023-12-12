@@ -1,23 +1,23 @@
-# the future dreams of this project
+# The future dreams of this project
 
 in this document i will write down some ideas i have for this project.
 
-## the cia world factbook
+## The CIA world factbook
 
-I am currently working on a script that would use some of the facts in the cia factbook to compare to osm.
+I am currently working on a script that would use some of the facts in the CIA factbook to compare to OSM.
 
-I am focusing on the power generation section, because it is the most interesting to me.
+I am focusing on the power generation section because it is the most interesting to me.
 
-its current state can be found in the `collect/countries/fromSource/factbook` file. Im stuck on how to get the data out of osm because the power generation is duplicated on for example the generator and the site.
+Its current state can be found in the `collect/countries/fromSource/factbook` file. I'm stuck on how to get the data out of OSM because the power generation is duplicated on, for example, the generator and the site.
 
 ## statistics sites
 
-there are many sites offering statistics. they are often government or ngo sites. they often have a lot of data, but it is often hard to get to. i would like to make a script that can get data from these sites.
+There are many sites offering statistics. They are often government or NGO sites. They often have a lot of data, but it is often hard to get to. I would like to make a script that can get data from these sites.
 
 <https://data.worldbank.org/>
 <https://cbs.nl/en-gb>
 
-## mcdonald's in many countries
+## McDonald's in many countries
 
 <https://en.wikipedia.org/wiki/List_of_countries_with_McDonald%27s_restaurants>
 
@@ -29,15 +29,19 @@ there are many sites offering statistics. they are often government or ngo sites
 
 <https://opendata.cbs.nl/statline/#/CBS/nl/navigatieScherm/recent>
 
+<https://www.alltheplaces.xyz/wikidata>
+
 ## some ideas
 
 - Amazon fulfillment centers
-- metro stations / train stations
-- apple stores
-- us national parks
+- metro stations/train stations
+- Apple stores
+- US National parks
 
 ## code fixes
 
-make a generic wikidata query compare function
+Make a generic wikidata query compare function
 
-centralize the taginfo servers
+Centralize the tag info servers
+
+making sure that one failed task does not fail the whole collect
