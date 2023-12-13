@@ -1,8 +1,8 @@
 # The future dreams of this project
 
-in this document i will write down some ideas i have for this project.
+in this document, I will write down some ideas I have for this project.
 
-## The CIA world factbook
+## The CIA World Factbook
 
 I am currently working on a script that would use some of the facts in the CIA factbook to compare to OSM.
 
@@ -24,12 +24,19 @@ There are many sites offering statistics. They are often government or NGO sites
 ## untapped sources
 
 <https://gruppe.schwarz/en>
+
 <https://corporate.walmart.com/about>
+
 <https://duo.nl/open_onderwijsdata/>
 
 <https://opendata.cbs.nl/statline/#/CBS/nl/navigatieScherm/recent>
 
 <https://www.alltheplaces.xyz/wikidata>
+
+## CBS data
+
+hotels
+https://opendata.cbs.nl/statline/#/CBS/nl/dataset/84040NED/table?ts=1702461218221
 
 ## some ideas
 
