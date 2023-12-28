@@ -17,20 +17,20 @@ export default async function worldwide(): Promise<Comparison[]> {
                 ['🏠'],
                 '2023-09-23'
             ),
-            await taginfoComparisons(
+            await overpassComparisonMultiple(
                 'Stolpersteine',
-                'memorial:type',
-                'stolperstein',
+                [['memorial:type', 'stolperstein'], ['memorial', 'stolperstein']],
+                'or',
                 100000,
                 'https://www.timesofisrael.com/holocaust-memorial-project-marks-milestone-with-100000-stumbling-blocks/',
                 'Stolpersteine are monuments to the victims of World War Two. They should be in OSM.',
                 [],
                 '2023-06-01'
             ),
-
             await overpassComparisonMultiple(
                 'IKEA stores',
                 [[brandWikidata, 'Q54078'], ['shop', 'furniture']],
+                'and',
                 468,
                 'https://www.ikea.com/global/en/our-business/how-we-work/',
                 'IKEA is a furniture store. They have {{expected}} stores in 63 countries. Are they all in OSM?',
@@ -100,6 +100,7 @@ export default async function worldwide(): Promise<Comparison[]> {
             await overpassComparisonMultiple(
                 'Tesla superchargers',
                 [['amenity', 'charging_station'], ['brand:wikidata', 'Q478214']],
+                'and',
                 5265,
                 'https://tesla-cdn.thron.com/static/ZXSBN8_TSLA_Q1_2023_Update_ABMJPG.pdf', // page 6
                 'When you want to charge your Tesla but the middle screen is dead and you don\'t have the app, you can find a supercharger in OSM. Or can you?',

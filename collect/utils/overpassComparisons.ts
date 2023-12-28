@@ -33,6 +33,7 @@ export default async function overpassComparison(
 export async function overpassComparisonMultiple(
     name: string,
     query: [string, string][],
+    operator: 'and' | 'or',
     expected: number,
     expectedSource: string,
     description: string,
@@ -42,7 +43,7 @@ export async function overpassComparisonMultiple(
 ): Promise<Comparison> {
     console.log(`starting on ${name}`);
 
-    const count = await overpassSimpleQuery(query, area);
+    const count = await overpassSimpleQuery(query, area, operator);
 
     return {
         id: getHash(JSON.stringify(query)),
