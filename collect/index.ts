@@ -14,9 +14,10 @@ import russia from './countries/RU/russia';
 import unitedStates from './countries/US/unitedStates';
 import vietnam from './countries/VN/Vietnam';
 
-// import factbook from './countries/fromSource/factbook/factbook';
 import airports from './countries/fromSource/ourAirportData/ourAirport';
+import factbook from './countries/fromSource/factbook/factbook';
 import wikidata from './countries/fromSource/wikidata/wikidata';
+import allThePlaces from './countries/fromSource/alltheplaces/alltheplaces';
 
 import { Comparison } from './types';
 
@@ -39,8 +40,9 @@ const tagsFile = path.join(__dirname, 'tags.json');
         ...(await vietnam()),
 
         // fromSource
-        // ...(await factbook())
+        await allThePlaces(),
         ...(await airports()),
+        ...(await factbook()),
         ...(await wikidata())
     ];
 

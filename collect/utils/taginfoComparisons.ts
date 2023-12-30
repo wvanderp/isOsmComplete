@@ -42,6 +42,7 @@ export async function taginfoComparisonKeyOnly(
     lastUpdated: string,
     server = osmTagInfoServer
 ): Promise<Comparison> {
+    console.log(`starting on ${name}`);
     const count = await taginfoKey(key, server);
 
     return {

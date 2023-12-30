@@ -1,6 +1,6 @@
 import React from 'react';
 import { Comparison, CountryCodes } from '../collect/types';
-import Country, { ProgressBar } from './Country';
+import Country, { Comparison as ComparisonComponent, ProgressBar } from './Country';
 
 import data from '../data/compare.json';
 import tags from '../data/tags.json';
@@ -122,10 +122,25 @@ export default function App() {
         .sort(sortCountries)
         .flatMap((country) => <Country key={country[0]} code={country[0] as CountryCodes} comparisons={country[1]} />);
 
+    // each day we select one of the comparisons to show on the front page
+    const today = new Date();
+    const comparisonOfTheDay = data[today.getDate() % data.length];
+    const comparisonOfTheDayComponent = <ComparisonComponent comparison={comparisonOfTheDay} />;
+
     // calculate the total average of all countries
     const totalAverage = data
         .map((comparison) => (comparison.actual / comparison.expected) * 100)
         .reduce((a, b) => a + b, 0) / data.length;
+
+    const expectedEntities = data
+        .map((comparison) => comparison.expected)
+        .reduce((a, b) => a + b, 0);
+
+    const actualEntities = data
+        .map((comparison) => comparison.actual)
+        .reduce((a, b) => a + b, 0);
+
+    const weightedAverage = (actualEntities / expectedEntities) * 100;
 
     return (
         <>
@@ -133,27 +148,48 @@ export default function App() {
                 <img src={logo} alt="OSM Complete Logo" className="logo" />
                 <h1>Is OSM Complete?</h1>
             </div>
-            <p>
+            <p id="intro">
                 How complete is OSM, really?
                 That&apos;s the question this website sets out to answer.
                 We compare the number of features in OpenStreetMap to the number of features in official data sources,
                 and the results are... well, let&apos;s say we&apos;re not quite there yet.<br />
-                <br />
-
-                You can suggest more sources over on our <a href={pkg.repository.url}>GitHub</a>. <br />
             </p>
-            <ProgressBar value={totalAverage} max={100} /><br/>
+            <ProgressBar value={totalAverage} max={100} /><br />
 
             <p>
                 <b>Global Average Completeness: {totalAverage.toFixed(2)}%</b><br /><br />
                 Our analysis indicates that OpenStreetMap comprises approximately {totalAverage.toFixed(2)}%
                 of the features found in official data sources worldwide.
+            </p>
+            <p>
+                The number above is a bit misleading
+                because it is an average of the percentages of each comparison.<br />
 
+                So, sum all expected entities ({expectedEntities.toLocaleString()})
+                and calculate the percentage of actual entities ({actualEntities.toLocaleString()}).<br />
+                Then, we get a fairer percentage of <b>{weightedAverage.toFixed(2)}%</b>.
             </p>
             <p>
                 Below, you find specific sources.
                 In the graph, we have the goal in green and OpenStreetMap in blue over time.
                 You can filter the data to only see your favorite country or topic.
+            </p>
+            <h2>How can you help...</h2>
+            <p>
+                ...improve the data? Well, you can help us by adding data to OpenStreetMap. <br />
+                An excellent place to start is the <a href="https://learnosm.org/en/">Learn OpenStreetMap</a>. <br />
+                If you need inspiration, you can check out <a href="https://maproulette.org/">Maproulette</a>, where you can find many tasks to improve OpenStreetMap.
+                <br />
+                <br />
+
+                If you want to help improve this website,
+                you can find the source code on <a href={pkg.repository.url}>GitHub</a>.
+                We can always use help with the following:
+                <ul>
+                    <li>Adding new sources</li>
+                    <li>Improving the website</li>
+                    <li>Adding new features</li>
+                </ul>
             </p>
             <br />
 
@@ -162,6 +198,12 @@ export default function App() {
                 <span>Country:</span>{countryButtons}<br />
                 <span>Tag:</span>{tagButtons}<br />
             </div>
+
+            <hr />
+            <h1>📅 Comparison of the day</h1>
+            {comparisonOfTheDayComponent}
+            <hr />
+
             {countries}
         </>
     );

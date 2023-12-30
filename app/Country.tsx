@@ -46,7 +46,7 @@ export default function Country(props: {
     );
 }
 
-function Comparison(props: {
+export function Comparison(props: {
     comparison: Comparison;
 }) {
     // replace the templates in the description with the actual values

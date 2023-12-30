@@ -3,8 +3,6 @@
 import React from 'react';
 import * as d3 from 'd3';
 import { GraphData } from './downloadGraphData';
-// eslint-disable-next-line no-console -- see https://github.com/parcel-bundler/parcel/issues/8792
-console.log(d3);
 
 // eslint-disable-next-line import/first -- for the d3 bug
 
@@ -51,7 +49,7 @@ export default function draw_chronology_chart(
         .range([0, w]);
     const axis_x = d3.axisBottom(scale_x)
         .tickFormat(d3.timeFormat('%b %Y'))
-        .ticks(3);
+        .ticks(4);
 
     const scale_y = d3.scaleLinear()
         .domain([0, max])

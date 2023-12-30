@@ -1,19 +1,15 @@
-import unzipper from 'unzipper';
-import { Readable } from 'stream';
+import extract from 'extract-zip';
+import fs from 'fs';
 
 /**
  * unzip a file to a directory
+ * also deletes the original zip file
  *
- * @param {Buffer} zipFile the file to be unpacked
+ * @param {string} zipFile path to the zip file
  * @param {string} outputDir the directory to unpack the file to
  * @returns {Promise<void>}
  */
-export default async function unzip(zipFile: Buffer, outputDirectory: string): Promise<void> {
-    return new Promise((resolve, reject) => {
-        const readStream = Readable.from(zipFile);
-        readStream
-            .pipe(unzipper.Extract({ path: outputDirectory }))
-            .on('finish', () => resolve())
-            .on('error', (error) => reject(error));
-    });
+export default async function unzip(zipFile: string, outputDirectory: string): Promise<void> {
+    await extract(zipFile, { dir: outputDirectory });
+    fs.unlinkSync(zipFile);
 }

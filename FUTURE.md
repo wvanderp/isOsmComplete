@@ -17,6 +17,11 @@ There are many sites offering statistics. They are often government or NGO sites
 <https://data.worldbank.org/>
 <https://cbs.nl/en-gb>
 
+## reoccurring tasks
+
+<https://opendata.cbs.nl/statline/#/CBS/nl/navigatieScherm/recent>
+<https://www.stats.gov.cn/english/PressRelease/>
+
 ## McDonald's in many countries
 
 <https://en.wikipedia.org/wiki/List_of_countries_with_McDonald%27s_restaurants>
@@ -29,14 +34,12 @@ There are many sites offering statistics. They are often government or NGO sites
 
 <https://duo.nl/open_onderwijsdata/>
 
-<https://opendata.cbs.nl/statline/#/CBS/nl/navigatieScherm/recent>
-
 <https://www.alltheplaces.xyz/wikidata>
 
 ## CBS data
 
 hotels
-https://opendata.cbs.nl/statline/#/CBS/nl/dataset/84040NED/table?ts=1702461218221
+<https://opendata.cbs.nl/statline/#/CBS/nl/dataset/84040NED/table?ts=1702461218221>
 
 ## some ideas
 
