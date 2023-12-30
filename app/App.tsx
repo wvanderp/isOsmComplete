@@ -9,6 +9,7 @@ import tags from '../data/tags.json';
 import logo from '../static/logo.svg';
 
 import pkg from '../package.json';
+import { dayOfTheMonth, dayOfTheWeek, dayOfTheYear } from './utils/dayOfTheYear';
 
 const prioritizedCountries = [
     'Worldwide',
@@ -124,7 +125,7 @@ export default function App() {
 
     // each day we select one of the comparisons to show on the front page
     const today = new Date();
-    const comparisonOfTheDay = data[today.getDate() % data.length];
+    const comparisonOfTheDay = data[(dayOfTheWeek(today) * dayOfTheYear(today) * dayOfTheMonth(today)) % data.length];
     const comparisonOfTheDayComponent = <ComparisonComponent comparison={comparisonOfTheDay} />;
 
     // calculate the total average of all countries
