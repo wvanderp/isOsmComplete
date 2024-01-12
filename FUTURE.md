@@ -1,6 +1,6 @@
 # The future dreams of this project
 
-in this document, I will write down some ideas I have for this project.
+In this document, I will write down some ideas I have for this project.
 
 ## The CIA World Factbook
 
@@ -36,6 +36,8 @@ There are many sites offering statistics. They are often government or NGO sites
 
 <https://www.alltheplaces.xyz/wikidata>
 
+<https://www.euronetatms.nl/?allow_cookies=yes#:~:text=c.%2050%2C000,geldautomaten%20in%20beheer>
+
 ## CBS data
 
 hotels
@@ -50,8 +52,8 @@ hotels
 
 ## code fixes
 
-Make a generic wikidata query compare function
+Make a generic wikidata query compare function.
 
-Centralize the tag info servers
+Centralize the tag info servers.
 
-making sure that one failed task does not fail the whole collect
+Making sure that one failed task does not fail the whole collect
