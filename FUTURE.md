@@ -38,6 +38,10 @@ There are many sites offering statistics. They are often government or NGO sites
 
 <https://www.euronetatms.nl/?allow_cookies=yes#:~:text=c.%2050%2C000,geldautomaten%20in%20beheer>
 
+https://www.submarinecablemap.com/
+
+https://www.nps.gov/subjects/digital/nps-data-api.htm
+
 ## CBS data
 
 hotels
