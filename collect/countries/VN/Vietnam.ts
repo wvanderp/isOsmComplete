@@ -1,9 +1,10 @@
 import { Comparison } from '../../types';
 import appendCountry from '../../utils/appendData';
 import { brandWikidata } from '../../utils/osmTags';
+import taginfoServers from '../../utils/tagInfoServers';
 import taginfoComparisons, { taginfoComparisonMultipleTags } from '../../utils/taginfoComparisons';
 
-const taginfoServer = 'https://taginfo.geofabrik.de/asia:vietnam';
+const taginfoServer = taginfoServers.VN;
 
 export default async function vietnam(): Promise<Comparison[]> {
     return appendCountry(

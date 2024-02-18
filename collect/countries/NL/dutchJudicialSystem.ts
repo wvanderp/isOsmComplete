@@ -3,8 +3,9 @@ import axios from 'axios';
 import { Comparison, PolitieApi } from '../../types';
 import appendCountry from '../../utils/appendData';
 import taginfoComparisons from '../../utils/taginfoComparisons';
+import taginfoServers from '../../utils/tagInfoServers';
 
-const taginfoServer = 'https://taginfo.geofabrik.de/europe:netherlands/';
+const taginfoServer = taginfoServers.NL;
 
 const courthousesExpected = [
     // Rechtbank-Zeeland-West-Brabant

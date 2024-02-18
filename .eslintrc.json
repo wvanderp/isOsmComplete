@@ -90,7 +90,7 @@
       }
     ],
     "no-unused-vars": "off",
-    // Git fixes this issue by automatedly change the brake line type when pushing the local branches
+    // Git fixes this issue by automagically change the brake line type when pushing the local branches
     "linebreak-style": "off",
     "no-undef": "warn",
     // Underscores are used to denote private functions and variables

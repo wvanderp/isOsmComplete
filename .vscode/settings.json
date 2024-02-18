@@ -1,6 +1,7 @@
 {
     "cSpell.words": [
         "alltheplaces",
+        "automagically",
         "compat",
         "crowdsourced",
         "dirents",
@@ -34,9 +35,6 @@
         "Wikidata",
         "wvdp"
     ],
-    "yaml.schemas": {
-        "https://json.schemastore.org/github-workflow.json": "vscode-vfs://github/github-actions[bot]/isOsmComplete/.github/workflows/build.yml"
-    },
     "search.exclude": {
         "data/**/*.json":true
     },

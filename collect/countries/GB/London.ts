@@ -1,8 +1,9 @@
 import { Comparison } from '../../types';
 import appendCountry from '../../utils/appendData';
+import taginfoServers from '../../utils/tagInfoServers';
 import taginfoComparisons from '../../utils/taginfoComparisons';
 
-const taginfoServer = 'https://taginfo.geofabrik.de/europe:united-kingdom:england:greater-london';
+const taginfoServer = taginfoServers.London;
 
 export default async function london(): Promise<Comparison[]> {
     return appendCountry(

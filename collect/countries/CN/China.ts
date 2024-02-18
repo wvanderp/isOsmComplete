@@ -2,7 +2,6 @@ import { Comparison } from '../../types';
 import appendCountry from '../../utils/appendData';
 import { overpassComparisonMultiple } from '../../utils/overpassComparisons';
 
-// const taginfoServer = 'https://taginfo.geofabrik.de/asia:china';
 const chinaArea = 3600270056;
 
 export default async function china(): Promise<Comparison[]> {

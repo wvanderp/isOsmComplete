@@ -3,11 +3,12 @@ import { parse } from 'csv-parse/sync';
 import { Comparison } from '../../types';
 import appendCountry from '../../utils/appendData';
 import { taginfoComparisonKeyOnly, taginfoComparisonMultipleTags } from '../../utils/taginfoComparisons';
+import taginfoServers from '../../utils/tagInfoServers';
 
 const sourceUrl = 'https://data.europa.eu/data/datasets/6k2ldtwgaa2lvoudvtbbq?locale=en';
 const dataUrl = 'https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/dt_oth_n47_r2?format=SDMX-CSV';
 
-const taginfoServer = 'https://taginfo.geofabrik.de/europe/';
+const taginfoServer = taginfoServers.EU;
 
 export default async function retailStoresInEurope(): Promise<Comparison[]> {
     console.log('starting on Retail stores in Europe');

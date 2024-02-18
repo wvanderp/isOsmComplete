@@ -1,10 +1,11 @@
 import { Comparison } from '../../types';
 import appendCountry from '../../utils/appendData';
 import { brandWikidata, operatorWikidata } from '../../utils/osmTags';
+import taginfoServers from '../../utils/tagInfoServers';
 import taginfoComparisons from '../../utils/taginfoComparisons';
 import london from './London';
 
-const taginfoServer = 'https://taginfo.geofabrik.de/europe:united-kingdom';
+const taginfoServer = taginfoServers.GB;
 
 export default async function greatBritain(): Promise<Comparison[]> {
     return appendCountry(

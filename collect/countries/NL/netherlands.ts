@@ -2,12 +2,13 @@
 import { Comparison } from '../../types';
 import appendCountry from '../../utils/appendData';
 import { brandWikidata } from '../../utils/osmTags';
+import taginfoServers from '../../utils/tagInfoServers';
 import taginfoComparisons, { taginfoComparisonMultipleTags } from '../../utils/taginfoComparisons';
 import dutchJudicialSystem from './dutchJudicialSystem';
 import geldmaat from './geldmaat';
 
-const taginfoServer = 'https://taginfo.geofabrik.de/europe:netherlands/';
-const taginfoServerEuropa = 'https://taginfo.geofabrik.de/europe';
+const taginfoServer = taginfoServers.NL;
+const taginfoServerEuropa = taginfoServers.EU;
 
 export default async function netherlands(): Promise<Comparison[]> {
     return appendCountry(
