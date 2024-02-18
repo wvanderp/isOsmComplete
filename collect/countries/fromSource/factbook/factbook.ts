@@ -17,7 +17,7 @@ export default async function factbook(): Promise<Comparison[]> {
     console.log('Downloading CIA World Factbook data...');
     // nuke the old directory and zip file
     if (fs.existsSync(factbookDirectory)) {
-        fs.rmdirSync(factbookDirectory, { recursive: true });
+        fs.rmSync(factbookDirectory, { recursive: true });
     }
     if (fs.existsSync(factbookZipFile)) {
         fs.unlinkSync(factbookZipFile);
