@@ -28,7 +28,7 @@
   {
     "id": "a18d3e40ae9fc681bce81114b28db33c050281ab197e033ee141a6990a55a738",
     "name": "IKEA stores",
-    "expected": 468,
+    "expected": 471,
     "actual": 557,
     "expectedSource": "https://www.ikea.com/global/en/our-business/how-we-work/",
     "actualSource": "overpass",
@@ -36,7 +36,7 @@
       "🛒"
     ],
     "description": "IKEA is a furniture store. They have {{expected}} stores in 63 countries. Are they all in OSM?",
-    "lastUpdated": "2023-12-05",
+    "lastUpdated": "2024-01-22",
     "country": "Worldwide"
   },
   {
@@ -102,16 +102,46 @@
   {
     "id": "ff163beb19543f2cb53c300637cac009272968c01b3511a40effa32489074e82",
     "name": "KFC",
-    "expected": 27000,
+    "expected": 29900,
     "actual": 13907,
-    "expectedSource": "https://www.yum.com/wps/portal/yumbrands/Yumbrands/company/our-brands/kfc",
+    "expectedSource": "https://s2.q4cdn.com/890585342/files/doc_financials/2023/q4/Q4-2023-Earnings-Release.pdf",
     "actualSource": "taginfo",
     "tags": [
       "🍔",
       "🛒"
     ],
     "description": "KFC expanded out of Kentucky in 1964. They now have {{expected}} stores in 135 countries. Are they all in OSM?",
-    "lastUpdated": "2023-03-17",
+    "lastUpdated": "2024-02-18",
+    "country": "Worldwide"
+  },
+  {
+    "id": "1741ef1701505db0c126d61364820e8e2d485d96751eaa8ef3e3850ee0595b22",
+    "name": "Taco Bell",
+    "expected": 8564,
+    "actual": 6347,
+    "expectedSource": "https://s2.q4cdn.com/890585342/files/doc_financials/2023/q4/Q4-2023-Earnings-Release.pdf",
+    "actualSource": "taginfo",
+    "tags": [
+      "🍔",
+      "🛒"
+    ],
+    "description": "Taco Bell is a fast-food chain. They have {{expected}} stores in 30 countries. Are they all in OSM?",
+    "lastUpdated": "2024-02-18",
+    "country": "Worldwide"
+  },
+  {
+    "id": "248346ad79386b814c4c361474a0eede7d7d254e1302feeacd7a2db3965ac5ba",
+    "name": "Pizza Hut",
+    "expected": 19866,
+    "actual": 7178,
+    "expectedSource": "https://s2.q4cdn.com/890585342/files/doc_financials/2023/q4/Q4-2023-Earnings-Release.pdf",
+    "actualSource": "taginfo",
+    "tags": [
+      "🍔",
+      "🛒"
+    ],
+    "description": "Pizza Hut is a fast-food chain. They have {{expected}} stores in 100 countries. Are they all in OSM?",
+    "lastUpdated": "2024-02-18",
     "country": "Worldwide"
   },
   {
@@ -126,7 +156,7 @@
       "🛒"
     ],
     "description": "Burger King is a fast-food chain. They have {{expected}} stores in 100 countries. Are they all in OSM?",
-    "lastUpdated": "2023-03-17",
+    "lastUpdated": "2024-02-18",
     "country": "Worldwide"
   },
   {
@@ -176,16 +206,16 @@
   {
     "id": "16f17dead727d54cdeea1a744885af7be858826c05e1ac342da754d457dd1b15",
     "name": "Fastned charger in the EU",
-    "expected": 272,
+    "expected": 300,
     "actual": 241,
-    "expectedSource": "https://fastnedcharging.com/hq/nl/fastned-bereikt-mijlpaal-van-positief-onderliggend-ebitda-resultaat/",
+    "expectedSource": "https://fastnedcharging.com/nl/locaties",
     "actualSource": "taginfo",
     "tags": [
       "🔋",
       "🚗"
     ],
     "description": "Fastned is a provider of charging stations in Europe. What is the charge of Fastned in OSM?",
-    "lastUpdated": "2023-09-24",
+    "lastUpdated": "2024-02-18",
     "country": "EU"
   },
   {
@@ -232,7 +262,7 @@
   },
   {
     "id": "c36d0cf963a5575f58ba8bae8b2f8ddee715472f45cacecb2557e6d081535fa8",
-    "name": "coal power plants in china",
+    "name": "Coal power plants in china",
     "expected": 3092,
     "actual": 4142,
     "expectedSource": "https://www.statista.com/statistics/1268457/coal-power-plants-in-china-by-province",
@@ -483,7 +513,7 @@
       "🛒"
     ],
     "description": "At this critical point in time, facing extinction in The Netherlands, they deserve to be mapped.",
-    "lastUpdated": "2023-02-28",
+    "lastUpdated": "2024-02-18",
     "country": "NL"
   },
   {
@@ -573,7 +603,7 @@
   {
     "id": "9d5c0df008dd2cd881f6559e5fe5e75942d8b455ccfa7925ae091f84357d841c",
     "name": "FAA tags ✈️",
-    "expected": 26648,
+    "expected": 26577,
     "actual": 9417,
     "expectedSource": "https://www.faa.gov/air_traffic/flight_info/aeronav/aero_data/Loc_ID_Search/Encodes_Decodes/",
     "actualSource": "taginfo",
@@ -581,7 +611,7 @@
       "✈️"
     ],
     "description": "Do all the airports in the US have an FAA tag?",
-    "lastUpdated": "2023-05-25",
+    "lastUpdated": "2024-02-22",
     "country": "US"
   },
   {
@@ -627,38 +657,38 @@
     "country": "US"
   },
   {
-    "id": "8f49d6617105144092570d23ddb7f8648887e839d5350af8b72cd7549eb16e60",
-    "name": "Dollar Tree",
-    "expected": 15840,
-    "actual": 4074,
+    "id": "bf3569f679d580f0267b0fa49caf4260f19a4d9ff40c4e5943ed4f90093912d2",
+    "name": "Dollar Tree & Family Dollar",
+    "expected": 16622,
+    "actual": 7449,
     "expectedSource": "https://corporate.dollartree.com/_assets/_e019a55beaa640d513e0240de36a677a/dollartreeinfo/db/893/9106/annual_report/DT_2021_Form+10-K_FINAL_5.11.22.pdf",
     "actualSource": "taginfo",
     "tags": [
       "🛒"
     ],
-    "description": "Dollar Trees pop out of the ground like... trees. But are these Dollar trees documented?",
-    "lastUpdated": "2023-03-17",
+    "description": "Dollar Trees pop out of the ground like... trees. It's sister, Family Dollar, can be compared to rabbits. But are these Family Dollar & Dollar trees documented?",
+    "lastUpdated": "2024-02-18",
     "country": "US"
   },
   {
     "id": "431c3520a26be03937166e9dbfed5a56d41e24de9e0f2530c7bea24eb70af3a6",
     "name": "CVS",
-    "expected": 9900,
+    "expected": 9395,
     "actual": 8159,
-    "expectedSource": "https://s2.q4cdn.com/447711729/files/doc_financials/2021/ar/CVS2021_Annual-Report.pdf",
+    "expectedSource": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0000064803/28e54055-44dd-4a6d-a517-6ffc18161213.pdf",
     "actualSource": "taginfo",
     "tags": [
       "🛒",
       "🏥"
     ],
     "description": "Having a pharmacy in every corner of the US is a great thing. Does every corner of OSM have a CVS pharmacy?",
-    "lastUpdated": "2023-03-17",
+    "lastUpdated": "2024-02-18",
     "country": "US"
   },
   {
     "id": "9dbf8e0d4c94858e8b152c16048d24705a9f3a744229e49ea85f8bae7e5ccead",
     "name": "Walgreens",
-    "expected": 4717,
+    "expected": 8600,
     "actual": 8494,
     "expectedSource": "https://s1.q4cdn.com/343380161/files/doc_financials/2022/ar/WBA-2022-Annual-Report.pdf",
     "actualSource": "taginfo",
@@ -667,7 +697,22 @@
       "🏥"
     ],
     "description": "Walgreens is the second largest pharmacy store chain in the US. Are all the Walgreens stores in the US tagged?",
-    "lastUpdated": "2023-05-25",
+    "lastUpdated": "2024-02-18",
+    "country": "US"
+  },
+  {
+    "id": "c5f2cbfcb3b055f1c40fe5d1551d6aee2da24379eb4e83d5a13efb13bb1afe0f",
+    "name": "Pharmacies in the US of A",
+    "expected": 40000,
+    "actual": 19628,
+    "expectedSource": "https://s1.q4cdn.com/343380161/files/doc_financials/2023/ar/wba-2023-annual-report.pdf",
+    "actualSource": "taginfo",
+    "tags": [
+      "🛒",
+      "🏥"
+    ],
+    "description": "There are a lot of places to pay too much for your medicine in the US. But can you find them in OSM?",
+    "lastUpdated": "2024-02-18",
     "country": "US"
   },
   {
@@ -771,7 +816,7 @@
   {
     "id": "df5d2597b3dcba2f5cc91947bb3904598bc27fcb732edcd76093ca0f1ea4e98f",
     "name": "Museums",
-    "expected": 88131,
+    "expected": 88132,
     "actual": 99005,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",
@@ -786,7 +831,7 @@
   {
     "id": "6ea4be580cc1cecfb7e0f67fac16e5963aebc743d6397e6259874592938ee3db",
     "name": "Sculptures",
-    "expected": 415978,
+    "expected": 415979,
     "actual": 84568,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",

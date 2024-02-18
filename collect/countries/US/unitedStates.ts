@@ -1,8 +1,8 @@
 import { Comparison } from '../../types';
 import appendCountry from '../../utils/appendData';
-import { brandWikidata } from '../../utils/osmTags';
+import { brandWikidata, healthcare, pharmacy } from '../../utils/osmTags';
 import taginfoServers from '../../utils/tagInfoServers';
-import taginfoComparisons, { taginfoComparisonKeyOnly } from '../../utils/taginfoComparisons';
+import taginfoComparisons, { taginfoComparisonKeyOnly, taginfoComparisonMultipleTags } from '../../utils/taginfoComparisons';
 
 const taginfoServer = taginfoServers.US;
 
@@ -13,11 +13,11 @@ export default async function unitedStates(): Promise<Comparison[]> {
             await taginfoComparisonKeyOnly(
                 'FAA tags ✈️',
                 'faa',
-                26648,
+                26577,
                 'https://www.faa.gov/air_traffic/flight_info/aeronav/aero_data/Loc_ID_Search/Encodes_Decodes/',
                 'Do all the airports in the US have an FAA tag?',
                 ['✈️'],
-                '2023-05-25',
+                '2024-02-22',
                 taginfoServer
             ),
             await taginfoComparisons(
@@ -53,37 +53,48 @@ export default async function unitedStates(): Promise<Comparison[]> {
                 '2023-10-23',
                 taginfoServer
             ),
-            await taginfoComparisons(
-                'Dollar Tree',
+            await taginfoComparisonMultipleTags(
+                'Dollar Tree & Family Dollar',
                 brandWikidata,
-                'Q5289230',
-                7824 + 8016, // dollar tree and family dollar
+                ['Q5289230', 'Q5433101'],
+                8272 + 8350, // dollar tree and family dollar
                 'https://corporate.dollartree.com/_assets/_e019a55beaa640d513e0240de36a677a/dollartreeinfo/db/893/9106/annual_report/DT_2021_Form+10-K_FINAL_5.11.22.pdf',
-                'Dollar Trees pop out of the ground like... trees. But are these Dollar trees documented?',
+                'Dollar Trees pop out of the ground like... trees. It\'s sister, Family Dollar, can be compared to rabbits. But are these Family Dollar & Dollar trees documented?',
                 ['🛒'],
-                '2023-03-17',
+                '2024-02-18',
                 taginfoServer
             ),
             await taginfoComparisons(
                 'CVS',
                 brandWikidata,
                 'Q2078880',
-                9900, // More then 9900 why not a exact number? What are they are hiding?
-                'https://s2.q4cdn.com/447711729/files/doc_financials/2021/ar/CVS2021_Annual-Report.pdf',
+                7500 + 1895, // locations + embedded pharmacies
+                'https://d18rn0p25nwr6d.cloudfront.net/CIK-0000064803/28e54055-44dd-4a6d-a517-6ffc18161213.pdf', // from https://investors.cvshealth.com/investors/financial-information/sec-filings/default.aspx
                 'Having a pharmacy in every corner of the US is a great thing. Does every corner of OSM have a CVS pharmacy?',
                 ['🛒', '🏥'],
-                '2023-03-17',
+                '2024-02-18',
                 taginfoServer
             ),
             await taginfoComparisons(
                 'Walgreens',
                 brandWikidata,
                 'Q1591889',
-                4717, // only in the US
-                'https://s1.q4cdn.com/343380161/files/doc_financials/2022/ar/WBA-2022-Annual-Report.pdf',
+                8600, // only in the US
+                'https://s1.q4cdn.com/343380161/files/doc_financials/2022/ar/WBA-2022-Annual-Report.pdf', // from https://investor.walgreensbootsalliance.com/home/default.aspx
                 'Walgreens is the second largest pharmacy store chain in the US. Are all the Walgreens stores in the US tagged?',
                 ['🛒', '🏥'],
-                '2023-05-25',
+                '2024-02-18',
+                taginfoServer
+            ),
+            await taginfoComparisons(
+                'Pharmacies in the US of A',
+                healthcare,
+                pharmacy,
+                40000,
+                'https://s1.q4cdn.com/343380161/files/doc_financials/2023/ar/wba-2023-annual-report.pdf', // from https://investor.walgreensbootsalliance.com/home/default.aspx
+                'There are a lot of places to pay too much for your medicine in the US. But can you find them in OSM?',
+                ['🛒', '🏥'],
+                '2024-02-18',
                 taginfoServer
             )
         ]

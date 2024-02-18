@@ -185,6 +185,7 @@
     "@typescript-eslint/no-use-before-define": "off", 
     "no-restricted-syntax": "off",
     "unicorn/prefer-top-level-await": "off",
-    "unicorn/no-array-reduce": "off"
+    "unicorn/no-array-reduce": "off",
+    "sonarjs/no-duplicate-string": ["error", { "threshold": 5 }]
   }
 }

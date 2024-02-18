@@ -4,3 +4,5 @@ export const wikidata = 'wikidata';
 
 export const shop = 'shop';
 export const bakery = 'bakery';
+export const healthcare = 'healthcare';
+export const pharmacy = 'pharmacy';

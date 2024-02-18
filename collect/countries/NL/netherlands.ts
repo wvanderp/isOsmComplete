@@ -56,7 +56,7 @@ export default async function netherlands(): Promise<Comparison[]> {
                 'https://www.rtlnieuws.nl/nieuws/nederland/artikel/5214097/flitspaal-cjib-boetes-overtredingen-snelheid-bon-auto-politie',
                 'Getting a ticket is really annoying! Maybe OSM can help you obey the law extremely locally.',
                 ['🚗', '👀'],
-                '2023-04-20',
+                '2024-02-18',
                 taginfoServer
             ),
             await taginfoComparisonMultipleTags(
@@ -98,10 +98,10 @@ export default async function netherlands(): Promise<Comparison[]> {
                 'emergency',
                 'siren',
                 4278,
-                'https://www.brandweer.nl/onderwerpen/sirenes/',
+                'https://www.brandweer.nl/onderwerpen/sirenes/', // an other source could be: https://luchtalarmen.nl/info
                 'At this critical point in time, facing extinction in The Netherlands, they deserve to be mapped.',
                 ['🛒'],
-                '2023-02-28',
+                '2024-02-18',
                 taginfoServer
             ),
 

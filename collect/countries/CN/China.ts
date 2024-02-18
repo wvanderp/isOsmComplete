@@ -23,7 +23,7 @@ export default async function china(): Promise<Comparison[]> {
                 chinaArea
             ),
             await taginfoComparisons(
-                'coal power plants in china',
+                'Coal power plants in china',
                 'generator:source',
                 'coal',
                 3092,

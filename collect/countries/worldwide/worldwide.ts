@@ -31,11 +31,11 @@ export default async function worldwide(): Promise<Comparison[]> {
                 'IKEA stores',
                 [[brandWikidata, 'Q54078'], ['shop', 'furniture']],
                 'and',
-                468,
+                471,
                 'https://www.ikea.com/global/en/our-business/how-we-work/',
                 'IKEA is a furniture store. They have {{expected}} stores in 63 countries. Are they all in OSM?',
                 ['🛒'],
-                '2023-12-05'
+                '2024-01-22'
             ),
             await taginfoComparisons(
                 '7-Eleven stores',
@@ -81,11 +81,31 @@ export default async function worldwide(): Promise<Comparison[]> {
                 'KFC',
                 brandWikidata,
                 'Q524757',
-                27000,
-                'https://www.yum.com/wps/portal/yumbrands/Yumbrands/company/our-brands/kfc',
+                29900,
+                'https://s2.q4cdn.com/890585342/files/doc_financials/2023/q4/Q4-2023-Earnings-Release.pdf', // from https://investors.yum.com/news-events/financial-releases/
                 'KFC expanded out of Kentucky in 1964. They now have {{expected}} stores in 135 countries. Are they all in OSM?',
                 ['🍔', '🛒'],
-                '2023-03-17'
+                '2024-02-18'
+            ),
+            await taginfoComparisons(
+                'Taco Bell',
+                brandWikidata,
+                'Q752941',
+                8564,
+                'https://s2.q4cdn.com/890585342/files/doc_financials/2023/q4/Q4-2023-Earnings-Release.pdf', // from https://investors.yum.com/news-events/financial-releases/
+                'Taco Bell is a fast-food chain. They have {{expected}} stores in 30 countries. Are they all in OSM?',
+                ['🍔', '🛒'],
+                '2024-02-18'
+            ),
+            await taginfoComparisons(
+                'Pizza Hut',
+                brandWikidata,
+                'Q191615',
+                19866,
+                'https://s2.q4cdn.com/890585342/files/doc_financials/2023/q4/Q4-2023-Earnings-Release.pdf', // from https://investors.yum.com/news-events/financial-releases/
+                'Pizza Hut is a fast-food chain. They have {{expected}} stores in 100 countries. Are they all in OSM?',
+                ['🍔', '🛒'],
+                '2024-02-18'
             ),
             await taginfoComparisons(
                 'Burger King',
@@ -95,7 +115,7 @@ export default async function worldwide(): Promise<Comparison[]> {
                 'https://www.rbi.com/English/brands/default.aspx',
                 'Burger King is a fast-food chain. They have {{expected}} stores in 100 countries. Are they all in OSM?',
                 ['🍔', '🛒'],
-                '2023-03-17'
+                '2024-02-18'
             ),
             await overpassComparisonMultiple(
                 'Tesla superchargers',
