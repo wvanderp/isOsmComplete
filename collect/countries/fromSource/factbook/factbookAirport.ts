@@ -6,16 +6,10 @@ import { taginfoComparisonMultipleTags } from '../../../utils/taginfoComparisons
 import { Comparison } from '../../../types';
 
 function parseAirport(file: FactbookCountry): number {
-    // paved airports
-    const pavedSection = file.Transportation['Airports - with paved runways'];
-    const pavedAirportsTotalText = pavedSection?.total?.text ?? pavedSection?.text ?? '0';
-    const pavedAirports = Number.parseInt(pavedAirportsTotalText.replace(/,/, ''), 10);
+    const airportsText = file.Transportation.Airports?.text;
+    const splitText = airportsText?.split(' ')[0];
 
-    // unpaved airports
-    const unpavedAirportsText = file.Transportation['Airports - with unpaved runways']?.text ?? '0';
-    const unpavedAirports = Number.parseInt(unpavedAirportsText.replace(/,/, ''), 10);
-
-    return pavedAirports + unpavedAirports;
+    return splitText ? Number.parseInt(splitText.replaceAll(',', ''), 10) : 0;
 }
 
 export default async function factbookAirports(factbookDirectory: string): Promise<Comparison> {
@@ -37,7 +31,7 @@ export default async function factbookAirports(factbookDirectory: string): Promi
         ['aerodrome', 'airstrip'],
         airportCount,
         'https://www.cia.gov/the-world-factbook/',
-        'the cia has, unsurprisingly, a interest in how many airports there are in a country. we can make use of this curiosity to check how far we are in mapping airports in OSM',
+        'The cia has, unsurprisingly, a interest in how many airports there are in a country. We can make use of this curiosity to check how far we are in mapping airports in OSM.',
         ['✈️'],
         '2023-12-30'
     );

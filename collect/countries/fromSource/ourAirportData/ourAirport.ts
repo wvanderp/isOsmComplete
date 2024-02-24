@@ -11,7 +11,7 @@ import { taginfoComparisonKeyOnly, taginfoComparisonMultipleTags } from '../../.
 const airportCsvUrl = 'https://davidmegginson.github.io/ourairports-data/airports.csv';
 
 export default async function airports(): Promise<Comparison[]> {
-    console.log('starting on airports');
+    console.info('starting on airports');
     const airportCsv = await axios.get<string>(airportCsvUrl);
 
     const airportsData = parse(airportCsv.data, {
@@ -72,7 +72,7 @@ export default async function airports(): Promise<Comparison[]> {
                 ['aerodrome', 'airstrip', 'heliport'],
                 airportsCount,
                 airportCsvUrl,
-                'ourAirports in a crowdsourced database of airports. lets see if osm can add something to it.',
+                'OurAirports in a crowdsourced database of airports. lets see if osm can add something to it.',
                 ['✈️'],
                 '2023-12-05'
             )
