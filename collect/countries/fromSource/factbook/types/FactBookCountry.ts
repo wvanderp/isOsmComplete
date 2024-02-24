@@ -81,6 +81,7 @@ export interface Economy {
     'Gini Index coefficient - distribution of family income'?: GiniIndexCoefficientDistributionOfFamilyIncome;
     'Average household expenditures'?: AverageHouseholdExpenditures;
     'Household income or consumption by percentage share'?: HouseholdIncomeOrConsumptionByPercentageShare;
+    Remittances?: Remittances;
     Budget?: Budget;
     'Budget surplus (+) or deficit (-)'?: BroadcastMedia;
     'Public debt'?: PublicDebt;
@@ -96,12 +97,12 @@ export interface Economy {
     'Reserves of foreign exchange and gold'?: ReservesOfForeignExchangeAndGold;
     'Debt - external'?: DebtExternal;
     'Exchange rates'?: ExchangeRates;
-    'Labor force - by occupation'?: LaborForceByOccupation;
     'GDP real growth rate'?: GDPRealGrowthRate;
     'GDP (purchasing power parity) - real'?: BroadcastMedia;
     'GDP - per capita (PPP)'?: BroadcastMedia;
     'Ease of Doing Business Index scores'?: EaseOfDoingBusinessIndexScores;
     'Agriculture - products'?: BroadcastMedia;
+    'Labor force - by occupation'?: LaborForceByOccupation;
 }
 
 export interface AverageHouseholdExpenditures {
@@ -210,6 +211,7 @@ export interface Exports {
     'Exports 2010'?: BroadcastMedia;
     text?: string;
     'Exports 2002'?: BroadcastMedia;
+    'Exports 2022'?: BroadcastMedia;
     'Exports 2005'?: BroadcastMedia;
 }
 
@@ -275,6 +277,7 @@ export interface Imports {
     text?: string;
     'Imports 2011'?: BroadcastMedia;
     'Imports 2004'?: BroadcastMedia;
+    'Imports 2022'?: BroadcastMedia;
     'Imports 2014'?: BroadcastMedia;
     'Imports 2005'?: BroadcastMedia;
 }
@@ -304,27 +307,9 @@ export interface InflationRateConsumerPrices {
 }
 
 export interface LaborForceByOccupation {
-    agriculture?: BroadcastMedia;
-    industry?: BroadcastMedia;
-    services?: BroadcastMedia;
-    'industry and services'?: BroadcastMedia;
-    note?: string;
-    text?: string;
-    'agriculture/fishing/forestry/mining'?: BroadcastMedia;
-    manufacturing?: BroadcastMedia;
-    construction?: BroadcastMedia;
-    'transportation and utilities'?: BroadcastMedia;
-    commerce?: BroadcastMedia;
-    tourism?: BroadcastMedia;
-    'transport and communications'?: BroadcastMedia;
-    'agriculture, forestry, and fishing'?: BroadcastMedia;
-    'gas, electricity, and water'?: BroadcastMedia;
-    'wholesale and retail distribution'?: BroadcastMedia;
-    'professional and scientific services'?: BroadcastMedia;
-    'public administration'?: BroadcastMedia;
-    'banking and finance'?: BroadcastMedia;
-    'entertainment and catering'?: BroadcastMedia;
-    'miscellaneous services'?: BroadcastMedia;
+    agriculture: BroadcastMedia;
+    industry: BroadcastMedia;
+    'industry and services': BroadcastMedia;
 }
 
 export interface PublicDebt {
@@ -412,6 +397,15 @@ export interface RealGDPPerCapita {
     'Real GDP per capita 2007'?: BroadcastMedia;
     'Real GDP per capita 2012'?: BroadcastMedia;
     'Real GDP per capita 2006'?: BroadcastMedia;
+}
+
+export interface Remittances {
+    'Remittances 2020'?: BroadcastMedia;
+    'Remittances 2019'?: BroadcastMedia;
+    'Remittances 2018'?: BroadcastMedia;
+    'Remittances 2021'?: BroadcastMedia;
+    'Remittances 2016'?: BroadcastMedia;
+    'Remittances 2017'?: BroadcastMedia;
 }
 
 export interface ReservesOfForeignExchangeAndGold {
@@ -584,7 +578,8 @@ export interface Environment {
     'Total renewable water resources'?: InternetCountryCode;
     'Major rivers (by length in km)'?: BroadcastMedia;
     'Food insecurity'?: FoodInsecurity;
-    'Major lakes (area sq km)'?: MajorLakesAreaSqkm;
+    'Major lakes (area sq km)'?: MajorLakesAreaSqKM;
+    Geoparks?: Geoparks;
     'Marine fisheries'?: BroadcastMedia;
 }
 
@@ -607,6 +602,11 @@ export interface FoodInsecurity {
     'exceptional shortfall in aggregate food production/supplies'?: BroadcastMedia;
 }
 
+export interface Geoparks {
+    'total global geoparks and regional networks': BroadcastMedia;
+    'global geoparks and regional networks': BroadcastMedia;
+}
+
 export interface LandUse {
     'agricultural land'?: BroadcastMedia;
     'agricultural land: arable land'?: BroadcastMedia;
@@ -618,7 +618,7 @@ export interface LandUse {
     'arable land / permanent crops / permanent pasture'?: BroadcastMedia;
 }
 
-export interface MajorLakesAreaSqkm {
+export interface MajorLakesAreaSqKM {
     'fresh water lake(s)'?: BroadcastMedia;
     'salt water lake(s)'?: BroadcastMedia;
 }
@@ -664,7 +664,7 @@ export interface Geography {
     'Natural hazards'?: BroadcastMedia;
     'Geography - note'?: BroadcastMedia;
     'Major rivers (by length in km)'?: BroadcastMedia;
-    'Major lakes (area sq km)'?: MajorLakesAreaSqkm;
+    'Major lakes (area sq km)'?: MajorLakesAreaSqKM;
     'Environment - current issues'?: BroadcastMedia;
     'Ocean volume'?: OceanVolume;
     'Major ocean currents'?: BroadcastMedia;
@@ -886,6 +886,7 @@ export interface MilitaryAndSecurity {
 }
 
 export interface MilitaryExpenditures {
+    'Military Expenditures 2023'?: BroadcastMedia;
     'Military Expenditures 2022'?: BroadcastMedia;
     'Military Expenditures 2021'?: BroadcastMedia;
     'Military Expenditures 2020'?: BroadcastMedia;
@@ -895,8 +896,8 @@ export interface MilitaryExpenditures {
     'Military Expenditures 2016'?: BroadcastMedia;
     'Military Expenditures 2015'?: BroadcastMedia;
     text?: string;
-    'Military Expenditures 2023'?: BroadcastMedia;
     note?: string;
+    'Military Expenditures 2024'?: BroadcastMedia;
 }
 
 export interface PeopleAndSociety {
@@ -939,7 +940,6 @@ export interface PeopleAndSociety {
     Literacy?: YouthUnemploymentRateAges1524;
     "Mother's mean age at first birth"?: InternetCountryCode;
     'School life expectancy (primary to tertiary education)'?: YouthUnemploymentRateAges1524;
-    'Youth unemployment rate (ages 15-24)'?: YouthUnemploymentRateAges1524;
     'HIV/AIDS - adult prevalence rate'?: BroadcastMedia;
     'HIV/AIDS - people living with HIV/AIDS'?: BroadcastMedia;
     'HIV/AIDS - deaths'?: BroadcastMedia;
@@ -1061,9 +1061,7 @@ export interface TraffickingInPersons {
 export interface Transportation {
     'National air transport system'?: NationalAirTransportSystem;
     'Civil aircraft registration country code prefix'?: BroadcastMedia;
-    Airports?: Airports;
-    'Airports - with paved runways'?: AirportsWithPavedRunways;
-    'Airports - with unpaved runways'?: AirportsWithUnpavedRunways;
+    Airports?: InternetCountryCode;
     Heliports?: InternetCountryCode;
     Pipelines?: BroadcastMedia;
     Railways?: Railways;
@@ -1075,35 +1073,14 @@ export interface Transportation {
     Icebreakers?: BroadcastMedia;
 }
 
-export interface Airports {
-    text?: string;
-    'Midway Islands'?: BroadcastMedia;
-    note?: string;
-}
-
 export interface AirportsWithPavedRunways {
-    total?: BroadcastMedia;
-    'civil airports'?: BroadcastMedia;
-    'military airports'?: BroadcastMedia;
-    'joint use (civil-military) airports'?: BroadcastMedia;
-    'other airports'?: BroadcastMedia;
-    note?: string;
-    text?: string;
-    '2,438 to 3,047 m'?: BroadcastMedia;
-}
-
-export interface AirportsWithUnpavedRunways {
-    text?: string;
-    note?: string;
-    total?: BroadcastMedia;
-    '1,524 to 2,437 m'?: BroadcastMedia;
-    '914 to 1,523 m'?: BroadcastMedia;
-    'under 914 m'?: BroadcastMedia;
+    total: BroadcastMedia;
+    '2,438 to 3,047 m': BroadcastMedia;
 }
 
 export interface MerchantMarine {
     total: BroadcastMedia;
-    'by type': BroadcastMedia;
+    'by type'?: BroadcastMedia;
     note?: string;
 }
 
@@ -1157,9 +1134,6 @@ export interface Roadways {
     urban?: BroadcastMedia;
     'non-urban'?: BroadcastMedia;
     text?: string;
-    'government control'?: BroadcastMedia;
     'Turkish Cypriot control'?: BroadcastMedia;
-    highways?: BroadcastMedia;
     'private and forest roads'?: BroadcastMedia;
-    'paved/oiled gravel'?: BroadcastMedia;
 }

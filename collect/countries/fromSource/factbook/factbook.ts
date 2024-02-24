@@ -14,7 +14,7 @@ const factbookZipFile = path.join(__dirname, 'factbook.zip');
  * this function download, parses and outputs data from the CIA World Factbook
  */
 export default async function factbook(): Promise<Comparison[]> {
-    console.log('Downloading CIA World Factbook data...');
+    console.info('Downloading CIA World Factbook data...');
     // nuke the old directory and zip file
     if (fs.existsSync(factbookDirectory)) {
         fs.rmSync(factbookDirectory, { recursive: true });

@@ -14,7 +14,7 @@ export default async function wikidataComparison(
     lastUpdated: string,
     server = osmTagInfoServer
 ): Promise<Comparison> {
-    console.log(`starting on ${name}`);
+    console.info(`starting on ${name}`);
 
     const { data } = await axios.post<{ results: { bindings: { count: { value: string } }[] } }>(
         `https://query.wikidata.org/sparql?query=${encodeURIComponent(sparqlQuery)}&format=json`

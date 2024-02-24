@@ -32,7 +32,7 @@ export default async function unitedStates(): Promise<Comparison[]> {
                 taginfoServer
             ),
             await taginfoComparisons(
-                'sam\'s club',
+                'Sam\'s club',
                 brandWikidata,
                 'Q1972120',
                 599, // only in the US

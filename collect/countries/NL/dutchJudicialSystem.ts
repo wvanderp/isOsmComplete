@@ -74,7 +74,7 @@ export default async function dutchJudicialSystem(): Promise<Comparison[]> {
         'NL',
         [
             await taginfoComparisons(
-                'palaces of justice in the Netherlands',
+                'Palaces of justice in the Netherlands',
                 'amenity',
                 'courthouse',
                 courthousesExpected,
@@ -86,7 +86,7 @@ export default async function dutchJudicialSystem(): Promise<Comparison[]> {
                 taginfoServer
             ),
             await taginfoComparisons(
-                'police stations in the Netherlands',
+                'Police stations in the Netherlands',
                 'amenity',
                 'police',
                 policeStationsExpected,
@@ -98,7 +98,7 @@ export default async function dutchJudicialSystem(): Promise<Comparison[]> {
                 taginfoServer
             ),
             await taginfoComparisons(
-                'fire stations in the Netherlands',
+                'Fire stations in the Netherlands',
                 'amenity',
                 'fire_station',
                 949,
@@ -110,7 +110,7 @@ export default async function dutchJudicialSystem(): Promise<Comparison[]> {
                 taginfoServer
             ),
             await taginfoComparisons(
-                'prisons in the Netherlands',
+                'Prisons in the Netherlands',
                 'amenity',
                 'prison',
                 // there are multiple sources we combine multiple sources to get a average
@@ -118,7 +118,7 @@ export default async function dutchJudicialSystem(): Promise<Comparison[]> {
                 // https://www.dji.nl/locaties
                 // https://nl.wikipedia.org/wiki/Dienst_Justiti%C3%ABle_Inrichtingen#Overzicht_inrichtingen_DJI
                 // https://experience.geowebonline.nl/Geocortex/Viewer/?app=b5bf572c74e54b0c9574d435afd9d6ce
-                averageToInt([50, 44, 47, 44]),
+                averageToInt([50, 52, 45, 44]),
                 // click on all links and count the prisons
                 'https://www.dji.nl/locaties',
                 'The Netherlands has {{expected}} prisons. Are they all in OSM?',

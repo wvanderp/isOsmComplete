@@ -11,7 +11,7 @@ const dataUrl = 'https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/d
 const taginfoServer = taginfoServers.EU;
 
 export default async function retailStoresInEurope(): Promise<Comparison[]> {
-    console.log('starting on Retail stores in Europe');
+    console.info('starting on Retail stores in Europe');
 
     const csv = await axios.get(dataUrl);
     const data = parse(csv.data, {
