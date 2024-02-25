@@ -278,7 +278,7 @@
     "id": "8ac45dae95ef22e2d219113f4e80215c865efa2424a819760f3f577e0cea5c1d",
     "name": "Bakeries in France 🍞🥐🥖",
     "expected": 56553,
-    "actual": 27846,
+    "actual": 27849,
     "expectedSource": "https://github.com/wvanderp/isOsmComplete/issues/1",
     "actualSource": "taginfo",
     "tags": [
@@ -520,7 +520,7 @@
     "id": "7d7cc1074bdd3b5e2609fe5f1c5b941f78e42281f270b579ffa71ff2a5ae831a",
     "name": "Geldmaat ATMs",
     "expected": 777,
-    "actual": 898,
+    "actual": 899,
     "expectedSource": "https://ii0d2f1pfc.execute-api.eu-west-1.amazonaws.com/prod/locations",
     "actualSource": "taginfo",
     "tags": [
@@ -816,7 +816,7 @@
   {
     "id": "df5d2597b3dcba2f5cc91947bb3904598bc27fcb732edcd76093ca0f1ea4e98f",
     "name": "Museums",
-    "expected": 88174,
+    "expected": 88177,
     "actual": 99083,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",
@@ -831,7 +831,7 @@
   {
     "id": "6ea4be580cc1cecfb7e0f67fac16e5963aebc743d6397e6259874592938ee3db",
     "name": "Sculptures",
-    "expected": 416211,
+    "expected": 417046,
     "actual": 84720,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",
