@@ -4,7 +4,7 @@ import taginfoComparisons from '../../utils/taginfoComparisons';
 import { brandWikidata } from '../../utils/osmTags';
 import taginfoServers from '../../utils/tagInfoServers';
 
-const geldmaatApi = 'https://ii0d2f1pfc.execute-api.eu-west-1.amazonaws.com/prod/locations';
+const geldmaatApi = 'https://api.prod.locator-backend.geldmaat.nl/locations';
 const taginfoServer = taginfoServers.NL;
 
 export default async function geldmaat(): Promise<Comparison> {
