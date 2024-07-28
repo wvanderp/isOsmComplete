@@ -14,22 +14,22 @@ export default async function germany(): Promise<Comparison[]> {
                 'REWE',
                 brandWikidata,
                 'Q16968817',
-                3749, // 3733 german retail locations and 16 convenience locations
-                'https://www.rewe-group.com/content/uploads/2023/06/rewe-group-financial-report-2022.pdf?t=2023092210',
+                3674 + 16 , // 3674 + 16 convenience stores
+                'https://www.rewe-group.com/content/uploads/2024/05/rewe-financal-report-31.12.2023.pdf?t=2024052702',
                 'Are all the REWE stores in OSM?',
                 ['🛒'],
-                '2023-06-01',
+                '2024-07-28',
                 taginfoServer
             ),
             await taginfoComparisons(
                 'PENNY',
                 brandWikidata,
                 'Q284688',
-                2135,
-                'https://www.rewe-group.com/content/uploads/2023/06/rewe-group-financial-report-2022.pdf?t=2023092210',
+                2123,
+                'https://www.rewe-group.com/content/uploads/2024/05/rewe-financal-report-31.12.2023.pdf?t=2024052702',
                 'Are all the PENNY stores in OSM?',
                 ['🛒'],
-                '2023-06-01',
+                '2024-07-28',
                 taginfoServer
             )
         ]

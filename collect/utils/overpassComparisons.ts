@@ -13,7 +13,7 @@ export default async function overpassComparison(
     lastUpdated: string,
     area?: number
 ): Promise<Comparison> {
-    console.info(`starting on ${name}`);
+    console.info(`Starting on ${name}`);
 
     const count = await overpassSimpleQuery([[key, value]], area);
 
@@ -41,7 +41,7 @@ export async function overpassComparisonMultiple(
     lastUpdated: string,
     area?: number
 ): Promise<Comparison> {
-    console.info(`starting on ${name}`);
+    console.info(`Starting on ${name}`);
 
     const count = await overpassSimpleQuery(query, area, operator);
 

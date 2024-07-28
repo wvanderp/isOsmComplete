@@ -25,7 +25,7 @@ export default async function worldwide(): Promise<Comparison[]> {
                 'https://www.timesofisrael.com/holocaust-memorial-project-marks-milestone-with-100000-stumbling-blocks/',
                 'Stolpersteine are monuments to the victims of World War Two. They should be in OSM.',
                 [],
-                '2023-06-01'
+                '2024-07-28'
             ),
             await overpassComparisonMultiple(
                 'IKEA stores',
@@ -61,11 +61,11 @@ export default async function worldwide(): Promise<Comparison[]> {
                 'Starbucks',
                 brandWikidata,
                 'Q37158',
-                37222,
-                'https://investor.starbucks.com/press-releases/financial-releases/press-release-details/2023/Starbucks-Reports-Q3-Fiscal-2023-Results/default.aspx',
+                18065 + 20886, // 18065 north America, 20886 international
+                'https://s203.q4cdn.com/326826266/files/doc_financials/2024/q2/2Q24-Earnings-Release-Final-4-30-24.pdf', // https://investor.starbucks.com
                 'Starbucks seems to be everywhere. But can you find them all in OSM?',
                 ['🛒', '🍔'],
-                '2023-08-01'
+                '2024-07-28'
             ),
             await taginfoComparisonMultipleTags(
                 'McDonald\'s',
@@ -131,11 +131,11 @@ export default async function worldwide(): Promise<Comparison[]> {
                 'Data centers',
                 'telecom',
                 'data_center',
-                8000,
-                'https://www.usitc.gov/publications/332/executive_briefings/ebot_data_centers_around_the_world.pdf',
+                10978,
+                'https://brightlio.com/data-center-stats/', // https://www.statista.com/statistics/1228433/data-centers-worldwide-by-country/ has a similar number
                 'Data centers are the backbone of the internet. There are {{expected}} of them in the world. Are they all in OSM?',
                 ['🌐'],
-                '2023-08-01'
+                '2024-07-28'
             ),
             await taginfoComparisons(
                 'UNESCO World Heritage Sites',
