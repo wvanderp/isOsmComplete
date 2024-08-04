@@ -19,11 +19,11 @@ export default async function netherlands(): Promise<Comparison[]> {
                 'amenity',
                 'charging_station',
                 // normal + fast
-                138717 + 4875,
-                'https://www.rvo.nl/onderwerpen/duurzaam-ondernemen/energie-en-milieu-innovaties/elektrisch-rijden/stand-van-zaken/cijfers',
+                163332 + 5157,
+                'https://duurzamemobiliteit.databank.nl/mosaic/en-us/elektrisch-vervoer/laadinfra-in-nederland',
                 'Electric car charging stations will be more important than ever. The Netherlands has {{expected}} car chargers. Are they all in OSM?',
                 ['🔋', '🚗'],
-                '2023-09-12',
+                '2024-08-04',
                 taginfoServer
             ),
             await taginfoComparisonMultipleTags(
@@ -68,7 +68,7 @@ export default async function netherlands(): Promise<Comparison[]> {
                 'Albert Heijn is the biggest supermarket chain in the Netherlands. Are they all in OSM?',
                 ['🛒'],
                 '2023-12-05',
-                // use the europe server because Albert Heijn is also in Belgium
+                // use the Europe server because Albert Heijn is also in Belgium
                 taginfoServerEuropa
             ),
             await taginfoComparisons(
@@ -102,6 +102,17 @@ export default async function netherlands(): Promise<Comparison[]> {
                 'At this critical point in time, facing extinction in The Netherlands, they deserve to be mapped.',
                 ['🛒'],
                 '2024-02-18',
+                taginfoServer
+            ),
+            await taginfoComparisons(
+                'Mailboxes in the Netherlands',
+                'operator:wikidata',
+                'Q5921598',
+                11000 ,
+                'https://nos.nl/artikel/2530705-oranje-brievenbussen-verdwijnen-op-steeds-meer-plekken',
+                'Mailboxes are disappearing in the Netherlands. Are they all in OSM?',
+                ['📮'],
+                '2024-08-04',
                 taginfoServer
             ),
 

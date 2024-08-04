@@ -3,6 +3,7 @@ import appendCountry from '../../utils/appendData';
 import { brandWikidata } from '../../utils/osmTags';
 import { overpassComparisonMultiple } from '../../utils/overpassComparisons';
 import taginfoComparisons, { taginfoComparisonKeyOnly, taginfoComparisonMultipleTags } from '../../utils/taginfoComparisons';
+import openBenches from './OpenBenches';
 
 export default async function worldwide(): Promise<Comparison[]> {
     return appendCountry(
@@ -41,11 +42,11 @@ export default async function worldwide(): Promise<Comparison[]> {
                 '7-Eleven stores',
                 brandWikidata,
                 'Q259340',
-                78029,
-                'https://en.wikipedia.org/wiki/7-Eleven',
+                83579,
+                'https://www.7andi.com/en/ir/file/library/mr/pdf/2023_01_all_a.pdf', // https://www.7andi.com/en/ir.html
                 'A 7-Eleven is always nearby. Because there are {{expected}} of them in 18 countries. Is your closest 7-Eleven in OSM?',
                 ['🛒', '🍔'],
-                '2023-09-24'
+                '2024-08-04'
             ),
             await taginfoComparisons(
                 'Subway stores',
@@ -71,11 +72,11 @@ export default async function worldwide(): Promise<Comparison[]> {
                 'McDonald\'s',
                 brandWikidata,
                 ['Q38076', 'Q12061542'],
-                40275,
-                'https://corporate.mcdonalds.com/content/dam/sites/corp/nfl/pdf/MCD_2023_Annual_Report.pdf',
+                41822,
+                'https://corporate.mcdonalds.com/content/dam/sites/corp/nfl/pdf/2023%20Annual%20Report_vf.pdf', // https://corporate.mcdonalds.com/corpmcd/investors/financial-information.html
                 'McDonald\'s is the largest fast-food chain in the world. Their corporate website says that the company has 38,000 stores in the world. Are they all in OSM?',
                 ['🍔', '🛒'],
-                '2023-09-22'
+                '2024-08-04'
             ),
             await taginfoComparisons(
                 'KFC',
@@ -146,7 +147,8 @@ export default async function worldwide(): Promise<Comparison[]> {
                 'UNESCO World Heritage Sites are places of special cultural or physical significance. They have marked {{expected}} of them. Can you find them all in OSM?',
                 ['🌳', '🏛️'],
                 '2023-11-28'
-            )
+            ),
+            await openBenches(),
         ]
     );
 }
