@@ -10,9 +10,9 @@ export default async function openBenches(): Promise<Comparison> {
         const [id, lat, lon, title] = line.split('\t');
         return {
             id,
-            lat: parseFloat(lat),
-            lon: parseFloat(lon),
-            title,
+            lat: Number.parseFloat(lat),
+            lon: Number.parseFloat(lon),
+            title
         };
     });
 

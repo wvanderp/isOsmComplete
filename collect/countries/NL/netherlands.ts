@@ -108,7 +108,7 @@ export default async function netherlands(): Promise<Comparison[]> {
                 'Mailboxes in the Netherlands',
                 'operator:wikidata',
                 'Q5921598',
-                11000 ,
+                11000,
                 'https://nos.nl/artikel/2530705-oranje-brievenbussen-verdwijnen-op-steeds-meer-plekken',
                 'Mailboxes are disappearing in the Netherlands. Are they all in OSM?',
                 ['📮'],

@@ -33,7 +33,6 @@ SELECT (count(?museumShip) as ?count) WHERE {
   }
 `;
 
-
 export default async function museum(): Promise<Comparison[]> {
     return appendCountry(
         'Worldwide',
@@ -75,5 +74,5 @@ export default async function museum(): Promise<Comparison[]> {
                 '2024-07-28'
             )
         ]
-    ); ``
+    );
 }

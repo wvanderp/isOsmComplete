@@ -37,7 +37,8 @@ async function callApi(url: string): Promise<number> {
         if (axios.isAxiosError(error)) {
             const axiosError = error as AxiosError;
             throw new Error(
-                `Error calling ${url}: ${axiosError.message} ${axiosError.response?.statusText} (${axiosError.response?.status})`
+                `Error calling ${url
+                }: ${axiosError.message} ${axiosError.response?.statusText} (${axiosError.response?.status})`
             );
         }
 

@@ -148,7 +148,7 @@ export default async function worldwide(): Promise<Comparison[]> {
                 ['🌳', '🏛️'],
                 '2023-11-28'
             ),
-            await openBenches(),
+            await openBenches()
         ]
     );
 }

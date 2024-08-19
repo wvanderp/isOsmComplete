@@ -14,7 +14,7 @@ export default async function germany(): Promise<Comparison[]> {
                 'REWE',
                 brandWikidata,
                 'Q16968817',
-                3674 + 16 , // 3674 + 16 convenience stores
+                3674 + 16, // 3674 + 16 convenience stores
                 'https://www.rewe-group.com/content/uploads/2024/05/rewe-financal-report-31.12.2023.pdf?t=2024052702',
                 'Are all the REWE stores in OSM?',
                 ['🛒'],
