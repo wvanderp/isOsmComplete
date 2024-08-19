@@ -115,6 +115,17 @@ export default async function netherlands(): Promise<Comparison[]> {
                 '2024-08-04',
                 taginfoServer
             ),
+            await taginfoComparisons(
+                'Surveillance cameras in the Netherlands',
+                'surveillance:type',
+                'camera',
+                337609,
+                'https://eenvandaag.avrotros.nl/item/steeds-meer-cameras-in-de-openbare-ruimte-dit-zijn-de-gevolgen-voor-jouw-privacy/',
+                'Is the Netherlands turning into a survalance state? Let\'s make sure that we know if it does!',
+                ['👀'],
+                '2024-08-19',
+                taginfoServer
+            ),
 
             // from other files
             await geldmaat(),
