@@ -1,18 +1,18 @@
 # The future dreams of this project
 
-In this document, I will write down some ideas I have for this project.
+In this document, I will write down my ideas for this project.
 
 ## The CIA World Factbook
 
-I am currently working on a script that would use some of the facts in the CIA factbook to compare to OSM.
+I am working on a script that would compare some of the facts in the CIA factbook to OSM.
 
-I am focusing on the power generation section because it is the most interesting to me.
+I am focusing on the power generation section because it interests me the most.
 
 Its current state can be found in the `collect/countries/fromSource/factbook` file. I'm stuck on how to get the data out of OSM because the power generation is duplicated on, for example, the generator and the site.
 
 ## statistics sites
 
-There are many sites offering statistics. They are often government or NGO sites. They often have a lot of data, but it is often hard to get to. I would like to make a script that can get data from these sites.
+There are many sites offering statistics. They are often government or NGO sites. They usually have a lot of data, but it is often hard to get to. I want to make a script that can get data from these sites.
 
 <https://data.worldbank.org/>
 <https://cbs.nl/en-gb>
@@ -60,4 +60,8 @@ Make a generic wikidata query compare function.
 
 Centralize the tag info servers.
 
-Making sure that one failed task does not fail the whole collect
+Making sure that one failed task does not fail the whole collection.
+
+## Japan convenience stores
+
+add 7-eleven, Family Market, and lawson
