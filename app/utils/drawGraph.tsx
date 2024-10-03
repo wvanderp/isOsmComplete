@@ -1,5 +1,4 @@
 /* eslint-disable unicorn/prefer-ternary */
-// @ts-nocheck
 import React from 'react';
 import * as d3 from 'd3';
 import { GraphData } from './downloadGraphData';

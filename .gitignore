@@ -3,7 +3,6 @@ dist
 .cache
 .idea
 build
-.parcel-cache
 scratch.ts
 scrap.ts
 collect/countries/fromSource/factbook/factbook/

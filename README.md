@@ -16,7 +16,7 @@ Be aware that any changes to the `data` folder will be overwritten by the GitHub
 
 Install the dependencies with `npm install`
 
-Run `npm run app` to start the parcel development server. This will serve the website on <http://localhost:1234>
+Run `npm run app` to start the vite development server. This will serve the website on <http://localhost:1234>
 
 You can use `npm run build` to build the website for production. This will create a `gitBuild` folder with the website.
 
@@ -24,7 +24,7 @@ The data can be collected with `npm run collect`. This will update all the data 
 
 ## Architecture
 
-The website is built with parcel and is served from GitHub pages. The data is stored in the repository and is updated with GitHub actions.
+The website is built with vite and is served from GitHub pages. The data is stored in the repository and is updated with GitHub actions.
 
 This website is built with the idea that it should be a static site with no server-side components. This means all the data is collected beforehand, and the website is built with that data. This means that the website can be hosted on GitHub pages and that it can be served from a CDN.
 

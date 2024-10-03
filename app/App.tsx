@@ -1,11 +1,10 @@
 import React from 'react';
 import { Comparison, CountryCodes } from '../collect/types';
-import Country, { Comparison as ComparisonComponent, ProgressBar } from './Country';
+import Country, { ComparisonCard as ComparisonComponent, ProgressBar } from './Country';
 
 import data from '../data/compare.json';
 import tags from '../data/tags.json';
 
-// @ts-expect-error -- static files are not supported by typescript
 import logo from '../static/logo.svg';
 
 import pkg from '../package.json';

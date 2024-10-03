@@ -30,7 +30,7 @@ export default function Country(props: {
     comparisons: Comparison[];
 }) {
     const comparisons = props.comparisons.map(
-        (comparison) => <Comparison key={comparison.name} comparison={comparison} />
+        (comparison) => <ComparisonCard key={comparison.name} comparison={comparison} />
     );
 
     return (
@@ -46,7 +46,7 @@ export default function Country(props: {
     );
 }
 
-export function Comparison(props: {
+export function ComparisonCard(props: {
     comparison: Comparison;
 }) {
     // replace the templates in the description with the actual values
@@ -73,7 +73,7 @@ export function Comparison(props: {
                     Actual: {props.comparison.actual}<br />
                     Percentage: {Math.floor((props.comparison.actual / props.comparison.expected) * 100)}% <br />
 
-                    { /* eslint-disable-next-line react/jsx-no-target-blank -- I love seeing the referrer my self so I will give it to others */}
+                    { /* eslint-disable-next-line react/jsx-no-target-blank -- I love seeing the referrer myself so I will give it to others */}
                     <a href={props.comparison.expectedSource} target="_blank" rel="noopener">Source of Expected</a>
                 </CardText>
                 <Graph comparison={props.comparison} />

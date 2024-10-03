@@ -43,5 +43,6 @@
     },
     "[csv]": {
         "files.insertFinalNewline": false,
-    }
+    },
+    "editor.formatOnSave": true
 }
