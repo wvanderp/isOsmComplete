@@ -17,7 +17,7 @@
     "id": "7db310de75fd52cb02a885303658ba574e5e5262b439fc3c6116a6661811782e",
     "name": "Stolpersteine",
     "expected": 100000,
-    "actual": 36495,
+    "actual": 36497,
     "expectedSource": "https://www.timesofisrael.com/holocaust-memorial-project-marks-milestone-with-100000-stumbling-blocks/",
     "actualSource": "overpass",
     "tags": [],
@@ -206,7 +206,7 @@
   {
     "id": "681037426fe19e62eba5d82fa128583b311ed6368eb25d638242103510647c5a",
     "name": "Memorial benches",
-    "expected": 33912,
+    "expected": 33913,
     "actual": 768,
     "expectedSource": "https://openbenches.org/",
     "actualSource": "taginfo",
@@ -220,7 +220,7 @@
   {
     "id": "16f17dead727d54cdeea1a744885af7be858826c05e1ac342da754d457dd1b15",
     "name": "Fastned charger in the EU",
-    "expected": 330,
+    "expected": 331,
     "actual": 251,
     "expectedSource": "https://fastnedcharging.com/nl/locaties",
     "actualSource": "taginfo",
@@ -236,7 +236,7 @@
     "id": "fcba5aaec2e6bac985428897470d2881bb4d9df7668db7fdc1e0f2fd416afb01",
     "name": "Retail stores in Europe",
     "expected": 2575171,
-    "actual": 2799329,
+    "actual": 2799992,
     "expectedSource": "https://data.europa.eu/data/datasets/6k2ldtwgaa2lvoudvtbbq?locale=en",
     "actualSource": "taginfo",
     "tags": [
@@ -264,7 +264,7 @@
     "id": "dace299682b6e90a3ec0b6e29d2ea57da76e3a7f30223cc01164bad12ae8f7d2",
     "name": "Train stations in China",
     "expected": 5470,
-    "actual": 6035,
+    "actual": 6034,
     "expectedSource": "https://en.wikipedia.org/wiki/Rail_transport_in_China#cite_note-CNCRCC-4",
     "actualSource": "overpass",
     "tags": [
@@ -292,7 +292,7 @@
     "id": "8ac45dae95ef22e2d219113f4e80215c865efa2424a819760f3f577e0cea5c1d",
     "name": "Bakeries in France 🍞🥐🥖",
     "expected": 56553,
-    "actual": 28220,
+    "actual": 28223,
     "expectedSource": "https://github.com/wvanderp/isOsmComplete/issues/1",
     "actualSource": "taginfo",
     "tags": [
@@ -349,7 +349,7 @@
     "id": "154c2bbd2b34ed2924ae6fefbc7a995465c3e80817984f658d2598095d80c9bb",
     "name": "Pubs in the UK",
     "expected": 47200,
-    "actual": 38915,
+    "actual": 38910,
     "expectedSource": "https://commonslibrary.parliament.uk/research-briefings/cbp-8591/",
     "actualSource": "taginfo",
     "tags": [
@@ -364,7 +364,7 @@
     "id": "68ade438a47fe782c8ec2ddd1ef9bf20dcb26a0198125f4f076c34eba80504d4",
     "name": "Royal Mail post boxes",
     "expected": 115000,
-    "actual": 20678,
+    "actual": 20681,
     "expectedSource": "https://personal.help.royalmail.com/app/answers/detail/a_id/135/~/royal-mails-postbox-network---your-questions-answered",
     "actualSource": "taginfo",
     "tags": [
@@ -378,7 +378,7 @@
     "id": "c4a42a0a94159cf374aefa1bab0c60a1fe327b2e9d6e295f967c70be3e7aad8a",
     "name": "Tesco",
     "expected": 3712,
-    "actual": 1176,
+    "actual": 1183,
     "expectedSource": "https://www.tescoplc.com/media/u1wlq2qf/tesco-plc-annual-report-2023.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -392,7 +392,7 @@
     "id": "0321c72333ab103de5ae07a761be0b833177b8825e99f8d3ef189a140d2f2631",
     "name": "National Car Parks",
     "expected": 642,
-    "actual": 185,
+    "actual": 187,
     "expectedSource": "https://www.ncp.co.uk/help-centre/about-us/",
     "actualSource": "taginfo",
     "tags": [
@@ -420,7 +420,7 @@
     "id": "618d455f20de0fc57391795eb6857e7ad0343ae82314129cded8f49d1e780184",
     "name": "Car chargers",
     "expected": 168489,
-    "actual": 14287,
+    "actual": 14325,
     "expectedSource": "https://duurzamemobiliteit.databank.nl/mosaic/en-us/elektrisch-vervoer/laadinfra-in-nederland",
     "actualSource": "taginfo",
     "tags": [
@@ -716,7 +716,7 @@
     "id": "431c3520a26be03937166e9dbfed5a56d41e24de9e0f2530c7bea24eb70af3a6",
     "name": "CVS",
     "expected": 9395,
-    "actual": 8289,
+    "actual": 8291,
     "expectedSource": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0000064803/28e54055-44dd-4a6d-a517-6ffc18161213.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -731,7 +731,7 @@
     "id": "9dbf8e0d4c94858e8b152c16048d24705a9f3a744229e49ea85f8bae7e5ccead",
     "name": "Walgreens",
     "expected": 8600,
-    "actual": 8679,
+    "actual": 8682,
     "expectedSource": "https://s1.q4cdn.com/343380161/files/doc_financials/2022/ar/WBA-2022-Annual-Report.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -746,7 +746,7 @@
     "id": "c5f2cbfcb3b055f1c40fe5d1551d6aee2da24379eb4e83d5a13efb13bb1afe0f",
     "name": "Pharmacies in the US of A",
     "expected": 40000,
-    "actual": 19830,
+    "actual": 19829,
     "expectedSource": "https://s1.q4cdn.com/343380161/files/doc_financials/2023/ar/wba-2023-annual-report.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -830,7 +830,7 @@
   {
     "id": "f0c59ddec204c478382d6632125f2afaa12f1bf052d5e5401e461002b4989a73",
     "name": "Match ourAirports on airports",
-    "expected": 69037,
+    "expected": 69048,
     "actual": 51891,
     "expectedSource": "https://davidmegginson.github.io/ourairports-data/airports.csv",
     "actualSource": "taginfo",
@@ -858,7 +858,7 @@
   {
     "id": "30529e4ce6d42b2f76c8c82fedd3ee300880c1630371f782a3033ffdc3aa44b3",
     "name": "Museums",
-    "expected": 91524,
+    "expected": 91529,
     "actual": 102166,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",
@@ -916,7 +916,7 @@
   {
     "id": "8cd17dd29781b1666ad0a8473cc911aba625639ebae78e24bed70ff24f2893ee",
     "name": "Sculptures",
-    "expected": 489304,
+    "expected": 489357,
     "actual": 95818,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",
