@@ -3,7 +3,7 @@
     "id": "f86b36460a37c5a45dea617f3fbd10c18027319318d2283be3f8318a7a793bca",
     "name": "Match Google on building",
     "expected": 1600000000,
-    "actual": 625039052,
+    "actual": 625136670,
     "expectedSource": "https://youtu.be/nP-nMZpLM1A?t=409",
     "actualSource": "taginfo",
     "tags": [
@@ -17,7 +17,7 @@
     "id": "7db310de75fd52cb02a885303658ba574e5e5262b439fc3c6116a6661811782e",
     "name": "Stolpersteine",
     "expected": 100000,
-    "actual": 36501,
+    "actual": 36504,
     "expectedSource": "https://www.timesofisrael.com/holocaust-memorial-project-marks-milestone-with-100000-stumbling-blocks/",
     "actualSource": "overpass",
     "tags": [],
@@ -29,7 +29,7 @@
     "id": "a18d3e40ae9fc681bce81114b28db33c050281ab197e033ee141a6990a55a738",
     "name": "IKEA stores",
     "expected": 471,
-    "actual": 585,
+    "actual": 588,
     "expectedSource": "https://www.ikea.com/global/en/our-business/how-we-work/",
     "actualSource": "overpass",
     "tags": [
@@ -43,7 +43,7 @@
     "id": "34d881bb4626ac285c1c64c08944d6d8883e5bfdef1d5bb2c0d2eeab9db0d20e",
     "name": "7-Eleven stores",
     "expected": 83579,
-    "actual": 39288,
+    "actual": 39289,
     "expectedSource": "https://www.7andi.com/en/ir/file/library/mr/pdf/2023_01_all_a.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -58,7 +58,7 @@
     "id": "ceafc782f32e77207571d2c2de651c13d6f8704acbe2221a9a7af3dd68313bf8",
     "name": "Subway stores",
     "expected": 37000,
-    "actual": 22896,
+    "actual": 22893,
     "expectedSource": "https://www.subway.com/en-us/contactus/subwayfaqs/about-subway",
     "actualSource": "taginfo",
     "tags": [
@@ -73,7 +73,7 @@
     "id": "0aa0000d49cbd3eaabb7d62b87d0695922a6cdc09c0f80d1684aadaeb49f4e95",
     "name": "Starbucks",
     "expected": 38951,
-    "actual": 20726,
+    "actual": 20729,
     "expectedSource": "https://s203.q4cdn.com/326826266/files/doc_financials/2024/q2/2Q24-Earnings-Release-Final-4-30-24.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -88,7 +88,7 @@
     "id": "bc00755018404ae08e7791edeacb749806f755a7a684108cdc730b7dc96d35bd",
     "name": "McDonald's",
     "expected": 41822,
-    "actual": 33678,
+    "actual": 33783,
     "expectedSource": "https://corporate.mcdonalds.com/content/dam/sites/corp/nfl/pdf/2023%20Annual%20Report_vf.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -103,7 +103,7 @@
     "id": "ff163beb19543f2cb53c300637cac009272968c01b3511a40effa32489074e82",
     "name": "KFC",
     "expected": 29900,
-    "actual": 14807,
+    "actual": 14810,
     "expectedSource": "https://s2.q4cdn.com/890585342/files/doc_financials/2023/q4/Q4-2023-Earnings-Release.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -133,7 +133,7 @@
     "id": "248346ad79386b814c4c361474a0eede7d7d254e1302feeacd7a2db3965ac5ba",
     "name": "Pizza Hut",
     "expected": 19866,
-    "actual": 7507,
+    "actual": 7508,
     "expectedSource": "https://s2.q4cdn.com/890585342/files/doc_financials/2023/q4/Q4-2023-Earnings-Release.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -148,7 +148,7 @@
     "id": "ebf58077453c74c27a1a8384024439568732ce333c09c0899c6156177657d513",
     "name": "Burger King",
     "expected": 18700,
-    "actual": 14114,
+    "actual": 14115,
     "expectedSource": "https://www.rbi.com/English/brands/default.aspx",
     "actualSource": "taginfo",
     "tags": [
@@ -163,7 +163,7 @@
     "id": "72b7bf05d23320f5325ae692c0c8de3fb12445f9c049e002e5dbe1976f8f1f4b",
     "name": "Tesla superchargers",
     "expected": 5952,
-    "actual": 1224,
+    "actual": 1225,
     "expectedSource": "https://digitalassets.tesla.com/tesla-contents/image/upload/IR/TSLA-Q4-2023-Update.pdf",
     "actualSource": "overpass",
     "tags": [
@@ -192,7 +192,7 @@
     "id": "ed897f43e805d3b55c3d7356a3421f53aea469e83c629cc476decc4dff2d3a57",
     "name": "UNESCO World Heritage Sites",
     "expected": 1199,
-    "actual": 2425,
+    "actual": 2426,
     "expectedSource": "https://whc.unesco.org/en/list/",
     "actualSource": "taginfo",
     "tags": [
@@ -206,7 +206,7 @@
   {
     "id": "681037426fe19e62eba5d82fa128583b311ed6368eb25d638242103510647c5a",
     "name": "Memorial benches",
-    "expected": 33903,
+    "expected": 33921,
     "actual": 773,
     "expectedSource": "https://openbenches.org/",
     "actualSource": "taginfo",
@@ -236,7 +236,7 @@
     "id": "fcba5aaec2e6bac985428897470d2881bb4d9df7668db7fdc1e0f2fd416afb01",
     "name": "Retail stores in Europe",
     "expected": 2575171,
-    "actual": 2800720,
+    "actual": 2801247,
     "expectedSource": "https://data.europa.eu/data/datasets/6k2ldtwgaa2lvoudvtbbq?locale=en",
     "actualSource": "taginfo",
     "tags": [
@@ -292,7 +292,7 @@
     "id": "8ac45dae95ef22e2d219113f4e80215c865efa2424a819760f3f577e0cea5c1d",
     "name": "Bakeries in France 🍞🥐🥖",
     "expected": 56553,
-    "actual": 28219,
+    "actual": 28221,
     "expectedSource": "https://github.com/wvanderp/isOsmComplete/issues/1",
     "actualSource": "taginfo",
     "tags": [
@@ -321,7 +321,7 @@
     "id": "5b0731306e515667e43a1bff6d2ae879f80da3791d96eef8abb59f6c30304876",
     "name": "REWE",
     "expected": 3690,
-    "actual": 3760,
+    "actual": 3759,
     "expectedSource": "https://www.rewe-group.com/content/uploads/2024/05/rewe-financal-report-31.12.2023.pdf?t=2024052702",
     "actualSource": "taginfo",
     "tags": [
@@ -335,7 +335,7 @@
     "id": "eff3c039efd5fc3fdd18a79fe91422c4024bcf602215b91d7691d00697409296",
     "name": "PENNY",
     "expected": 2123,
-    "actual": 2037,
+    "actual": 2038,
     "expectedSource": "https://www.rewe-group.com/content/uploads/2024/05/rewe-financal-report-31.12.2023.pdf?t=2024052702",
     "actualSource": "taginfo",
     "tags": [
@@ -349,7 +349,7 @@
     "id": "154c2bbd2b34ed2924ae6fefbc7a995465c3e80817984f658d2598095d80c9bb",
     "name": "Pubs in the UK",
     "expected": 47200,
-    "actual": 38908,
+    "actual": 38906,
     "expectedSource": "https://commonslibrary.parliament.uk/research-briefings/cbp-8591/",
     "actualSource": "taginfo",
     "tags": [
@@ -364,7 +364,7 @@
     "id": "68ade438a47fe782c8ec2ddd1ef9bf20dcb26a0198125f4f076c34eba80504d4",
     "name": "Royal Mail post boxes",
     "expected": 115000,
-    "actual": 20697,
+    "actual": 20700,
     "expectedSource": "https://personal.help.royalmail.com/app/answers/detail/a_id/135/~/royal-mails-postbox-network---your-questions-answered",
     "actualSource": "taginfo",
     "tags": [
@@ -420,7 +420,7 @@
     "id": "618d455f20de0fc57391795eb6857e7ad0343ae82314129cded8f49d1e780184",
     "name": "Car chargers",
     "expected": 168489,
-    "actual": 14330,
+    "actual": 14339,
     "expectedSource": "https://duurzamemobiliteit.databank.nl/mosaic/en-us/elektrisch-vervoer/laadinfra-in-nederland",
     "actualSource": "taginfo",
     "tags": [
@@ -449,7 +449,7 @@
     "id": "902133b15f0e1713baf285972581ebe1e8ae52860098b1a90212e544f516baf2",
     "name": "Wind turbines",
     "expected": 2971,
-    "actual": 3382,
+    "actual": 3383,
     "expectedSource": "https://nl.wikipedia.org/wiki/Windturbines_in_Nederland",
     "actualSource": "taginfo",
     "tags": [
@@ -534,7 +534,7 @@
     "id": "be4dab2607d9f1299d9ededa89929f3a2649b47841587587722a72ec265b81e3",
     "name": "Mailboxes in the Netherlands",
     "expected": 11000,
-    "actual": 6546,
+    "actual": 6547,
     "expectedSource": "https://nos.nl/artikel/2530705-oranje-brievenbussen-verdwijnen-op-steeds-meer-plekken",
     "actualSource": "taginfo",
     "tags": [
@@ -548,7 +548,7 @@
     "id": "e25f43d2f95cb5907a29ef7934405b05fdff5162c44ce9781b4542e8c334c0fe",
     "name": "Surveillance cameras in the Netherlands",
     "expected": 337609,
-    "actual": 5136,
+    "actual": 5151,
     "expectedSource": "https://eenvandaag.avrotros.nl/item/steeds-meer-cameras-in-de-openbare-ruimte-dit-zijn-de-gevolgen-voor-jouw-privacy/",
     "actualSource": "taginfo",
     "tags": [
@@ -562,7 +562,7 @@
     "id": "7d7cc1074bdd3b5e2609fe5f1c5b941f78e42281f270b579ffa71ff2a5ae831a",
     "name": "Geldmaat ATMs",
     "expected": 772,
-    "actual": 1152,
+    "actual": 1154,
     "expectedSource": "https://api.prod.locator-backend.geldmaat.nl/locations",
     "actualSource": "taginfo",
     "tags": [
@@ -632,7 +632,7 @@
     "id": "a1b5f8d936156d6b7f182995a4e1f0e5edb3a15084f932282737bd059321f616",
     "name": "Pyaterochka",
     "expected": 19164,
-    "actual": 14902,
+    "actual": 14905,
     "expectedSource": "https://www.x5.ru/wp-content/uploads/2023/06/x5-ar-2022-eng.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -731,7 +731,7 @@
     "id": "9dbf8e0d4c94858e8b152c16048d24705a9f3a744229e49ea85f8bae7e5ccead",
     "name": "Walgreens",
     "expected": 8600,
-    "actual": 8684,
+    "actual": 8680,
     "expectedSource": "https://s1.q4cdn.com/343380161/files/doc_financials/2022/ar/WBA-2022-Annual-Report.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -746,7 +746,7 @@
     "id": "c5f2cbfcb3b055f1c40fe5d1551d6aee2da24379eb4e83d5a13efb13bb1afe0f",
     "name": "Pharmacies in the US of A",
     "expected": 40000,
-    "actual": 19831,
+    "actual": 19830,
     "expectedSource": "https://s1.q4cdn.com/343380161/files/doc_financials/2023/ar/wba-2023-annual-report.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -803,7 +803,7 @@
     "id": "0a275c5789b11d5b72921303db8373e97342f2d81af43e22d3c768d58df03206",
     "name": "Airports with IATA codes ✈️",
     "expected": 9102,
-    "actual": 9879,
+    "actual": 9881,
     "expectedSource": "https://davidmegginson.github.io/ourairports-data/airports.csv",
     "actualSource": "taginfo",
     "tags": [
@@ -817,7 +817,7 @@
     "id": "45bc39b4b3b48b01c0818ca97beabb4aad95ee48232cd8c79603a6c02a84dafc",
     "name": "Airports with ICAO codes ✈️",
     "expected": 20947,
-    "actual": 17281,
+    "actual": 17282,
     "expectedSource": "https://davidmegginson.github.io/ourairports-data/airports.csv",
     "actualSource": "taginfo",
     "tags": [
@@ -830,8 +830,8 @@
   {
     "id": "f0c59ddec204c478382d6632125f2afaa12f1bf052d5e5401e461002b4989a73",
     "name": "Match ourAirports on airports",
-    "expected": 69064,
-    "actual": 51893,
+    "expected": 69071,
+    "actual": 51891,
     "expectedSource": "https://davidmegginson.github.io/ourairports-data/airports.csv",
     "actualSource": "taginfo",
     "tags": [
@@ -845,7 +845,7 @@
     "id": "71a9759b540300dccd608fedd0d7f90356b924b16ff08c62b38d8d281be3b73c",
     "name": "CIA World Factbook - Airports",
     "expected": 50118,
-    "actual": 51239,
+    "actual": 51237,
     "expectedSource": "https://www.cia.gov/the-world-factbook/",
     "actualSource": "taginfo",
     "tags": [
@@ -858,8 +858,8 @@
   {
     "id": "30529e4ce6d42b2f76c8c82fedd3ee300880c1630371f782a3033ffdc3aa44b3",
     "name": "Museums",
-    "expected": 91538,
-    "actual": 102185,
+    "expected": 91543,
+    "actual": 102201,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",
     "description": "The number of museums in the world",
@@ -873,8 +873,8 @@
   {
     "id": "cba42aa122a00612e07fbd9a57264c051f3fefdf9ea4b6aebca7e32f4c36da33",
     "name": "Zoos",
-    "expected": 2313,
-    "actual": 8573,
+    "expected": 2315,
+    "actual": 8579,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",
     "description": "The number of zoos in the world",
@@ -888,7 +888,7 @@
     "id": "3aa187ecc04a2bd9abca79c453b03890b8ba357ac3c454edbe03109ec873a3f2",
     "name": "Aquariums",
     "expected": 525,
-    "actual": 1469,
+    "actual": 1468,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",
     "description": "The number of aquariums in the world",
@@ -916,8 +916,8 @@
   {
     "id": "8cd17dd29781b1666ad0a8473cc911aba625639ebae78e24bed70ff24f2893ee",
     "name": "Sculptures",
-    "expected": 489671,
-    "actual": 95949,
+    "expected": 490351,
+    "actual": 95978,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",
     "description": "It is always nice to have some art in your city. Is your local sculpture in OSM?",
