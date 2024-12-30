@@ -32,12 +32,12 @@ const courthousesExpected = [
     1
 ].reduce((a, b) => a + b, 0);
 
-// utility get average of array
+// Utility to get the average of an array
 function averageToInt(array: number[]): number {
     return Math.round(array.reduce((a, b) => a + b, 0) / array.length);
 }
 
-// get the number of police stations in the Netherlands
+// Get the number of police stations in the Netherlands
 async function getPoliceStations(): Promise<number> {
     // Politiebureaus
     // https://www.politie.nl/binaries/content/assets/politie/onderwerpen/algemeen/politieapi.pdf
@@ -78,7 +78,7 @@ export default async function dutchJudicialSystem(): Promise<Comparison[]> {
                 'amenity',
                 'courthouse',
                 courthousesExpected,
-                // click on all links and count the courthouses
+                // Click on all links and count the courthouses
                 'https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Rechtbanken',
                 'In the Netherlands, courts are sometimes called palaces of justice. We expect {{expected}} of them.',
                 ['⚖️'],
@@ -90,7 +90,7 @@ export default async function dutchJudicialSystem(): Promise<Comparison[]> {
                 'amenity',
                 'police',
                 policeStationsExpected,
-                // click on all links and count the police stations
+                // Click on all links and count the police stations
                 'https://api.politie.nl/v4/politiebureaus/all',
                 'The Netherlands has {{expected}} police stations. Are they all in OSM?',
                 ['⚖️'],
@@ -102,7 +102,7 @@ export default async function dutchJudicialSystem(): Promise<Comparison[]> {
                 'amenity',
                 'fire_station',
                 949,
-                // click on all links and count the fire stations
+                // Click on all links and count the fire stations
                 'https://kerncijfers.nipv.nl/mosaic/kerncijfers-veiligheidsregio-s/kerncijfers-kazernes',
                 'The Netherlands has {{expected}} fire stations. Are they all in OSM?',
                 ['🚒'],
@@ -113,13 +113,13 @@ export default async function dutchJudicialSystem(): Promise<Comparison[]> {
                 'Prisons in the Netherlands',
                 'amenity',
                 'prison',
-                // there are multiple sources we combine multiple sources to get a average
+                // There are multiple sources. We combine multiple sources to get an average.
                 // https://www.dji.nl/over-dji
                 // https://www.dji.nl/locaties
                 // https://nl.wikipedia.org/wiki/Dienst_Justiti%C3%ABle_Inrichtingen#Overzicht_inrichtingen_DJI
                 // https://experience.geowebonline.nl/Geocortex/Viewer/?app=b5bf572c74e54b0c9574d435afd9d6ce
                 averageToInt([50, 52, 45, 44]),
-                // click on all links and count the prisons
+                // Click on all links and count the prisons
                 'https://www.dji.nl/locaties',
                 'The Netherlands has {{expected}} prisons. Are they all in OSM?',
                 ['⚖️'],

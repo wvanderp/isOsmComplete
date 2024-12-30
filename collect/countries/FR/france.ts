@@ -17,7 +17,7 @@ export default async function france(): Promise<Comparison[]> {
                     bakery,
                     56553,
                     'https://github.com/wvanderp/isOsmComplete/issues/1',
-                    'Tu aimes les baguettes? 🥖🥖🥖 Then you better make sure that OSM knows where the closest baker is.',
+                    'Tu aimes les baguettes? 🥖🥖🥖 Then you better make sure that OSM knows where the nearest bakery is.',
                     ['🛒'],
                     '2023-10-15',
                     taginfoServer

@@ -8,7 +8,7 @@ SELECT (count(?museum) as ?count) WHERE {
     FILTER NOT EXISTS { ?museum wdt:P576 ?enddate } # Exclude closed museums (P576 = end date)
     FILTER NOT EXISTS { ?museum wdt:P31 wd:Q575727 } # Exclude museum ships
     FILTER NOT EXISTS { ?museum wdt:P31 wd:Q43501 } # Exclude zoos
-    FILTER NOT EXISTS { ?museum wdt:P31 wd:Q491675 } # Exclude dolphinarium
+    FILTER NOT EXISTS { ?museum wdt:P31 wd:Q491675 } # Exclude dolphinariums
   }
 `;
 

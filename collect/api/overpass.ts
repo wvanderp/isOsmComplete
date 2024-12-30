@@ -10,6 +10,7 @@ function andQuery(queries: [string, string][], area?: number): string {
 function orQuery(queries: [string, string][], area?: number): string {
     return queries.map(([key, value]) => `nwr["${key}"="${value}"]${area ? '(area.searchArea)' : ''};`).join('\n');
 }
+
 /**
  * Executes a simple Overpass query and returns the count of matching elements.
  * @param {[string, string][]} queries - An array of key-value pairs representing the query parameters.

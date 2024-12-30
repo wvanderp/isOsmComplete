@@ -123,6 +123,8 @@ function Graph({ comparison }: { comparison: Comparison }) {
                 setGraph(draw_chronology_chart(data, comparison.expected));
             }
         );
+    // window.innerWidth should be added properly through a window resize listener
+    // or removed from the dependency array if not needed
     }, [comparison, window.innerWidth]);
 
     return (

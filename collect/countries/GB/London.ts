@@ -15,7 +15,7 @@ export default async function london(): Promise<Comparison[]> {
                 'camera',
                 942562,
                 'https://clarionuk.com/resources/how-many-cctv-cameras-are-in-london/',
-                'London might be the most watched city in the world. But who watches the watcher?',
+                'London might be the most watched city in the world. But who watches the watchers?',
                 ['👀'],
                 '2023-10-15',
                 taginfoServer

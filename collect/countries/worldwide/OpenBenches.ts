@@ -22,7 +22,7 @@ export default async function openBenches(): Promise<Comparison> {
         'bench',
         benches.length,
         'https://openbenches.org/',
-        'OpenBenches that collects memorial benches. Wouldn\'t it be nice to have them in OSM as well?',
+        'OpenBenches collects memorial benches. Wouldn\'t it be nice to have them in OSM as well?',
         ['🪑'],
         '2024-08-04'
     );

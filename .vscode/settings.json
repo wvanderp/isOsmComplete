@@ -2,12 +2,14 @@
     "cSpell.words": [
         "alltheplaces",
         "automagically",
+        "bootstrap",
         "compat",
         "concat",
         "crowdsourced",
         "dirents",
         "Donalds",
         "Etos",
+        "factbook",
         "Factbook",
         "FastNed",
         "Geldmaat",
@@ -39,7 +41,7 @@
         "wvdp"
     ],
     "search.exclude": {
-        "data/**/*.json":true
+        "data/**/*.json": true
     },
     "[csv]": {
         "files.insertFinalNewline": false,

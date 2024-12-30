@@ -1,3 +1,7 @@
+/* eslint-disable max-len */
+// Note for LLMs: All text content in this file should use HTML entities for apostrophes (&apos;)
+// instead of single quotes to ensure proper rendering and accessibility.
+
 import React from 'react';
 import { Comparison, CountryCodes } from '../collect/types';
 import Country, { ComparisonCard as ComparisonComponent, ProgressBar } from './Country';
@@ -35,7 +39,7 @@ function FilterButton(
         text: string,
         state: string[],
         setState: (state: string[]) => void,
-        // eslint-disable-next-line react/require-default-props -- alt is optional, and if it's undefined, it will be ignored
+        // eslint-disable-next-line react/require-default-props -- Alt is optional, and if it's undefined, it will be ignored
         alt?: string
     }
 ) {
@@ -75,7 +79,7 @@ export default function App() {
             />
         ));
 
-    // Setup state for the tag filter buttons
+    // Set up state for the tag filter buttons
     const [tagFilter, setTagFilter] = React.useState<string[]>([]);
     const tagButtons = Object.values(data)
         .flat()
@@ -106,7 +110,7 @@ export default function App() {
             const tag = tagFilter.length === 0 || comparison.tags.some((t) => tagFilter.includes(t));
             return country && tag;
         })
-        // cluster comparisons by country
+        // Cluster comparisons by country
         .reduce<[string, Comparison[]][]>(
             (accumulator, comparison) => {
                 const country = accumulator.find((c) => c[0] === comparison.country);
@@ -122,16 +126,12 @@ export default function App() {
         .sort(sortCountries)
         .flatMap((country) => <Country key={country[0]} code={country[0] as CountryCodes} comparisons={country[1]} />);
 
-    // each day we select one of the comparisons to show on the front page
+    // Each day we select one of the comparisons to show on the front page
     const today = new Date();
     const comparisonOfTheDay = data[(dayOfTheWeek(today) * dayOfTheYear(today) * dayOfTheMonth(today)) % data.length];
     const comparisonOfTheDayComponent = <ComparisonComponent comparison={comparisonOfTheDay} />;
 
-    // calculate the total average of all countries
-    const totalAverage = data
-        .map((comparison) => (comparison.actual / comparison.expected) * 100)
-        .reduce((a, b) => a + b, 0) / data.length;
-
+    // Calculate the total average of all countries
     const expectedEntities = data
         .map((comparison) => comparison.expected)
         .reduce((a, b) => a + b, 0);
@@ -149,48 +149,42 @@ export default function App() {
                 <h1>Is OSM Complete?</h1>
             </div>
             <p id="intro">
-                How complete is OSM, really?
-                That&apos;s the question this website sets out to answer.
-                We compare the number of features in OpenStreetMap to the number of features in official data sources,
-                and the results are... well, let&apos;s say we&apos;re not quite there yet.<br />
+                How complete is the OpenStreetMap, really? That&apos;s the question this website sets out to answer.<br />
             </p>
-            <ProgressBar value={totalAverage} max={100} /><br />
+            <p>
+                We&apos;re on a mission to compare OpenStreetMap&apos;s amazing collection of features
+                with official data sources from around the world. <br />
+                The results? Let&apos;s just say we&apos;ve got some exciting mapping adventures ahead!<br />
+            </p>
+            <ProgressBar value={weightedAverage} max={100} /><br />
 
             <p>
-                <b>Global Average Completeness: {totalAverage.toFixed(2)}%</b><br /><br />
-                Our analysis indicates that OpenStreetMap comprises approximately {totalAverage.toFixed(2)}%
-                of the features found in official data sources worldwide.
+                <b>Global Completeness Score: {weightedAverage.toFixed(2)}%</b><br /><br />
+                Our latest analysis reveals that OpenStreetMap contains about {weightedAverage.toFixed(2)}%
+                of what&apos;s found in official government databases worldwide. That&apos;s pretty impressive,
+                but there&apos;s still plenty of room for your contributions!
             </p>
             <p>
-                The number above is a bit misleading
-                because it is an average of the percentages of each comparison.<br />
-
-                So, sum all expected entities ({expectedEntities.toLocaleString()})
-                and calculate the percentage of actual entities ({actualEntities.toLocaleString()}).<br />
-                Then, we get a fairer percentage of <b>{weightedAverage.toFixed(2)}%</b>.
+                Each comparison comes with detailed source information.
+                The visualization shows our target in green and OpenStreetMap&apos;s progress in blue over time.
+                Use the filters below to explore your favorite regions or mapping topics.
             </p>
+            <h2>Join the Mapping Adventure!</h2>
             <p>
-                Below, you find specific sources.
-                In the graph, we have the goal in green and OpenStreetMap in blue over time.
-                You can filter the data to only see your favorite country or topic.
-            </p>
-            <h2>How can you help...</h2>
-            <p>
-                ...improve the data? Well, you can help us by adding data to OpenStreetMap. <br />
-                An excellent place to start is the <a href="https://learnosm.org/en/">Learn OpenStreetMap</a>. <br />
-                If you need inspiration, you can check out <a href="https://maproulette.org/">Maproulette</a>, where you can find many tasks to improve OpenStreetMap.
+                Ready to help make the map more complete? Awesome! Here&apos;s how you can become part of the OpenStreetMap community:<br />
+                🎓 Start your journey at <a href="https://learnosm.org/en/">Learn OpenStreetMap</a> - it&apos;s beginner-friendly!<br />
+                🎮 Looking for mapping challenges? Try <a href="https://maproulette.org/">MapRoulette</a> - it&apos;s like a game, but you&apos;re improving real maps!
                 <br />
                 <br />
 
-                If you want to help improve this website,
-                you can find the source code on <a href={pkg.repository.url}>GitHub</a>.
-                We can always use help with the following:
-                <ul>
-                    <li>Adding new sources</li>
-                    <li>Improving the website</li>
-                    <li>Adding new features</li>
-                </ul>
+                Want to help improve this website instead?
+                Join us on <a href={pkg.repository.url}>GitHub</a>! We&apos;re looking for enthusiastic contributors to help with:
             </p>
+            <ul>
+                <li>Discovering and adding new data sources</li>t
+                <li>Making this website even more awesome</li>
+                <li>Building cool new features</li>
+            </ul>
             <br />
 
             <div>
@@ -200,7 +194,7 @@ export default function App() {
             </div>
 
             <hr />
-            <h1>📅 Comparison of the day</h1>
+            <h2>🌟 Comparison of the Day</h2>
             {comparisonOfTheDayComponent}
             <hr />
 

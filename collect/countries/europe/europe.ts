@@ -17,12 +17,12 @@ export default async function europe(): Promise<Comparison[]> {
         'EU',
         [
             await taginfoComparisons(
-                'Fastned charger in the EU',
+                'Fastned chargers in the EU',
                 'operator:wikidata',
                 'Q19935749',
                 await numberOfFastnedChargers(),
                 'https://fastnedcharging.com/nl/locaties',
-                'Fastned is a provider of charging stations in Europe. What is the charge of Fastned in OSM?',
+                'Fastned is a provider of charging stations in Europe. What is the charge of Fastneds network in OSM?',
                 ['🔋', '🚗'],
                 '2024-02-18',
                 taginfoServer

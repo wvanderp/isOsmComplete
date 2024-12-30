@@ -16,7 +16,7 @@ export default async function russia(): Promise<Comparison[]> {
                 'Q1768969',
                 19164,
                 'https://www.x5.ru/wp-content/uploads/2023/06/x5-ar-2022-eng.pdf',
-                'Pyaterochka (Пятёрочка), literally translated to five, is a Russian convenience store. There should be {{expected}} of them in osm.',
+                'Pyaterochka (Пятёрочка), literally translated to "Five", is a Russian convenience store. There should be {{expected}} of them in OSM.',
                 ['🛒'],
                 '2023-11-23',
                 taginfoServer

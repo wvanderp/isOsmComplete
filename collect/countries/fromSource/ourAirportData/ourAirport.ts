@@ -67,12 +67,12 @@ export default async function airports(): Promise<Comparison[]> {
                 '2023-12-05'
             ),
             await taginfoComparisonMultipleTags(
-                'Match ourAirports on airports',
+                'Match OurAirports on airports',
                 'aeroway',
                 ['aerodrome', 'airstrip', 'heliport'],
                 airportsCount,
                 airportCsvUrl,
-                'OurAirports in a crowdsourced database of airports. lets see if osm can add something to it.',
+                'OurAirports is a crowdsourced database of airports. Let\'s see if OSM can add something to it.',
                 ['✈️'],
                 '2023-12-05'
             )

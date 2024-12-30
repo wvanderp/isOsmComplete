@@ -15,7 +15,7 @@ export default async function vietnam(): Promise<Comparison[]> {
                 brandWikidata,
                 ['Q38076', 'Q12061542'],
                 35,
-                'https://mcdonalds.vn/cua-hang.html', // counted by hand
+                'https://mcdonalds.vn/cua-hang.html', // Counted by hand
                 'McDonald\'s was never able to enter the Vietnamese market. They only managed to open {{expected}} stores. To console them, we should have them all in OSM.',
                 ['🍔', '🛒'],
                 '2024-07-28',

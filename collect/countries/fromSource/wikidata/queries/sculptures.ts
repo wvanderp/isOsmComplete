@@ -9,7 +9,7 @@ WHERE
     ?item wdt:P31/wdt:P279* wd:Q860861 .
     ?item wdt:P625 ?coord.
     FILTER NOT EXISTS { ?item wdt:P576 ?enddate } # Exclude demolished sculptures (P576 = end date)
-    FILTER NOT EXISTS { ?item wdt:P31 wd:Q15072800 } # Exclude cemetery cros
+    FILTER NOT EXISTS { ?item wdt:P31 wd:Q15072800 } # Exclude cemetery crosses
 }`;
 
 export default async function sculptures(): Promise<Comparison[]> {

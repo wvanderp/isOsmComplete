@@ -44,7 +44,7 @@ export default async function worldwide(): Promise<Comparison[]> {
                 'Q259340',
                 83579,
                 'https://www.7andi.com/en/ir/file/library/mr/pdf/2023_01_all_a.pdf', // https://www.7andi.com/en/ir.html
-                'A 7-Eleven is always nearby. Because there are {{expected}} of them in 18 countries. Is your closest 7-Eleven in OSM?',
+                'A 7-Eleven is always nearby because there are {{expected}} of them in 18 countries. Is your closest 7-Eleven in OSM?',
                 ['🛒', '🍔'],
                 '2024-08-04'
             ),

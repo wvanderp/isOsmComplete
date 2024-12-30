@@ -1,15 +1,15 @@
 import { Comparison } from '../../types';
 import appendCountry from '../../utils/appendData';
 import { taginfoComparisonKeyOnly } from '../../utils/taginfoComparisons';
-// the document is called CANADA FLIGHT SUPPLEMENT and if you search for 'FLT PLN' you can subtract the other uses
+// The document is called CANADA FLIGHT SUPPLEMENT and if you search for 'FLT PLN' you can subtract the other uses
 const airportIdentifiers = [
-    // YUKON NORTHWEST TERRITORIES NUNAVUT
+    // YUKON, NORTHWEST TERRITORIES, NUNAVUT
     // https://www.navcanada.ca/en/ecfs_01_en.pdf
     114,
     // BRITISH COLUMBIA
     // https://www.navcanada.ca/en/ecfs_02_en.pdf
     206,
-    // ALBERTA SASKATCHEWAN MANITOBA
+    // ALBERTA, SASKATCHEWAN, MANITOBA
     // https://www.navcanada.ca/en/ecfs_03_en.pdf
     611,
     // ONTARIO
@@ -32,7 +32,7 @@ export default async function canada(): Promise<Comparison[]> {
                 'tclid',
                 airportIdentifiers.reduce((a, b) => a + b, 0),
                 'https://www.navcanada.ca/en/ecfs_07_en.pdf',
-                'Canada is a bit special and designed their own codes for airports. Luckily, there are only a few to add.',
+                'Canada is a bit special and designed their own codes for airports. Fortunately, there are only a few to add.',
                 ['✈️'],
                 '2024-02-24'
             )

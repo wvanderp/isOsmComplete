@@ -19,7 +19,7 @@ export default async function factbookAirports(factbookDirectory: string): Promi
         if (path.basename(file).length !== 7) continue;
         if (path.basename(file) === 'xx.json') continue;
 
-        // parse the data
+        // Parse the data
         const factbookFile = JSON.parse(fs.readFileSync(file, 'utf8')) as FactbookCountry;
 
         airportCount += parseAirport(factbookFile);
@@ -31,7 +31,7 @@ export default async function factbookAirports(factbookDirectory: string): Promi
         ['aerodrome', 'airstrip'],
         airportCount,
         'https://www.cia.gov/the-world-factbook/',
-        'The cia has, unsurprisingly, a interest in how many airports there are in a country. We can make use of this curiosity to check how far we are in mapping airports in OSM.',
+        'The CIA has, unsurprisingly, an interest in how many airports there are in a country. We can make use of this curiosity to check how far we are in mapping airports in OSM.',
         ['✈️'],
         '2023-12-30'
     );

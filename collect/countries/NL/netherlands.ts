@@ -43,7 +43,7 @@ export default async function netherlands(): Promise<Comparison[]> {
                 'wind',
                 2509 + 462, // land 2022 + sea 2020
                 'https://nl.wikipedia.org/wiki/Windturbines_in_Nederland', // https://opendata.cbs.nl/statline/#/CBS/nl/dataset/70960NED/table
-                'Wind energy is the new hotness. But are they all present?',
+                'Wind energy is the new hotness. But how hot is the current wind turbine coverage in OSM?',
                 ['⚡'],
                 '2023-12-05',
                 taginfoServer
@@ -121,7 +121,7 @@ export default async function netherlands(): Promise<Comparison[]> {
                 'camera',
                 337609,
                 'https://eenvandaag.avrotros.nl/item/steeds-meer-cameras-in-de-openbare-ruimte-dit-zijn-de-gevolgen-voor-jouw-privacy/',
-                'Is the Netherlands turning into a survalance state? Let\'s make sure that we know if it does!',
+                'Is the Netherlands turning into a surveillance state? Let\'s make sure that we know if it does!',
                 ['👀'],
                 '2024-08-19',
                 taginfoServer

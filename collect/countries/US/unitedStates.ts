@@ -37,7 +37,7 @@ export default async function unitedStates(): Promise<Comparison[]> {
                 'Q1972120',
                 599, // only in the US
                 'https://corporate.walmart.com/about/location-facts',
-                'Sam\'s Club is a membership-only retail warehouse club. Are all of Sam\'s clubhouses in the US tagged?',
+                'Sam\'s Club is a membership-only retail warehouse club. Are all of Sam\'s Clubhouses in the US tagged?',
                 ['🛒'],
                 '2023-10-15',
                 taginfoServer
@@ -48,7 +48,7 @@ export default async function unitedStates(): Promise<Comparison[]> {
                 'Q145168', // DG Market, DGX not in Wikidata
                 19294, // combining Dollar General, DG Market, DGX and pOpshelf
                 'https://investor.dollargeneral.com/websites/dollargeneral/English/0/investor-relations.html',
-                'This General store, also known as DG Market, DGX, and pOpshelf, sells everything for $1. How much money would we have if we got a dollar for every Dollar General store on the map?',
+                'This general store, also known as DG Market, DGX, and pOpshelf, sells everything for $1. How much money would we have if we got a dollar for every Dollar General store on the map?',
                 ['🛒'],
                 '2023-10-23',
                 taginfoServer
@@ -59,7 +59,7 @@ export default async function unitedStates(): Promise<Comparison[]> {
                 ['Q5289230', 'Q5433101'],
                 8272 + 8350, // dollar tree and family dollar
                 'https://corporate.dollartree.com/_assets/_e019a55beaa640d513e0240de36a677a/dollartreeinfo/db/893/9106/annual_report/DT_2021_Form+10-K_FINAL_5.11.22.pdf',
-                'Dollar Trees pop out of the ground like... trees. It\'s sister, Family Dollar, can be compared to rabbits. But are these Family Dollar & Dollar trees documented?',
+                'Dollar Trees pop out of the ground like... trees. Its sister, Family Dollar, can be compared to rabbits. But are these Family Dollar & Dollar Trees documented?',
                 ['🛒'],
                 '2024-02-18',
                 taginfoServer

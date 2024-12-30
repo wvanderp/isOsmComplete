@@ -11,11 +11,11 @@ const factbookUrl = 'https://github.com/factbook/factbook.json/archive/refs/head
 const factbookDirectory = path.join(__dirname, 'factbook');
 const factbookZipFile = path.join(__dirname, 'factbook.zip');
 /**
- * this function download, parses and outputs data from the CIA World Factbook
+ * This function downloads, parses, and outputs data from the CIA World Factbook.
  */
 export default async function factbook(): Promise<Comparison[]> {
     console.info('Downloading CIA World Factbook data...');
-    // nuke the old directory and zip file
+    // Nuke the old directory and zip file
     if (fs.existsSync(factbookDirectory)) {
         fs.rmSync(factbookDirectory, { recursive: true });
     }
@@ -24,17 +24,16 @@ export default async function factbook(): Promise<Comparison[]> {
     }
 
     const factbookZip = await axios.get(factbookUrl, { responseType: 'arraybuffer' });
-    // write the zip file to disk
+    // Write the zip file to disk
     fs.writeFileSync(factbookZipFile, factbookZip.data);
 
-    // unzip the file
+    // Unzip the file
     await unzip(factbookZipFile, factbookDirectory);
 
-    // energy
+    // Energy
     // const energyComparison = await factbookEnergy(factbookDirectory);
 
-    // airports
-
+    // Airports
     const factbookAirportsComparison = await factbookAirports(factbookDirectory);
 
     return appendCountry(

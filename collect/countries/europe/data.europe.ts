@@ -11,7 +11,7 @@ const dataUrl = 'https://ec.europa.eu/eurostat/api/dissemination/sdmx/2.1/data/d
 const taginfoServer = taginfoServers.EU;
 
 export default async function retailStoresInEurope(): Promise<Comparison[]> {
-    console.info('Starting on Retail stores in Europe');
+    console.info('Starting on retail stores in Europe');
 
     const csv = await axios.get(dataUrl);
     const data = parse(csv.data, {
@@ -31,7 +31,7 @@ export default async function retailStoresInEurope(): Promise<Comparison[]> {
         OBS_FLAG: string;
     }[];
 
-    const catagories = data
+    const categories = data
         .filter((a) => a.TIME_PERIOD === 2017)
         .filter((a) => typeof a.OBS_VALUE === 'number' && !Number.isNaN(a.OBS_VALUE))
         .reduce<Record<string, number>>((accumulator, current) => {
@@ -40,10 +40,10 @@ export default async function retailStoresInEurope(): Promise<Comparison[]> {
             return accumulator;
         }, {});
 
-    // should remove G47.9, G47.8 witch are stalls and markets, and non store shops
-    const retailStoresCount = catagories.G47 - (catagories.G478 + catagories.G479);
+    // Remove G47.9 and G47.8, which are stalls, markets, and non-store shops
+    const retailStoresCount = categories.G47 - (categories.G478 + categories.G479);
 
-    // car shops are not included in the retail stores
+    // Car shops are not included in the retail stores count
     const carShopsCount = await taginfoComparisonMultipleTags(
         'Car shops in Europe',
         'shop',

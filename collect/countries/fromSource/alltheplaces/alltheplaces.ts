@@ -7,7 +7,7 @@ import { AllThePlacesRunHistory } from './AllThePlacesHistoryType';
 const allThePlacesRunHistoryUrl = 'https://alltheplaces-data.openaddresses.io/runs/history.json';
 
 export default async function allThePlaces(): Promise<Comparison> {
-    const {data: runs} = await axios.get<AllThePlacesRunHistory[]>(allThePlacesRunHistoryUrl);
+    const { data: runs } = await axios.get<AllThePlacesRunHistory[]>(allThePlacesRunHistoryUrl);
 
     const latestRun = runs.at(-1);
 
