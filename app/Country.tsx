@@ -117,15 +117,23 @@ export function ProgressBar(props: { value: number, max: number }) {
 
 function Graph({ comparison }: { comparison: Comparison }) {
     const [graph, setGraph] = React.useState<React.ReactNode>(null);
+
     useEffect(() => {
-        downloadGraphData(comparison.id).then(
-            (data) => {
-                setGraph(draw_chronology_chart(data, comparison.expected));
-            }
-        );
-    // window.innerWidth should be added properly through a window resize listener
-    // or removed from the dependency array if not needed
-    }, [comparison, window.innerWidth]);
+        function handleResize() {
+            downloadGraphData(comparison.id).then(
+                (data) => {
+                    setGraph(draw_chronology_chart(data, comparison.expected));
+                }
+            );
+        }
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
+
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, [comparison]);
 
     return (
         <div>

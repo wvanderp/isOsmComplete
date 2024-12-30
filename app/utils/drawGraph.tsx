@@ -22,86 +22,115 @@ function determine_chart_width(leftMargin: number, rightMargin: number): number 
     return 1200 - leftRightMargin - 50;
 }
 
+function debounce(function_: () => void, wait: number) {
+    let timeout: NodeJS.Timeout;
+    return () => {
+        clearTimeout(timeout);
+        timeout = setTimeout(function_, wait);
+    };
+}
+
 export default function draw_chronology_chart(
     uncleanData: GraphData[],
     goal = 0
 ): React.ReactNode {
     const margin = { top: 10, right: 15, bottom: 60, left: 80 };
 
-    const w = determine_chart_width(margin.left, margin.right);
-    const h = 400;
-
-    uncleanData.push({ date: tomorrow(), value: d3.max(uncleanData, (d) => d.value) ?? 0 });
-
-    const data = uncleanData.map((d) => ({
-        ...d,
-        date: new Date(d.date)
-    }));
-
-    const t0 = data[0].date;
-    const t1 = data.at(-1).date;
-
-    const max = Math.max(d3.max(data, (d) => d.value) ?? 0, goal);
-
-    const scale_x = d3.scaleTime()
-        .domain([t0, t1])
-        .range([0, w]);
-    const axis_x = d3.axisBottom(scale_x)
-        .tickFormat(d3.timeFormat('%b %Y'))
-        .ticks(4);
-
-    const scale_y = d3.scaleLinear()
-        .domain([0, max])
-        .range([h, 0]);
-
-    const line = d3.line().curve(d3.curveStepAfter)
-        .x((d) => scale_x(d.date))
-        .y((d) => scale_y(d.value));
-
     const container = document.createElement('div');
 
-    const chart = d3.select(container).append('svg')
-        .attr('width', w + margin.left + margin.right)
-        .attr('height', h + margin.top + margin.bottom)
-        .append('g')
-        .attr('transform', `translate(${margin.left}, ${margin.top})`)
-        .call((c) => {
-            c.append('rect')
-                .attr('width', w + 10)
-                .attr('height', h + 10)
-                .attr('x', -5)
-                .attr('y', -5)
-                .style('fill', 'white')
-                .style('stroke', '#d0d0c8');
-        });
+    function renderChart() {
+        container.innerHTML = ''; // Clear previous chart
 
-    chart.append('g')
-        .attr('class', 'x axis')
-        .attr('transform', `translate(0, ${h + 5})`)
-        .call(axis_x);
+        const w = determine_chart_width(margin.left, margin.right);
+        const h = 400;
 
-    chart.append('g')
-        .attr('class', 'y axis')
-        .attr('transform', 'translate(-5, 0)')
-        .call(d3.axisLeft(scale_y));
+        uncleanData.push({ date: tomorrow(), value: d3.max(uncleanData, (d) => d.value) ?? 0 });
 
-    chart.append('path')
-        .datum(data)
-        .attr('fill', 'none')
-        .attr('stroke', '#083e76')
-        .attr('stroke-width', 1.5)
-        .attr('stroke-linejoin', 'round')
-        .attr('stroke-linecap', 'round')
-        .attr('d', line);
+        const data = uncleanData.map((d) => ({
+            ...d,
+            date: new Date(d.date)
+        }));
 
-    if (goal !== 0) {
-        chart.append('line')
-            .style('stroke', 'green')
-            .attr('x1', scale_x(data[0].date))
-            .attr('y1', scale_y(goal))
-            .attr('x2', scale_x(new Date(tomorrow())))
-            .attr('y2', scale_y(goal));
+        const t0 = data[0].date;
+        const t1 = data.at(-1).date;
+
+        const max = Math.max(d3.max(data, (d) => d.value) ?? 0, goal) * 1.1; // Added 10% headroom
+
+        const scale_x = d3.scaleTime()
+            .domain([t0, t1])
+            .range([0, w]);
+        const axis_x = d3.axisBottom(scale_x)
+            .tickFormat(d3.timeFormat('%b %Y'))
+            .ticks(6)
+            .tickSize(-h);
+
+        const scale_y = d3.scaleLinear()
+            .domain([0, max])
+            .range([h, 0]);
+
+        const line = d3.line().curve(d3.curveBasis)
+            .x((d) => scale_x(d.date))
+            .y((d) => scale_y(d.value));
+
+        const chart = d3.select(container).append('svg')
+            .attr('width', w + margin.left + margin.right)
+            .attr('height', h + margin.top + margin.bottom)
+            .append('g')
+            .attr('transform', `translate(${margin.left}, ${margin.top})`);
+
+        // Add grid
+        chart.append('g')
+            .attr('class', 'grid')
+            .attr('transform', `translate(0, ${h})`)
+            .call(axis_x)
+            .style('color', '#e0e0e0')
+            .select('.domain')
+            .remove();
+
+        chart.append('g')
+            .attr('class', 'grid')
+            .call(d3.axisLeft(scale_y).tickSize(-w).tickFormat(''))
+            .style('color', '#e0e0e0')
+            .select('.domain')
+            .remove();
+
+        // Add axes
+        chart.append('g')
+            .attr('class', 'x axis')
+            .attr('transform', `translate(0, ${h})`)
+            .call(d3.axisBottom(scale_x).tickFormat(d3.timeFormat('%b %Y')))
+            .style('color', '#666');
+
+        chart.append('g')
+            .attr('class', 'y axis')
+            .call(d3.axisLeft(scale_y))
+            .style('color', '#666');
+
+        // Add line
+        chart.append('path')
+            .datum(data)
+            .attr('fill', 'none')
+            .attr('stroke', '#2563eb')
+            .attr('stroke-width', 2.5)
+            .attr('stroke-linejoin', 'round')
+            .attr('stroke-linecap', 'round')
+            .attr('d', line);
+
+        if (goal !== 0) {
+            chart.append('line')
+                .style('stroke', '#22c55e')
+                .style('stroke-width', 2)
+                .style('stroke-dasharray', '5,5')
+                .attr('x1', 0)
+                .attr('y1', scale_y(goal))
+                .attr('x2', w)
+                .attr('y2', scale_y(goal));
+        }
     }
-    // eslint-disable-next-line react/no-danger
+
+    renderChart();
+    const debouncedRenderChart = debounce(renderChart, 200);
+    window.addEventListener('resize', debouncedRenderChart);
+
     return <div dangerouslySetInnerHTML={{ __html: container.outerHTML }} />;
 }
