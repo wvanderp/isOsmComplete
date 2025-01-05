@@ -30,22 +30,22 @@ export default async function netherlands(): Promise<Comparison[]> {
                 'Hospitals',
                 'amenity',
                 ['hospital', 'clinic'],
-                307 + 445, // hospitals + clinics
+                299 + 483, // hospitals + clinics
                 'https://www.zorgkaartnederland.nl/ziekenhuis', // and https://www.zorgkaartnederland.nl/overige-kliniek
                 'The Netherlands has {{expected}} hospitals and clinics. Are they all in OSM?',
                 ['🏥'],
-                '2023-12-05',
+                '2025-01-05',
                 taginfoServer
             ),
             await taginfoComparisons(
                 'Wind turbines',
                 'generator:source',
                 'wind',
-                2509 + 462, // land 2022 + sea 2020
+                2557 + 472, // land 2023 + sea 2022
                 'https://nl.wikipedia.org/wiki/Windturbines_in_Nederland', // https://opendata.cbs.nl/statline/#/CBS/nl/dataset/70960NED/table
                 'Wind energy is the new hotness. But how hot is the current wind turbine coverage in OSM?',
                 ['⚡'],
-                '2023-12-05',
+                '2025-01-05',
                 taginfoServer
             ),
             await taginfoComparisons(
@@ -63,11 +63,11 @@ export default async function netherlands(): Promise<Comparison[]> {
                 "Albert Heijn's",
                 brandWikidata,
                 ['Q1653985', 'Q78163765'],
-                1228,
-                'https://media.aholddelhaize.com/media/vy4neu1n/ar-2022-ahold-delhaize-interactive-final.pdf?t=638143108570530000',
+                1268,
+                'https://media.aholddelhaize.com/media/clkbibno/ad_ar23_interactive.pdf?t=638459189069470000',
                 'Albert Heijn is the biggest supermarket chain in the Netherlands. Are they all in OSM?',
                 ['🛒'],
-                '2023-12-05',
+                '2025-01-05',
                 // use the Europe server because Albert Heijn is also in Belgium
                 taginfoServerEuropa
             ),
@@ -75,22 +75,22 @@ export default async function netherlands(): Promise<Comparison[]> {
                 'Gall & Gall',
                 brandWikidata,
                 'Q13639185',
-                603,
-                'https://media.aholddelhaize.com/media/vy4neu1n/ar-2022-ahold-delhaize-interactive-final.pdf?t=638143108570530000',
+                628,
+                'https://media.aholddelhaize.com/media/clkbibno/ad_ar23_interactive.pdf?t=638459189069470000',
                 'Gall & Gall is a liquor store chain in the Netherlands. Are they all in OSM?',
                 ['🛒'],
-                '2023-12-05',
+                '2025-01-05',
                 taginfoServer
             ),
             await taginfoComparisons(
                 'Etos',
                 brandWikidata,
                 'Q2609459',
-                522,
-                'https://media.aholddelhaize.com/media/vy4neu1n/ar-2022-ahold-delhaize-interactive-final.pdf?t=638143108570530000',
+                523,
+                'https://media.aholddelhaize.com/media/clkbibno/ad_ar23_interactive.pdf?t=638459189069470000',
                 'Etos is a drugstore chain in the Netherlands. Are they all in OSM?',
                 ['🛒'],
-                '2023-12-05',
+                '2025-01-05',
                 taginfoServer
             ),
             await taginfoComparisons(

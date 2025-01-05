@@ -2,7 +2,7 @@ import { Comparison } from '../../types';
 import appendCountry from '../../utils/appendData';
 import { brandWikidata, operatorWikidata } from '../../utils/osmTags';
 import taginfoServers from '../../utils/tagInfoServers';
-import taginfoComparisons from '../../utils/taginfoComparisons';
+import taginfoComparisons, { taginfoComparisonMultipleTags } from '../../utils/taginfoComparisons';
 import london from './London';
 
 const taginfoServer = taginfoServers.GB;
@@ -15,11 +15,11 @@ export default async function greatBritain(): Promise<Comparison[]> {
                 'Pubs in the UK',
                 'amenity',
                 'pub',
-                47200,
-                'https://commonslibrary.parliament.uk/research-briefings/cbp-8591/',
+                45350,
+                'https://beerandpub.com/data-statistics',
                 'Are all the locations for Britain\'s favorite pastime in OSM?',
                 ['🍺', '🛒'],
-                '2023-09-24',
+                '2025-01-05',
                 taginfoServer
             ),
             await taginfoComparisons(
@@ -33,15 +33,21 @@ export default async function greatBritain(): Promise<Comparison[]> {
                 '2024-12-30',
                 taginfoServer
             ),
-            await taginfoComparisons(
+            await taginfoComparisonMultipleTags(
                 'Tesco',
                 brandWikidata,
-                'Q487494',
-                3712,
-                'https://www.tescoplc.com/media/u1wlq2qf/tesco-plc-annual-report-2023.pdf',
+                [
+                    'Q487494',
+                    'Q98456772',
+                    'Q25172225'
+                ],
+                // 809 big stores + 2048 convenience stores
+                809 + 2048,
+                // search for `store numbers` in the document
+                'https://www.tescoplc.com/media/qjejufrm/tesco-plc-interim-results-2425-press-release.pdf',
                 'Are all the Tesco stores in OSM?',
                 ['🛒'],
-                '2023-09-24',
+                '2025-01-05',
                 taginfoServer
             ),
             await taginfoComparisons(
@@ -52,7 +58,7 @@ export default async function greatBritain(): Promise<Comparison[]> {
                 'https://www.ncp.co.uk/help-centre/about-us/',
                 'NCP claims to sprinkle "beautiful" parking spots all over Britain. Fancy using OSM to uncover the one they deem closest to your majestic presence?',
                 ['🚗'],
-                '2023-11-23',
+                '2025-01-05',
                 taginfoServer
             ),
 

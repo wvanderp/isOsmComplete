@@ -15,11 +15,11 @@ export default async function france(): Promise<Comparison[]> {
                     'Bakeries in France 🍞🥐🥖',
                     shop,
                     bakery,
-                    56553,
+                    57300,
                     'https://github.com/wvanderp/isOsmComplete/issues/1',
                     'Tu aimes les baguettes? 🥖🥖🥖 Then you better make sure that OSM knows where the nearest bakery is.',
                     ['🛒'],
-                    '2023-10-15',
+                    '2025-01-05',
                     taginfoServer
                 ),
                 'Merci beaucoup à [@Binnette](https://github.com/Binnette) for the suggestion and for providing the data!'

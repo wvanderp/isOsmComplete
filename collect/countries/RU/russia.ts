@@ -2,7 +2,7 @@ import { Comparison } from '../../types';
 import appendCountry from '../../utils/appendData';
 import { brandWikidata } from '../../utils/osmTags';
 import taginfoServers from '../../utils/tagInfoServers';
-import taginfoComparisons from '../../utils/taginfoComparisons';
+import taginfoComparisons, { taginfoComparisonMultipleTags } from '../../utils/taginfoComparisons';
 
 const taginfoServer = taginfoServers.RU;
 
@@ -14,11 +14,22 @@ export default async function russia(): Promise<Comparison[]> {
                 'Pyaterochka',
                 brandWikidata,
                 'Q1768969',
-                19164,
-                'https://www.x5.ru/wp-content/uploads/2023/06/x5-ar-2022-eng.pdf',
+                21308,
+                'https://www.x5.ru/wp-content/uploads/reports/2023/en/financial-statements/',
                 'Pyaterochka (Пятёрочка), literally translated to "Five", is a Russian convenience store. There should be {{expected}} of them in OSM.',
                 ['🛒'],
-                '2023-11-23',
+                '2025-01-05',
+                taginfoServer
+            ),
+            await taginfoComparisonMultipleTags(
+                'McDonald\'s leaves Russia',
+                brandWikidata,
+                ['Q38076', 'Q12061542'],
+                0,
+                'https://corporate.mcdonalds.com/corpmcd/our-stories/article/mcd-exit-russia.html',
+                'Many companies have left Russia due to the very "Special" Military Operation in Ukraine. McDonald\'s is one of them. Are all the McDonald\'s in Russia removed from OSM?',
+                ['🍔', '🛒'],
+                '2025-01-05',
                 taginfoServer
             )
         ]

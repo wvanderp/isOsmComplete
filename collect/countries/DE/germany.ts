@@ -18,7 +18,7 @@ export default async function germany(): Promise<Comparison[]> {
                 'https://www.rewe-group.com/content/uploads/2024/05/rewe-financal-report-31.12.2023.pdf?t=2024052702',
                 'Are all the REWE stores in OSM?',
                 ['🛒'],
-                '2024-07-28',
+                '2025-01-05',
                 taginfoServer
             ),
             await taginfoComparisons(
@@ -29,7 +29,7 @@ export default async function germany(): Promise<Comparison[]> {
                 'https://www.rewe-group.com/content/uploads/2024/05/rewe-financal-report-31.12.2023.pdf?t=2024052702',
                 'Are all the PENNY stores in OSM?',
                 ['🛒'],
-                '2024-07-28',
+                '2025-01-05',
                 taginfoServer
             )
         ]

@@ -16,6 +16,8 @@ export default async function wikidataComparison(
 ): Promise<Comparison> {
     console.info(`Starting on ${name}`);
 
+    await new Promise((resolve) => { setTimeout(resolve, 1000); });
+
     const { data } = await axios.post<{ results: { bindings: { count: { value: string } }[] } }>(
         `https://query.wikidata.org/sparql?query=${encodeURIComponent(sparqlQuery)}&format=json`
     );

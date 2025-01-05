@@ -3,12 +3,12 @@ import appendCountry from '../../../../utils/appendData';
 import wikidataComparison from '../utils/wikidataComparison';
 
 const museumSparqlQuery = `
-SELECT (count(?museum) as ?count) WHERE {
+SELECT (count(*) as ?count) WHERE {
     ?museum (wdt:P31/(wdt:P279*)) wd:Q33506. # Instance of museum
-    FILTER NOT EXISTS { ?museum wdt:P576 ?enddate } # Exclude closed museums (P576 = end date)
-    FILTER NOT EXISTS { ?museum wdt:P31 wd:Q575727 } # Exclude museum ships
-    FILTER NOT EXISTS { ?museum wdt:P31 wd:Q43501 } # Exclude zoos
-    FILTER NOT EXISTS { ?museum wdt:P31 wd:Q491675 } # Exclude dolphinariums
+    MINUS { ?museum wdt:P576 ?enddate } # Exclude closed museums (P576 = end date)
+    MINUS { ?museum (wdt:P31/(wdt:P279*)) wd:Q575727 } # Exclude museum ships
+    MINUS { ?museum (wdt:P31/(wdt:P279*)) wd:Q43501 } # Exclude zoos
+    MINUS { ?museum (wdt:P31/(wdt:P279*)) wd:Q491675 } # Exclude dolphinariums
   }
 `;
 
@@ -44,7 +44,7 @@ export default async function museum(): Promise<Comparison[]> {
                 'museum',
                 'The number of museums in the world',
                 ['🏛️', '🎨'],
-                '2024-07-28'
+                '2025-01-05'
             ),
             await wikidataComparison(
                 'Zoos',
@@ -53,7 +53,7 @@ export default async function museum(): Promise<Comparison[]> {
                 'zoo',
                 'The number of zoos in the world',
                 ['🦁'],
-                '2024-07-28'
+                '2025-01-05'
             ),
             await wikidataComparison(
                 'Aquariums',
@@ -62,7 +62,7 @@ export default async function museum(): Promise<Comparison[]> {
                 'aquarium',
                 'The number of aquariums in the world',
                 ['🦁'],
-                '2024-07-28'
+                '2025-01-05'
             ),
             await wikidataComparison(
                 'Museum ships',
@@ -71,7 +71,7 @@ export default async function museum(): Promise<Comparison[]> {
                 'ship',
                 'The number of museum ships in the world',
                 ['🚢', '🏛️'],
-                '2024-07-28'
+                '2025-01-05'
             )
         ]
     );

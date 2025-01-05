@@ -33,6 +33,6 @@ export default async function factbookAirports(factbookDirectory: string): Promi
         'https://www.cia.gov/the-world-factbook/',
         'The CIA has, unsurprisingly, an interest in how many airports there are in a country. We can make use of this curiosity to check how far we are in mapping airports in OSM.',
         ['✈️'],
-        '2023-12-30'
+        '2025-01-05'
     );
 }

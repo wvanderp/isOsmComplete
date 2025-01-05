@@ -24,45 +24,46 @@ export default async function unitedStates(): Promise<Comparison[]> {
                 'Walmart',
                 brandWikidata,
                 'Q483551',
-                4616, // only in the US
+                4606, // only in the US
                 'https://corporate.walmart.com/about/location-facts',
                 'Walmart is the largest company in the world by revenue. Are all the Walmart stores in the US tagged?',
                 ['🛒'],
-                '2023-10-15',
+                '2025-01-05',
                 taginfoServer
             ),
             await taginfoComparisons(
                 'Sam\'s club',
                 brandWikidata,
                 'Q1972120',
-                599, // only in the US
+                600, // only in the US
                 'https://corporate.walmart.com/about/location-facts',
                 'Sam\'s Club is a membership-only retail warehouse club. Are all of Sam\'s Clubhouses in the US tagged?',
                 ['🛒'],
-                '2023-10-15',
+                '2025-01-05',
                 taginfoServer
             ),
             await taginfoComparisons(
                 'Dollar General',
                 brandWikidata,
                 'Q145168', // DG Market, DGX not in Wikidata
-                19294, // combining Dollar General, DG Market, DGX and pOpshelf
+                20345, // combining Dollar General, DG Market, DGX and pOpshelf
                 'https://investor.dollargeneral.com/websites/dollargeneral/English/0/investor-relations.html',
                 'This general store, also known as DG Market, DGX, and pOpshelf, sells everything for $1. How much money would we have if we got a dollar for every Dollar General store on the map?',
                 ['🛒'],
-                '2023-10-23',
+                '2025-01-05',
                 taginfoServer
             ),
             await taginfoComparisonMultipleTags(
                 'Dollar Tree & Family Dollar',
                 brandWikidata,
                 ['Q5289230', 'Q5433101'],
-                8272 + 8350, // dollar tree and family dollar
+                16774, // dollar tree and family dollar
+                // https://corporate.dollartree.com/investors/financial-information/annual-reports-proxies
                 'https://corporate.dollartree.com/_assets/_e019a55beaa640d513e0240de36a677a/dollartreeinfo/db/893/9106/annual_report/DT_2021_Form+10-K_FINAL_5.11.22.pdf',
                 'Dollar Trees pop out of the ground like... trees. Its sister, Family Dollar, can be compared to rabbits. But are these Family Dollar & Dollar Trees documented?',
                 ['🛒'],
-                '2024-02-18',
-                taginfoServer
+                '2024-02-18'
+                // using the worldwide taginfo server because they are located in us and canada
             ),
             await taginfoComparisons(
                 'CVS',

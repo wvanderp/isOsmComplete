@@ -55,7 +55,7 @@ export default async function airports(): Promise<Comparison[]> {
                 airportCsvUrl,
                 'The number of airports with IATA codes in OSM',
                 ['✈️'],
-                '2023-12-05'
+                '2025-01-05'
             ),
             await taginfoComparisonKeyOnly(
                 'Airports with ICAO codes ✈️',
@@ -64,7 +64,7 @@ export default async function airports(): Promise<Comparison[]> {
                 airportCsvUrl,
                 'The number of airports with ICAO codes in OSM',
                 ['✈️'],
-                '2023-12-05'
+                '2025-01-05'
             ),
             await taginfoComparisonMultipleTags(
                 'Match OurAirports on airports',
@@ -74,7 +74,7 @@ export default async function airports(): Promise<Comparison[]> {
                 airportCsvUrl,
                 'OurAirports is a crowdsourced database of airports. Let\'s see if OSM can add something to it.',
                 ['✈️'],
-                '2023-12-05'
+                '2025-01-05'
             )
         ]
     );

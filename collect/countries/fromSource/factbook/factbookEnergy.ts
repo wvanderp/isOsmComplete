@@ -83,7 +83,7 @@ export default async function factbookEnergy(factbookDirectory: string): Promise
     // merge the data
     return Object.entries(osmEnergyList)
         .map(([countryCode, osmEnergy]) => {
-        // @ts-expect-error -- type asserted
+            // @ts-expect-error -- type asserted
             const gec_code = countryCodes[countryCode] as string | undefined;
 
             if (!gec_code) {
@@ -106,7 +106,7 @@ export default async function factbookEnergy(factbookDirectory: string): Promise
         })
         .filter((element) => element !== null)
         .map((element) => {
-        // @ts-expect-error -- already checked for null
+            // @ts-expect-error -- already checked for null
             const { countryCode, osmEnergy, energyFactbook } = element;
 
             const comparison: Comparison = {
@@ -119,7 +119,7 @@ export default async function factbookEnergy(factbookDirectory: string): Promise
                 description: 'Every country produces Electricity, so all the electricity generators in OpenStreetMap should add up to the total production in the CIA World Factbook.',
                 country: countryCode,
                 tags: ['⚡'],
-                lastUpdated: '2023-06-18'
+                lastUpdated: '2025-01-05'
             };
 
             return comparison;

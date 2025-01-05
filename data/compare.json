@@ -3,7 +3,7 @@
     "id": "f86b36460a37c5a45dea617f3fbd10c18027319318d2283be3f8318a7a793bca",
     "name": "Match Google on building",
     "expected": 1600000000,
-    "actual": 631549313,
+    "actual": 632150201,
     "expectedSource": "https://youtu.be/nP-nMZpLM1A?t=409",
     "actualSource": "taginfo",
     "tags": [
@@ -17,7 +17,7 @@
     "id": "7db310de75fd52cb02a885303658ba574e5e5262b439fc3c6116a6661811782e",
     "name": "Stolpersteine",
     "expected": 100000,
-    "actual": 38019,
+    "actual": 38164,
     "expectedSource": "https://www.timesofisrael.com/holocaust-memorial-project-marks-milestone-with-100000-stumbling-blocks/",
     "actualSource": "overpass",
     "tags": [],
@@ -43,7 +43,7 @@
     "id": "34d881bb4626ac285c1c64c08944d6d8883e5bfdef1d5bb2c0d2eeab9db0d20e",
     "name": "7-Eleven stores",
     "expected": 83579,
-    "actual": 39901,
+    "actual": 39966,
     "expectedSource": "https://www.7andi.com/en/ir/file/library/mr/pdf/2023_01_all_a.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -58,22 +58,22 @@
     "id": "ceafc782f32e77207571d2c2de651c13d6f8704acbe2221a9a7af3dd68313bf8",
     "name": "Subway stores",
     "expected": 37000,
-    "actual": 23036,
-    "expectedSource": "https://www.subway.com/en-us/contactus/subwayfaqs/about-subway",
+    "actual": 23053,
+    "expectedSource": "https://newsroom.subway.com/2024-10-01-Subway-Continues-to-Expand-Its-Global-Presence-with-Over-10,000-Future-Restaurant-Commitments",
     "actualSource": "taginfo",
     "tags": [
       "🍔",
       "🛒"
     ],
     "description": "Subway and McDonald's are the two largest fast-food chains in the world. Who has more stores?",
-    "lastUpdated": "2023-09-24",
+    "lastUpdated": "2025-01-05",
     "country": "Worldwide"
   },
   {
     "id": "0aa0000d49cbd3eaabb7d62b87d0695922a6cdc09c0f80d1684aadaeb49f4e95",
     "name": "Starbucks",
     "expected": 38951,
-    "actual": 21015,
+    "actual": 21048,
     "expectedSource": "https://s203.q4cdn.com/326826266/files/doc_financials/2024/q2/2Q24-Earnings-Release-Final-4-30-24.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -88,7 +88,7 @@
     "id": "bc00755018404ae08e7791edeacb749806f755a7a684108cdc730b7dc96d35bd",
     "name": "McDonald's",
     "expected": 41822,
-    "actual": 34392,
+    "actual": 34416,
     "expectedSource": "https://corporate.mcdonalds.com/content/dam/sites/corp/nfl/pdf/2023%20Annual%20Report_vf.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -103,7 +103,7 @@
     "id": "ff163beb19543f2cb53c300637cac009272968c01b3511a40effa32489074e82",
     "name": "KFC",
     "expected": 29900,
-    "actual": 15048,
+    "actual": 15080,
     "expectedSource": "https://s2.q4cdn.com/890585342/files/doc_financials/2023/q4/Q4-2023-Earnings-Release.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -118,7 +118,7 @@
     "id": "1741ef1701505db0c126d61364820e8e2d485d96751eaa8ef3e3850ee0595b22",
     "name": "Taco Bell",
     "expected": 8564,
-    "actual": 6869,
+    "actual": 6878,
     "expectedSource": "https://s2.q4cdn.com/890585342/files/doc_financials/2023/q4/Q4-2023-Earnings-Release.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -133,7 +133,7 @@
     "id": "248346ad79386b814c4c361474a0eede7d7d254e1302feeacd7a2db3965ac5ba",
     "name": "Pizza Hut",
     "expected": 19866,
-    "actual": 7621,
+    "actual": 7642,
     "expectedSource": "https://s2.q4cdn.com/890585342/files/doc_financials/2023/q4/Q4-2023-Earnings-Release.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -148,7 +148,7 @@
     "id": "ebf58077453c74c27a1a8384024439568732ce333c09c0899c6156177657d513",
     "name": "Burger King",
     "expected": 18700,
-    "actual": 14253,
+    "actual": 14260,
     "expectedSource": "https://www.rbi.com/English/brands/default.aspx",
     "actualSource": "taginfo",
     "tags": [
@@ -178,7 +178,7 @@
     "id": "73c662317d2a4e93f6b2d96626dd2667624f8fe48292bce3a735025fb3df82c4",
     "name": "Data centers",
     "expected": 10978,
-    "actual": 3229,
+    "actual": 3250,
     "expectedSource": "https://brightlio.com/data-center-stats/",
     "actualSource": "taginfo",
     "tags": [
@@ -191,8 +191,8 @@
   {
     "id": "ed897f43e805d3b55c3d7356a3421f53aea469e83c629cc476decc4dff2d3a57",
     "name": "UNESCO World Heritage Sites",
-    "expected": 1199,
-    "actual": 2448,
+    "expected": 1223,
+    "actual": 2449,
     "expectedSource": "https://whc.unesco.org/en/list/",
     "actualSource": "taginfo",
     "tags": [
@@ -200,14 +200,14 @@
       "🏛️"
     ],
     "description": "UNESCO World Heritage Sites are places of special cultural or physical significance. They have marked {{expected}} of them. Can you find them all in OSM?",
-    "lastUpdated": "2023-11-28",
+    "lastUpdated": "2025-01-05",
     "country": "Worldwide"
   },
   {
     "id": "681037426fe19e62eba5d82fa128583b311ed6368eb25d638242103510647c5a",
     "name": "Memorial benches",
-    "expected": 34572,
-    "actual": 840,
+    "expected": 34636,
+    "actual": 852,
     "expectedSource": "https://openbenches.org/",
     "actualSource": "taginfo",
     "tags": [
@@ -236,14 +236,14 @@
     "id": "fcba5aaec2e6bac985428897470d2881bb4d9df7668db7fdc1e0f2fd416afb01",
     "name": "Retail stores in Europe",
     "expected": 2575171,
-    "actual": 2831000,
+    "actual": 2834125,
     "expectedSource": "https://data.europa.eu/data/datasets/6k2ldtwgaa2lvoudvtbbq?locale=en",
     "actualSource": "taginfo",
     "tags": [
       "🛒"
     ],
     "description": "How much shopping can be done in Europe?",
-    "lastUpdated": "2023-09-24",
+    "lastUpdated": "2025-01-05",
     "country": "EU"
   },
   {
@@ -264,21 +264,21 @@
     "id": "dace299682b6e90a3ec0b6e29d2ea57da76e3a7f30223cc01164bad12ae8f7d2",
     "name": "Train stations in China",
     "expected": 5470,
-    "actual": 6116,
+    "actual": 6121,
     "expectedSource": "https://en.wikipedia.org/wiki/Rail_transport_in_China#cite_note-CNCRCC-4",
     "actualSource": "overpass",
     "tags": [
       "🚂"
     ],
     "description": "China transports a lot of people by train. Can they find their stations in OSM?",
-    "lastUpdated": "2023-11-28",
+    "lastUpdated": "2025-01-05",
     "country": "CN"
   },
   {
     "id": "c36d0cf963a5575f58ba8bae8b2f8ddee715472f45cacecb2557e6d081535fa8",
     "name": "Coal power plants in China",
     "expected": 3092,
-    "actual": 4243,
+    "actual": 4249,
     "expectedSource": "https://www.statista.com/statistics/1268457/coal-power-plants-in-china-by-province",
     "actualSource": "taginfo",
     "tags": [
@@ -291,15 +291,15 @@
   {
     "id": "8ac45dae95ef22e2d219113f4e80215c865efa2424a819760f3f577e0cea5c1d",
     "name": "Bakeries in France 🍞🥐🥖",
-    "expected": 56553,
-    "actual": 28350,
+    "expected": 57300,
+    "actual": 28362,
     "expectedSource": "https://github.com/wvanderp/isOsmComplete/issues/1",
     "actualSource": "taginfo",
     "tags": [
       "🛒"
     ],
     "description": "Tu aimes les baguettes? 🥖🥖🥖 Then you better make sure that OSM knows where the nearest bakery is.",
-    "lastUpdated": "2023-10-15",
+    "lastUpdated": "2025-01-05",
     "thanks": "Merci beaucoup à [@Binnette](https://github.com/Binnette) for the suggestion and for providing the data!",
     "country": "FR"
   },
@@ -307,14 +307,14 @@
     "id": "5b0731306e515667e43a1bff6d2ae879f80da3791d96eef8abb59f6c30304876",
     "name": "REWE",
     "expected": 3690,
-    "actual": 3766,
+    "actual": 3765,
     "expectedSource": "https://www.rewe-group.com/content/uploads/2024/05/rewe-financal-report-31.12.2023.pdf?t=2024052702",
     "actualSource": "taginfo",
     "tags": [
       "🛒"
     ],
     "description": "Are all the REWE stores in OSM?",
-    "lastUpdated": "2024-07-28",
+    "lastUpdated": "2025-01-05",
     "country": "DE"
   },
   {
@@ -328,29 +328,29 @@
       "🛒"
     ],
     "description": "Are all the PENNY stores in OSM?",
-    "lastUpdated": "2024-07-28",
+    "lastUpdated": "2025-01-05",
     "country": "DE"
   },
   {
     "id": "154c2bbd2b34ed2924ae6fefbc7a995465c3e80817984f658d2598095d80c9bb",
     "name": "Pubs in the UK",
-    "expected": 47200,
-    "actual": 38848,
-    "expectedSource": "https://commonslibrary.parliament.uk/research-briefings/cbp-8591/",
+    "expected": 45350,
+    "actual": 38846,
+    "expectedSource": "https://beerandpub.com/data-statistics",
     "actualSource": "taginfo",
     "tags": [
       "🍺",
       "🛒"
     ],
     "description": "Are all the locations for Britain's favorite pastime in OSM?",
-    "lastUpdated": "2023-09-24",
+    "lastUpdated": "2025-01-05",
     "country": "GB"
   },
   {
     "id": "68ade438a47fe782c8ec2ddd1ef9bf20dcb26a0198125f4f076c34eba80504d4",
     "name": "Royal Mail post boxes",
     "expected": 115000,
-    "actual": 20923,
+    "actual": 20944,
     "expectedSource": "https://personal.help.royalmail.com/app/answers/detail/a_id/135/~/royal-mails-postbox-network---your-questions-answered",
     "actualSource": "taginfo",
     "tags": [
@@ -361,31 +361,31 @@
     "country": "GB"
   },
   {
-    "id": "c4a42a0a94159cf374aefa1bab0c60a1fe327b2e9d6e295f967c70be3e7aad8a",
+    "id": "6f09a43068073da389b49c4c581736b667886098a6866adaa929601bab513fe4",
     "name": "Tesco",
-    "expected": 3712,
-    "actual": 1235,
-    "expectedSource": "https://www.tescoplc.com/media/u1wlq2qf/tesco-plc-annual-report-2023.pdf",
+    "expected": 2857,
+    "actual": 3566,
+    "expectedSource": "https://www.tescoplc.com/media/qjejufrm/tesco-plc-interim-results-2425-press-release.pdf",
     "actualSource": "taginfo",
     "tags": [
       "🛒"
     ],
     "description": "Are all the Tesco stores in OSM?",
-    "lastUpdated": "2023-09-24",
+    "lastUpdated": "2025-01-05",
     "country": "GB"
   },
   {
     "id": "0321c72333ab103de5ae07a761be0b833177b8825e99f8d3ef189a140d2f2631",
     "name": "National Car Parks",
     "expected": 642,
-    "actual": 194,
+    "actual": 196,
     "expectedSource": "https://www.ncp.co.uk/help-centre/about-us/",
     "actualSource": "taginfo",
     "tags": [
       "🚗"
     ],
     "description": "NCP claims to sprinkle \"beautiful\" parking spots all over Britain. Fancy using OSM to uncover the one they deem closest to your majestic presence?",
-    "lastUpdated": "2023-11-23",
+    "lastUpdated": "2025-01-05",
     "country": "GB"
   },
   {
@@ -399,14 +399,14 @@
       "👀"
     ],
     "description": "London might be the most watched city in the world. But who watches the watchers?",
-    "lastUpdated": "2023-10-15",
+    "lastUpdated": "2025-01-05",
     "country": "GB"
   },
   {
     "id": "618d455f20de0fc57391795eb6857e7ad0343ae82314129cded8f49d1e780184",
     "name": "Car chargers",
     "expected": 168489,
-    "actual": 14710,
+    "actual": 14748,
     "expectedSource": "https://duurzamemobiliteit.databank.nl/mosaic/en-us/elektrisch-vervoer/laadinfra-in-nederland",
     "actualSource": "taginfo",
     "tags": [
@@ -420,21 +420,21 @@
   {
     "id": "b36e45ea67ee7caebab45e72995bc4bd94b4452bd4cc5432d64bf1f39c4d5db5",
     "name": "Hospitals",
-    "expected": 752,
-    "actual": 657,
+    "expected": 782,
+    "actual": 659,
     "expectedSource": "https://www.zorgkaartnederland.nl/ziekenhuis",
     "actualSource": "taginfo",
     "tags": [
       "🏥"
     ],
     "description": "The Netherlands has {{expected}} hospitals and clinics. Are they all in OSM?",
-    "lastUpdated": "2023-12-05",
+    "lastUpdated": "2025-01-05",
     "country": "NL"
   },
   {
     "id": "902133b15f0e1713baf285972581ebe1e8ae52860098b1a90212e544f516baf2",
     "name": "Wind turbines",
-    "expected": 2971,
+    "expected": 3029,
     "actual": 3456,
     "expectedSource": "https://nl.wikipedia.org/wiki/Windturbines_in_Nederland",
     "actualSource": "taginfo",
@@ -442,14 +442,14 @@
       "⚡"
     ],
     "description": "Wind energy is the new hotness. But how hot is the current wind turbine coverage in OSM?",
-    "lastUpdated": "2023-12-05",
+    "lastUpdated": "2025-01-05",
     "country": "NL"
   },
   {
     "id": "24bd6d67bee4f7c61cf54fdc835eddc747fff751af8d7fccdafe27e948aaaaa5",
     "name": "Traffic enforcement camera",
     "expected": 615,
-    "actual": 881,
+    "actual": 879,
     "expectedSource": "https://www.rtlnieuws.nl/nieuws/nederland/artikel/5214097/flitspaal-cjib-boetes-overtredingen-snelheid-bon-auto-politie",
     "actualSource": "taginfo",
     "tags": [
@@ -463,43 +463,43 @@
   {
     "id": "33252528d584f4e383f479cc2ef63e8e9dd81ef4b728ccba6680c417451417f1",
     "name": "Albert Heijn's",
-    "expected": 1228,
-    "actual": 1091,
-    "expectedSource": "https://media.aholddelhaize.com/media/vy4neu1n/ar-2022-ahold-delhaize-interactive-final.pdf?t=638143108570530000",
+    "expected": 1268,
+    "actual": 1092,
+    "expectedSource": "https://media.aholddelhaize.com/media/clkbibno/ad_ar23_interactive.pdf?t=638459189069470000",
     "actualSource": "taginfo",
     "tags": [
       "🛒"
     ],
     "description": "Albert Heijn is the biggest supermarket chain in the Netherlands. Are they all in OSM?",
-    "lastUpdated": "2023-12-05",
+    "lastUpdated": "2025-01-05",
     "country": "NL"
   },
   {
     "id": "cdbed7a45ed2ad1c1ca6bf63e8ec05d2626610408ed194b5f0f3e0befedd8019",
     "name": "Gall & Gall",
-    "expected": 603,
+    "expected": 628,
     "actual": 475,
-    "expectedSource": "https://media.aholddelhaize.com/media/vy4neu1n/ar-2022-ahold-delhaize-interactive-final.pdf?t=638143108570530000",
+    "expectedSource": "https://media.aholddelhaize.com/media/clkbibno/ad_ar23_interactive.pdf?t=638459189069470000",
     "actualSource": "taginfo",
     "tags": [
       "🛒"
     ],
     "description": "Gall & Gall is a liquor store chain in the Netherlands. Are they all in OSM?",
-    "lastUpdated": "2023-12-05",
+    "lastUpdated": "2025-01-05",
     "country": "NL"
   },
   {
     "id": "3ba07a7ca047a4ef09524bbb691697a5be740dabac9b7e32a02b9604032b21a2",
     "name": "Etos",
-    "expected": 522,
-    "actual": 493,
-    "expectedSource": "https://media.aholddelhaize.com/media/vy4neu1n/ar-2022-ahold-delhaize-interactive-final.pdf?t=638143108570530000",
+    "expected": 523,
+    "actual": 492,
+    "expectedSource": "https://media.aholddelhaize.com/media/clkbibno/ad_ar23_interactive.pdf?t=638459189069470000",
     "actualSource": "taginfo",
     "tags": [
       "🛒"
     ],
     "description": "Etos is a drugstore chain in the Netherlands. Are they all in OSM?",
-    "lastUpdated": "2023-12-05",
+    "lastUpdated": "2025-01-05",
     "country": "NL"
   },
   {
@@ -520,7 +520,7 @@
     "id": "be4dab2607d9f1299d9ededa89929f3a2649b47841587587722a72ec265b81e3",
     "name": "Mailboxes in the Netherlands",
     "expected": 11000,
-    "actual": 6541,
+    "actual": 6542,
     "expectedSource": "https://nos.nl/artikel/2530705-oranje-brievenbussen-verdwijnen-op-steeds-meer-plekken",
     "actualSource": "taginfo",
     "tags": [
@@ -534,7 +534,7 @@
     "id": "e25f43d2f95cb5907a29ef7934405b05fdff5162c44ce9781b4542e8c334c0fe",
     "name": "Surveillance cameras in the Netherlands",
     "expected": 337609,
-    "actual": 5223,
+    "actual": 5229,
     "expectedSource": "https://eenvandaag.avrotros.nl/item/steeds-meer-cameras-in-de-openbare-ruimte-dit-zijn-de-gevolgen-voor-jouw-privacy/",
     "actualSource": "taginfo",
     "tags": [
@@ -548,7 +548,7 @@
     "id": "7d7cc1074bdd3b5e2609fe5f1c5b941f78e42281f270b579ffa71ff2a5ae831a",
     "name": "Geldmaat ATMs",
     "expected": 767,
-    "actual": 1185,
+    "actual": 1188,
     "expectedSource": "https://api.prod.locator-backend.geldmaat.nl/locations",
     "actualSource": "taginfo",
     "tags": [
@@ -561,7 +561,7 @@
   {
     "id": "2d7d693f20708d0bd0673b98979bef31728cbbada8fcf74dc512c135dfc07d04",
     "name": "Palaces of justice in the Netherlands",
-    "expected": 31,
+    "expected": 44,
     "actual": 46,
     "expectedSource": "https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Rechtbanken",
     "actualSource": "taginfo",
@@ -569,7 +569,7 @@
       "⚖️"
     ],
     "description": "In the Netherlands, courts are sometimes called palaces of justice. We expect {{expected}} of them.",
-    "lastUpdated": "2023-10-26",
+    "lastUpdated": "2025-01-05",
     "country": "NL"
   },
   {
@@ -583,13 +583,13 @@
       "⚖️"
     ],
     "description": "The Netherlands has {{expected}} police stations. Are they all in OSM?",
-    "lastUpdated": "2023-10-26",
+    "lastUpdated": "2025-01-05",
     "country": "NL"
   },
   {
     "id": "f8893b7dedf3c700a59a6124ea5fe52d4f1177cd94e4c190cd82efa3e5a51f23",
     "name": "Fire stations in the Netherlands",
-    "expected": 949,
+    "expected": 961,
     "actual": 1012,
     "expectedSource": "https://kerncijfers.nipv.nl/mosaic/kerncijfers-veiligheidsregio-s/kerncijfers-kazernes",
     "actualSource": "taginfo",
@@ -597,13 +597,13 @@
       "🚒"
     ],
     "description": "The Netherlands has {{expected}} fire stations. Are they all in OSM?",
-    "lastUpdated": "2023-10-26",
+    "lastUpdated": "2025-01-05",
     "country": "NL"
   },
   {
     "id": "a11d416ecb8b6694ce2e2d8f3f204051fd4ac6a33ea188486e8671787cc63be3",
     "name": "Prisons in the Netherlands",
-    "expected": 48,
+    "expected": 47,
     "actual": 48,
     "expectedSource": "https://www.dji.nl/locaties",
     "actualSource": "taginfo",
@@ -611,21 +611,36 @@
       "⚖️"
     ],
     "description": "The Netherlands has {{expected}} prisons. Are they all in OSM?",
-    "lastUpdated": "2023-10-26",
+    "lastUpdated": "2025-01-05",
     "country": "NL"
   },
   {
     "id": "a1b5f8d936156d6b7f182995a4e1f0e5edb3a15084f932282737bd059321f616",
     "name": "Pyaterochka",
-    "expected": 19164,
-    "actual": 14988,
-    "expectedSource": "https://www.x5.ru/wp-content/uploads/2023/06/x5-ar-2022-eng.pdf",
+    "expected": 21308,
+    "actual": 14998,
+    "expectedSource": "https://www.x5.ru/wp-content/uploads/reports/2023/en/financial-statements/",
     "actualSource": "taginfo",
     "tags": [
       "🛒"
     ],
     "description": "Pyaterochka (Пятёрочка), literally translated to \"Five\", is a Russian convenience store. There should be {{expected}} of them in OSM.",
-    "lastUpdated": "2023-11-23",
+    "lastUpdated": "2025-01-05",
+    "country": "RU"
+  },
+  {
+    "id": "4aaf577ade087fcfc1e02a4f673365216ceacea18758910e836d5965bbeb1440",
+    "name": "McDonald's leaves Russia",
+    "expected": 0,
+    "actual": 88,
+    "expectedSource": "https://corporate.mcdonalds.com/corpmcd/our-stories/article/mcd-exit-russia.html",
+    "actualSource": "taginfo",
+    "tags": [
+      "🍔",
+      "🛒"
+    ],
+    "description": "Many companies have left Russia due to the very \"Special\" Military Operation in Ukraine. McDonald's is one of them. Are all the McDonald's in Russia removed from OSM?",
+    "lastUpdated": "2025-01-05",
     "country": "RU"
   },
   {
@@ -645,7 +660,7 @@
   {
     "id": "672c11a3ce96b3a1220ab8c35eb8cee0959397cccc7ee8f3a718d0b3bbd7fdaf",
     "name": "Walmart",
-    "expected": 4616,
+    "expected": 4606,
     "actual": 5902,
     "expectedSource": "https://corporate.walmart.com/about/location-facts",
     "actualSource": "taginfo",
@@ -653,42 +668,42 @@
       "🛒"
     ],
     "description": "Walmart is the largest company in the world by revenue. Are all the Walmart stores in the US tagged?",
-    "lastUpdated": "2023-10-15",
+    "lastUpdated": "2025-01-05",
     "country": "US"
   },
   {
     "id": "9f1d9e36c241ec5015672f9021d172ad264bf2b828ffee865616688870580652",
     "name": "Sam's club",
-    "expected": 599,
-    "actual": 1001,
+    "expected": 600,
+    "actual": 1002,
     "expectedSource": "https://corporate.walmart.com/about/location-facts",
     "actualSource": "taginfo",
     "tags": [
       "🛒"
     ],
     "description": "Sam's Club is a membership-only retail warehouse club. Are all of Sam's Clubhouses in the US tagged?",
-    "lastUpdated": "2023-10-15",
+    "lastUpdated": "2025-01-05",
     "country": "US"
   },
   {
     "id": "3f9e77cd45a114b1e686eeba3cbca311458f447e3a19a8212f440adfa6ca3757",
     "name": "Dollar General",
-    "expected": 19294,
-    "actual": 9740,
+    "expected": 20345,
+    "actual": 9772,
     "expectedSource": "https://investor.dollargeneral.com/websites/dollargeneral/English/0/investor-relations.html",
     "actualSource": "taginfo",
     "tags": [
       "🛒"
     ],
     "description": "This general store, also known as DG Market, DGX, and pOpshelf, sells everything for $1. How much money would we have if we got a dollar for every Dollar General store on the map?",
-    "lastUpdated": "2023-10-23",
+    "lastUpdated": "2025-01-05",
     "country": "US"
   },
   {
-    "id": "bf3569f679d580f0267b0fa49caf4260f19a4d9ff40c4e5943ed4f90093912d2",
+    "id": "e8abbe6249e1c3bc1273888049b5e49146cc4de019208c8295c94231d6c696bc",
     "name": "Dollar Tree & Family Dollar",
-    "expected": 16622,
-    "actual": 8711,
+    "expected": 16774,
+    "actual": 8914,
     "expectedSource": "https://corporate.dollartree.com/_assets/_e019a55beaa640d513e0240de36a677a/dollartreeinfo/db/893/9106/annual_report/DT_2021_Form+10-K_FINAL_5.11.22.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -702,7 +717,7 @@
     "id": "431c3520a26be03937166e9dbfed5a56d41e24de9e0f2530c7bea24eb70af3a6",
     "name": "CVS",
     "expected": 9395,
-    "actual": 8333,
+    "actual": 8342,
     "expectedSource": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0000064803/28e54055-44dd-4a6d-a517-6ffc18161213.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -717,7 +732,7 @@
     "id": "9dbf8e0d4c94858e8b152c16048d24705a9f3a744229e49ea85f8bae7e5ccead",
     "name": "Walgreens",
     "expected": 8600,
-    "actual": 8744,
+    "actual": 8754,
     "expectedSource": "https://s1.q4cdn.com/343380161/files/doc_financials/2022/ar/WBA-2022-Annual-Report.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -732,7 +747,7 @@
     "id": "c5f2cbfcb3b055f1c40fe5d1551d6aee2da24379eb4e83d5a13efb13bb1afe0f",
     "name": "Pharmacies in the US of A",
     "expected": 40000,
-    "actual": 19852,
+    "actual": 19865,
     "expectedSource": "https://s1.q4cdn.com/343380161/files/doc_financials/2023/ar/wba-2023-annual-report.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -776,13 +791,13 @@
   {
     "id": "584fc774358fc5effb44d8d99e39853e0e2192637ec7ffd761f7eb010893cc12",
     "name": "All The Places",
-    "expected": 3622243,
-    "actual": 2367861,
+    "expected": 3641666,
+    "actual": 2373592,
     "expectedSource": "https://www.alltheplaces.xyz/",
     "actualSource": "https://www.alltheplaces.xyz/",
     "tags": [],
     "description": "\n            All The Places is a project to collect and maintain a database of all the places in the world\n            by scraping the websites of businesses, government agencies, or other open data sources.\n            We can use this to find out what the better way to map is: scraping websites or using local knowledge.\n        ",
-    "lastUpdated": "2023-12-30",
+    "lastUpdated": "2025-01-05",
     "country": "Worldwide"
   },
   {
@@ -796,56 +811,56 @@
       "✈️"
     ],
     "description": "The number of airports with IATA codes in OSM",
-    "lastUpdated": "2023-12-05",
+    "lastUpdated": "2025-01-05",
     "country": "Worldwide"
   },
   {
     "id": "45bc39b4b3b48b01c0818ca97beabb4aad95ee48232cd8c79603a6c02a84dafc",
     "name": "Airports with ICAO codes ✈️",
     "expected": 20966,
-    "actual": 17332,
+    "actual": 17334,
     "expectedSource": "https://davidmegginson.github.io/ourairports-data/airports.csv",
     "actualSource": "taginfo",
     "tags": [
       "✈️"
     ],
     "description": "The number of airports with ICAO codes in OSM",
-    "lastUpdated": "2023-12-05",
+    "lastUpdated": "2025-01-05",
     "country": "Worldwide"
   },
   {
     "id": "f0c59ddec204c478382d6632125f2afaa12f1bf052d5e5401e461002b4989a73",
     "name": "Match OurAirports on airports",
-    "expected": 69478,
-    "actual": 51887,
+    "expected": 69529,
+    "actual": 51886,
     "expectedSource": "https://davidmegginson.github.io/ourairports-data/airports.csv",
     "actualSource": "taginfo",
     "tags": [
       "✈️"
     ],
     "description": "OurAirports is a crowdsourced database of airports. Let's see if OSM can add something to it.",
-    "lastUpdated": "2023-12-05",
+    "lastUpdated": "2025-01-05",
     "country": "Worldwide"
   },
   {
     "id": "71a9759b540300dccd608fedd0d7f90356b924b16ff08c62b38d8d281be3b73c",
     "name": "CIA World Factbook - Airports",
     "expected": 50118,
-    "actual": 51234,
+    "actual": 51231,
     "expectedSource": "https://www.cia.gov/the-world-factbook/",
     "actualSource": "taginfo",
     "tags": [
       "✈️"
     ],
     "description": "The CIA has, unsurprisingly, an interest in how many airports there are in a country. We can make use of this curiosity to check how far we are in mapping airports in OSM.",
-    "lastUpdated": "2023-12-30",
+    "lastUpdated": "2025-01-05",
     "country": "Worldwide"
   },
   {
-    "id": "c2b36aee59dbf8222f519bd99b16c067b70f5b77921813c0603301cde9be76fb",
+    "id": "735cd2329eff5a2f9a7958b29d41f7856774347f06bad4dd93aa9b33f59ae58d",
     "name": "Museums",
-    "expected": 91999,
-    "actual": 102844,
+    "expected": 91687,
+    "actual": 102915,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",
     "description": "The number of museums in the world",
@@ -853,42 +868,42 @@
       "🏛️",
       "🎨"
     ],
-    "lastUpdated": "2024-07-28",
+    "lastUpdated": "2025-01-05",
     "country": "Worldwide"
   },
   {
     "id": "cba42aa122a00612e07fbd9a57264c051f3fefdf9ea4b6aebca7e32f4c36da33",
     "name": "Zoos",
-    "expected": 2327,
-    "actual": 8635,
+    "expected": 2330,
+    "actual": 8637,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",
     "description": "The number of zoos in the world",
     "tags": [
       "🦁"
     ],
-    "lastUpdated": "2024-07-28",
+    "lastUpdated": "2025-01-05",
     "country": "Worldwide"
   },
   {
     "id": "3aa187ecc04a2bd9abca79c453b03890b8ba357ac3c454edbe03109ec873a3f2",
     "name": "Aquariums",
-    "expected": 526,
-    "actual": 1484,
+    "expected": 528,
+    "actual": 1485,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",
     "description": "The number of aquariums in the world",
     "tags": [
       "🦁"
     ],
-    "lastUpdated": "2024-07-28",
+    "lastUpdated": "2025-01-05",
     "country": "Worldwide"
   },
   {
     "id": "b066c7374d3f7731bdb5d6b0f7130b08876fc35724699b4f471ba294fef41f51",
     "name": "Museum ships",
-    "expected": 304,
-    "actual": 1090,
+    "expected": 306,
+    "actual": 1093,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",
     "description": "The number of museum ships in the world",
@@ -896,21 +911,7 @@
       "🚢",
       "🏛️"
     ],
-    "lastUpdated": "2024-07-28",
-    "country": "Worldwide"
-  },
-  {
-    "id": "62975e39d14f4438ceeee6c2bee4e74484946b6b6758eda9a99741b86999d6c1",
-    "name": "Sculptures",
-    "expected": 499640,
-    "actual": 98269,
-    "expectedSource": "Wikidata query service",
-    "actualSource": "taginfo",
-    "description": "It is always nice to have some art in your city. Is your local sculpture in OSM?",
-    "tags": [
-      "🎨"
-    ],
-    "lastUpdated": "2023-09-24",
+    "lastUpdated": "2025-01-05",
     "country": "Worldwide"
   }
 ]

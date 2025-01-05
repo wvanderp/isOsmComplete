@@ -19,7 +19,7 @@ export default async function china(): Promise<Comparison[]> {
                 'https://en.wikipedia.org/wiki/Rail_transport_in_China#cite_note-CNCRCC-4',
                 'China transports a lot of people by train. Can they find their stations in OSM?',
                 ['🚂'],
-                '2023-11-28',
+                '2025-01-05',
                 chinaArea
             ),
             await taginfoComparisons(

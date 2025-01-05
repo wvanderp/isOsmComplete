@@ -47,7 +47,7 @@ export default async function allThePlaces(): Promise<Comparison> {
             by scraping the websites of businesses, government agencies, or other open data sources.
             We can use this to find out what the better way to map is: scraping websites or using local knowledge.
         `,
-        lastUpdated: '2023-12-30',
+        lastUpdated: '2025-01-05',
         country: 'Worldwide'
     };
 }

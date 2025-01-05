@@ -53,10 +53,10 @@ export default async function worldwide(): Promise<Comparison[]> {
                 brandWikidata,
                 'Q244457',
                 37000,
-                'https://www.subway.com/en-us/contactus/subwayfaqs/about-subway',
+                'https://newsroom.subway.com/2024-10-01-Subway-Continues-to-Expand-Its-Global-Presence-with-Over-10,000-Future-Restaurant-Commitments',
                 'Subway and McDonald\'s are the two largest fast-food chains in the world. Who has more stores?',
                 ['🍔', '🛒'],
-                '2023-09-24'
+                '2025-01-05'
             ),
             await taginfoComparisons(
                 'Starbucks',
@@ -142,11 +142,11 @@ export default async function worldwide(): Promise<Comparison[]> {
                 'UNESCO World Heritage Sites',
                 'heritage:operator',
                 'whc',
-                1199,
+                1223,
                 'https://whc.unesco.org/en/list/',
                 'UNESCO World Heritage Sites are places of special cultural or physical significance. They have marked {{expected}} of them. Can you find them all in OSM?',
                 ['🌳', '🏛️'],
-                '2023-11-28'
+                '2025-01-05'
             ),
             await openBenches()
         ]

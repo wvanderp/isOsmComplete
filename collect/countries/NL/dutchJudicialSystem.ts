@@ -8,6 +8,7 @@ import taginfoServers from '../../utils/tagInfoServers';
 const taginfoServer = taginfoServers.NL;
 
 const courthousesExpected = [
+    // rechtbanken
     // Rechtbank-Zeeland-West-Brabant
     4,
     // Rechtbank-Rotterdam
@@ -29,6 +30,31 @@ const courthousesExpected = [
     // Rechtbank-Den Haag
     1,
     // Rechtbank-Amsterdam
+    1,
+    // Gerechtshoven / palaces of justice
+    // Gerechtshof Amsterdam
+    1,
+    // Gerechtshof Arnhem-Leeuwarden
+    3,
+    // Gerechtshof Den Haag
+    1,
+    // Gerechtshof 's-Hertogenbosch
+    1,
+    // other
+    // Hoge Raad der Nederlanden
+    1,
+    // College van Beroep voor het bedrijfsleven
+    1,
+    // Centrale Raad van Beroep
+    1,
+    // Raad van State
+    1,
+    // international
+    // Permanent Court of Arbitration
+    1,
+    // International Court of Justice
+    1,
+    // International Criminal Court
     1
 ].reduce((a, b) => a + b, 0);
 
@@ -82,7 +108,7 @@ export default async function dutchJudicialSystem(): Promise<Comparison[]> {
                 'https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Rechtbanken',
                 'In the Netherlands, courts are sometimes called palaces of justice. We expect {{expected}} of them.',
                 ['⚖️'],
-                '2023-10-26',
+                '2025-01-05',
                 taginfoServer
             ),
             await taginfoComparisons(
@@ -94,19 +120,19 @@ export default async function dutchJudicialSystem(): Promise<Comparison[]> {
                 'https://api.politie.nl/v4/politiebureaus/all',
                 'The Netherlands has {{expected}} police stations. Are they all in OSM?',
                 ['⚖️'],
-                '2023-10-26',
+                '2025-01-05',
                 taginfoServer
             ),
             await taginfoComparisons(
                 'Fire stations in the Netherlands',
                 'amenity',
                 'fire_station',
-                949,
+                961,
                 // Click on all links and count the fire stations
                 'https://kerncijfers.nipv.nl/mosaic/kerncijfers-veiligheidsregio-s/kerncijfers-kazernes',
                 'The Netherlands has {{expected}} fire stations. Are they all in OSM?',
                 ['🚒'],
-                '2023-10-26',
+                '2025-01-05',
                 taginfoServer
             ),
             await taginfoComparisons(
@@ -118,12 +144,12 @@ export default async function dutchJudicialSystem(): Promise<Comparison[]> {
                 // https://www.dji.nl/locaties
                 // https://nl.wikipedia.org/wiki/Dienst_Justiti%C3%ABle_Inrichtingen#Overzicht_inrichtingen_DJI
                 // https://experience.geowebonline.nl/Geocortex/Viewer/?app=b5bf572c74e54b0c9574d435afd9d6ce
-                averageToInt([50, 52, 45, 44]),
+                averageToInt([50, 55, 41, 40]),
                 // Click on all links and count the prisons
                 'https://www.dji.nl/locaties',
                 'The Netherlands has {{expected}} prisons. Are they all in OSM?',
                 ['⚖️'],
-                '2023-10-26',
+                '2025-01-05',
                 taginfoServer
             )
         ]

@@ -52,7 +52,7 @@ export default async function retailStoresInEurope(): Promise<Comparison[]> {
         sourceUrl,
         'How many car shops are in Europe?',
         ['🚗'],
-        '2023-09-24',
+        '2025-01-05',
         taginfoServer
     );
 
@@ -63,7 +63,7 @@ export default async function retailStoresInEurope(): Promise<Comparison[]> {
         sourceUrl,
         'How much shopping can be done in Europe?',
         ['🛒'],
-        '2023-09-24',
+        '2025-01-05',
         taginfoServer
     );
 
