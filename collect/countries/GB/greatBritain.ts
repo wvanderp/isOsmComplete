@@ -28,9 +28,9 @@ export default async function greatBritain(): Promise<Comparison[]> {
                 'Q638098',
                 115000,
                 'https://personal.help.royalmail.com/app/answers/detail/a_id/135/~/royal-mails-postbox-network---your-questions-answered',
-                'Are all the Royal Mail post boxes in OSM?',
+                'If you have the sudden urge to send a letter, you can find one of the {{expected}} Royal Mail post boxes in the UK. Some of them are in OSM too.',
                 ['📮'],
-                '2023-09-22',
+                '2024-12-30',
                 taginfoServer
             ),
             await taginfoComparisons(

@@ -16,7 +16,7 @@ export default async function worldwide(): Promise<Comparison[]> {
                 'https://youtu.be/nP-nMZpLM1A?t=409',
                 'Google, in its 2022 keynote, claims that they have 1,600,000,000 buildings. Are we even close with OSM?',
                 ['🏠'],
-                '2023-09-23'
+                '2024-12-30'
             ),
             await overpassComparisonMultiple(
                 'Stolpersteine',
