@@ -26,11 +26,11 @@ export default async function china(): Promise<Comparison[]> {
                 'Coal power plants in China',
                 'generator:source',
                 'coal',
-                3092,
-                'https://www.statista.com/statistics/1268457/coal-power-plants-in-china-by-province',
+                3862,
+                'https://globalenergymonitor.org/projects/global-coal-plant-tracker/tracker/',
                 "Coal is a big part of China's energy production. Reducing carbon emissions means reducing coal power plants. Can OSM help with that?",
                 ['⚡'],
-                '2024-02-18',
+                '2025-01-05',
                 taginfoServer
             )
         ]

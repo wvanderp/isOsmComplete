@@ -24,7 +24,7 @@ export default async function europe(): Promise<Comparison[]> {
                 'https://fastnedcharging.com/nl/locaties',
                 'Fastned is a provider of charging stations in Europe. What is the charge of Fastneds network in OSM?',
                 ['🔋', '🚗'],
-                '2024-02-18',
+                '2025-01-05',
                 taginfoServer
             ),
 

@@ -52,11 +52,11 @@ export default async function netherlands(): Promise<Comparison[]> {
                 'Traffic enforcement camera',
                 'highway',
                 'speed_camera',
-                615,
-                'https://www.rtlnieuws.nl/nieuws/nederland/artikel/5214097/flitspaal-cjib-boetes-overtredingen-snelheid-bon-auto-politie',
+                642,
+                'https://www.om.nl/actueel/nieuws/2024/04/29/om-vreest-wildgroei-gemeentelijke-flitspalen',
                 'Getting a ticket is really annoying! Maybe OSM can help you obey the law extremely locally.',
                 ['🚗', '👀'],
-                '2024-02-18',
+                '2025-01-05',
                 taginfoServer
             ),
             await taginfoComparisonMultipleTags(
@@ -101,7 +101,7 @@ export default async function netherlands(): Promise<Comparison[]> {
                 'https://www.brandweer.nl/onderwerpen/sirenes/', // an other source could be: https://luchtalarmen.nl/info
                 'At this critical point in time, facing extinction in The Netherlands, they deserve to be mapped.',
                 ['🛒'],
-                '2024-02-18',
+                '2025-01-05',
                 taginfoServer
             ),
             await taginfoComparisons(

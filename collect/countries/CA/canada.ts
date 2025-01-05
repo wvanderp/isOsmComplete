@@ -34,7 +34,7 @@ export default async function canada(): Promise<Comparison[]> {
                 'https://www.navcanada.ca/en/ecfs_07_en.pdf',
                 'Canada is a bit special and designed their own codes for airports. Fortunately, there are only a few to add.',
                 ['✈️'],
-                '2024-02-24'
+                '2025-01-05'
             )
         ]
     );

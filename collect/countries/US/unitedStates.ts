@@ -3,6 +3,7 @@ import appendCountry from '../../utils/appendData';
 import { brandWikidata, healthcare, pharmacy } from '../../utils/osmTags';
 import taginfoServers from '../../utils/tagInfoServers';
 import taginfoComparisons, { taginfoComparisonKeyOnly, taginfoComparisonMultipleTags } from '../../utils/taginfoComparisons';
+import sanFrancisco from './SanfranSisco';
 
 const taginfoServer = taginfoServers.US;
 
@@ -13,11 +14,11 @@ export default async function unitedStates(): Promise<Comparison[]> {
             await taginfoComparisonKeyOnly(
                 'FAA tags ✈️',
                 'faa',
-                26577,
+                26697,
                 'https://www.faa.gov/air_traffic/flight_info/aeronav/aero_data/Loc_ID_Search/Encodes_Decodes/',
                 'Do all the airports in the US have an FAA tag?',
                 ['✈️'],
-                '2024-02-22',
+                '2025-01-05',
                 taginfoServer
             ),
             await taginfoComparisons(
@@ -97,7 +98,20 @@ export default async function unitedStates(): Promise<Comparison[]> {
                 ['🛒', '🏥'],
                 '2024-02-18',
                 taginfoServer
-            )
+            ),
+            await taginfoComparisons(
+                'ShotSpotter',
+                'surveillance:type',
+                'gunshot_detector',
+                25580,
+                'https://www.wired.com/story/shotspotter-secret-sensor-locations-leak/',
+                'ShotSpotter is a surveillance system that listens for gunshots. The company behind them (SoundThinking) dont want you to know where they are. So lets add them to OSM!',
+                ['👀', '⚖️'],
+                '2025-01-05',
+                taginfoServer
+            ),
+
+            ...(await sanFrancisco())
         ]
     );
 }

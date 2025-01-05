@@ -28,7 +28,7 @@
   {
     "id": "a18d3e40ae9fc681bce81114b28db33c050281ab197e033ee141a6990a55a738",
     "name": "IKEA stores",
-    "expected": 471,
+    "expected": 480,
     "actual": 591,
     "expectedSource": "https://www.ikea.com/global/en/our-business/how-we-work/",
     "actualSource": "overpass",
@@ -36,7 +36,7 @@
       "🛒"
     ],
     "description": "IKEA is a furniture store. They have {{expected}} stores in 63 countries. Are they all in OSM?",
-    "lastUpdated": "2024-01-22",
+    "lastUpdated": "2025-01-05",
     "country": "Worldwide"
   },
   {
@@ -229,7 +229,7 @@
       "🚗"
     ],
     "description": "Fastned is a provider of charging stations in Europe. What is the charge of Fastneds network in OSM?",
-    "lastUpdated": "2024-02-18",
+    "lastUpdated": "2025-01-05",
     "country": "EU"
   },
   {
@@ -257,7 +257,7 @@
       "✈️"
     ],
     "description": "Canada is a bit special and designed their own codes for airports. Fortunately, there are only a few to add.",
-    "lastUpdated": "2024-02-24",
+    "lastUpdated": "2025-01-05",
     "country": "CA"
   },
   {
@@ -277,15 +277,15 @@
   {
     "id": "c36d0cf963a5575f58ba8bae8b2f8ddee715472f45cacecb2557e6d081535fa8",
     "name": "Coal power plants in China",
-    "expected": 3092,
+    "expected": 3862,
     "actual": 4249,
-    "expectedSource": "https://www.statista.com/statistics/1268457/coal-power-plants-in-china-by-province",
+    "expectedSource": "https://globalenergymonitor.org/projects/global-coal-plant-tracker/tracker/",
     "actualSource": "taginfo",
     "tags": [
       "⚡"
     ],
     "description": "Coal is a big part of China's energy production. Reducing carbon emissions means reducing coal power plants. Can OSM help with that?",
-    "lastUpdated": "2024-02-18",
+    "lastUpdated": "2025-01-05",
     "country": "CN"
   },
   {
@@ -448,16 +448,16 @@
   {
     "id": "24bd6d67bee4f7c61cf54fdc835eddc747fff751af8d7fccdafe27e948aaaaa5",
     "name": "Traffic enforcement camera",
-    "expected": 615,
+    "expected": 642,
     "actual": 879,
-    "expectedSource": "https://www.rtlnieuws.nl/nieuws/nederland/artikel/5214097/flitspaal-cjib-boetes-overtredingen-snelheid-bon-auto-politie",
+    "expectedSource": "https://www.om.nl/actueel/nieuws/2024/04/29/om-vreest-wildgroei-gemeentelijke-flitspalen",
     "actualSource": "taginfo",
     "tags": [
       "🚗",
       "👀"
     ],
     "description": "Getting a ticket is really annoying! Maybe OSM can help you obey the law extremely locally.",
-    "lastUpdated": "2024-02-18",
+    "lastUpdated": "2025-01-05",
     "country": "NL"
   },
   {
@@ -513,7 +513,7 @@
       "🛒"
     ],
     "description": "At this critical point in time, facing extinction in The Netherlands, they deserve to be mapped.",
-    "lastUpdated": "2024-02-18",
+    "lastUpdated": "2025-01-05",
     "country": "NL"
   },
   {
@@ -646,7 +646,7 @@
   {
     "id": "9d5c0df008dd2cd881f6559e5fe5e75942d8b455ccfa7925ae091f84357d841c",
     "name": "FAA tags ✈️",
-    "expected": 26577,
+    "expected": 26697,
     "actual": 10268,
     "expectedSource": "https://www.faa.gov/air_traffic/flight_info/aeronav/aero_data/Loc_ID_Search/Encodes_Decodes/",
     "actualSource": "taginfo",
@@ -654,7 +654,7 @@
       "✈️"
     ],
     "description": "Do all the airports in the US have an FAA tag?",
-    "lastUpdated": "2024-02-22",
+    "lastUpdated": "2025-01-05",
     "country": "US"
   },
   {
@@ -759,6 +759,37 @@
     "country": "US"
   },
   {
+    "id": "64b37b8e5569b44e50e64d6a97beb4352eb95ffb565f7b18ded312e9ed767a62",
+    "name": "ShotSpotter",
+    "expected": 25580,
+    "actual": 1,
+    "expectedSource": "https://www.wired.com/story/shotspotter-secret-sensor-locations-leak/",
+    "actualSource": "taginfo",
+    "tags": [
+      "👀",
+      "⚖️"
+    ],
+    "description": "ShotSpotter is a surveillance system that listens for gunshots. The company behind them (SoundThinking) dont want you to know where they are. So lets add them to OSM!",
+    "lastUpdated": "2025-01-05",
+    "country": "US"
+  },
+  {
+    "id": "3822544fb7dc2b50617b988e2c8a8a675ada5f72d5f015b3e69c5d3571252d59",
+    "name": "Automatic number-plate recognition in San Francisco",
+    "expected": 400,
+    "actual": 73,
+    "expectedSource": "https://sfist.com/2025/01/03/sfpd-refuses-to-say-where-theyve-placed-those-400-automated-license-plate-readers-all-over-town/",
+    "actualSource": "overpass",
+    "tags": [
+      "👀",
+      "⚖️",
+      "🚗"
+    ],
+    "description": "The SFPD has placed 400 ALPRs all over town, but they refuse to say where they are. Maybe we can help them find them?",
+    "lastUpdated": "2024-07-28",
+    "country": "US"
+  },
+  {
     "id": "3d841cb7e2304ec56f21c5e6b23477afd658e33e9de5e0a139634794e25eb5a7",
     "name": "McDonald's in Vietnam",
     "expected": 35,
@@ -859,7 +890,7 @@
   {
     "id": "735cd2329eff5a2f9a7958b29d41f7856774347f06bad4dd93aa9b33f59ae58d",
     "name": "Museums",
-    "expected": 91687,
+    "expected": 91691,
     "actual": 102915,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",

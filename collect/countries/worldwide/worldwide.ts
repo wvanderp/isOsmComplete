@@ -32,11 +32,11 @@ export default async function worldwide(): Promise<Comparison[]> {
                 'IKEA stores',
                 [[brandWikidata, 'Q54078'], ['shop', 'furniture']],
                 'and',
-                471,
+                480,
                 'https://www.ikea.com/global/en/our-business/how-we-work/',
                 'IKEA is a furniture store. They have {{expected}} stores in 63 countries. Are they all in OSM?',
                 ['🛒'],
-                '2024-01-22'
+                '2025-01-05'
             ),
             await taginfoComparisons(
                 '7-Eleven stores',
