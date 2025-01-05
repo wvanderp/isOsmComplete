@@ -1,9 +1,10 @@
+/* eslint-disable sonarjs/no-duplicate-string */
 import { Comparison } from '../../types';
 import appendCountry from '../../utils/appendData';
 import { brandWikidata, healthcare, pharmacy } from '../../utils/osmTags';
 import taginfoServers from '../../utils/tagInfoServers';
 import taginfoComparisons, { taginfoComparisonKeyOnly, taginfoComparisonMultipleTags } from '../../utils/taginfoComparisons';
-import sanFrancisco from './SanfranSisco';
+import sanFrancisco from './sanFrancisco';
 
 const taginfoServer = taginfoServers.US;
 
