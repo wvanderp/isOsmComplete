@@ -23,7 +23,7 @@ function determine_chart_width(leftMargin: number, rightMargin: number): number 
 }
 
 function debounce(function_: () => void, wait: number) {
-    let timeout: NodeJS.Timeout;
+    let timeout: ReturnType<typeof setTimeout>;
     return () => {
         clearTimeout(timeout);
         timeout = setTimeout(function_, wait);
@@ -52,7 +52,7 @@ export default function draw_chronology_chart(
         }));
 
         const t0 = data[0].date;
-        const t1 = data.at(-1).date;
+        const t1 = data.at(-1)?.date ?? new Date();
 
         const max = Math.max(d3.max(data, (d) => d.value) ?? 0, goal) * 1.1; // Added 10% headroom
 
@@ -60,6 +60,7 @@ export default function draw_chronology_chart(
             .domain([t0, t1])
             .range([0, w]);
         const axis_x = d3.axisBottom(scale_x)
+            // @ts-expect-error
             .tickFormat(d3.timeFormat('%b %Y'))
             .ticks(6)
             .tickSize(-h);
@@ -68,7 +69,7 @@ export default function draw_chronology_chart(
             .domain([0, max])
             .range([h, 0]);
 
-        const line = d3.line().curve(d3.curveBasis)
+        const line = d3.line<{ date: Date; value: number }>().curve(d3.curveBasis)
             .x((d) => scale_x(d.date))
             .y((d) => scale_y(d.value));
 
@@ -82,6 +83,7 @@ export default function draw_chronology_chart(
         chart.append('g')
             .attr('class', 'grid')
             .attr('transform', `translate(0, ${h})`)
+            // @ts-expect-error
             .call(axis_x)
             .style('color', '#e0e0e0')
             .select('.domain')
@@ -89,7 +91,7 @@ export default function draw_chronology_chart(
 
         chart.append('g')
             .attr('class', 'grid')
-            .call(d3.axisLeft(scale_y).tickSize(-w).tickFormat(''))
+            .call(d3.axisLeft(scale_y).tickSize(-w).tickFormat(() => ''))
             .style('color', '#e0e0e0')
             .select('.domain')
             .remove();
@@ -98,6 +100,7 @@ export default function draw_chronology_chart(
         chart.append('g')
             .attr('class', 'x axis')
             .attr('transform', `translate(0, ${h})`)
+            // @ts-expect-error
             .call(d3.axisBottom(scale_x).tickFormat(d3.timeFormat('%b %Y')))
             .style('color', '#666');
 
@@ -132,5 +135,6 @@ export default function draw_chronology_chart(
     const debouncedRenderChart = debounce(renderChart, 200);
     window.addEventListener('resize', debouncedRenderChart);
 
+    // eslint-disable-next-line react/no-danger
     return <div dangerouslySetInnerHTML={{ __html: container.outerHTML }} />;
 }

@@ -181,7 +181,7 @@ export default function App() {
                 Join us on <a href={pkg.repository.url}>GitHub</a>! We&apos;re looking for enthusiastic contributors to help with:
             </p>
             <ul>
-                <li>Discovering and adding new data sources</li>t
+                <li>Discovering and adding new data sources</li>
                 <li>Making this website even more awesome</li>
                 <li>Building cool new features</li>
             </ul>
