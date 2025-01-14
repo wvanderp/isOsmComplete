@@ -21,9 +21,9 @@
     "@types/crypto-js": "^4.2.2",
     "@types/d3": "^7.4.3",
     "@types/mocha": "^10.0.10",
-    "@types/node": "^22.10.5",
-    "@types/react": "^19.0.2",
-    "@types/react-dom": "^19.0.2",
+    "@types/node": "^22.10.6",
+    "@types/react": "^19.0.7",
+    "@types/react-dom": "^19.0.3",
     "@types/showdown": "^2.0.6",
     "@types/unzipper": "^0.10.10",
     "@typescript-eslint/eslint-plugin": "^7.17.0",
@@ -40,13 +40,13 @@
     "eslint-plugin-sonarjs": "^0.25.1",
     "eslint-plugin-unicorn": "^55.0.0",
     "expect": "^29.7.0",
-    "mocha": "^11.0.1",
+    "vitest": "^1.2.0",
     "npm-run-all": "^4.1.5",
     "process": "^0.11.10",
     "rimraf": "^6.0.1",
-    "sass": "^1.83.1",
+    "sass": "^1.83.4",
     "ts-node": "^10.9.2",
-    "typescript": "^5.7.2",
+    "typescript": "^5.7.3",
     "vite": "^6.0.7",
     "vite-plugin-static-copy": "^2.2.0",
     "vite-plugin-svgr": "^4.3.0"
@@ -79,6 +79,6 @@
     "tsc": "tsc --noEmit",
     "collect": "ts-node collect && npm run lintData",
     "clean": "rimraf build gitBuild",
-    "test": "mocha --recursive tests/**/*.spec.ts tests/**/**/*.spec.ts"
+    "test": "vitest run"
   }
 }

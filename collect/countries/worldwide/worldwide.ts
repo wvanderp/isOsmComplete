@@ -82,41 +82,41 @@ export default async function worldwide(): Promise<Comparison[]> {
                 'KFC',
                 brandWikidata,
                 'Q524757',
-                29900,
-                'https://s2.q4cdn.com/890585342/files/doc_financials/2023/q4/Q4-2023-Earnings-Release.pdf', // from https://investors.yum.com/news-events/financial-releases/
+                31143,
+                'https://s2.q4cdn.com/890585342/files/doc_financials/2024/q3/Yum-Brands-Q3-24-Earnings-Release.pdf', // from https://investors.yum.com/news-events/financial-releases/
                 'KFC expanded out of Kentucky in 1964. They now have {{expected}} stores in 135 countries. Are they all in OSM?',
                 ['🍔', '🛒'],
-                '2024-02-18'
+                '2025-01-14'
             ),
             await taginfoComparisons(
                 'Taco Bell',
                 brandWikidata,
                 'Q752941',
-                8564,
-                'https://s2.q4cdn.com/890585342/files/doc_financials/2023/q4/Q4-2023-Earnings-Release.pdf', // from https://investors.yum.com/news-events/financial-releases/
+                8594,
+                'https://s2.q4cdn.com/890585342/files/doc_financials/2024/q3/Yum-Brands-Q3-24-Earnings-Release.pdf', // from https://investors.yum.com/news-events/financial-releases/
                 'Taco Bell is a fast-food chain. They have {{expected}} stores in 30 countries. Are they all in OSM?',
                 ['🍔', '🛒'],
-                '2024-02-18'
+                '2025-01-14'
             ),
             await taginfoComparisons(
                 'Pizza Hut',
                 brandWikidata,
                 'Q191615',
-                19866,
-                'https://s2.q4cdn.com/890585342/files/doc_financials/2023/q4/Q4-2023-Earnings-Release.pdf', // from https://investors.yum.com/news-events/financial-releases/
+                19927,
+                'https://s2.q4cdn.com/890585342/files/doc_financials/2024/q3/Yum-Brands-Q3-24-Earnings-Release.pdf', // from https://investors.yum.com/news-events/financial-releases/
                 'Pizza Hut is a fast-food chain. They have {{expected}} stores in 100 countries. Are they all in OSM?',
                 ['🍔', '🛒'],
-                '2024-02-18'
+                '2025-01-14'
             ),
             await taginfoComparisons(
                 'Burger King',
                 brandWikidata,
                 'Q177054',
-                18700,
-                'https://www.rbi.com/English/brands/default.aspx',
+                19384,
+                'https://s26.q4cdn.com/317237604/files/doc_financials/2023/ar/RBI-Global-Store-Counts-Across-Brands-by-Market-February-13-2024.pdf', // https://www.rbi.com/English/investors/annual-reports/default.aspx
                 'Burger King is a fast-food chain. They have {{expected}} stores in 100 countries. Are they all in OSM?',
                 ['🍔', '🛒'],
-                '2024-02-18'
+                '2025-02-14'
             ),
             await overpassComparisonMultiple(
                 'Tesla superchargers',
@@ -136,7 +136,7 @@ export default async function worldwide(): Promise<Comparison[]> {
                 'https://brightlio.com/data-center-stats/', // https://www.statista.com/statistics/1228433/data-centers-worldwide-by-country/ has a similar number
                 'Data centers are the backbone of the internet. There are {{expected}} of them in the world. Are they all in OSM?',
                 ['🌐'],
-                '2024-07-28'
+                '2025-01-05'
             ),
             await taginfoComparisons(
                 'UNESCO World Heritage Sites',

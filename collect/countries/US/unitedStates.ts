@@ -59,23 +59,24 @@ export default async function unitedStates(): Promise<Comparison[]> {
                 'Dollar Tree & Family Dollar',
                 brandWikidata,
                 ['Q5289230', 'Q5433101'],
-                16774, // dollar tree and family dollar
+                8415 + 8359, // dollar tree and family dollar
                 // https://corporate.dollartree.com/investors/financial-information/annual-reports-proxies
-                'https://corporate.dollartree.com/_assets/_e019a55beaa640d513e0240de36a677a/dollartreeinfo/db/893/9106/annual_report/DT_2021_Form+10-K_FINAL_5.11.22.pdf',
+                'https://corporate.dollartree.com/_assets/_4a3a5283aa3f850b49f9ea2652af1540/dollartreeinfo/db/893/10332/annual_report/2023+Annual+Report+PDF+Version+for+IR+Website+v3.0.pdf',
                 'Dollar Trees pop out of the ground like... trees. Its sister, Family Dollar, can be compared to rabbits. But are these Family Dollar & Dollar Trees documented?',
                 ['🛒'],
-                '2024-02-18'
+                '2025-01-14'
                 // using the worldwide taginfo server because they are located in us and canada
             ),
             await taginfoComparisons(
                 'CVS',
                 brandWikidata,
                 'Q2078880',
-                7500 + 1895, // locations + embedded pharmacies
-                'https://d18rn0p25nwr6d.cloudfront.net/CIK-0000064803/28e54055-44dd-4a6d-a517-6ffc18161213.pdf', // from https://investors.cvshealth.com/investors/financial-information/sec-filings/default.aspx
+                9395, // locations + embedded pharmacies
+                // from https://investors.cvshealth.com/investors/financial-information/sec-filings/default.aspx (search for `Total stores`)
+                'https://d18rn0p25nwr6d.cloudfront.net/CIK-0000064803/28e54055-44dd-4a6d-a517-6ffc18161213.pdf',
                 'Having a pharmacy in every corner of the US is a great thing. Does every corner of OSM have a CVS pharmacy?',
                 ['🛒', '🏥'],
-                '2024-02-18',
+                '2025-01-14',
                 taginfoServer
             ),
             await taginfoComparisons(
@@ -106,7 +107,7 @@ export default async function unitedStates(): Promise<Comparison[]> {
                 'gunshot_detector',
                 25580,
                 'https://www.wired.com/story/shotspotter-secret-sensor-locations-leak/',
-                'ShotSpotter is a surveillance system that listens for gunshots. The company behind them (SoundThinking) dont want you to know where they are. So lets add them to OSM!',
+                'ShotSpotter is a surveillance system that listens for gunshots. The company behind them (SoundThinking) don\'t want you to know where they are. So lets add them to OSM!',
                 ['👀', '⚖️'],
                 '2025-01-05',
                 taginfoServer
