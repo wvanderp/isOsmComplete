@@ -17,7 +17,7 @@
     "id": "7db310de75fd52cb02a885303658ba574e5e5262b439fc3c6116a6661811782e",
     "name": "Stolpersteine",
     "expected": 100000,
-    "actual": 38387,
+    "actual": 38389,
     "expectedSource": "https://www.timesofisrael.com/holocaust-memorial-project-marks-milestone-with-100000-stumbling-blocks/",
     "actualSource": "overpass",
     "tags": [],
@@ -163,7 +163,7 @@
     "id": "72b7bf05d23320f5325ae692c0c8de3fb12445f9c049e002e5dbe1976f8f1f4b",
     "name": "Tesla superchargers",
     "expected": 5952,
-    "actual": 1287,
+    "actual": 1288,
     "expectedSource": "https://digitalassets.tesla.com/tesla-contents/image/upload/IR/TSLA-Q4-2023-Update.pdf",
     "actualSource": "overpass",
     "tags": [
@@ -206,7 +206,7 @@
   {
     "id": "681037426fe19e62eba5d82fa128583b311ed6368eb25d638242103510647c5a",
     "name": "Memorial benches",
-    "expected": 34664,
+    "expected": 34665,
     "actual": 854,
     "expectedSource": "https://openbenches.org/",
     "actualSource": "taginfo",
@@ -264,7 +264,7 @@
     "id": "dace299682b6e90a3ec0b6e29d2ea57da76e3a7f30223cc01164bad12ae8f7d2",
     "name": "Train stations in China",
     "expected": 5470,
-    "actual": 6134,
+    "actual": 6146,
     "expectedSource": "https://en.wikipedia.org/wiki/Rail_transport_in_China#cite_note-CNCRCC-4",
     "actualSource": "overpass",
     "tags": [
@@ -350,7 +350,7 @@
     "id": "68ade438a47fe782c8ec2ddd1ef9bf20dcb26a0198125f4f076c34eba80504d4",
     "name": "Royal Mail post boxes",
     "expected": 115000,
-    "actual": 20954,
+    "actual": 20955,
     "expectedSource": "https://personal.help.royalmail.com/app/answers/detail/a_id/135/~/royal-mails-postbox-network---your-questions-answered",
     "actualSource": "taginfo",
     "tags": [
@@ -890,7 +890,7 @@
   {
     "id": "735cd2329eff5a2f9a7958b29d41f7856774347f06bad4dd93aa9b33f59ae58d",
     "name": "Museums",
-    "expected": 92266,
+    "expected": 92273,
     "actual": 102993,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",
