@@ -1,7 +1,7 @@
 import { Comparison } from '../../types';
 import appendCountry from '../../utils/appendData';
 import { brandWikidata } from '../../utils/osmTags';
-import { overpassComparisonMultiple } from '../../utils/overpassComparisons';
+import { overpassComparisonMultiple, overpassComparisonRaw } from '../../utils/overpassComparisons';
 import taginfoComparisons, { taginfoComparisonKeyOnly, taginfoComparisonMultipleTags } from '../../utils/taginfoComparisons';
 import openBenches from './OpenBenches';
 
@@ -147,6 +147,32 @@ export default async function worldwide(): Promise<Comparison[]> {
                 'UNESCO World Heritage Sites are places of special cultural or physical significance. They have marked {{expected}} of them. Can you find them all in OSM?',
                 ['🌳', '🏛️'],
                 '2025-01-05'
+            ),
+            await overpassComparisonRaw(
+                'US Overseas Military Bases',
+                `
+                [out:json][timeout:180];
+                (
+                nwr["military"="base"]["operator"~"^(United States|US)"];
+                )->.all_bases;
+        
+                area["ISO3166-1"="US"]->.us;
+        
+                (
+                node.all_bases(area.us);
+                way.all_bases(area.us);
+                relation.all_bases(area.us);
+                )->.bases_in_us;
+        
+                ( .all_bases; - .bases_in_us; );
+        
+                out count;
+                `,
+                750,
+                'https://quincyinst.org/research/drawdown-improving-u-s-and-global-security-through-military-base-closures-abroad/#executive-summary',
+                'The US provides freedom anywhere in the world. Let\'s make a map of all {{expected}} locations where freedom can be received.',
+                ['🪖'],
+                '2025-01-25'
             ),
             await openBenches()
         ]

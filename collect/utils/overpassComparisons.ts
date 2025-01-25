@@ -1,4 +1,4 @@
-import overpassSimpleQuery from '../api/overpass';
+import { overpassSimpleQuery, overpassRawQuery } from '../api/overpass';
 import { Comparison } from '../types';
 import getHash from './getHash';
 
@@ -73,6 +73,43 @@ export async function overpassComparisonMultiple(
 
     return {
         id: getHash(JSON.stringify(query)),
+        name,
+        expected,
+        actual: count,
+        expectedSource,
+        actualSource: 'overpass',
+        tags,
+        description,
+        lastUpdated
+    };
+}
+
+/**
+ * Performs a comparison using a raw Overpass query string
+ * @param name - The name of the comparison
+ * @param rawQuery - The raw Overpass query string
+ * @param expected - The expected count of features
+ * @param expectedSource - The source of the expected count
+ * @param description - A description of what is being compared
+ * @param tags - Array of tags for categorizing the comparison
+ * @param lastUpdated - Date string of when the comparison was last updated
+ * @returns Promise containing the comparison result
+ */
+export async function overpassComparisonRaw(
+    name: string,
+    rawQuery: string,
+    expected: number,
+    expectedSource: string,
+    description: string,
+    tags: string[],
+    lastUpdated: string
+): Promise<Comparison> {
+    console.info(`Starting on ${name}`);
+
+    const count = await overpassRawQuery(rawQuery);
+
+    return {
+        id: getHash(rawQuery),
         name,
         expected,
         actual: count,

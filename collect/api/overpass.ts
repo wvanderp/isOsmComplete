@@ -18,7 +18,7 @@ function orQuery(queries: [string, string][], area?: number): string {
  * @param {'and' | 'or'} [operator] - Whether to use an AND or OR operator for the query.
  * @returns A promise that resolves to the count of matching elements.
  */
-export default async function overpassSimpleQuery(queries: [string, string][], area?: number, operator: 'and' | 'or' = 'and'): Promise<number> {
+export async function overpassSimpleQuery(queries: [string, string][], area?: number, operator: 'and' | 'or' = 'and'): Promise<number> {
     const queryPart = operator === 'and' ? andQuery(queries, area) : orQuery(queries, area);
     const query = `
     [out:json][timeout:25];
@@ -27,6 +27,23 @@ export default async function overpassSimpleQuery(queries: [string, string][], a
     ${queryPart}
     );
     out count;`;
+
+    return callApi(query);
+}
+
+/**
+ * Executes a raw Overpass query and returns the count of matching elements.
+ * @param {string} query - The raw Overpass query string
+ * @returns A promise that resolves to the count of matching elements.
+ */
+export async function overpassRawQuery(query: string): Promise<number> {
+    // Ensure the query has the necessary output format
+    if (!query.includes('[out:json]')) {
+        throw new Error('Query must include [out:json]');
+    }
+    if (!query.includes('out count')) {
+        throw new Error('Query must include out count');
+    }
 
     return callApi(query);
 }
