@@ -153,7 +153,8 @@ export default async function worldwide(): Promise<Comparison[]> {
                 `
                 [out:json][timeout:180];
                 (
-                nwr["military"="base"]["operator"~"^(United States|US)"];
+         	       nwr["landuse"="military"]["operator"~"^(United States|US)"];
+        	       nwr["military"]["operator"~"^(United States|US)"];
                 )->.all_bases;
         
                 area["ISO3166-1"="US"]->.us;

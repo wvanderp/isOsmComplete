@@ -17,7 +17,7 @@
     "id": "7db310de75fd52cb02a885303658ba574e5e5262b439fc3c6116a6661811782e",
     "name": "Stolpersteine",
     "expected": 100000,
-    "actual": 38591,
+    "actual": 38595,
     "expectedSource": "https://www.timesofisrael.com/holocaust-memorial-project-marks-milestone-with-100000-stumbling-blocks/",
     "actualSource": "overpass",
     "tags": [],
@@ -204,10 +204,10 @@
     "country": "Worldwide"
   },
   {
-    "id": "e0f93153e38cfbda6564e7764675a6194379174c5cd01c01aa6251cb9646a792",
+    "id": "5fceb53220bd7bdd350d95e0cbf518db0f7f09d3aaac05d7cff2ac6b2efc1b63",
     "name": "US Overseas Military Bases",
     "expected": 750,
-    "actual": 11,
+    "actual": 67,
     "expectedSource": "https://quincyinst.org/research/drawdown-improving-u-s-and-global-security-through-military-base-closures-abroad/#executive-summary",
     "actualSource": "overpass",
     "tags": [
@@ -220,7 +220,7 @@
   {
     "id": "681037426fe19e62eba5d82fa128583b311ed6368eb25d638242103510647c5a",
     "name": "Memorial benches",
-    "expected": 34883,
+    "expected": 34886,
     "actual": 859,
     "expectedSource": "https://openbenches.org/",
     "actualSource": "taginfo",
@@ -904,7 +904,7 @@
   {
     "id": "735cd2329eff5a2f9a7958b29d41f7856774347f06bad4dd93aa9b33f59ae58d",
     "name": "Museums",
-    "expected": 92389,
+    "expected": 92426,
     "actual": 103148,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",
