@@ -17,7 +17,7 @@
     "id": "7db310de75fd52cb02a885303658ba574e5e5262b439fc3c6116a6661811782e",
     "name": "Stolpersteine",
     "expected": 100000,
-    "actual": 38622,
+    "actual": 38627,
     "expectedSource": "https://www.timesofisrael.com/holocaust-memorial-project-marks-milestone-with-100000-stumbling-blocks/",
     "actualSource": "overpass",
     "tags": [],
@@ -163,7 +163,7 @@
     "id": "72b7bf05d23320f5325ae692c0c8de3fb12445f9c049e002e5dbe1976f8f1f4b",
     "name": "Tesla superchargers",
     "expected": 5952,
-    "actual": 1300,
+    "actual": 1302,
     "expectedSource": "https://digitalassets.tesla.com/tesla-contents/image/upload/IR/TSLA-Q4-2023-Update.pdf",
     "actualSource": "overpass",
     "tags": [
@@ -791,7 +791,7 @@
     "id": "3822544fb7dc2b50617b988e2c8a8a675ada5f72d5f015b3e69c5d3571252d59",
     "name": "Automatic number-plate recognition in San Francisco",
     "expected": 400,
-    "actual": 188,
+    "actual": 193,
     "expectedSource": "https://sfist.com/2025/01/03/sfpd-refuses-to-say-where-theyve-placed-those-400-automated-license-plate-readers-all-over-town/",
     "actualSource": "overpass",
     "tags": [
@@ -836,8 +836,8 @@
   {
     "id": "584fc774358fc5effb44d8d99e39853e0e2192637ec7ffd761f7eb010893cc12",
     "name": "All The Places",
-    "expected": 3613319,
-    "actual": 2394184,
+    "expected": 3628418,
+    "actual": 2396567,
     "expectedSource": "https://www.alltheplaces.xyz/",
     "actualSource": "https://www.alltheplaces.xyz/",
     "tags": [],
@@ -904,7 +904,7 @@
   {
     "id": "735cd2329eff5a2f9a7958b29d41f7856774347f06bad4dd93aa9b33f59ae58d",
     "name": "Museums",
-    "expected": 92436,
+    "expected": 92442,
     "actual": 103174,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",
@@ -947,7 +947,7 @@
   {
     "id": "b066c7374d3f7731bdb5d6b0f7130b08876fc35724699b4f471ba294fef41f51",
     "name": "Museum ships",
-    "expected": 307,
+    "expected": 308,
     "actual": 1091,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",
