@@ -3,7 +3,7 @@
     "id": "f86b36460a37c5a45dea617f3fbd10c18027319318d2283be3f8318a7a793bca",
     "name": "Match Google on building",
     "expected": 1600000000,
-    "actual": 634256138,
+    "actual": 634348667,
     "expectedSource": "https://youtu.be/nP-nMZpLM1A?t=409",
     "actualSource": "taginfo",
     "tags": [
@@ -17,7 +17,7 @@
     "id": "7db310de75fd52cb02a885303658ba574e5e5262b439fc3c6116a6661811782e",
     "name": "Stolpersteine",
     "expected": 100000,
-    "actual": 38679,
+    "actual": 38742,
     "expectedSource": "https://www.timesofisrael.com/holocaust-memorial-project-marks-milestone-with-100000-stumbling-blocks/",
     "actualSource": "overpass",
     "tags": [],
@@ -43,7 +43,7 @@
     "id": "34d881bb4626ac285c1c64c08944d6d8883e5bfdef1d5bb2c0d2eeab9db0d20e",
     "name": "7-Eleven stores",
     "expected": 83579,
-    "actual": 40219,
+    "actual": 40223,
     "expectedSource": "https://www.7andi.com/en/ir/file/library/mr/pdf/2023_01_all_a.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -58,7 +58,7 @@
     "id": "ceafc782f32e77207571d2c2de651c13d6f8704acbe2221a9a7af3dd68313bf8",
     "name": "Subway stores",
     "expected": 37000,
-    "actual": 23117,
+    "actual": 23120,
     "expectedSource": "https://newsroom.subway.com/2024-10-01-Subway-Continues-to-Expand-Its-Global-Presence-with-Over-10,000-Future-Restaurant-Commitments",
     "actualSource": "taginfo",
     "tags": [
@@ -118,7 +118,7 @@
     "id": "1741ef1701505db0c126d61364820e8e2d485d96751eaa8ef3e3850ee0595b22",
     "name": "Taco Bell",
     "expected": 8594,
-    "actual": 6904,
+    "actual": 6906,
     "expectedSource": "https://s2.q4cdn.com/890585342/files/doc_financials/2024/q3/Yum-Brands-Q3-24-Earnings-Release.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -133,7 +133,7 @@
     "id": "248346ad79386b814c4c361474a0eede7d7d254e1302feeacd7a2db3965ac5ba",
     "name": "Pizza Hut",
     "expected": 19927,
-    "actual": 7669,
+    "actual": 7671,
     "expectedSource": "https://s2.q4cdn.com/890585342/files/doc_financials/2024/q3/Yum-Brands-Q3-24-Earnings-Release.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -148,7 +148,7 @@
     "id": "ebf58077453c74c27a1a8384024439568732ce333c09c0899c6156177657d513",
     "name": "Burger King",
     "expected": 19384,
-    "actual": 14357,
+    "actual": 14356,
     "expectedSource": "https://s26.q4cdn.com/317237604/files/doc_financials/2023/ar/RBI-Global-Store-Counts-Across-Brands-by-Market-February-13-2024.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -178,7 +178,7 @@
     "id": "73c662317d2a4e93f6b2d96626dd2667624f8fe48292bce3a735025fb3df82c4",
     "name": "Data centers",
     "expected": 10978,
-    "actual": 3311,
+    "actual": 3313,
     "expectedSource": "https://brightlio.com/data-center-stats/",
     "actualSource": "taginfo",
     "tags": [
@@ -220,7 +220,7 @@
   {
     "id": "681037426fe19e62eba5d82fa128583b311ed6368eb25d638242103510647c5a",
     "name": "Memorial benches",
-    "expected": 34895,
+    "expected": 34898,
     "actual": 861,
     "expectedSource": "https://openbenches.org/",
     "actualSource": "taginfo",
@@ -250,7 +250,7 @@
     "id": "fcba5aaec2e6bac985428897470d2881bb4d9df7668db7fdc1e0f2fd416afb01",
     "name": "Retail stores in Europe",
     "expected": 2575171,
-    "actual": 2843999,
+    "actual": 2844494,
     "expectedSource": "https://data.europa.eu/data/datasets/6k2ldtwgaa2lvoudvtbbq?locale=en",
     "actualSource": "taginfo",
     "tags": [
@@ -278,7 +278,7 @@
     "id": "dace299682b6e90a3ec0b6e29d2ea57da76e3a7f30223cc01164bad12ae8f7d2",
     "name": "Train stations in China",
     "expected": 5470,
-    "actual": 6149,
+    "actual": 6148,
     "expectedSource": "https://en.wikipedia.org/wiki/Rail_transport_in_China#cite_note-CNCRCC-4",
     "actualSource": "overpass",
     "tags": [
@@ -335,7 +335,7 @@
     "id": "eff3c039efd5fc3fdd18a79fe91422c4024bcf602215b91d7691d00697409296",
     "name": "PENNY",
     "expected": 2123,
-    "actual": 2049,
+    "actual": 2048,
     "expectedSource": "https://www.rewe-group.com/content/uploads/2024/05/rewe-financal-report-31.12.2023.pdf?t=2024052702",
     "actualSource": "taginfo",
     "tags": [
@@ -349,7 +349,7 @@
     "id": "154c2bbd2b34ed2924ae6fefbc7a995465c3e80817984f658d2598095d80c9bb",
     "name": "Pubs in the UK",
     "expected": 45350,
-    "actual": 38852,
+    "actual": 38850,
     "expectedSource": "https://beerandpub.com/data-statistics",
     "actualSource": "taginfo",
     "tags": [
@@ -420,7 +420,7 @@
     "id": "618d455f20de0fc57391795eb6857e7ad0343ae82314129cded8f49d1e780184",
     "name": "Car chargers",
     "expected": 168489,
-    "actual": 14946,
+    "actual": 14951,
     "expectedSource": "https://duurzamemobiliteit.databank.nl/mosaic/en-us/elektrisch-vervoer/laadinfra-in-nederland",
     "actualSource": "taginfo",
     "tags": [
@@ -492,7 +492,7 @@
     "id": "cdbed7a45ed2ad1c1ca6bf63e8ec05d2626610408ed194b5f0f3e0befedd8019",
     "name": "Gall & Gall",
     "expected": 628,
-    "actual": 476,
+    "actual": 477,
     "expectedSource": "https://media.aholddelhaize.com/media/clkbibno/ad_ar23_interactive.pdf?t=638459189069470000",
     "actualSource": "taginfo",
     "tags": [
@@ -548,7 +548,7 @@
     "id": "e25f43d2f95cb5907a29ef7934405b05fdff5162c44ce9781b4542e8c334c0fe",
     "name": "Surveillance cameras in the Netherlands",
     "expected": 337609,
-    "actual": 5243,
+    "actual": 5244,
     "expectedSource": "https://eenvandaag.avrotros.nl/item/steeds-meer-cameras-in-de-openbare-ruimte-dit-zijn-de-gevolgen-voor-jouw-privacy/",
     "actualSource": "taginfo",
     "tags": [
@@ -562,7 +562,7 @@
     "id": "7d7cc1074bdd3b5e2609fe5f1c5b941f78e42281f270b579ffa71ff2a5ae831a",
     "name": "Geldmaat ATMs",
     "expected": 769,
-    "actual": 1196,
+    "actual": 1197,
     "expectedSource": "https://api.prod.locator-backend.geldmaat.nl/locations",
     "actualSource": "taginfo",
     "tags": [
@@ -632,7 +632,7 @@
     "id": "a1b5f8d936156d6b7f182995a4e1f0e5edb3a15084f932282737bd059321f616",
     "name": "Pyaterochka",
     "expected": 21308,
-    "actual": 15040,
+    "actual": 15041,
     "expectedSource": "https://www.x5.ru/wp-content/uploads/reports/2023/en/financial-statements/",
     "actualSource": "taginfo",
     "tags": [
@@ -731,7 +731,7 @@
     "id": "431c3520a26be03937166e9dbfed5a56d41e24de9e0f2530c7bea24eb70af3a6",
     "name": "CVS",
     "expected": 9395,
-    "actual": 8349,
+    "actual": 8350,
     "expectedSource": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0000064803/28e54055-44dd-4a6d-a517-6ffc18161213.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -761,7 +761,7 @@
     "id": "c5f2cbfcb3b055f1c40fe5d1551d6aee2da24379eb4e83d5a13efb13bb1afe0f",
     "name": "Pharmacies in the US of A",
     "expected": 40000,
-    "actual": 19915,
+    "actual": 19918,
     "expectedSource": "https://s1.q4cdn.com/343380161/files/doc_financials/2023/ar/wba-2023-annual-report.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -776,7 +776,7 @@
     "id": "a8187a5e4030cd77fad97e7f665e21eff7bf05bb423a4449f46b55e9b68bc0a2",
     "name": "ShotSpotter",
     "expected": 25580,
-    "actual": 582,
+    "actual": 583,
     "expectedSource": "https://www.wired.com/story/shotspotter-secret-sensor-locations-leak/",
     "actualSource": "taginfo",
     "tags": [
@@ -791,7 +791,7 @@
     "id": "3822544fb7dc2b50617b988e2c8a8a675ada5f72d5f015b3e69c5d3571252d59",
     "name": "Automatic number-plate recognition in San Francisco",
     "expected": 400,
-    "actual": 202,
+    "actual": 205,
     "expectedSource": "https://sfist.com/2025/01/03/sfpd-refuses-to-say-where-theyve-placed-those-400-automated-license-plate-readers-all-over-town/",
     "actualSource": "overpass",
     "tags": [
@@ -849,7 +849,7 @@
     "id": "0a275c5789b11d5b72921303db8373e97342f2d81af43e22d3c768d58df03206",
     "name": "Airports with IATA codes ✈️",
     "expected": 9103,
-    "actual": 9941,
+    "actual": 9940,
     "expectedSource": "https://davidmegginson.github.io/ourairports-data/airports.csv",
     "actualSource": "taginfo",
     "tags": [
@@ -863,7 +863,7 @@
     "id": "45bc39b4b3b48b01c0818ca97beabb4aad95ee48232cd8c79603a6c02a84dafc",
     "name": "Airports with ICAO codes ✈️",
     "expected": 20970,
-    "actual": 17360,
+    "actual": 17359,
     "expectedSource": "https://davidmegginson.github.io/ourairports-data/airports.csv",
     "actualSource": "taginfo",
     "tags": [
@@ -876,8 +876,8 @@
   {
     "id": "f0c59ddec204c478382d6632125f2afaa12f1bf052d5e5401e461002b4989a73",
     "name": "Match OurAirports on airports",
-    "expected": 69796,
-    "actual": 51990,
+    "expected": 69806,
+    "actual": 51992,
     "expectedSource": "https://davidmegginson.github.io/ourairports-data/airports.csv",
     "actualSource": "taginfo",
     "tags": [
@@ -891,7 +891,7 @@
     "id": "71a9759b540300dccd608fedd0d7f90356b924b16ff08c62b38d8d281be3b73c",
     "name": "CIA World Factbook - Airports",
     "expected": 50118,
-    "actual": 51330,
+    "actual": 51332,
     "expectedSource": "https://www.cia.gov/the-world-factbook/",
     "actualSource": "taginfo",
     "tags": [
@@ -904,8 +904,8 @@
   {
     "id": "735cd2329eff5a2f9a7958b29d41f7856774347f06bad4dd93aa9b33f59ae58d",
     "name": "Museums",
-    "expected": 92448,
-    "actual": 103189,
+    "expected": 92453,
+    "actual": 103228,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",
     "description": "The number of museums in the world",
@@ -919,8 +919,8 @@
   {
     "id": "cba42aa122a00612e07fbd9a57264c051f3fefdf9ea4b6aebca7e32f4c36da33",
     "name": "Zoos",
-    "expected": 2335,
-    "actual": 8647,
+    "expected": 2336,
+    "actual": 8650,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",
     "description": "The number of zoos in the world",
@@ -934,7 +934,7 @@
     "id": "3aa187ecc04a2bd9abca79c453b03890b8ba357ac3c454edbe03109ec873a3f2",
     "name": "Aquariums",
     "expected": 528,
-    "actual": 1487,
+    "actual": 1486,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",
     "description": "The number of aquariums in the world",
