@@ -102,14 +102,16 @@ export default function App() {
         })
         .filter((tag) => tag !== null);
 
+    function matchesFilters(comparison: Comparison) {
+        const country = countryFilter.length === 0 || (comparison?.country && countryFilter.includes(comparison.country));
+        const tag = tagFilter.length === 0 || (comparison?.tags && comparison.tags.some((t) => tagFilter.includes(t)));
+        return country && tag;
+    }
+
     // Sort countries by prioritizedCountries and then alphabetically
     // and filter by countries and tags
     const countries = data
-        .filter((comparison) => {
-            const country = countryFilter.length === 0 || countryFilter.includes(comparison.country);
-            const tag = tagFilter.length === 0 || comparison.tags.some((t) => tagFilter.includes(t));
-            return country && tag;
-        })
+        .filter((comparison) => matchesFilters(comparison))
         // Cluster comparisons by country
         .reduce<[string, Comparison[]][]>(
             (accumulator, comparison) => {
@@ -130,6 +132,7 @@ export default function App() {
     const today = new Date();
     const comparisonOfTheDay = data[(dayOfTheWeek(today) * dayOfTheYear(today) * dayOfTheMonth(today)) % data.length];
     const comparisonOfTheDayComponent = <ComparisonComponent comparison={comparisonOfTheDay} />;
+    const comparisonOfTheDayMatchesFilter = matchesFilters(comparisonOfTheDay);
 
     // Calculate the total average of all countries
     const expectedEntities = data
@@ -193,10 +196,14 @@ export default function App() {
                 <span>Tag:</span>{tagButtons}<br />
             </div>
 
-            <hr />
-            <h2>🌟 Comparison of the Day</h2>
-            {comparisonOfTheDayComponent}
-            <hr />
+            {comparisonOfTheDayMatchesFilter && (
+                <>
+                    <hr />
+                    <h2>🌟 Comparison of the Day</h2>
+                    {comparisonOfTheDayComponent}
+                    <hr />
+                </>
+            )}
 
             {countries}
         </>

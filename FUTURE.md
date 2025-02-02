@@ -58,10 +58,4 @@ hotels
 
 Make a generic wikidata query compare function.
 
-Centralize the tag info servers.
-
 Making sure that one failed task does not fail the whole collection.
-
-## Japan convenience stores
-
-add 7-eleven, Family Market, and lawson

@@ -9,15 +9,15 @@ export default defineConfig({
         viteStaticCopy({
             targets: [
                 {
-                src: './data/graphs',
-                dest: './'
+                    src: './data/graphs',
+                    dest: './'
                 }
             ]
         })
     ],
     build: {
         outDir: './gitBuild',
-        emptyOutDir: true, // also necessary
+        emptyOutDir: true
     },
-    base: '/isOsmComplete/',
-})
+    base: '/isOsmComplete/'
+});

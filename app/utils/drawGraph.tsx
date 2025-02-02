@@ -59,17 +59,13 @@ export default function draw_chronology_chart(
         const scale_x = d3.scaleTime()
             .domain([t0, t1])
             .range([0, w]);
-        const axis_x = d3.axisBottom(scale_x)
-            // @ts-expect-error
-            .tickFormat(d3.timeFormat('%b %Y'))
-            .ticks(6)
-            .tickSize(-h);
 
         const scale_y = d3.scaleLinear()
             .domain([0, max])
             .range([h, 0]);
 
-        const line = d3.line<{ date: Date; value: number }>().curve(d3.curveBasis)
+        const line = d3.line<{ date: Date; value: number }>()
+            .curve(d3.curveNatural)
             .x((d) => scale_x(d.date))
             .y((d) => scale_y(d.value));
 
@@ -80,18 +76,28 @@ export default function draw_chronology_chart(
             .attr('transform', `translate(${margin.left}, ${margin.top})`);
 
         // Add grid
+
+        const axis_x = d3.axisBottom(scale_x)
+            .tickFormat(() => '')
+            .ticks(6)
+            .tickSize(-h);
+
         chart.append('g')
             .attr('class', 'grid')
             .attr('transform', `translate(0, ${h})`)
-            // @ts-expect-error
             .call(axis_x)
             .style('color', '#e0e0e0')
             .select('.domain')
             .remove();
 
+        const axis_y = d3.axisLeft(scale_y)
+            .tickFormat(() => '')
+            .ticks(6)
+            .tickSize(-w);
+
         chart.append('g')
             .attr('class', 'grid')
-            .call(d3.axisLeft(scale_y).tickSize(-w).tickFormat(() => ''))
+            .call(axis_y)
             .style('color', '#e0e0e0')
             .select('.domain')
             .remove();

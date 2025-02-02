@@ -122,11 +122,11 @@ export default async function worldwide(): Promise<Comparison[]> {
                 'Tesla superchargers',
                 [['amenity', 'charging_station'], ['brand:wikidata', 'Q478214']],
                 'and',
-                5952,
-                'https://digitalassets.tesla.com/tesla-contents/image/upload/IR/TSLA-Q4-2023-Update.pdf', // page 8
+                6975,
+                'https://digitalassets.tesla.com/tesla-contents/image/upload/IR/TSLA-Q4-2024-Update.pdf', // https://ir.tesla.com/#quarterly-disclosure (search for `Supercharger stations`)
                 'When you want to charge your Tesla but the middle screen is dead and you don\'t have the app, you can find a supercharger in OSM. Or can you?',
                 ['🔋', '🚗'],
-                '2024-02-24'
+                '2025-02-02'
             ),
             await taginfoComparisons(
                 'Data centers',

@@ -14,9 +14,9 @@ Be aware that any changes to the `data` folder will be overwritten by the GitHub
 
 ## How to run locally
 
-Install the dependencies with `npm install`
+Install the dependencies with `npm install`.
 
-Run `npm run app` to start the vite development server. This will serve the website on <http://localhost:1234>
+Run `npm run app` to start the Vite development server. This will serve the website on <http://localhost:1234>.
 
 You can use `npm run build` to build the website for production. This will create a `gitBuild` folder with the website.
 
@@ -24,10 +24,10 @@ The data can be collected with `npm run collect`. This will update all the data 
 
 ## Architecture
 
-The website is built with vite and is served from GitHub pages. The data is stored in the repository and is updated with GitHub actions.
+The website is built with Vite and is served from GitHub Pages. The data is stored in the repository and is updated with GitHub Actions.
 
-This website is built with the idea that it should be a static site with no server-side components. This means all the data is collected beforehand, and the website is built with that data. This means that the website can be hosted on GitHub pages and that it can be served from a CDN.
+This website is built with the idea that it should be a static site with no server-side components. This means all the data is collected beforehand, and the website is built with that data. This means that the website can be hosted on GitHub Pages and that it can be served from a CDN.
 
-The data is collected with a node script run periodically on GitHub actions. The data is then committed to the repository, and the website is built with that data.
+The data is collected with a Node script run periodically on GitHub Actions. The data is then committed to the repository, and the website is built with that data.
 
-When anything is pushed to the `main` branch, a GitHub action is triggered that builds the website and pushes it to the `gh-pages` branch. This branch is then served by GitHub pages.
+When anything is pushed to the `main` branch, a GitHub Action is triggered that builds the website and pushes it to the `gh-pages` branch. This branch is then served by GitHub Pages.

@@ -83,11 +83,11 @@ export default async function unitedStates(): Promise<Comparison[]> {
                 'Walgreens',
                 brandWikidata,
                 'Q1591889',
-                8600, // only in the US
-                'https://s1.q4cdn.com/343380161/files/doc_financials/2022/ar/WBA-2022-Annual-Report.pdf', // from https://investor.walgreensbootsalliance.com/home/default.aspx
+                8560, // only in the US
+                'https://investor.walgreensbootsalliance.com/static-files/6ff421c2-4c3c-4da6-bc84-158a9be81e61', // from https://investor.walgreensbootsalliance.com/home/default.aspx (search for `Retail stores and healthcare locations`)
                 'Walgreens is the second largest pharmacy store chain in the US. Are all the Walgreens stores in the US tagged?',
                 ['🛒', '🏥'],
-                '2024-02-18',
+                '2025-02-02',
                 taginfoServer
             ),
             await taginfoComparisons(
@@ -95,10 +95,10 @@ export default async function unitedStates(): Promise<Comparison[]> {
                 healthcare,
                 pharmacy,
                 40000,
-                'https://s1.q4cdn.com/343380161/files/doc_financials/2023/ar/wba-2023-annual-report.pdf', // from https://investor.walgreensbootsalliance.com/home/default.aspx
+                'https://investor.walgreensbootsalliance.com/static-files/6ff421c2-4c3c-4da6-bc84-158a9be81e61', // from https://investor.walgreensbootsalliance.com/home/default.aspx
                 'There are a lot of places to pay too much for your medicine in the US. But can you find them in OSM?',
                 ['🛒', '🏥'],
-                '2024-02-18',
+                '2025-02-02',
                 taginfoServer
             ),
             await taginfoComparisons(
