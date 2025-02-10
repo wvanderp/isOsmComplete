@@ -1,8 +1,7 @@
+import './style/main.css';
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './style/main.sass';
 
 import { polyfillCountryFlagEmojis } from 'country-flag-emoji-polyfill';
 import App from './App';

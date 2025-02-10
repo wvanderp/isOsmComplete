@@ -4,7 +4,7 @@
 
 import React from 'react';
 import { Comparison, CountryCodes } from '../collect/types';
-import Country, { ComparisonCard as ComparisonComponent, ProgressBar } from './Country';
+import Country, { ComparisonCard as ComparisonComponent } from './Country';
 
 import data from '../data/compare.json';
 import tags from '../data/tags.json';
@@ -13,6 +13,7 @@ import logo from '../static/logo.svg';
 
 import pkg from '../package.json';
 import { dayOfTheMonth, dayOfTheWeek, dayOfTheYear } from './utils/dayOfTheYear';
+import ProgressBar from './ProgressBar';
 
 const prioritizedCountries = [
     'Worldwide',

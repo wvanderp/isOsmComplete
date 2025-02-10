@@ -9,3 +9,7 @@ To add a new comparison add a new entry to the comparisons array fill out all th
 chose an appropritate actual source like overpass or taginfo 
 
 write a funny description and add tags.
+
+## &apos; in files
+
+All text content in this file should use HTML entities for apostrophes (&apos;) instead of single quotes to ensure proper rendering and accessibility.
