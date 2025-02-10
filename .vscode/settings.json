@@ -55,5 +55,10 @@
     "[csv]": {
         "files.insertFinalNewline": false,
     },
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "github.copilot.chat.codeGeneration.instructions": [
+        {
+            "file": "copilot.md"
+        }
+    ]
 }

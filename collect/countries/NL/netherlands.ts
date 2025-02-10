@@ -52,8 +52,8 @@ export default async function netherlands(): Promise<Comparison[]> {
                 'Traffic enforcement camera',
                 'highway',
                 'speed_camera',
-                642,
-                'https://www.om.nl/actueel/nieuws/2024/04/29/om-vreest-wildgroei-gemeentelijke-flitspalen',
+                1019,
+                'https://www.cjib.nl/sites/default/files/2025-01/Instroom%20wahv%20per%20flitspaal%20per%20provincie_2024.pdf',
                 'Getting a ticket is really annoying! Maybe OSM can help you obey the law extremely locally.',
                 ['🚗', '👀'],
                 '2025-01-05',
@@ -99,8 +99,8 @@ export default async function netherlands(): Promise<Comparison[]> {
                 'siren',
                 4278,
                 'https://www.brandweer.nl/onderwerpen/sirenes/', // an other source could be: https://luchtalarmen.nl/info
-                'At this critical point in time, facing extinction in The Netherlands, they deserve to be mapped.',
-                ['🛒'],
+                'At this critical point in time, civil defense sirens are facing extinction in The Netherlands, they deserve to be mapped.',
+                ['🚨'],
                 '2025-01-05',
                 taginfoServer
             ),
