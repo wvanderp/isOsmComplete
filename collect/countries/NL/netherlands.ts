@@ -129,14 +129,14 @@ export default async function netherlands(): Promise<Comparison[]> {
             await taginfoComparisonMultipleKeyValuePairs(
                 'Hydrogen refueling stations',
                 [
-                    ["fuel:h35", "yes"],
-                    ["fuel:h50", "yes"],
-                    ["fuel:h70", "yes"],
-                    ["fuel:LH2", "no"]
+                    ['fuel:h35', 'yes'],
+                    ['fuel:h50', 'yes'],
+                    ['fuel:h70', 'yes'],
+                    ['fuel:LH2', 'no']
                 ],
                 25,
                 'https://duurzamemobiliteit.databank.nl/mosaic/nl-nl/elektrisch-vervoer/laad--en-tankinfrastructuur-in-nederland',
-                'Running out of gas is never fun. Especially when that gas is hydrogen. So let\'s make sure that the pressious few hydrogen refueling stations are in OSM!',
+                'Running out of gas is never fun. Especially when that gas is hydrogen. So let\'s make sure that the precious few hydrogen refueling stations are in OSM!',
                 ['🚗'],
                 '2025-01-05',
                 taginfoServer

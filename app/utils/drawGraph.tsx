@@ -49,7 +49,8 @@ export default function draw_chronology_chart(
         const data = uncleanData.map((d) => ({
             ...d,
             date: new Date(d.date)
-        }));
+        }))
+            .sort((a, b) => a.date.getTime() - b.date.getTime());
 
         const t0 = data[0].date;
         const t1 = data.at(-1)?.date ?? new Date();
@@ -65,7 +66,7 @@ export default function draw_chronology_chart(
             .range([h, 0]);
 
         const line = d3.line<{ date: Date; value: number }>()
-            .curve(d3.curveNatural)
+            .curve(d3.curveBasis)
             .x((d) => scale_x(d.date))
             .y((d) => scale_y(d.value));
 

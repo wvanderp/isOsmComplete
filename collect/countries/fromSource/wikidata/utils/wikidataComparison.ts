@@ -6,7 +6,7 @@ import { osmTagInfoServer } from '../../../../utils/taginfoComparisons';
 
 /**
  * Fetches comparison data from Wikidata and Taginfo and returns a Comparison object.
- * 
+ *
  * @param {string} name - The name of the comparison.
  * @param {string} sparqlQuery - The SPARQL query to fetch data from Wikidata.
  * @param {string} key - The key to fetch data from Taginfo.
