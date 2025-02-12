@@ -130,3 +130,47 @@ export async function taginfoComparisonMultipleTags(
         lastUpdated
     };
 }
+
+/**
+ * creates a comparison object for a combination of multiple key-value pairs
+ *
+ * @param name name of the comparison
+ * @param keyValues the multiple key-value pairs to search for in Taginfo
+ * @param expected the expected count
+ * @param expectedSource the source of the expected count
+ * @param description a funny description of the comparison
+ * @param tags Emoji tags to help categorize the comparison
+ * @param lastUpdated the last time the comparison was updated
+ * @param server the taginfo server to use for the comparison
+ * @returns a comparison object
+ */
+export async function taginfoComparisonMultipleKeyValuePairs(
+    name: string,
+    keyValues: [string, string][],
+    expected: number,
+    expectedSource: string,
+    description: string,
+    tags: string[],
+    lastUpdated: string,
+    server = osmTagInfoServer
+): Promise<Comparison> {
+    console.info(`Starting on ${name}`);
+
+    const taginfos = await Promise.all(
+        keyValues.map(([key, value]) => taginfoKeyValue(key, value, server))
+    );
+
+    const count = taginfos.reduce((a, b) => a + b, 0);
+
+    return {
+        id: getHash(`${keyValues.map(([key, value]) => key + value).join('')}${server}`),
+        name,
+        expected,
+        actual: count,
+        expectedSource,
+        actualSource: 'taginfo',
+        tags,
+        description,
+        lastUpdated
+    };
+}

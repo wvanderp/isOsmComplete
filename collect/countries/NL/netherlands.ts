@@ -3,7 +3,7 @@ import { Comparison } from '../../types';
 import appendCountry from '../../utils/appendData';
 import { brandWikidata } from '../../utils/osmTags';
 import taginfoServers from '../../utils/tagInfoServers';
-import taginfoComparisons, { taginfoComparisonMultipleTags } from '../../utils/taginfoComparisons';
+import taginfoComparisons, { taginfoComparisonMultipleKeyValuePairs, taginfoComparisonMultipleTags } from '../../utils/taginfoComparisons';
 import dutchJudicialSystem from './dutchJudicialSystem';
 import geldmaat from './geldmaat';
 
@@ -19,8 +19,8 @@ export default async function netherlands(): Promise<Comparison[]> {
                 'amenity',
                 'charging_station',
                 // normal + fast
-                163332 + 5157,
-                'https://duurzamemobiliteit.databank.nl/mosaic/en-us/elektrisch-vervoer/laadinfra-in-nederland',
+                177963 + 5741,
+                'https://duurzamemobiliteit.databank.nl/mosaic/nl-nl/elektrisch-vervoer/laad--en-tankinfrastructuur-in-nederland',
                 'Electric car charging stations will be more important than ever. The Netherlands has {{expected}} car chargers. Are they all in OSM?',
                 ['🔋', '🚗'],
                 '2024-08-04',
@@ -100,7 +100,7 @@ export default async function netherlands(): Promise<Comparison[]> {
                 4278,
                 'https://www.brandweer.nl/onderwerpen/sirenes/', // an other source could be: https://luchtalarmen.nl/info
                 'At this critical point in time, civil defense sirens are facing extinction in The Netherlands, they deserve to be mapped.',
-                ['🚨'],
+                ['🚒'],
                 '2025-01-05',
                 taginfoServer
             ),
@@ -110,7 +110,7 @@ export default async function netherlands(): Promise<Comparison[]> {
                 'Q5921598',
                 11000,
                 'https://nos.nl/artikel/2530705-oranje-brievenbussen-verdwijnen-op-steeds-meer-plekken',
-                'Mailboxes are disappearing in the Netherlands. Are they all in OSM?',
+                'Mailboxes are big and orange in the Netherlands. The prefect color for spotting them in OSM!',
                 ['📮'],
                 '2024-08-04',
                 taginfoServer
@@ -126,7 +126,21 @@ export default async function netherlands(): Promise<Comparison[]> {
                 '2024-08-19',
                 taginfoServer
             ),
-
+            await taginfoComparisonMultipleKeyValuePairs(
+                'Hydrogen refueling stations',
+                [
+                    ["fuel:h35", "yes"],
+                    ["fuel:h50", "yes"],
+                    ["fuel:h70", "yes"],
+                    ["fuel:LH2", "no"]
+                ],
+                25,
+                'https://duurzamemobiliteit.databank.nl/mosaic/nl-nl/elektrisch-vervoer/laad--en-tankinfrastructuur-in-nederland',
+                'Running out of gas is never fun. Especially when that gas is hydrogen. So let\'s make sure that the pressious few hydrogen refueling stations are in OSM!',
+                ['🚗'],
+                '2025-01-05',
+                taginfoServer
+            ),
             // from other files
             await geldmaat(),
             ...(await dutchJudicialSystem())
