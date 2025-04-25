@@ -17,7 +17,7 @@
     "id": "7db310de75fd52cb02a885303658ba574e5e5262b439fc3c6116a6661811782e",
     "name": "Stolpersteine",
     "expected": 100000,
-    "actual": 40388,
+    "actual": 40400,
     "expectedSource": "https://www.timesofisrael.com/holocaust-memorial-project-marks-milestone-with-100000-stumbling-blocks/",
     "actualSource": "overpass",
     "tags": [],
@@ -163,7 +163,7 @@
     "id": "72b7bf05d23320f5325ae692c0c8de3fb12445f9c049e002e5dbe1976f8f1f4b",
     "name": "Tesla superchargers",
     "expected": 6975,
-    "actual": 1380,
+    "actual": 1382,
     "expectedSource": "https://digitalassets.tesla.com/tesla-contents/image/upload/IR/TSLA-Q4-2024-Update.pdf",
     "actualSource": "overpass",
     "tags": [
@@ -220,7 +220,7 @@
   {
     "id": "681037426fe19e62eba5d82fa128583b311ed6368eb25d638242103510647c5a",
     "name": "Memorial benches",
-    "expected": 35807,
+    "expected": 35822,
     "actual": 907,
     "expectedSource": "https://openbenches.org/",
     "actualSource": "taginfo",
@@ -250,7 +250,7 @@
     "id": "fcba5aaec2e6bac985428897470d2881bb4d9df7668db7fdc1e0f2fd416afb01",
     "name": "Retail stores in Europe",
     "expected": 2575171,
-    "actual": 2882847,
+    "actual": 2883465,
     "expectedSource": "https://data.europa.eu/data/datasets/6k2ldtwgaa2lvoudvtbbq?locale=en",
     "actualSource": "taginfo",
     "tags": [
@@ -278,7 +278,7 @@
     "id": "dace299682b6e90a3ec0b6e29d2ea57da76e3a7f30223cc01164bad12ae8f7d2",
     "name": "Train stations in China",
     "expected": 5470,
-    "actual": 5716,
+    "actual": 5717,
     "expectedSource": "https://en.wikipedia.org/wiki/Rail_transport_in_China#cite_note-CNCRCC-4",
     "actualSource": "overpass",
     "tags": [
@@ -306,7 +306,7 @@
     "id": "8ac45dae95ef22e2d219113f4e80215c865efa2424a819760f3f577e0cea5c1d",
     "name": "Bakeries in France 🍞🥐🥖",
     "expected": 57300,
-    "actual": 28639,
+    "actual": 28642,
     "expectedSource": "https://github.com/wvanderp/isOsmComplete/issues/1",
     "actualSource": "taginfo",
     "tags": [
@@ -321,7 +321,7 @@
     "id": "5b0731306e515667e43a1bff6d2ae879f80da3791d96eef8abb59f6c30304876",
     "name": "REWE",
     "expected": 3690,
-    "actual": 3756,
+    "actual": 3755,
     "expectedSource": "https://www.rewe-group.com/content/uploads/2024/05/rewe-financal-report-31.12.2023.pdf?t=2024052702",
     "actualSource": "taginfo",
     "tags": [
@@ -378,7 +378,7 @@
     "id": "6f09a43068073da389b49c4c581736b667886098a6866adaa929601bab513fe4",
     "name": "Tesco",
     "expected": 2857,
-    "actual": 3726,
+    "actual": 3742,
     "expectedSource": "https://www.tescoplc.com/media/qjejufrm/tesco-plc-interim-results-2425-press-release.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -392,7 +392,7 @@
     "id": "0321c72333ab103de5ae07a761be0b833177b8825e99f8d3ef189a140d2f2631",
     "name": "National Car Parks",
     "expected": 642,
-    "actual": 215,
+    "actual": 223,
     "expectedSource": "https://www.ncp.co.uk/help-centre/about-us/",
     "actualSource": "taginfo",
     "tags": [
@@ -420,7 +420,7 @@
     "id": "0b8d0a7e9c4d47412cfcd43f49ade9f42a01778dc1fee6c267709068b25bf79c",
     "name": "7-Eleven in Japan",
     "expected": 21651,
-    "actual": 13707,
+    "actual": 13710,
     "expectedSource": "https://www.sej.co.jp/company/en/n_stores.html",
     "actualSource": "taginfo",
     "tags": [
@@ -434,7 +434,7 @@
     "id": "e18056e340450a86b40c3345da1813d618e1e90cc539fca122d06446b74969d9",
     "name": "FamilyMart",
     "expected": 16245,
-    "actual": 10133,
+    "actual": 10134,
     "expectedSource": "https://www.family.co.jp/english/company/store.html",
     "actualSource": "taginfo",
     "tags": [
@@ -448,7 +448,7 @@
     "id": "4e08b590ccfa28307f67fcd9fa13e863ceeb9df3a0680cda85576bb376551956",
     "name": "Lawson",
     "expected": 14608,
-    "actual": 8103,
+    "actual": 8104,
     "expectedSource": "https://www.lawson.jp/en/store/japan/",
     "actualSource": "taginfo",
     "tags": [
@@ -462,7 +462,7 @@
     "id": "c0159ac244342b48d193898c693bdcd4ae9aea7fab0b48f7e5b3d13436bf4fcf",
     "name": "Shinto shrines",
     "expected": 80394,
-    "actual": 49369,
+    "actual": 49377,
     "expectedSource": "https://en.wikipedia.org/wiki/Shinto_shrine",
     "actualSource": "taginfo",
     "tags": [
@@ -476,7 +476,7 @@
     "id": "618d455f20de0fc57391795eb6857e7ad0343ae82314129cded8f49d1e780184",
     "name": "Car chargers",
     "expected": 183704,
-    "actual": 16057,
+    "actual": 16077,
     "expectedSource": "https://duurzamemobiliteit.databank.nl/mosaic/nl-nl/elektrisch-vervoer/laad--en-tankinfrastructuur-in-nederland",
     "actualSource": "taginfo",
     "tags": [
@@ -491,7 +491,7 @@
     "id": "b36e45ea67ee7caebab45e72995bc4bd94b4452bd4cc5432d64bf1f39c4d5db5",
     "name": "Hospitals",
     "expected": 782,
-    "actual": 660,
+    "actual": 659,
     "expectedSource": "https://www.zorgkaartnederland.nl/ziekenhuis",
     "actualSource": "taginfo",
     "tags": [
@@ -590,7 +590,7 @@
     "id": "be4dab2607d9f1299d9ededa89929f3a2649b47841587587722a72ec265b81e3",
     "name": "Mailboxes in the Netherlands",
     "expected": 11000,
-    "actual": 6518,
+    "actual": 6516,
     "expectedSource": "https://nos.nl/artikel/2530705-oranje-brievenbussen-verdwijnen-op-steeds-meer-plekken",
     "actualSource": "taginfo",
     "tags": [
@@ -659,7 +659,7 @@
   {
     "id": "910291ad6b615144a5cca4463175c2fbfb0f7eed8a2f6770f8cdbd622cae7810",
     "name": "Police stations in the Netherlands",
-    "expected": 377,
+    "expected": 375,
     "actual": 448,
     "expectedSource": "https://api.politie.nl/v4/politiebureaus/all",
     "actualSource": "taginfo",
@@ -702,7 +702,7 @@
     "id": "a1b5f8d936156d6b7f182995a4e1f0e5edb3a15084f932282737bd059321f616",
     "name": "Pyaterochka",
     "expected": 21308,
-    "actual": 15183,
+    "actual": 15188,
     "expectedSource": "https://www.x5.ru/wp-content/uploads/reports/2023/en/financial-statements/",
     "actualSource": "taginfo",
     "tags": [
@@ -716,7 +716,7 @@
     "id": "4aaf577ade087fcfc1e02a4f673365216ceacea18758910e836d5965bbeb1440",
     "name": "McDonald's leaves Russia",
     "expected": 0,
-    "actual": 83,
+    "actual": 82,
     "expectedSource": "https://corporate.mcdonalds.com/corpmcd/our-stories/article/mcd-exit-russia.html",
     "actualSource": "taginfo",
     "tags": [
@@ -731,7 +731,7 @@
     "id": "9d5c0df008dd2cd881f6559e5fe5e75942d8b455ccfa7925ae091f84357d841c",
     "name": "FAA tags ✈️",
     "expected": 26697,
-    "actual": 10280,
+    "actual": 10281,
     "expectedSource": "https://www.faa.gov/air_traffic/flight_info/aeronav/aero_data/Loc_ID_Search/Encodes_Decodes/",
     "actualSource": "taginfo",
     "tags": [
@@ -745,7 +745,7 @@
     "id": "672c11a3ce96b3a1220ab8c35eb8cee0959397cccc7ee8f3a718d0b3bbd7fdaf",
     "name": "Walmart",
     "expected": 4606,
-    "actual": 5940,
+    "actual": 5937,
     "expectedSource": "https://corporate.walmart.com/about/location-facts",
     "actualSource": "taginfo",
     "tags": [
@@ -773,7 +773,7 @@
     "id": "3f9e77cd45a114b1e686eeba3cbca311458f447e3a19a8212f440adfa6ca3757",
     "name": "Dollar General",
     "expected": 20345,
-    "actual": 9952,
+    "actual": 9958,
     "expectedSource": "https://investor.dollargeneral.com/websites/dollargeneral/English/0/investor-relations.html",
     "actualSource": "taginfo",
     "tags": [
@@ -801,7 +801,7 @@
     "id": "431c3520a26be03937166e9dbfed5a56d41e24de9e0f2530c7bea24eb70af3a6",
     "name": "CVS",
     "expected": 9395,
-    "actual": 8402,
+    "actual": 8404,
     "expectedSource": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0000064803/28e54055-44dd-4a6d-a517-6ffc18161213.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -816,7 +816,7 @@
     "id": "9dbf8e0d4c94858e8b152c16048d24705a9f3a744229e49ea85f8bae7e5ccead",
     "name": "Walgreens",
     "expected": 8560,
-    "actual": 8851,
+    "actual": 8848,
     "expectedSource": "https://investor.walgreensbootsalliance.com/static-files/6ff421c2-4c3c-4da6-bc84-158a9be81e61",
     "actualSource": "taginfo",
     "tags": [
@@ -831,7 +831,7 @@
     "id": "c5f2cbfcb3b055f1c40fe5d1551d6aee2da24379eb4e83d5a13efb13bb1afe0f",
     "name": "Pharmacies in the US of A",
     "expected": 40000,
-    "actual": 19996,
+    "actual": 20002,
     "expectedSource": "https://investor.walgreensbootsalliance.com/static-files/6ff421c2-4c3c-4da6-bc84-158a9be81e61",
     "actualSource": "taginfo",
     "tags": [
@@ -946,7 +946,7 @@
   {
     "id": "f0c59ddec204c478382d6632125f2afaa12f1bf052d5e5401e461002b4989a73",
     "name": "Match OurAirports on airports",
-    "expected": 70429,
+    "expected": 70433,
     "actual": 52167,
     "expectedSource": "https://davidmegginson.github.io/ourairports-data/airports.csv",
     "actualSource": "taginfo",
@@ -974,7 +974,7 @@
   {
     "id": "735cd2329eff5a2f9a7958b29d41f7856774347f06bad4dd93aa9b33f59ae58d",
     "name": "Museums",
-    "expected": 94142,
+    "expected": 94145,
     "actual": 104536,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",
