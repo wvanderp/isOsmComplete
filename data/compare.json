@@ -3,7 +3,7 @@
     "id": "f86b36460a37c5a45dea617f3fbd10c18027319318d2283be3f8318a7a793bca",
     "name": "Match Google on building",
     "expected": 1600000000,
-    "actual": 658261518,
+    "actual": 658394441,
     "expectedSource": "https://youtu.be/nP-nMZpLM1A?t=409",
     "actualSource": "taginfo",
     "tags": [
@@ -17,7 +17,7 @@
     "id": "7db310de75fd52cb02a885303658ba574e5e5262b439fc3c6116a6661811782e",
     "name": "Stolpersteine",
     "expected": 100000,
-    "actual": 44747,
+    "actual": 44787,
     "expectedSource": "https://www.timesofisrael.com/holocaust-memorial-project-marks-milestone-with-100000-stumbling-blocks/",
     "actualSource": "overpass",
     "tags": [],
@@ -43,7 +43,7 @@
     "id": "34d881bb4626ac285c1c64c08944d6d8883e5bfdef1d5bb2c0d2eeab9db0d20e",
     "name": "7-Eleven stores",
     "expected": 83579,
-    "actual": 42304,
+    "actual": 42307,
     "expectedSource": "https://www.7andi.com/en/ir/file/library/mr/pdf/2023_01_all_a.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -58,7 +58,7 @@
     "id": "ceafc782f32e77207571d2c2de651c13d6f8704acbe2221a9a7af3dd68313bf8",
     "name": "Subway stores",
     "expected": 37000,
-    "actual": 23383,
+    "actual": 23385,
     "expectedSource": "https://newsroom.subway.com/2024-10-01-Subway-Continues-to-Expand-Its-Global-Presence-with-Over-10,000-Future-Restaurant-Commitments",
     "actualSource": "taginfo",
     "tags": [
@@ -73,7 +73,7 @@
     "id": "0aa0000d49cbd3eaabb7d62b87d0695922a6cdc09c0f80d1684aadaeb49f4e95",
     "name": "Starbucks",
     "expected": 38951,
-    "actual": 22117,
+    "actual": 22120,
     "expectedSource": "https://s203.q4cdn.com/326826266/files/doc_financials/2024/q2/2Q24-Earnings-Release-Final-4-30-24.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -103,7 +103,7 @@
     "id": "ff163beb19543f2cb53c300637cac009272968c01b3511a40effa32489074e82",
     "name": "KFC",
     "expected": 31143,
-    "actual": 15679,
+    "actual": 15685,
     "expectedSource": "https://s2.q4cdn.com/890585342/files/doc_financials/2024/q3/Yum-Brands-Q3-24-Earnings-Release.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -133,7 +133,7 @@
     "id": "248346ad79386b814c4c361474a0eede7d7d254e1302feeacd7a2db3965ac5ba",
     "name": "Pizza Hut",
     "expected": 19927,
-    "actual": 7918,
+    "actual": 7920,
     "expectedSource": "https://s2.q4cdn.com/890585342/files/doc_financials/2024/q3/Yum-Brands-Q3-24-Earnings-Release.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -148,7 +148,7 @@
     "id": "ebf58077453c74c27a1a8384024439568732ce333c09c0899c6156177657d513",
     "name": "Burger King",
     "expected": 19384,
-    "actual": 14885,
+    "actual": 14884,
     "expectedSource": "https://s26.q4cdn.com/317237604/files/doc_financials/2023/ar/RBI-Global-Store-Counts-Across-Brands-by-Market-February-13-2024.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -192,7 +192,7 @@
     "id": "ed897f43e805d3b55c3d7356a3421f53aea469e83c629cc476decc4dff2d3a57",
     "name": "UNESCO World Heritage Sites",
     "expected": 1223,
-    "actual": 2556,
+    "actual": 2557,
     "expectedSource": "https://whc.unesco.org/en/list/",
     "actualSource": "taginfo",
     "tags": [
@@ -220,7 +220,7 @@
   {
     "id": "681037426fe19e62eba5d82fa128583b311ed6368eb25d638242103510647c5a",
     "name": "Memorial benches",
-    "expected": 38402,
+    "expected": 38404,
     "actual": 1050,
     "expectedSource": "https://openbenches.org/",
     "actualSource": "taginfo",
@@ -250,7 +250,7 @@
     "id": "fcba5aaec2e6bac985428897470d2881bb4d9df7668db7fdc1e0f2fd416afb01",
     "name": "Retail stores in Europe",
     "expected": 2575171,
-    "actual": 2957464,
+    "actual": 2958143,
     "expectedSource": "https://data.europa.eu/data/datasets/6k2ldtwgaa2lvoudvtbbq?locale=en",
     "actualSource": "taginfo",
     "tags": [
@@ -306,7 +306,7 @@
     "id": "8ac45dae95ef22e2d219113f4e80215c865efa2424a819760f3f577e0cea5c1d",
     "name": "Bakeries in France 🍞🥐🥖",
     "expected": 57300,
-    "actual": 28951,
+    "actual": 28953,
     "expectedSource": "https://github.com/wvanderp/isOsmComplete/issues/1",
     "actualSource": "taginfo",
     "tags": [
@@ -349,7 +349,7 @@
     "id": "154c2bbd2b34ed2924ae6fefbc7a995465c3e80817984f658d2598095d80c9bb",
     "name": "Pubs in the UK",
     "expected": 45350,
-    "actual": 38750,
+    "actual": 38741,
     "expectedSource": "https://beerandpub.com/data-statistics",
     "actualSource": "taginfo",
     "tags": [
@@ -406,7 +406,7 @@
     "id": "df3831a1efe183797884a1cbc42055262e7061e54970bc6ec964f6e37008deec",
     "name": "Surveillance cameras in London",
     "expected": 942562,
-    "actual": 1714,
+    "actual": 1716,
     "expectedSource": "https://clarionuk.com/resources/how-many-cctv-cameras-are-in-london/",
     "actualSource": "taginfo",
     "tags": [
@@ -420,7 +420,7 @@
     "id": "0b8d0a7e9c4d47412cfcd43f49ade9f42a01778dc1fee6c267709068b25bf79c",
     "name": "7-Eleven in Japan",
     "expected": 21651,
-    "actual": 14081,
+    "actual": 14084,
     "expectedSource": "https://www.sej.co.jp/company/en/n_stores.html",
     "actualSource": "taginfo",
     "tags": [
@@ -434,7 +434,7 @@
     "id": "e18056e340450a86b40c3345da1813d618e1e90cc539fca122d06446b74969d9",
     "name": "FamilyMart",
     "expected": 16245,
-    "actual": 10477,
+    "actual": 10480,
     "expectedSource": "https://www.family.co.jp/english/company/store.html",
     "actualSource": "taginfo",
     "tags": [
@@ -448,7 +448,7 @@
     "id": "4e08b590ccfa28307f67fcd9fa13e863ceeb9df3a0680cda85576bb376551956",
     "name": "Lawson",
     "expected": 14608,
-    "actual": 8338,
+    "actual": 8337,
     "expectedSource": "https://www.lawson.jp/en/store/japan/",
     "actualSource": "taginfo",
     "tags": [
@@ -462,7 +462,7 @@
     "id": "c0159ac244342b48d193898c693bdcd4ae9aea7fab0b48f7e5b3d13436bf4fcf",
     "name": "Shinto shrines",
     "expected": 80394,
-    "actual": 50653,
+    "actual": 50661,
     "expectedSource": "https://en.wikipedia.org/wiki/Shinto_shrine",
     "actualSource": "taginfo",
     "tags": [
@@ -476,7 +476,7 @@
     "id": "618d455f20de0fc57391795eb6857e7ad0343ae82314129cded8f49d1e780184",
     "name": "Car chargers",
     "expected": 183704,
-    "actual": 18234,
+    "actual": 18242,
     "expectedSource": "https://duurzamemobiliteit.databank.nl/mosaic/nl-nl/elektrisch-vervoer/laad--en-tankinfrastructuur-in-nederland",
     "actualSource": "taginfo",
     "tags": [
@@ -491,7 +491,7 @@
     "id": "b36e45ea67ee7caebab45e72995bc4bd94b4452bd4cc5432d64bf1f39c4d5db5",
     "name": "Hospitals",
     "expected": 782,
-    "actual": 673,
+    "actual": 674,
     "expectedSource": "https://www.zorgkaartnederland.nl/ziekenhuis",
     "actualSource": "taginfo",
     "tags": [
@@ -604,7 +604,7 @@
     "id": "e25f43d2f95cb5907a29ef7934405b05fdff5162c44ce9781b4542e8c334c0fe",
     "name": "Surveillance cameras in the Netherlands",
     "expected": 337609,
-    "actual": 5726,
+    "actual": 5727,
     "expectedSource": "https://eenvandaag.avrotros.nl/item/steeds-meer-cameras-in-de-openbare-ruimte-dit-zijn-de-gevolgen-voor-jouw-privacy/",
     "actualSource": "taginfo",
     "tags": [
@@ -632,7 +632,7 @@
     "id": "7d7cc1074bdd3b5e2609fe5f1c5b941f78e42281f270b579ffa71ff2a5ae831a",
     "name": "Geldmaat ATMs",
     "expected": 756,
-    "actual": 4250,
+    "actual": 4251,
     "expectedSource": "https://api.prod.locator-backend.geldmaat.nl/locations",
     "actualSource": "taginfo",
     "tags": [
@@ -745,7 +745,7 @@
     "id": "672c11a3ce96b3a1220ab8c35eb8cee0959397cccc7ee8f3a718d0b3bbd7fdaf",
     "name": "Walmart",
     "expected": 4606,
-    "actual": 5935,
+    "actual": 5934,
     "expectedSource": "https://corporate.walmart.com/about/location-facts",
     "actualSource": "taginfo",
     "tags": [
@@ -773,7 +773,7 @@
     "id": "3f9e77cd45a114b1e686eeba3cbca311458f447e3a19a8212f440adfa6ca3757",
     "name": "Dollar General",
     "expected": 20345,
-    "actual": 10261,
+    "actual": 10262,
     "expectedSource": "https://investor.dollargeneral.com/websites/dollargeneral/English/0/investor-relations.html",
     "actualSource": "taginfo",
     "tags": [
@@ -816,7 +816,7 @@
     "id": "9dbf8e0d4c94858e8b152c16048d24705a9f3a744229e49ea85f8bae7e5ccead",
     "name": "Walgreens",
     "expected": 8560,
-    "actual": 9025,
+    "actual": 9023,
     "expectedSource": "https://investor.walgreensbootsalliance.com/static-files/6ff421c2-4c3c-4da6-bc84-158a9be81e61",
     "actualSource": "taginfo",
     "tags": [
@@ -932,8 +932,8 @@
   {
     "id": "45bc39b4b3b48b01c0818ca97beabb4aad95ee48232cd8c79603a6c02a84dafc",
     "name": "Airports with ICAO codes ✈️",
-    "expected": 19122,
-    "actual": 17810,
+    "expected": 19121,
+    "actual": 17812,
     "expectedSource": "https://davidmegginson.github.io/ourairports-data/airports.csv",
     "actualSource": "taginfo",
     "tags": [
@@ -946,8 +946,8 @@
   {
     "id": "f0c59ddec204c478382d6632125f2afaa12f1bf052d5e5401e461002b4989a73",
     "name": "Match OurAirports on airports",
-    "expected": 70945,
-    "actual": 52378,
+    "expected": 70946,
+    "actual": 52365,
     "expectedSource": "https://davidmegginson.github.io/ourairports-data/airports.csv",
     "actualSource": "taginfo",
     "tags": [
@@ -961,7 +961,7 @@
     "id": "71a9759b540300dccd608fedd0d7f90356b924b16ff08c62b38d8d281be3b73c",
     "name": "CIA World Factbook - Airports",
     "expected": 52459,
-    "actual": 51686,
+    "actual": 51673,
     "expectedSource": "https://www.cia.gov/the-world-factbook/",
     "actualSource": "taginfo",
     "tags": [
@@ -974,8 +974,8 @@
   {
     "id": "735cd2329eff5a2f9a7958b29d41f7856774347f06bad4dd93aa9b33f59ae58d",
     "name": "Museums",
-    "expected": 95731,
-    "actual": 106537,
+    "expected": 95735,
+    "actual": 106551,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",
     "description": "The number of museums in the world",
@@ -989,8 +989,8 @@
   {
     "id": "cba42aa122a00612e07fbd9a57264c051f3fefdf9ea4b6aebca7e32f4c36da33",
     "name": "Zoos",
-    "expected": 2325,
-    "actual": 8912,
+    "expected": 2327,
+    "actual": 8911,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",
     "description": "The number of zoos in the world",
@@ -1004,7 +1004,7 @@
     "id": "3aa187ecc04a2bd9abca79c453b03890b8ba357ac3c454edbe03109ec873a3f2",
     "name": "Aquariums",
     "expected": 542,
-    "actual": 1584,
+    "actual": 1585,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",
     "description": "The number of aquariums in the world",
