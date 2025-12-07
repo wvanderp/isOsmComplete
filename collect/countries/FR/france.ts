@@ -8,6 +8,12 @@ import { overpassComparisonRaw } from '../../utils/overpassComparisons';
 
 const taginfoServer = taginfoServers.FR;
 
+async function getChargingStationsCount(): Promise<number> {
+    const url = 'https://tabular-api.data.gouv.fr/api/resources/2729b192-40ab-4454-904d-735084dca3a3/data/?page_size=1';
+    const result = await axios.get<{ 'meta': { 'total': number } }>(url);
+    return result.data.meta.total;
+}
+
 export default async function france(): Promise<Comparison[]> {
     // Fetch boulodromes count from French Government API
     const boulodromesUrl = 'https://equipements.sports.gouv.fr/api/explore/v2.1/catalog/datasets/data-es/records?limit=0&refine=equip_type_famille%3A%22Boulodrome%22';
@@ -66,17 +72,11 @@ export default async function france(): Promise<Comparison[]> {
             appendThanks(
                 await overpassComparisonRaw(
                     'Electric vehicle charging stations in France 🇫🇷',
-                    `
-                    [out:json][timeout:120];
-                    area[name="France"]->.fr;
-                    nwr["amenity"="charging_station"](area.fr);
-                    out count;`,
-                    await (() => {
-                        const url = 'https://tabular-api.data.gouv.fr/api/resources/2729b192-40ab-4454-904d-735084dca3a3/data/?page_size=1';
-                        const result = axios.get<{ 'meta': { 'total': number } }>(url);
-
-                        return result.then((response) => response.data.meta.total);
-                    })(),
+                    `[out:json][timeout:120];
+area[name="France"]->.fr;
+nwr["amenity"="charging_station"](area.fr);
+out count;`,
+                    await getChargingStationsCount(),
                     'https://www.data.gouv.fr/datasets/base-nationale-des-irve-infrastructures-de-recharge-pour-vehicules-electriques/',
                     'The French government maintains a database of EV charging infrastructure. OSM is charging towards full coverage! ⚡',
                     ['🔋', '🚗'],
