@@ -220,7 +220,7 @@
   {
     "id": "681037426fe19e62eba5d82fa128583b311ed6368eb25d638242103510647c5a",
     "name": "Memorial benches",
-    "expected": 39237,
+    "expected": 39239,
     "actual": 1139,
     "expectedSource": "https://openbenches.org/",
     "actualSource": "taginfo",
@@ -304,7 +304,7 @@
   },
   {
     "id": "8ac45dae95ef22e2d219113f4e80215c865efa2424a819760f3f577e0cea5c1d",
-    "name": "Bakeries in France 🍞🥐🥖",
+    "name": "Bakeries in France 🇫🇷",
     "expected": 57300,
     "actual": 29015,
     "expectedSource": "https://github.com/wvanderp/isOsmComplete/issues/1",
@@ -325,13 +325,26 @@
     "expectedSource": "https://equipements.sports.gouv.fr/api/explore/v2.1/catalog/datasets/data-es/records?limit=0&refine=equip_type_famille%3A%22Boulodrome%22",
     "actualSource": "taginfo",
     "tags": [
-      "🎳",
-      "🇫🇷",
-      "🥖"
+      "🎱"
     ],
-    "description": "The French government says there are 28,664 places to play boules. OSM is still rolling towards that number. Vive la pétanque! 🎳🥖🇫🇷",
+    "description": "The French government says there are 28,664 places to play boules. OSM is still rolling towards that number. Vive la pétanque!",
     "lastUpdated": "2025-05-28",
     "thanks": "Thanks again to [@Binnette](https://github.com/Binnette) for reading through French government datasets and suggesting this one!",
+    "country": "FR"
+  },
+  {
+    "id": "2c16afdec168ad143ebb97f8ff8b358a8077ae12fa17b1fd9d1faeacff905637",
+    "name": "Rail stations in France 🇫🇷",
+    "expected": 2785,
+    "actual": 13548,
+    "expectedSource": "https://www.data.gouv.fr/datasets/gares-de-voyageurs-1/",
+    "actualSource": "taginfo",
+    "tags": [
+      "🚂"
+    ],
+    "description": "All aboard! 🚂 The French government tracks {{expected}} rail stations across France. Let's make sure they're all mapped in OSM!",
+    "lastUpdated": "2025-12-07",
+    "thanks": "And another thanks to [@Binnette](https://github.com/Binnette) for this suggestion as well!",
     "country": "FR"
   },
   {
@@ -991,7 +1004,7 @@
   {
     "id": "735cd2329eff5a2f9a7958b29d41f7856774347f06bad4dd93aa9b33f59ae58d",
     "name": "Museums",
-    "expected": 96793,
+    "expected": 96794,
     "actual": 107664,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",

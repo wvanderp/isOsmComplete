@@ -2,7 +2,9 @@
     "cSpell.words": [
         "alltheplaces",
         "automagically",
+        "Binnette",
         "bootstrap",
+        "boulodromes",
         "compat",
         "concat",
         "crowdsourced",
@@ -55,10 +57,5 @@
     "[csv]": {
         "files.insertFinalNewline": false,
     },
-    "editor.formatOnSave": true,
-    "github.copilot.chat.codeGeneration.instructions": [
-        {
-            "file": "copilot.md"
-        }
-    ]
+    "editor.formatOnSave": true
 }
