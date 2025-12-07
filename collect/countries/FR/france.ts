@@ -4,6 +4,7 @@ import appendCountry, { appendThanks } from '../../utils/appendData';
 import { bakery, shop } from '../../utils/osmTags';
 import taginfoServers from '../../utils/tagInfoServers';
 import taginfoComparisons, { taginfoComparisonMultipleKeyValuePairs } from '../../utils/taginfoComparisons';
+import { overpassComparisonRaw } from '../../utils/overpassComparisons';
 
 const taginfoServer = taginfoServers.FR;
 
@@ -61,6 +62,27 @@ export default async function france(): Promise<Comparison[]> {
                     taginfoServer
                 ),
                 'And another thanks to [@Binnette](https://github.com/Binnette) for this suggestion as well!'
+            ),
+            appendThanks(
+                await overpassComparisonRaw(
+                    'Electric vehicle charging stations in France 🇫🇷',
+                    `
+                    [out:json][timeout:120];
+                    area[name="France"]->.fr;
+                    nwr["amenity"="charging_station"](area.fr);
+                    out count;`,
+                    await (() => {
+                        const url = 'https://tabular-api.data.gouv.fr/api/resources/2729b192-40ab-4454-904d-735084dca3a3/data/?page_size=1';
+                        const result = axios.get<{ 'meta': { 'total': number } }>(url);
+
+                        return result.then((response) => response.data.meta.total);
+                    })(),
+                    'https://www.data.gouv.fr/datasets/base-nationale-des-irve-infrastructures-de-recharge-pour-vehicules-electriques/',
+                    'The French government maintains a database of EV charging infrastructure. OSM is charging towards full coverage! ⚡',
+                    ['🔋', '🚗'],
+                    '2025-12-07'
+                ),
+                'Thanks to [@Binnette](https://github.com/Binnette) for finding this dataset! 🚗⚡'
             )
         ]
     );
