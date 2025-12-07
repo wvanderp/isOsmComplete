@@ -49,7 +49,7 @@ export async function overpassRawQuery(query: string): Promise<number> {
 }
 
 async function callApi(query: string): Promise<number> {
-    randomDelay(1000, 10000);
+    randomDelay(3000, 10000);
 
     const data = await overpassJson(query) as OverpassCount;
     const count = data.elements[0].tags.total;
