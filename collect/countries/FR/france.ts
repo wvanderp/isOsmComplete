@@ -52,7 +52,7 @@ export default async function france(): Promise<Comparison[]> {
             appendThanks(
                 await taginfoComparisonMultipleKeyValuePairs(
                     'Rail stations in France 🇫🇷',
-                    [['railway', 'station'], ['public_transport', 'station']],
+                    [['railway', 'station']],
                     railStationsCount,
                     'https://www.data.gouv.fr/datasets/gares-de-voyageurs-1/',
                     'All aboard! 🚂 The French government tracks {{expected}} rail stations across France. Let\'s make sure they\'re all mapped in OSM!',
