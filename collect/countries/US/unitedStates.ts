@@ -114,8 +114,8 @@ export default async function unitedStates(): Promise<Comparison[]> {
             ),
             await taginfoComparisons(
                 'Flock Safety ALPR',
-                'surveillance:type',
-                'ALPR',
+                'manufacturer:wikidata',
+                'Q108485435',
                 90000,
                 'https://data.aclum.org/2025/10/07/flock-gives-law-enforcement-all-over-the-country-access-to-your-location/',
                 'Flock Safety operates a network of ~90,000 ALPR cameras across the US, giving law enforcement access to location tracking. These surveillance cameras should be documented in OSM!',
