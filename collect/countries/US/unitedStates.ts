@@ -112,6 +112,17 @@ export default async function unitedStates(): Promise<Comparison[]> {
                 '2025-01-05',
                 taginfoServer
             ),
+            await taginfoComparisons(
+                'Flock Safety ALPR',
+                'manufacturer:wikidata',
+                'Q108485435',
+                90000,
+                'https://data.aclum.org/2025/10/07/flock-gives-law-enforcement-all-over-the-country-access-to-your-location/',
+                'Flock Safety operates a network of ~90,000 ALPR cameras across the US, giving law enforcement access to location tracking. These surveillance cameras should be documented in OSM!',
+                ['👀', '⚖️', '🚗'],
+                '2025-12-07',
+                taginfoServer
+            ),
 
             ...(await sanFrancisco())
         ]

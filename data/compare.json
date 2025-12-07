@@ -17,7 +17,7 @@
     "id": "7db310de75fd52cb02a885303658ba574e5e5262b439fc3c6116a6661811782e",
     "name": "Stolpersteine",
     "expected": 100000,
-    "actual": 46614,
+    "actual": 46617,
     "expectedSource": "https://www.timesofisrael.com/holocaust-memorial-project-marks-milestone-with-100000-stumbling-blocks/",
     "actualSource": "overpass",
     "tags": [],
@@ -919,6 +919,22 @@
     "country": "US"
   },
   {
+    "id": "9abfeb99536f5a1889b2c18a5dd995c304bd8a82ae8c6a1a1cc76b842c2c8d75",
+    "name": "Flock Safety ALPR",
+    "expected": 90000,
+    "actual": 38362,
+    "expectedSource": "https://data.aclum.org/2025/10/07/flock-gives-law-enforcement-all-over-the-country-access-to-your-location/",
+    "actualSource": "taginfo",
+    "tags": [
+      "👀",
+      "⚖️",
+      "🚗"
+    ],
+    "description": "Flock Safety operates a network of ~90,000 ALPR cameras across the US, giving law enforcement access to location tracking. These surveillance cameras should be documented in OSM!",
+    "lastUpdated": "2025-12-07",
+    "country": "US"
+  },
+  {
     "id": "3822544fb7dc2b50617b988e2c8a8a675ada5f72d5f015b3e69c5d3571252d59",
     "name": "Automatic number-plate recognition in San Francisco",
     "expected": 400,
@@ -1035,7 +1051,7 @@
   {
     "id": "735cd2329eff5a2f9a7958b29d41f7856774347f06bad4dd93aa9b33f59ae58d",
     "name": "Museums",
-    "expected": 96794,
+    "expected": 96796,
     "actual": 107664,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",
@@ -1050,7 +1066,7 @@
   {
     "id": "cba42aa122a00612e07fbd9a57264c051f3fefdf9ea4b6aebca7e32f4c36da33",
     "name": "Zoos",
-    "expected": 2893,
+    "expected": 2894,
     "actual": 9007,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",
