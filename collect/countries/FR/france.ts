@@ -18,6 +18,11 @@ export default async function france(): Promise<Comparison[]> {
     const railStationsResponse = await axios.get<{ 'meta': { 'total': number } }>(railStationsUrl);
     const railStationsCount = railStationsResponse.data.meta.total;
 
+    // Fetch charging stations count from French Government API
+    const url = 'https://tabular-api.data.gouv.fr/api/resources/eb76d20a-8501-400e-b336-d85724de5435/data/';
+    const result = await axios.get<{ 'meta': { 'total': number } }>(url);
+    const chargingStationsCount = result.data.meta.total;
+
     return appendCountry(
         'FR',
         [
@@ -61,6 +66,19 @@ export default async function france(): Promise<Comparison[]> {
                     taginfoServer
                 ),
                 'And another thanks to [@Binnette](https://github.com/Binnette) for this suggestion as well!'
+            ),
+            appendThanks(
+                await taginfoComparisons(
+                    'Electric vehicle charging stations in France 🇫🇷',
+                    'amenity',
+                    'charging_station',
+                    chargingStationsCount,
+                    'https://www.data.gouv.fr/datasets/base-nationale-des-irve-infrastructures-de-recharge-pour-vehicules-electriques/',
+                    'The French government maintains a database of EV charging infrastructure. OSM is charging towards full coverage! ⚡',
+                    ['🔋', '🚗'],
+                    '2025-12-07'
+                ),
+                'Thanks to [@Binnette](https://github.com/Binnette) for finding this dataset! 🚗⚡'
             )
         ]
     );

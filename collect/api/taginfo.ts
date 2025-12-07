@@ -23,7 +23,7 @@ export async function taginfoKey(key: string, server = 'https://taginfo.openstre
 
 async function callApi(url: string): Promise<number> {
     try {
-        randomDelay(1000, 10000);
+        randomDelay(2000, 10000);
 
         const response = await axios.get<TagInfo>(url);
         const count = response.data.data.find((x) => x.type === 'all')?.count;
