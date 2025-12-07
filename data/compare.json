@@ -348,6 +348,22 @@
     "country": "FR"
   },
   {
+    "id": "ee342a2cf9deebfaeb005720eb517b420c7909dd98f7a69fc3a39c341d0ca6b4",
+    "name": "Electric vehicle charging stations in France 🇫🇷",
+    "expected": 191455,
+    "actual": 174154,
+    "expectedSource": "https://www.data.gouv.fr/datasets/base-nationale-des-irve-infrastructures-de-recharge-pour-vehicules-electriques/",
+    "actualSource": "taginfo",
+    "tags": [
+      "🔋",
+      "🚗"
+    ],
+    "description": "The French government maintains a database of EV charging infrastructure. OSM is charging towards full coverage! ⚡",
+    "lastUpdated": "2025-12-07",
+    "thanks": "Thanks to [@Binnette](https://github.com/Binnette) for finding this dataset! 🚗⚡",
+    "country": "FR"
+  },
+  {
     "id": "5b0731306e515667e43a1bff6d2ae879f80da3791d96eef8abb59f6c30304876",
     "name": "REWE",
     "expected": 3690,

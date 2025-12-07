@@ -4,6 +4,8 @@ import getHash from './getHash';
 
 /**
  * Performs a comparison between expected and actual counts of OpenStreetMap features
+ * This is kind of a heavy tool, so if you can please use taginfo for simple queries.
+ *
  * @param name - The name of the comparison
  * @param key - The OSM tag key to query
  * @param value - The OSM tag value to query
@@ -45,6 +47,8 @@ export default async function overpassComparison(
 
 /**
  * Performs a comparison using multiple OSM tags combined with AND/OR operators
+ * This is kind of a heavy tool, so if you can please use taginfo for simple queries.
+ *
  * @param name - The name of the comparison
  * @param query - Array of [key, value] pairs representing OSM tags
  * @param operator - Whether to combine tags with 'and' or 'or'
@@ -85,7 +89,9 @@ export async function overpassComparisonMultiple(
 }
 
 /**
- * Performs a comparison using a raw Overpass query string
+ * Performs a comparison using a raw Overpass query string.
+ * This is kind of a heavy tool, so if you can please use taginfo for simple queries.
+ *
  * @param name - The name of the comparison
  * @param rawQuery - The raw Overpass query string
  * @param expected - The expected count of features

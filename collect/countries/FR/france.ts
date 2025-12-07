@@ -4,15 +4,8 @@ import appendCountry, { appendThanks } from '../../utils/appendData';
 import { bakery, shop } from '../../utils/osmTags';
 import taginfoServers from '../../utils/tagInfoServers';
 import taginfoComparisons, { taginfoComparisonMultipleKeyValuePairs } from '../../utils/taginfoComparisons';
-import { overpassComparisonRaw } from '../../utils/overpassComparisons';
 
 const taginfoServer = taginfoServers.FR;
-
-async function getChargingStationsCount(): Promise<number> {
-    const url = 'https://tabular-api.data.gouv.fr/api/resources/2729b192-40ab-4454-904d-735084dca3a3/data/?page_size=1';
-    const result = await axios.get<{ 'meta': { 'total': number } }>(url);
-    return result.data.meta.total;
-}
 
 export default async function france(): Promise<Comparison[]> {
     // Fetch boulodromes count from French Government API
@@ -24,6 +17,11 @@ export default async function france(): Promise<Comparison[]> {
     const railStationsUrl = 'https://tabular-api.data.gouv.fr/api/resources/cbacca02-6925-4a46-aab6-7194debbb9b7/data/?page_size=1';
     const railStationsResponse = await axios.get<{ 'meta': { 'total': number } }>(railStationsUrl);
     const railStationsCount = railStationsResponse.data.meta.total;
+
+    // Fetch charging stations count from French Government API
+    const url = 'https://tabular-api.data.gouv.fr/api/resources/eb76d20a-8501-400e-b336-d85724de5435/data/';
+    const result = await axios.get<{ 'meta': { 'total': number } }>(url);
+    const chargingStationsCount = result.data.meta.total;
 
     return appendCountry(
         'FR',
@@ -70,13 +68,11 @@ export default async function france(): Promise<Comparison[]> {
                 'And another thanks to [@Binnette](https://github.com/Binnette) for this suggestion as well!'
             ),
             appendThanks(
-                await overpassComparisonRaw(
+                await taginfoComparisons(
                     'Electric vehicle charging stations in France 🇫🇷',
-                    `[out:json][timeout:120];
-area[name="France"]->.fr;
-nwr["amenity"="charging_station"](area.fr);
-out count;`,
-                    await getChargingStationsCount(),
+                    'amenity',
+                    'charging_station',
+                    chargingStationsCount,
                     'https://www.data.gouv.fr/datasets/base-nationale-des-irve-infrastructures-de-recharge-pour-vehicules-electriques/',
                     'The French government maintains a database of EV charging infrastructure. OSM is charging towards full coverage! ⚡',
                     ['🔋', '🚗'],
