@@ -4,6 +4,7 @@ import appendCountry, { appendThanks } from '../../utils/appendData';
 import { bakery, shop } from '../../utils/osmTags';
 import taginfoServers from '../../utils/tagInfoServers';
 import taginfoComparisons from '../../utils/taginfoComparisons';
+import { overpassComparisonMultiple } from '../../utils/overpassComparisons';
 
 const taginfoServer = taginfoServers.FR;
 
@@ -43,6 +44,25 @@ export default async function france(): Promise<Comparison[]> {
                     taginfoServer
                 ),
                 'Thanks again to [@Binnette](https://github.com/Binnette) for reading through French government datasets and suggesting this one!'
+            ),
+            appendThanks(
+                await overpassComparisonMultiple(
+                    'Rail stations in France 🇫🇷',
+                    [['railway', 'station'], ['public_transport', 'station']],
+                    'and',
+                    await (() => {
+                        const url = 'https://tabular-api.data.gouv.fr/api/resources/cbacca02-6925-4a46-aab6-7194debbb9b7/data/?page_size=1';
+                        const result = axios.get<{ 'meta': { 'total': number } }>(url);
+
+                        return result.then((response) => response.data.meta.total);
+                    })(),
+                    'https://www.data.gouv.fr/datasets/gares-de-voyageurs-1/',
+                    'All aboard! 🚂 The French government tracks {{expected}} rail stations across France. Let\'s make sure they\'re all mapped in OSM!',
+                    ['🚂'],
+                    '2025-12-07',
+                    3600001403 // France
+                ),
+                'Merci beaucoup à [@Binnette](https://github.com/Binnette) for the suggestion and for providing the data!'
             )
         ]
     );
