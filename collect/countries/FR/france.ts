@@ -1,9 +1,9 @@
+import axios from 'axios';
 import { Comparison } from '../../types';
 import appendCountry, { appendThanks } from '../../utils/appendData';
 import { bakery, shop } from '../../utils/osmTags';
 import taginfoServers from '../../utils/tagInfoServers';
 import taginfoComparisons from '../../utils/taginfoComparisons';
-import overpassComparison from '../../utils/overpassComparisons';
 
 const taginfoServer = taginfoServers.FR;
 
@@ -13,7 +13,7 @@ export default async function france(): Promise<Comparison[]> {
         [
             appendThanks(
                 await taginfoComparisons(
-                    'Bakeries in France 🍞🥐🥖',
+                    'Bakeries in France',
                     shop,
                     bakery,
                     57300,
@@ -25,16 +25,24 @@ export default async function france(): Promise<Comparison[]> {
                 ),
                 'Merci beaucoup à [@Binnette](https://github.com/Binnette) for the suggestion and for providing the data!'
             ),
-            await taginfoComparisons(
-                'Jeux de boules (Boulodromes) in France 🇫🇷',
-                'sport',
-                'boules',
-                28664,
-                'https://equipements.sports.gouv.fr/api/explore/v2.1/catalog/datasets/data-es/records?limit=0&refine=equip_type_famille%3A%22Boulodrome%22',
-                'The French government says there are 28,664 places to play boules. OSM is still rolling towards that number. Vive la pétanque! 🎳🥖🇫🇷',
-                ['🎳', '🇫🇷', '🥖'],
-                '2025-05-28',
-                taginfoServer
+            appendThanks(
+                await taginfoComparisons(
+                    'Jeux de boules (Boulodromes) in France 🇫🇷',
+                    'sport',
+                    'boules',
+                    await (() => {
+                        const url = 'https://equipements.sports.gouv.fr/api/explore/v2.1/catalog/datasets/data-es/records?limit=0&refine=equip_type_famille%3A%22Boulodrome%22';
+                        const result = axios.get<{ "total_count": number, "results": [] }>(url);
+
+                        return result.then(res => res.data.total_count);
+                    })(),
+                    'https://equipements.sports.gouv.fr/api/explore/v2.1/catalog/datasets/data-es/records?limit=0&refine=equip_type_famille%3A%22Boulodrome%22',
+                    'The French government says there are 28,664 places to play boules. OSM is still rolling towards that number. Vive la pétanque!',
+                    ['🎱'],
+                    '2025-05-28',
+                    taginfoServer
+                ),
+                "Thanks again to [@Binnette](https://github.com/Binnette) for reading through French government datasets and suggesting this one!"
             )
         ]
     );
