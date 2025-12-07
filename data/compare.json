@@ -333,10 +333,10 @@
     "country": "FR"
   },
   {
-    "id": "2c16afdec168ad143ebb97f8ff8b358a8077ae12fa17b1fd9d1faeacff905637",
+    "id": "b141c7a370535b0fed19af73c5ad17e2e23585145be708727b59c89ab9e226c5",
     "name": "Rail stations in France 🇫🇷",
     "expected": 2785,
-    "actual": 13548,
+    "actual": 2970,
     "expectedSource": "https://www.data.gouv.fr/datasets/gares-de-voyageurs-1/",
     "actualSource": "taginfo",
     "tags": [
@@ -445,6 +445,21 @@
     "description": "London might be the most watched city in the world. But who watches the watchers?",
     "lastUpdated": "2025-01-05",
     "country": "GB"
+  },
+  {
+    "id": "839d2ae61d82edc4d60cd020dd4491b0aa2aa04e62574093bac5be16744f8265",
+    "name": "Gas stations in Italy 🇮🇹",
+    "expected": 24575,
+    "actual": 22871,
+    "expectedSource": "https://www.mimit.gov.it/images/exportCSV/anagrafica_impianti_attivi.csv",
+    "actualSource": "taginfo",
+    "tags": [
+      "🚗"
+    ],
+    "description": "Italy has {{expected}} gas stations according to government data. Time to fuel up OSM with complete coverage! ⛽",
+    "lastUpdated": "2025-12-07",
+    "thanks": "Thanks to [@ivanbranco](https://github.com/ivanbranco) for providing the data from the Italian Ministry of Business and Made in Italy!",
+    "country": "IT"
   },
   {
     "id": "0b8d0a7e9c4d47412cfcd43f49ade9f42a01778dc1fee6c267709068b25bf79c",

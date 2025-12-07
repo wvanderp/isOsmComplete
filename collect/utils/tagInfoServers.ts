@@ -5,6 +5,7 @@ const taginfoServers = {
     EU: 'https://taginfo.geofabrik.de/europe/',
     FR: 'https://taginfo.geofabrik.de/europe:france',
     GB: 'https://taginfo.geofabrik.de/europe:united-kingdom',
+    IT: 'https://taginfo.geofabrik.de/europe:italy',
     JP: 'https://taginfo.geofabrik.de/asia:japan',
     London: 'https://taginfo.geofabrik.de/europe:united-kingdom:england:greater-london',
     NL: 'https://taginfo.geofabrik.de/europe:netherlands/',
