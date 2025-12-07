@@ -318,6 +318,22 @@
     "country": "FR"
   },
   {
+    "id": "94a0bda2b1827b197dd747cd6c456594f23f6252b7f12d789cad82198e6fc8a5",
+    "name": "Jeux de boules (Boulodromes) in France 🇫🇷",
+    "expected": 28664,
+    "actual": 17346,
+    "expectedSource": "https://equipements.sports.gouv.fr/api/explore/v2.1/catalog/datasets/data-es/records?limit=0&refine=equip_type_famille%3A%22Boulodrome%22",
+    "actualSource": "taginfo",
+    "tags": [
+      "🎳",
+      "🇫🇷",
+      "🥖"
+    ],
+    "description": "The French government says there are 28,664 places to play boules. OSM is still rolling towards that number. Vive la pétanque! 🎳🥖🇫🇷",
+    "lastUpdated": "2025-05-28",
+    "country": "FR"
+  },
+  {
     "id": "5b0731306e515667e43a1bff6d2ae879f80da3791d96eef8abb59f6c30304876",
     "name": "REWE",
     "expected": 3690,
