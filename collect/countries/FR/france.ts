@@ -9,6 +9,11 @@ import { overpassComparisonMultiple } from '../../utils/overpassComparisons';
 const taginfoServer = taginfoServers.FR;
 
 export default async function france(): Promise<Comparison[]> {
+    // Fetch rail stations count from French Government API
+    const railStationsUrl = 'https://tabular-api.data.gouv.fr/api/resources/cbacca02-6925-4a46-aab6-7194debbb9b7/data/?page_size=1';
+    const railStationsResponse = await axios.get<{ 'meta': { 'total': number } }>(railStationsUrl);
+    const railStationsCount = railStationsResponse.data.meta.total;
+
     return appendCountry(
         'FR',
         [
@@ -50,12 +55,7 @@ export default async function france(): Promise<Comparison[]> {
                     'Rail stations in France 🇫🇷',
                     [['railway', 'station'], ['public_transport', 'station']],
                     'and',
-                    await (() => {
-                        const url = 'https://tabular-api.data.gouv.fr/api/resources/cbacca02-6925-4a46-aab6-7194debbb9b7/data/?page_size=1';
-                        const result = axios.get<{ 'meta': { 'total': number } }>(url);
-
-                        return result.then((response) => response.data.meta.total);
-                    })(),
+                    railStationsCount,
                     'https://www.data.gouv.fr/datasets/gares-de-voyageurs-1/',
                     'All aboard! 🚂 The French government tracks {{expected}} rail stations across France. Let\'s make sure they\'re all mapped in OSM!',
                     ['🚂'],
