@@ -48,10 +48,12 @@ export async function overpassRawQuery(query: string): Promise<number> {
     return callApi(query);
 }
 
-async function callApi(query: string): Promise<number> {
-    randomDelay(3000, 10000);
+const USER_AGENT = 'is-osm-complete/0.1.0 (https://github.com/wvanderp/isOsmComplete)';
 
-    const data = await overpassJson(query) as OverpassCount;
+async function callApi(query: string): Promise<number> {
+    await randomDelay(3000, 15000);
+
+    const data = await overpassJson(query, { userAgent: USER_AGENT }) as OverpassCount;
     const count = data.elements[0].tags.total;
 
     return Number.parseInt(count, 10);

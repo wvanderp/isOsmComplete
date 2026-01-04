@@ -2,6 +2,7 @@ import { OverpassOsmElement, overpassJson } from 'overpass-ts';
 import { iso1A2Code } from '@rapideditor/country-coder';
 import path from 'path';
 import fs from 'fs';
+import randomDelay from '../../../utils/delay';
 import parseEnergy, { genericEnergyParser } from './parsers/parseEnergy';
 import { Comparison } from '../../../types';
 import directoryWalk from './utils/directoryWalk';
@@ -21,7 +22,9 @@ async function getEnergyProduction(): Promise<Record<string, number>> {
 out meta;
 `;
 
-    const data = await overpassJson(query);
+    const USER_AGENT = 'is-osm-complete/0.1.0 (https://github.com/wvanderp/isOsmComplete)';
+    await randomDelay(3000, 15000);
+    const data = await overpassJson(query, { userAgent: USER_AGENT });
 
     const elements = data.elements
         .reduce<OverpassOsmElement[]>((accumulator, current) => {
