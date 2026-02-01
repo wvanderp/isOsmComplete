@@ -1,6 +1,6 @@
 import axios, { AxiosError } from 'axios';
 import { TagInfo } from '../types';
-import randomDelay from '../utils/delay';
+import { randomDelay } from '../utils/delay';
 
 function cleanServer(server: string): string {
     if (server.at(-1) === '/') {

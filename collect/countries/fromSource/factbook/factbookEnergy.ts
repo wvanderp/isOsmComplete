@@ -2,7 +2,7 @@ import { OverpassOsmElement, overpassJson } from 'overpass-ts';
 import { iso1A2Code } from '@rapideditor/country-coder';
 import path from 'path';
 import fs from 'fs';
-import randomDelay from '../../../utils/delay';
+import { randomDelay } from '../../../utils/delay';
 import parseEnergy, { genericEnergyParser } from './parsers/parseEnergy';
 import { Comparison } from '../../../types';
 import directoryWalk from './utils/directoryWalk';

@@ -1,6 +1,6 @@
 import { overpassJson } from 'overpass-ts';
 import { OverpassCount } from '../types';
-import randomDelay from '../utils/delay';
+import { randomDelay } from '../utils/delay';
 
 function andQuery(queries: [string, string][], area?: number): string {
     const queryPart = queries.map(([key, value]) => `["${key}"="${value}"]`).join('');
