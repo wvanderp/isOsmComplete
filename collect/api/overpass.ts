@@ -58,14 +58,10 @@ const USER_AGENT = 'is-osm-complete/0.1.0 (https://github.com/wvanderp/isOsmComp
  * @returns The result of the function
  */
 async function withRetry<T>(function_: () => Promise<T>, maxRetries: number = 2): Promise<T> {
-    let lastError: Error | undefined;
-
     for (let attempt = 0; attempt <= maxRetries; attempt += 1) {
         try {
             return await function_();
         } catch (error) {
-            lastError = error as Error;
-
             // Only retry on timeout or rate limit errors
             const isRetriableError = error instanceof OverpassGatewayTimeoutError
                 || error instanceof OverpassRateLimitError;
@@ -80,14 +76,14 @@ async function withRetry<T>(function_: () => Promise<T>, maxRetries: number = 2)
         }
     }
 
-    // This should never be reached, but TypeScript needs it
-    throw lastError;
+    // This should never be reached due to the throw in the catch block
+    throw new Error('Unexpected: withRetry completed without returning or throwing');
 }
 
 async function callApi(query: string): Promise<number> {
     await randomDelay(3000, 15000);
 
-    const data = await withRetry(async () => overpassJson(query, { userAgent: USER_AGENT }) as OverpassCount);
+    const data = (await withRetry(async () => overpassJson(query, { userAgent: USER_AGENT }))) as OverpassCount;
 
     const count = data.elements[0].tags.total;
 
