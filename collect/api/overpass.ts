@@ -1,6 +1,6 @@
-import { overpassJson } from 'overpass-ts';
+import { overpassJson, OverpassGatewayTimeoutError, OverpassRateLimitError } from 'overpass-ts';
 import { OverpassCount } from '../types';
-import { randomDelay } from '../utils/delay';
+import { randomDelay, delay } from '../utils/delay';
 
 function andQuery(queries: [string, string][], area?: number): string {
     const queryPart = queries.map(([key, value]) => `["${key}"="${value}"]`).join('');
@@ -50,10 +50,45 @@ export async function overpassRawQuery(query: string): Promise<number> {
 
 const USER_AGENT = 'is-osm-complete/0.1.0 (https://github.com/wvanderp/isOsmComplete)';
 
+/**
+ * Executes a function with exponential backoff retry logic.
+ * Retries up to 3 times (initial attempt + 2 retries) with exponential backoff.
+ * @param function_ - The async function to execute
+ * @param maxRetries - Maximum number of retries (default: 2, meaning 3 total attempts)
+ * @returns The result of the function
+ */
+async function withRetry<T>(function_: () => Promise<T>, maxRetries: number = 2): Promise<T> {
+    let lastError: Error | undefined;
+
+    for (let attempt = 0; attempt <= maxRetries; attempt += 1) {
+        try {
+            return await function_();
+        } catch (error) {
+            lastError = error as Error;
+
+            // Only retry on timeout or rate limit errors
+            const isRetriableError = error instanceof OverpassGatewayTimeoutError
+                || error instanceof OverpassRateLimitError;
+
+            if (!isRetriableError || attempt === maxRetries) {
+                throw error;
+            }
+
+            // Exponential backoff: 2^attempt * 1000ms (1s, 2s, 4s, etc.)
+            const backoffMs = (2 ** attempt) * 1000;
+            await delay(backoffMs);
+        }
+    }
+
+    // This should never be reached, but TypeScript needs it
+    throw lastError;
+}
+
 async function callApi(query: string): Promise<number> {
     await randomDelay(3000, 15000);
 
-    const data = await overpassJson(query, { userAgent: USER_AGENT }) as OverpassCount;
+    const data = await withRetry(async () => overpassJson(query, { userAgent: USER_AGENT }) as OverpassCount);
+
     const count = data.elements[0].tags.total;
 
     return Number.parseInt(count, 10);
