@@ -2,14 +2,6 @@
 
 In this document, I will write down my ideas for this project.
 
-## The CIA World Factbook
-
-I am working on a script that would compare some of the facts in the CIA factbook to OSM.
-
-I am focusing on the power generation section because it interests me the most.
-
-Its current state can be found in the `collect/countries/fromSource/factbook` file. I'm stuck on how to get the data out of OSM because the power generation is duplicated on, for example, the generator and the site.
-
 ## statistics sites
 
 There are many sites offering statistics. They are often government or NGO sites. They usually have a lot of data, but it is often hard to get to. I want to make a script that can get data from these sites.

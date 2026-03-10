@@ -17,7 +17,6 @@ import unitedStates from './countries/US/unitedStates';
 import vietnam from './countries/VN/Vietnam';
 
 import airports from './countries/fromSource/ourAirportData/ourAirport';
-import factbook from './countries/fromSource/factbook/factbook';
 import wikidata from './countries/fromSource/wikidata/wikidata';
 import allThePlaces from './countries/fromSource/alltheplaces/alltheplaces';
 
@@ -46,7 +45,6 @@ const tagsFile = path.join(__dirname, 'tags.json');
         // fromSource
         await allThePlaces(),
         ...(await airports()),
-        ...(await factbook()),
         ...(await wikidata())
     ];
 

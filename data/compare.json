@@ -1035,20 +1035,6 @@
     "country": "Worldwide"
   },
   {
-    "id": "71a9759b540300dccd608fedd0d7f90356b924b16ff08c62b38d8d281be3b73c",
-    "name": "CIA World Factbook - Airports",
-    "expected": 52459,
-    "actual": 51807,
-    "expectedSource": "https://www.cia.gov/the-world-factbook/",
-    "actualSource": "taginfo",
-    "tags": [
-      "✈️"
-    ],
-    "description": "The CIA has, unsurprisingly, an interest in how many airports there are in a country. We can make use of this curiosity to check how far we are in mapping airports in OSM.",
-    "lastUpdated": "2025-01-05",
-    "country": "Worldwide"
-  },
-  {
     "id": "735cd2329eff5a2f9a7958b29d41f7856774347f06bad4dd93aa9b33f59ae58d",
     "name": "Museums",
     "expected": 97606,
