@@ -5,5 +5,3 @@ dist
 build
 scratch.ts
 scrap.ts
-collect/countries/fromSource/factbook/factbook/
-collect/countries/fromSource/factbook/scripts/factbook.json
