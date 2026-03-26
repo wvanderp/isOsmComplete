@@ -1,6 +1,12 @@
-import { overpassJson } from 'overpass-ts';
+import { OverpassRateLimitError, overpassJson } from 'overpass-ts';
 import { OverpassCount } from '../types';
-import { randomDelay } from '../utils/delay';
+import { delay, randomDelay } from '../utils/delay';
+
+const REQUEST_DELAY_MIN_MS = 3000;
+const REQUEST_DELAY_MAX_MS = 15000;
+const RATE_LIMIT_BACKOFF_MS = 15000;
+const MAX_RATE_LIMIT_BACKOFF_MS = 60000;
+const MAX_RATE_LIMIT_RETRIES = 3;
 
 function andQuery(queries: [string, string][], area?: number): string {
     const queryPart = queries.map(([key, value]) => `["${key}"="${value}"]`).join('');
@@ -50,11 +56,27 @@ export async function overpassRawQuery(query: string): Promise<number> {
 
 const USER_AGENT = 'is-osm-complete/0.1.0 (https://github.com/wvanderp/isOsmComplete)';
 
+function getRateLimitBackoffMs(attempt: number): number {
+    return Math.min(RATE_LIMIT_BACKOFF_MS * (2 ** (attempt - 1)), MAX_RATE_LIMIT_BACKOFF_MS);
+}
+
 async function callApi(query: string): Promise<number> {
-    await randomDelay(3000, 15000);
+    for (let attempt = 0; attempt <= MAX_RATE_LIMIT_RETRIES; attempt += 1) {
+        await randomDelay(REQUEST_DELAY_MIN_MS, REQUEST_DELAY_MAX_MS);
 
-    const data = await overpassJson(query, { userAgent: USER_AGENT }) as OverpassCount;
-    const count = data.elements[0].tags.total;
+        try {
+            const data = await overpassJson(query, { userAgent: USER_AGENT }) as OverpassCount;
+            const count = data.elements[0].tags.total;
 
-    return Number.parseInt(count, 10);
+            return Number.parseInt(count, 10);
+        } catch (error) {
+            if (!(error instanceof OverpassRateLimitError) || attempt === MAX_RATE_LIMIT_RETRIES) {
+                throw error;
+            }
+
+            await delay(getRateLimitBackoffMs(attempt + 1));
+        }
+    }
+
+    throw new Error('Overpass retry loop exited unexpectedly');
 }
