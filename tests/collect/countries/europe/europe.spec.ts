@@ -7,9 +7,18 @@ const sampleLocations = [
     { id: 3, name: 'Location C' }
 ];
 
+function htmlEncode(str: string): string {
+    return str
+        .replaceAll('&', '&amp;')
+        .replaceAll('"', '&quot;')
+        .replaceAll("'", '&#39;')
+        .replaceAll('<', '&lt;')
+        .replaceAll('>', '&gt;');
+}
+
 describe('parseFastnedLocations', () => {
     it('should parse the data-locations attribute and return the count', () => {
-        const encoded = encodeURIComponent(JSON.stringify(sampleLocations));
+        const encoded = htmlEncode(JSON.stringify(sampleLocations));
         const html = `<div data-locations="${encoded}"></div>`;
         expect(parseFastnedLocations(html)).toBe(3);
     });
@@ -22,19 +31,19 @@ describe('parseFastnedLocations', () => {
     });
 
     it('should handle a single location', () => {
-        const encoded = encodeURIComponent(JSON.stringify([{ id: 1 }]));
+        const encoded = htmlEncode(JSON.stringify([{ id: 1 }]));
         const html = `<div data-locations="${encoded}"></div>`;
         expect(parseFastnedLocations(html)).toBe(1);
     });
 
     it('should handle an empty locations array', () => {
-        const encoded = encodeURIComponent(JSON.stringify([]));
+        const encoded = htmlEncode(JSON.stringify([]));
         const html = `<div data-locations="${encoded}"></div>`;
         expect(parseFastnedLocations(html)).toBe(0);
     });
 
     it('should throw when data-locations contains invalid JSON', () => {
-        const html = `<div data-locations="${encodeURIComponent('not valid json')}"></div>`;
+        const html = `<div data-locations="${htmlEncode('not valid json')}"></div>`;
         expect(() => parseFastnedLocations(html)).toThrow(
             'Failed to parse the data-locations JSON from the Fastned locations page'
         );
