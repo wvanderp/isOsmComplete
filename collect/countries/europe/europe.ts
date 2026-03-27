@@ -7,6 +7,15 @@ import retailStoresInEurope from './data.europe';
 
 const taginfoServer = taginfoServers.EU;
 
+function decodeHtmlEntities(string_: string): string {
+    return string_
+        .replaceAll('&quot;', '"')
+        .replaceAll('&amp;', '&')
+        .replaceAll('&lt;', '<')
+        .replaceAll('&gt;', '>')
+        .replaceAll('&#39;', "'");
+}
+
 export function parseFastnedLocations(html: string): number {
     const match = html.match(/data-locations="([^"]+)"/);
     if (!match?.[1]) {
@@ -15,7 +24,7 @@ export function parseFastnedLocations(html: string): number {
 
     let locations: unknown[];
     try {
-        locations = JSON.parse(decodeURIComponent(match[1])) as unknown[];
+        locations = JSON.parse(decodeHtmlEntities(match[1])) as unknown[];
     } catch {
         throw new Error('Failed to parse the data-locations JSON from the Fastned locations page');
     }

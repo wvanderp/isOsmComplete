@@ -1,4 +1,4 @@
-import { OverpassRateLimitError, overpassJson } from 'overpass-ts';
+import { OverpassGatewayTimeoutError, OverpassRateLimitError, overpassJson } from 'overpass-ts';
 import { OverpassCount } from '../types';
 import { delay, randomDelay } from '../utils/delay';
 
@@ -70,7 +70,8 @@ async function callApi(query: string): Promise<number> {
 
             return Number.parseInt(count, 10);
         } catch (error) {
-            if (!(error instanceof OverpassRateLimitError) || attempt === MAX_RATE_LIMIT_RETRIES) {
+            const isRetryable = error instanceof OverpassRateLimitError || error instanceof OverpassGatewayTimeoutError;
+            if (!isRetryable || attempt === MAX_RATE_LIMIT_RETRIES) {
                 throw error;
             }
 
