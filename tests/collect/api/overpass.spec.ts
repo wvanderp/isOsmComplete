@@ -1,9 +1,11 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
+import { OverpassRateLimitError } from 'overpass-ts';
+import { overpassRawQuery } from '../../../collect/api/overpass';
 
 const { overpassJsonMock, delayMock, randomDelayMock } = vi.hoisted(() => ({
     overpassJsonMock: vi.fn(),
-    delayMock: vi.fn(async () => {}),
-    randomDelayMock: vi.fn(async () => {})
+    delayMock: vi.fn(async () => { }),
+    randomDelayMock: vi.fn(async () => { })
 }));
 
 vi.mock('overpass-ts', async (importOriginal) => {
@@ -19,9 +21,6 @@ vi.mock('../../../collect/utils/delay', () => ({
     delay: delayMock,
     randomDelay: randomDelayMock
 }));
-
-const { OverpassRateLimitError } = await import('overpass-ts');
-const { overpassRawQuery } = await import('../../../collect/api/overpass');
 
 const query = '[out:json];node(1);out count;';
 
