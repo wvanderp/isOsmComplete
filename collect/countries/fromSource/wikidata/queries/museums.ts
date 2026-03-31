@@ -2,36 +2,43 @@ import { Comparison } from '../../../../types';
 import appendCountry from '../../../../utils/appendData';
 import wikidataComparison from '../utils/wikidataComparison';
 
-// Optimized query: Use SERVICE wikibase:label hint and limit property path depth
-// The original query with wdt:P279* is very expensive as it traverses the entire class hierarchy
+// Wikidata/Blazegraph only supports *, +, and ? as path repetition operators.
+// {n,m} syntax is not supported and causes 400 errors.
+// For the museum query we precompute valid museum types in a subquery (excluding
+// zoo/museum-ship/dolphinarium subtypes) and then count instances — this is more
+// efficient than running FILTER NOT EXISTS with a full * traversal for every item.
 const museumSparqlQuery = `
 SELECT (COUNT(DISTINCT ?museum) AS ?count) WHERE {
-    # Direct instance of museum or subclass up to 5 levels deep
-    ?museum wdt:P31/wdt:P279{0,5} wd:Q33506.
+    {
+        SELECT DISTINCT ?type WHERE {
+            ?type wdt:P279* wd:Q33506. # Subclass of museum
+            FILTER NOT EXISTS { ?type wdt:P279* wd:Q575727 } # Exclude museum ship subtypes
+            FILTER NOT EXISTS { ?type wdt:P279* wd:Q43501 } # Exclude zoo subtypes
+            FILTER NOT EXISTS { ?type wdt:P279* wd:Q491675 } # Exclude dolphinarium subtypes
+        }
+    }
+    ?museum wdt:P31 ?type.
     FILTER NOT EXISTS { ?museum wdt:P576 ?enddate } # Exclude closed museums
-    FILTER NOT EXISTS { ?museum wdt:P31/wdt:P279{0,3} wd:Q575727 } # Exclude museum ships
-    FILTER NOT EXISTS { ?museum wdt:P31/wdt:P279{0,3} wd:Q43501 } # Exclude zoos
-    FILTER NOT EXISTS { ?museum wdt:P31/wdt:P279{0,3} wd:Q491675 } # Exclude dolphinariums
   }
 `;
 
 const zooSparqlQuery = `
 SELECT (COUNT(DISTINCT ?zoo) AS ?count) WHERE {
-    ?zoo wdt:P31/wdt:P279{0,5} wd:Q43501. # Instance of zoo or subclass
+    ?zoo wdt:P31/wdt:P279* wd:Q43501. # Instance of zoo or subclass
     FILTER NOT EXISTS { ?zoo wdt:P576 ?enddate } # Exclude closed zoos
   }
 `;
 
 const aquariumSparqlQuery = `
 SELECT (COUNT(DISTINCT ?aquarium) AS ?count) WHERE {
-    ?aquarium wdt:P31/wdt:P279{0,5} wd:Q2281788. # Instance of public aquarium or subclass
+    ?aquarium wdt:P31/wdt:P279* wd:Q2281788. # Instance of public aquarium or subclass
     FILTER NOT EXISTS { ?aquarium wdt:P576 ?enddate } # Exclude closed aquariums
   }
 `;
 
 const museumShipsSparqlQuery = `
 SELECT (COUNT(DISTINCT ?museumShip) AS ?count) WHERE {
-    ?museumShip wdt:P31/wdt:P279{0,5} wd:Q575727. # Instance of museum ship or subclass
+    ?museumShip wdt:P31/wdt:P279* wd:Q575727. # Instance of museum ship or subclass
     FILTER NOT EXISTS { ?museumShip wdt:P576 ?enddate } # Exclude closed museum ships
   }
 `;
