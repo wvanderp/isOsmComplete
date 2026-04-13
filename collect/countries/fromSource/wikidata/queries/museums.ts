@@ -2,36 +2,46 @@ import { Comparison } from '../../../../types';
 import appendCountry from '../../../../utils/appendData';
 import wikidataComparison from '../utils/wikidataComparison';
 
-// Optimized query: Use SERVICE wikibase:label hint and limit property path depth
-// The original query with wdt:P279* is very expensive as it traverses the entire class hierarchy
+// Wikidata Query Service rejects bounded property paths like wdt:P279{0,5}. The
+// supported and performant form is to bind the instance-of class first and then
+// follow the subclass tree from the class variable.
+function buildClassHierarchyPattern(entityVariable: string, classVariable: string, qid: string): string {
+    return `${entityVariable} wdt:P31 ${classVariable}.\n    ${classVariable} wdt:P279* wd:${qid}.`;
+}
+
 const museumSparqlQuery = `
 SELECT (COUNT(DISTINCT ?museum) AS ?count) WHERE {
-    # Direct instance of museum or subclass up to 5 levels deep
-    ?museum wdt:P31/wdt:P279{0,5} wd:Q33506.
+    ${buildClassHierarchyPattern('?museum', '?museumClass', 'Q33506')}
     FILTER NOT EXISTS { ?museum wdt:P576 ?enddate } # Exclude closed museums
-    FILTER NOT EXISTS { ?museum wdt:P31/wdt:P279{0,3} wd:Q575727 } # Exclude museum ships
-    FILTER NOT EXISTS { ?museum wdt:P31/wdt:P279{0,3} wd:Q43501 } # Exclude zoos
-    FILTER NOT EXISTS { ?museum wdt:P31/wdt:P279{0,3} wd:Q491675 } # Exclude dolphinariums
-  }
+    FILTER NOT EXISTS {
+        ${buildClassHierarchyPattern('?museum', '?museumShipClass', 'Q575727')}
+    } # Exclude museum ships
+    FILTER NOT EXISTS {
+        ${buildClassHierarchyPattern('?museum', '?zooClass', 'Q43501')}
+    } # Exclude zoos
+    FILTER NOT EXISTS {
+        ${buildClassHierarchyPattern('?museum', '?dolphinariumClass', 'Q491675')}
+    } # Exclude dolphinariums
+}
 `;
 
 const zooSparqlQuery = `
 SELECT (COUNT(DISTINCT ?zoo) AS ?count) WHERE {
-    ?zoo wdt:P31/wdt:P279{0,5} wd:Q43501. # Instance of zoo or subclass
+    ${buildClassHierarchyPattern('?zoo', '?zooClass', 'Q43501')} # Instance of zoo or subclass
     FILTER NOT EXISTS { ?zoo wdt:P576 ?enddate } # Exclude closed zoos
   }
 `;
 
 const aquariumSparqlQuery = `
 SELECT (COUNT(DISTINCT ?aquarium) AS ?count) WHERE {
-    ?aquarium wdt:P31/wdt:P279{0,5} wd:Q2281788. # Instance of public aquarium or subclass
+    ${buildClassHierarchyPattern('?aquarium', '?aquariumClass', 'Q2281788')} # Instance of public aquarium or subclass
     FILTER NOT EXISTS { ?aquarium wdt:P576 ?enddate } # Exclude closed aquariums
   }
 `;
 
 const museumShipsSparqlQuery = `
 SELECT (COUNT(DISTINCT ?museumShip) AS ?count) WHERE {
-    ?museumShip wdt:P31/wdt:P279{0,5} wd:Q575727. # Instance of museum ship or subclass
+    ${buildClassHierarchyPattern('?museumShip', '?museumShipClass', 'Q575727')} # Instance of museum ship or subclass
     FILTER NOT EXISTS { ?museumShip wdt:P576 ?enddate } # Exclude closed museum ships
   }
 `;
