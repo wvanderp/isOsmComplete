@@ -182,10 +182,16 @@
     "unicorn/prefer-module": "off",
     "unicorn/numeric-separators-style": "off",
     "react/jsx-one-expression-per-line": "off",
-    "@typescript-eslint/no-use-before-define": "off", 
+    "@typescript-eslint/no-use-before-define": "off",
     "no-restricted-syntax": "off",
     "unicorn/prefer-top-level-await": "off",
     "unicorn/no-array-reduce": "off",
-    "sonarjs/no-duplicate-string": ["error", { "threshold": 5 }]
+    "sonarjs/no-duplicate-string": [
+      "error",
+      {
+        "threshold": 5
+      }
+    ],
+    "eslint-plugin-unicorn/empty-brace-spaces": "off"
   }
 }

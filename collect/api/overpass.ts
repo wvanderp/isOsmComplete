@@ -6,7 +6,13 @@ const REQUEST_DELAY_MIN_MS = 3000;
 const REQUEST_DELAY_MAX_MS = 15000;
 const RATE_LIMIT_BACKOFF_MS = 15000;
 const MAX_RATE_LIMIT_BACKOFF_MS = 60000;
-const MAX_RATE_LIMIT_RETRIES = 3;
+const MAX_RATE_LIMIT_RETRIES_PER_ENDPOINT = 3;
+const OVERPASS_ENDPOINTS = [
+    'https://overpass-api.de/api/interpreter',
+    'https://overpass.kumi.systems/api/interpreter',
+    'https://lz4.overpass-api.de/api/interpreter'
+];
+const RETRYABLE_STATUS_CODES = new Set([408, 429, 500, 502, 503, 504]);
 
 function andQuery(queries: [string, string][], area?: number): string {
     const queryPart = queries.map(([key, value]) => `["${key}"="${value}"]`).join('');
@@ -60,23 +66,73 @@ function getRateLimitBackoffMs(attempt: number): number {
     return Math.min(RATE_LIMIT_BACKOFF_MS * (2 ** (attempt - 1)), MAX_RATE_LIMIT_BACKOFF_MS);
 }
 
+function getRetryableStatusCode(error: unknown): number | undefined {
+    if (error instanceof OverpassRateLimitError) {
+        return 429;
+    }
+
+    if (error instanceof OverpassGatewayTimeoutError) {
+        return 504;
+    }
+
+    if (!(error instanceof Error)) {
+        return undefined;
+    }
+
+    const statusMatch = /^\s*(\d{3})\b/u.exec(error.message);
+    return statusMatch ? Number.parseInt(statusMatch[1], 10) : undefined;
+}
+
+function isRetryableOverpassError(error: unknown): boolean {
+    const statusCode = getRetryableStatusCode(error);
+    return statusCode !== undefined && RETRYABLE_STATUS_CODES.has(statusCode);
+}
+
 async function callApi(query: string): Promise<number> {
-    for (let attempt = 0; attempt <= MAX_RATE_LIMIT_RETRIES; attempt += 1) {
-        await randomDelay(REQUEST_DELAY_MIN_MS, REQUEST_DELAY_MAX_MS);
+    const attemptsPerEndpoint = MAX_RATE_LIMIT_RETRIES_PER_ENDPOINT + 1;
+    let lastRetryableError: unknown;
 
-        try {
-            const data = await overpassJson(query, { userAgent: USER_AGENT }) as OverpassCount;
-            const count = data.elements[0].tags.total;
+    for (const endpoint of OVERPASS_ENDPOINTS) {
+        for (let attempt = 1; attempt <= attemptsPerEndpoint; attempt += 1) {
+            await randomDelay(REQUEST_DELAY_MIN_MS, REQUEST_DELAY_MAX_MS);
 
-            return Number.parseInt(count, 10);
-        } catch (error) {
-            const isRetryable = error instanceof OverpassRateLimitError || error instanceof OverpassGatewayTimeoutError;
-            if (!isRetryable || attempt === MAX_RATE_LIMIT_RETRIES) {
-                throw error;
+            try {
+                const data = await overpassJson(query, {
+                    endpoint,
+                    userAgent: USER_AGENT
+                }) as OverpassCount;
+                const count = data.elements[0].tags.total;
+
+                return Number.parseInt(count, 10);
+            } catch (error) {
+                if (!isRetryableOverpassError(error)) {
+                    throw error;
+                }
+
+                lastRetryableError = error;
+                const statusCode = getRetryableStatusCode(error);
+
+                if (attempt === attemptsPerEndpoint) {
+                    console.warn(
+                        `[overpass] ${endpoint} failed with retryable error ${statusCode} `
+                        + `on attempt ${attempt}/${attemptsPerEndpoint}. Trying next endpoint.`
+                    );
+                    break;
+                }
+
+                const backoffMs = getRateLimitBackoffMs(attempt);
+
+                console.warn(
+                    `[overpass] ${endpoint} failed with retryable error ${statusCode} `
+                    + `on attempt ${attempt}/${attemptsPerEndpoint}. Retrying in ${backoffMs}ms.`
+                );
+                await delay(backoffMs);
             }
-
-            await delay(getRateLimitBackoffMs(attempt + 1));
         }
+    }
+
+    if (lastRetryableError) {
+        throw lastRetryableError;
     }
 
     throw new Error('Overpass retry loop exited unexpectedly');
