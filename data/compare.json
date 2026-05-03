@@ -17,7 +17,7 @@
     "id": "7db310de75fd52cb02a885303658ba574e5e5262b439fc3c6116a6661811782e",
     "name": "Stolpersteine",
     "expected": 100000,
-    "actual": 50189,
+    "actual": 50197,
     "expectedSource": "https://www.timesofisrael.com/holocaust-memorial-project-marks-milestone-with-100000-stumbling-blocks/",
     "actualSource": "overpass",
     "tags": [],
@@ -163,7 +163,7 @@
     "id": "72b7bf05d23320f5325ae692c0c8de3fb12445f9c049e002e5dbe1976f8f1f4b",
     "name": "Tesla superchargers",
     "expected": 6975,
-    "actual": 829,
+    "actual": 834,
     "expectedSource": "https://digitalassets.tesla.com/tesla-contents/image/upload/IR/TSLA-Q4-2024-Update.pdf",
     "actualSource": "overpass",
     "tags": [
@@ -220,7 +220,7 @@
   {
     "id": "681037426fe19e62eba5d82fa128583b311ed6368eb25d638242103510647c5a",
     "name": "Memorial benches",
-    "expected": 41313,
+    "expected": 41321,
     "actual": 1454,
     "expectedSource": "https://openbenches.org/",
     "actualSource": "taginfo",
@@ -235,7 +235,7 @@
     "id": "16f17dead727d54cdeea1a744885af7be858826c05e1ac342da754d457dd1b15",
     "name": "Fastned chargers in the EU",
     "expected": 420,
-    "actual": 346,
+    "actual": 348,
     "expectedSource": "https://www.fastnedcharging.com/en/locations",
     "actualSource": "taginfo",
     "tags": [
@@ -250,7 +250,7 @@
     "id": "fcba5aaec2e6bac985428897470d2881bb4d9df7668db7fdc1e0f2fd416afb01",
     "name": "Retail stores in Europe",
     "expected": 2575171,
-    "actual": 3070234,
+    "actual": 3070799,
     "expectedSource": "https://data.europa.eu/data/datasets/6k2ldtwgaa2lvoudvtbbq?locale=en",
     "actualSource": "taginfo",
     "tags": [
@@ -350,7 +350,7 @@
   {
     "id": "ee342a2cf9deebfaeb005720eb517b420c7909dd98f7a69fc3a39c341d0ca6b4",
     "name": "Electric vehicle charging stations in France 🇫🇷",
-    "expected": 224467,
+    "expected": 211708,
     "actual": 187107,
     "expectedSource": "https://www.data.gouv.fr/datasets/base-nationale-des-irve-infrastructures-de-recharge-pour-vehicules-electriques/",
     "actualSource": "taginfo",
@@ -465,7 +465,7 @@
   {
     "id": "839d2ae61d82edc4d60cd020dd4491b0aa2aa04e62574093bac5be16744f8265",
     "name": "Gas stations in Italy 🇮🇹",
-    "expected": 23778,
+    "expected": 23783,
     "actual": 22868,
     "expectedSource": "https://www.mimit.gov.it/images/exportCSV/anagrafica_impianti_attivi.csv",
     "actualSource": "taginfo",
@@ -763,7 +763,7 @@
     "id": "a1b5f8d936156d6b7f182995a4e1f0e5edb3a15084f932282737bd059321f616",
     "name": "Pyaterochka",
     "expected": 21308,
-    "actual": 15898,
+    "actual": 15899,
     "expectedSource": "https://www.x5.ru/wp-content/uploads/reports/2023/en/financial-statements/",
     "actualSource": "taginfo",
     "tags": [
@@ -877,7 +877,7 @@
     "id": "9dbf8e0d4c94858e8b152c16048d24705a9f3a744229e49ea85f8bae7e5ccead",
     "name": "Walgreens",
     "expected": 8560,
-    "actual": 9122,
+    "actual": 9120,
     "expectedSource": "https://investor.walgreensbootsalliance.com/static-files/6ff421c2-4c3c-4da6-bc84-158a9be81e61",
     "actualSource": "taginfo",
     "tags": [
@@ -907,7 +907,7 @@
     "id": "a8187a5e4030cd77fad97e7f665e21eff7bf05bb423a4449f46b55e9b68bc0a2",
     "name": "ShotSpotter",
     "expected": 25580,
-    "actual": 1829,
+    "actual": 1831,
     "expectedSource": "https://www.wired.com/story/shotspotter-secret-sensor-locations-leak/",
     "actualSource": "taginfo",
     "tags": [
@@ -922,7 +922,7 @@
     "id": "9abfeb99536f5a1889b2c18a5dd995c304bd8a82ae8c6a1a1cc76b842c2c8d75",
     "name": "Flock Safety ALPR",
     "expected": 90000,
-    "actual": 72669,
+    "actual": 72882,
     "expectedSource": "https://data.aclum.org/2025/10/07/flock-gives-law-enforcement-all-over-the-country-access-to-your-location/",
     "actualSource": "taginfo",
     "tags": [
@@ -1009,7 +1009,7 @@
   {
     "id": "45bc39b4b3b48b01c0818ca97beabb4aad95ee48232cd8c79603a6c02a84dafc",
     "name": "Airports with ICAO codes ✈️",
-    "expected": 19250,
+    "expected": 19252,
     "actual": 18257,
     "expectedSource": "https://davidmegginson.github.io/ourairports-data/airports.csv",
     "actualSource": "taginfo",
@@ -1023,7 +1023,7 @@
   {
     "id": "f0c59ddec204c478382d6632125f2afaa12f1bf052d5e5401e461002b4989a73",
     "name": "Match OurAirports on airports",
-    "expected": 72105,
+    "expected": 72111,
     "actual": 52762,
     "expectedSource": "https://davidmegginson.github.io/ourairports-data/airports.csv",
     "actualSource": "taginfo",
@@ -1037,7 +1037,7 @@
   {
     "id": "a574f409f513f14521a0edcd526947e24b92b79eebeabb829a9c034e88cc0b72",
     "name": "Museums",
-    "expected": 78352,
+    "expected": 78357,
     "actual": 109337,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",
