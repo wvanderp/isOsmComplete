@@ -61,11 +61,8 @@
         "*Spec.xts"
       ],
       "rules": {
-        // Mocha doesn’t like it when we use arrows
-        // https://mochajs.org/#arrow-functions
         "prefer-arrow-callback": "off",
         "func-names": "off",
-        // There are no function calls in mocha so this rule thinks the file does nothing. But mocha calls the file
         "no-unused-expressions": "off",
         // Any is used to mock some vars and it gives warnings about it that are unwanted
         "@typescript-eslint/no-explicit-any": "off"
@@ -125,8 +122,6 @@
       }
     ],
     "object-curly-newline": "off",
-    // disabling this rule because we have dynamically generated tests
-    "mocha/no-setup-in-describe": "off",
     "react/jsx-tag-spacing": "off",
     "react/jsx-filename-extension": [
       1,
