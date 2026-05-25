@@ -20,7 +20,7 @@ export default async function geldmaat(): Promise<Comparison> {
         geldmaatApi,
         'Geldmaat is a provider of ATMs in the Netherlands. What is the number of Geldmaat ATMs in OSM?',
         ['💰'],
-        '2024-07-28',
+        new Date().toISOString().split('T')[0], // Continuously updated, so we just use the current date as the last updated date
         taginfoServer
     );
 }

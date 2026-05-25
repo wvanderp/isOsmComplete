@@ -1,4 +1,4 @@
-/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable import-x/no-extraneous-dependencies */
 /* eslint-disable sonarjs/no-duplicate-string */
 
 import axios from 'axios';

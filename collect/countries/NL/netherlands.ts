@@ -19,11 +19,11 @@ export default async function netherlands(): Promise<Comparison[]> {
                 'amenity',
                 'charging_station',
                 // normal + fast
-                177963 + 5741,
+                209195 + 6650,
                 'https://duurzamemobiliteit.databank.nl/mosaic/nl-nl/elektrisch-vervoer/laad--en-tankinfrastructuur-in-nederland',
                 'Electric car charging stations will be more important than ever. The Netherlands has {{expected}} car chargers. Are they all in OSM?',
                 ['🔋', '🚗'],
-                '2024-08-04',
+                '2026-05-25',
                 taginfoServer
             ),
             await taginfoComparisonMultipleTags(
@@ -112,18 +112,18 @@ export default async function netherlands(): Promise<Comparison[]> {
                 'https://nos.nl/artikel/2530705-oranje-brievenbussen-verdwijnen-op-steeds-meer-plekken',
                 'Mailboxes are big and orange in the Netherlands. The prefect color for spotting them in OSM!',
                 ['📮'],
-                '2024-08-04',
+                '2026-05-25',
                 taginfoServer
             ),
             await taginfoComparisons(
                 'Surveillance cameras in the Netherlands',
                 'surveillance:type',
                 'camera',
-                337609,
-                'https://eenvandaag.avrotros.nl/item/steeds-meer-cameras-in-de-openbare-ruimte-dit-zijn-de-gevolgen-voor-jouw-privacy/',
+                338751,
+                'https://www.tweedekamer.nl/kamerstukken/brieven_regering/detail?id=2024D47535&did=2024D47535',
                 'Is the Netherlands turning into a surveillance state? Let\'s make sure that we know if it does!',
                 ['👀'],
-                '2024-08-19',
+                '2026-05-25',
                 taginfoServer
             ),
             await taginfoComparisonMultipleKeyValuePairs(
@@ -138,7 +138,7 @@ export default async function netherlands(): Promise<Comparison[]> {
                 'https://duurzamemobiliteit.databank.nl/mosaic/nl-nl/elektrisch-vervoer/laad--en-tankinfrastructuur-in-nederland',
                 'Running out of gas is never fun. Especially when that gas is hydrogen. So let\'s make sure that the precious few hydrogen refueling stations are in OSM!',
                 ['🚗'],
-                '2025-01-05',
+                '2026-05-25',
                 taginfoServer
             ),
             // from other files

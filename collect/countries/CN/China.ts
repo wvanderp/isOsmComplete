@@ -19,18 +19,18 @@ export default async function china(): Promise<Comparison[]> {
                 'https://en.wikipedia.org/wiki/Rail_transport_in_China#cite_note-CNCRCC-4',
                 'China transports a lot of people by train. Can they find their stations in OSM?',
                 ['🚂'],
-                '2025-01-05',
+                '2026-05-25',
                 chinaArea
             ),
             await taginfoComparisons(
                 'Coal power plants in China',
                 'generator:source',
                 'coal',
-                3862,
-                'https://globalenergymonitor.org/projects/global-coal-plant-tracker/tracker/',
+                3317, // operating only
+                'https://globalenergymonitor.org/projects/global-coal-plant-tracker?popup=2628',
                 "Coal is a big part of China's energy production. Reducing carbon emissions means reducing coal power plants. Can OSM help with that?",
                 ['⚡'],
-                '2025-01-05',
+                '2026-05-25',
                 taginfoServer
             )
         ]

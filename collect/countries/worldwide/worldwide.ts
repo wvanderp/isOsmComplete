@@ -12,21 +12,21 @@ export default async function worldwide(): Promise<Comparison[]> {
             await taginfoComparisonKeyOnly(
                 'Match Google on building',
                 'building',
-                1600000000,
-                'https://youtu.be/nP-nMZpLM1A?t=409',
-                'Google, in its 2022 keynote, claims that they have 1,600,000,000 buildings. Are we even close with OSM?',
+                1600000000 + 1800000000, // 1.6B from the google i/o 2022 keynote, plus 1.8B from google open buildings dataset
+                'https://sites.research.google/gr/open-buildings/',
+                'Google just casually dropped a dataset of 1.8 billion building footprints in the global south. This might be in addition to the 1.6 billion building footprints they already had in 2022. So can osm ever catch up to Google on mapping buildings?',
                 ['🏠'],
-                '2024-12-30'
+                '2026-05-25'
             ),
             await overpassComparisonMultiple(
                 'Stolpersteine',
                 [['memorial:type', 'stolperstein'], ['memorial', 'stolperstein']],
                 'or',
-                100000,
-                'https://www.timesofisrael.com/holocaust-memorial-project-marks-milestone-with-100000-stumbling-blocks/',
+                116000,
+                'https://www.stolpersteine.eu/en/information/facts-and-figures',
                 'Stolpersteine are monuments to the victims of World War Two. They should be in OSM.',
                 [],
-                '2024-07-28'
+                '2026-05-25'
             ),
             await overpassComparisonMultiple(
                 'IKEA stores',
@@ -42,11 +42,11 @@ export default async function worldwide(): Promise<Comparison[]> {
                 '7-Eleven stores',
                 brandWikidata,
                 'Q259340',
-                83579,
-                'https://www.7andi.com/en/ir/file/library/mr/pdf/2023_01_all_a.pdf', // https://www.7andi.com/en/ir.html
+                85816,
+                'https://www.7andi.com/en/ir/file/library/mr/pdf/2026_01_all_en.pdf', // https://www.7andi.com/en/ir.html and then management report
                 'A 7-Eleven is always nearby because there are {{expected}} of them in 18 countries. Is your closest 7-Eleven in OSM?',
                 ['🛒', '🍔'],
-                '2024-08-04'
+                '2026-05-25'
             ),
             await taginfoComparisons(
                 'Subway stores',
@@ -62,21 +62,21 @@ export default async function worldwide(): Promise<Comparison[]> {
                 'Starbucks',
                 brandWikidata,
                 'Q37158',
-                18065 + 20886, // 18065 north America, 20886 international
-                'https://s203.q4cdn.com/326826266/files/doc_financials/2024/q2/2Q24-Earnings-Release-Final-4-30-24.pdf', // https://investor.starbucks.com
+                41129,
+                'https://s203.q4cdn.com/326826266/files/doc_financials/2026/q2/FY26-Q2-Store-Counts-By-Market.xlsx', // https://investor.starbucks.com
                 'Starbucks seems to be everywhere. But can you find them all in OSM?',
                 ['🛒', '🍔'],
-                '2024-07-28'
+                '2025-01-05'
             ),
             await taginfoComparisonMultipleTags(
                 'McDonald\'s',
                 brandWikidata,
                 ['Q38076', 'Q12061542'],
-                41822,
-                'https://corporate.mcdonalds.com/content/dam/sites/corp/nfl/pdf/2023%20Annual%20Report_vf.pdf', // https://corporate.mcdonalds.com/corpmcd/investors/financial-information.html
+                45356,
+                'https://corporate.mcdonalds.com/content/dam/sites/corp/nfl/pdf/MCD%202025%20Annual%20Report.pdf', // https://corporate.mcdonalds.com/corpmcd/investors/financial-information.html
                 'McDonald\'s is the largest fast-food chain in the world. Their corporate website says that the company has 38,000 stores in the world. Are they all in OSM?',
                 ['🍔', '🛒'],
-                '2024-08-04'
+                '2026-05-25'
             ),
             await taginfoComparisons(
                 'KFC',
