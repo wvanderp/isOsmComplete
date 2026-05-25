@@ -25,28 +25,40 @@ import { Comparison } from './types';
 const directory = path.join(__dirname, '../data');
 const tagsFile = path.join(__dirname, 'tags.json');
 
-(async () => {
-    const data: Comparison[] = [
-        ...(await worldwide()),
-        ...(await europe()),
+async function tryCollect(name: string, fn: () => Promise<Comparison | Comparison[]>): Promise<Comparison[]> {
+    try {
+        const result = await fn();
+        return Array.isArray(result) ? result : [result];
+    } catch (err) {
+        console.error(`Collection "${name}" failed:`, err);
+        return [];
+    }
+}
 
-        ...(await canada()),
-        ...(await china()),
-        ...(await france()),
-        ...(await germany()),
-        ...(await greatBritain()),
-        ...(await italy()),
-        ...(await japan()),
-        ...(await netherlands()),
-        ...(await russia()),
-        ...(await unitedStates()),
-        ...(await vietnam()),
+(async () => {
+    const results = await Promise.allSettled([
+        tryCollect('worldwide', worldwide),
+        tryCollect('europe', europe),
+
+        tryCollect('canada', canada),
+        tryCollect('china', china),
+        tryCollect('france', france),
+        tryCollect('germany', germany),
+        tryCollect('greatBritain', greatBritain),
+        tryCollect('italy', italy),
+        tryCollect('japan', japan),
+        tryCollect('netherlands', netherlands),
+        tryCollect('russia', russia),
+        tryCollect('unitedStates', unitedStates),
+        tryCollect('vietnam', vietnam),
 
         // fromSource
-        await allThePlaces(),
-        ...(await airports()),
-        ...(await wikidata())
-    ];
+        tryCollect('allThePlaces', allThePlaces),
+        tryCollect('airports', airports),
+        tryCollect('wikidata', wikidata),
+    ]);
+
+    const data: Comparison[] = results.flatMap((r) => (r.status === 'fulfilled' ? r.value : []));
 
     saveGraphData(data);
 
