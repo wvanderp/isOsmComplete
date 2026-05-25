@@ -73,12 +73,12 @@ export function ComparisonCard(props: {
                     Actual: {props.comparison.actual}<br />
                     Percentage: {Math.floor((props.comparison.actual / props.comparison.expected) * 100)}% <br />
 
-                    { /* eslint-disable-next-line react/jsx-no-target-blank -- I love seeing the referrer myself so I will give it to others */}
+                    { /* eslint-disable-next-line @eslint-react/dom-no-unsafe-target-blank -- I love seeing the referrer myself so I will give it to others */}
                     <a href={props.comparison.expectedSource} target="_blank" rel="noopener">Source of Expected</a>
                 </CardText>
                 <Graph comparison={props.comparison} />
-                {/* eslint-disable-next-line react/no-danger -- this is markdown */ }
-                <div id="thanks" dangerouslySetInnerHTML={{__html: props.comparison.thanks ? markdownConverter.makeHtml(props.comparison.thanks) : ''}} />
+                {/* eslint-disable-next-line @eslint-react/dom-no-dangerously-set-innerhtml -- this is markdown */}
+                <div id="thanks" dangerouslySetInnerHTML={{ __html: props.comparison.thanks ? markdownConverter.makeHtml(props.comparison.thanks) : '' }} />
             </CardBody>
         </Card>
     );

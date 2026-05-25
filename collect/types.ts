@@ -24,8 +24,7 @@ export type TaginfoComparison = Comparison & {
     };
 }
 
-// @ts-expect-error - this is a type assertion test
-export const isTaginfoComparison = (a: unknown): a is TaginfoComparison => a.extra.type === 'taginfo';
+export const isTaginfoComparison = (a: unknown): a is TaginfoComparison => (a as TaginfoComparison)?.extra?.type === 'taginfo';
 
 export type CountryCodes = Alpha2Code | 'Worldwide' | 'EU';
 
@@ -72,10 +71,10 @@ export interface PolitieApi {
     iterator: {
         last: boolean;
         offset: number;
-      };
+    };
     politiebureaus: PolitiebureausEntity[];
-  }
-  interface PolitiebureausEntity {
+}
+interface PolitiebureausEntity {
     displayName?: null;
     links?: null;
     uid: string;
@@ -94,14 +93,14 @@ export interface PolitieApi {
     afbeelding: {
         url: string;
         alttext?: string | null;
-      };
+    };
     locaties?: {
         latitude: number;
         longitude: number;
-      }[];
-  }
+    }[];
+}
 interface BezoekadresOrPostadres {
     postadres: string;
     postcode: string;
     plaats: string;
-  }
+}

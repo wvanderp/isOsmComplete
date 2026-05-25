@@ -39,7 +39,6 @@ function FilterButton(
         text: string,
         state: string[],
         setState: (state: string[]) => void,
-        // eslint-disable-next-line react/require-default-props -- Alt is optional, and if it's undefined, it will be ignored
         alt?: string
     }
 ) {

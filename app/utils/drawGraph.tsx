@@ -3,7 +3,7 @@ import React from 'react';
 import * as d3 from 'd3';
 import { GraphData } from './downloadGraphData';
 
-// eslint-disable-next-line import/first -- for the d3 bug
+// eslint-disable-next-line import-x/first -- for the d3 bug
 
 function tomorrow() {
     const d = new Date();
@@ -142,6 +142,6 @@ export default function draw_chronology_chart(
     const debouncedRenderChart = debounce(renderChart, 200);
     window.addEventListener('resize', debouncedRenderChart);
 
-    // eslint-disable-next-line react/no-danger
+    // eslint-disable-next-line @eslint-react/dom-no-dangerously-set-innerhtml
     return <div dangerouslySetInnerHTML={{ __html: container.outerHTML }} />;
 }
