@@ -175,6 +175,19 @@ export default async function worldwide(): Promise<Comparison[]> {
                 ['🪖'],
                 '2025-01-25'
             ),
+            await overpassComparisonRaw(
+                'UN Member States',
+                `
+                [out:json][timeout:180];
+                relation["boundary"="administrative"]["admin_level"="2"];
+                out count;
+                `,
+                193,
+                'https://www.un.org/en/about-us/member-states',
+                'The UN says there are {{expected}} countries in the world. How many has OSM bothered to draw a border around?',
+                ['🌍'],
+                '2026-05-25'
+            ),
             await openBenches()
         ]
     );
