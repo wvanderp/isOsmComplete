@@ -2,27 +2,27 @@
   {
     "id": "f86b36460a37c5a45dea617f3fbd10c18027319318d2283be3f8318a7a793bca",
     "name": "Match Google on building",
-    "expected": 1600000000,
-    "actual": 699240540,
-    "expectedSource": "https://youtu.be/nP-nMZpLM1A?t=409",
+    "expected": 3400000000,
+    "actual": 700003802,
+    "expectedSource": "https://sites.research.google/gr/open-buildings/",
     "actualSource": "taginfo",
     "tags": [
       "🏠"
     ],
-    "description": "Google, in its 2022 keynote, claims that they have 1,600,000,000 buildings. Are we even close with OSM?",
-    "lastUpdated": "2024-12-30",
+    "description": "Google just casually dropped a dataset of 1.8 billion building footprints in the global south. This might be in addition to the 1.6 billion building footprints they already had in 2022. So can osm ever catch up to Google on mapping buildings?",
+    "lastUpdated": "2026-05-25",
     "country": "Worldwide"
   },
   {
     "id": "7db310de75fd52cb02a885303658ba574e5e5262b439fc3c6116a6661811782e",
     "name": "Stolpersteine",
-    "expected": 100000,
+    "expected": 116000,
     "actual": 50753,
-    "expectedSource": "https://www.timesofisrael.com/holocaust-memorial-project-marks-milestone-with-100000-stumbling-blocks/",
+    "expectedSource": "https://www.stolpersteine.eu/en/information/facts-and-figures",
     "actualSource": "overpass",
     "tags": [],
     "description": "Stolpersteine are monuments to the victims of World War Two. They should be in OSM.",
-    "lastUpdated": "2024-07-28",
+    "lastUpdated": "2026-05-25",
     "country": "Worldwide"
   },
   {
@@ -42,23 +42,23 @@
   {
     "id": "34d881bb4626ac285c1c64c08944d6d8883e5bfdef1d5bb2c0d2eeab9db0d20e",
     "name": "7-Eleven stores",
-    "expected": 83579,
-    "actual": 44308,
-    "expectedSource": "https://www.7andi.com/en/ir/file/library/mr/pdf/2023_01_all_a.pdf",
+    "expected": 85816,
+    "actual": 44317,
+    "expectedSource": "https://www.7andi.com/en/ir/file/library/mr/pdf/2026_01_all_en.pdf",
     "actualSource": "taginfo",
     "tags": [
       "🛒",
       "🍔"
     ],
     "description": "A 7-Eleven is always nearby because there are {{expected}} of them in 18 countries. Is your closest 7-Eleven in OSM?",
-    "lastUpdated": "2024-08-04",
+    "lastUpdated": "2026-05-25",
     "country": "Worldwide"
   },
   {
     "id": "ceafc782f32e77207571d2c2de651c13d6f8704acbe2221a9a7af3dd68313bf8",
     "name": "Subway stores",
     "expected": 37000,
-    "actual": 23765,
+    "actual": 23768,
     "expectedSource": "https://newsroom.subway.com/2024-10-01-Subway-Continues-to-Expand-Its-Global-Presence-with-Over-10,000-Future-Restaurant-Commitments",
     "actualSource": "taginfo",
     "tags": [
@@ -72,38 +72,38 @@
   {
     "id": "0aa0000d49cbd3eaabb7d62b87d0695922a6cdc09c0f80d1684aadaeb49f4e95",
     "name": "Starbucks",
-    "expected": 38951,
-    "actual": 23050,
-    "expectedSource": "https://s203.q4cdn.com/326826266/files/doc_financials/2024/q2/2Q24-Earnings-Release-Final-4-30-24.pdf",
+    "expected": 41129,
+    "actual": 23051,
+    "expectedSource": "https://s203.q4cdn.com/326826266/files/doc_financials/2026/q2/FY26-Q2-Store-Counts-By-Market.xlsx",
     "actualSource": "taginfo",
     "tags": [
       "🛒",
       "🍔"
     ],
     "description": "Starbucks seems to be everywhere. But can you find them all in OSM?",
-    "lastUpdated": "2024-07-28",
+    "lastUpdated": "2025-01-05",
     "country": "Worldwide"
   },
   {
     "id": "bc00755018404ae08e7791edeacb749806f755a7a684108cdc730b7dc96d35bd",
     "name": "McDonald's",
-    "expected": 41822,
-    "actual": 36254,
-    "expectedSource": "https://corporate.mcdonalds.com/content/dam/sites/corp/nfl/pdf/2023%20Annual%20Report_vf.pdf",
+    "expected": 45356,
+    "actual": 36257,
+    "expectedSource": "https://corporate.mcdonalds.com/content/dam/sites/corp/nfl/pdf/MCD%202025%20Annual%20Report.pdf",
     "actualSource": "taginfo",
     "tags": [
       "🍔",
       "🛒"
     ],
     "description": "McDonald's is the largest fast-food chain in the world. Their corporate website says that the company has 38,000 stores in the world. Are they all in OSM?",
-    "lastUpdated": "2024-08-04",
+    "lastUpdated": "2026-05-25",
     "country": "Worldwide"
   },
   {
     "id": "ff163beb19543f2cb53c300637cac009272968c01b3511a40effa32489074e82",
     "name": "KFC",
     "expected": 31143,
-    "actual": 16468,
+    "actual": 16471,
     "expectedSource": "https://s2.q4cdn.com/890585342/files/doc_financials/2024/q3/Yum-Brands-Q3-24-Earnings-Release.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -148,7 +148,7 @@
     "id": "ebf58077453c74c27a1a8384024439568732ce333c09c0899c6156177657d513",
     "name": "Burger King",
     "expected": 19384,
-    "actual": 15244,
+    "actual": 15245,
     "expectedSource": "https://s26.q4cdn.com/317237604/files/doc_financials/2023/ar/RBI-Global-Store-Counts-Across-Brands-by-Market-February-13-2024.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -178,7 +178,7 @@
     "id": "73c662317d2a4e93f6b2d96626dd2667624f8fe48292bce3a735025fb3df82c4",
     "name": "Data centers",
     "expected": 10978,
-    "actual": 4196,
+    "actual": 4197,
     "expectedSource": "https://brightlio.com/data-center-stats/",
     "actualSource": "taginfo",
     "tags": [
@@ -218,17 +218,31 @@
     "country": "Worldwide"
   },
   {
+    "id": "01170b0207bc9d24f099c3dd3abeae597f964f3a0b3c4177a370f319f9591e8d",
+    "name": "UN Member States",
+    "expected": 193,
+    "actual": 238,
+    "expectedSource": "https://www.un.org/en/about-us/member-states",
+    "actualSource": "overpass",
+    "tags": [
+      "🌍"
+    ],
+    "description": "The UN says there are {{expected}} countries in the world. How many has OSM bothered to draw a border around?",
+    "lastUpdated": "2026-05-25",
+    "country": "Worldwide"
+  },
+  {
     "id": "681037426fe19e62eba5d82fa128583b311ed6368eb25d638242103510647c5a",
     "name": "Memorial benches",
-    "expected": 41737,
-    "actual": 1499,
+    "expected": 41752,
+    "actual": 1500,
     "expectedSource": "https://openbenches.org/",
     "actualSource": "taginfo",
     "tags": [
       "🪑"
     ],
     "description": "OpenBenches collects memorial benches. Wouldn't it be nice to have them in OSM as well?",
-    "lastUpdated": "2024-08-04",
+    "lastUpdated": "2026-05-25",
     "country": "Worldwide"
   },
   {
@@ -285,21 +299,21 @@
       "🚂"
     ],
     "description": "China transports a lot of people by train. Can they find their stations in OSM?",
-    "lastUpdated": "2025-01-05",
+    "lastUpdated": "2026-05-25",
     "country": "CN"
   },
   {
     "id": "c36d0cf963a5575f58ba8bae8b2f8ddee715472f45cacecb2557e6d081535fa8",
     "name": "Coal power plants in China",
-    "expected": 3862,
+    "expected": 3317,
     "actual": 4344,
-    "expectedSource": "https://globalenergymonitor.org/projects/global-coal-plant-tracker/tracker/",
+    "expectedSource": "https://globalenergymonitor.org/projects/global-coal-plant-tracker?popup=2628",
     "actualSource": "taginfo",
     "tags": [
       "⚡"
     ],
     "description": "Coal is a big part of China's energy production. Reducing carbon emissions means reducing coal power plants. Can OSM help with that?",
-    "lastUpdated": "2025-01-05",
+    "lastUpdated": "2026-05-25",
     "country": "CN"
   },
   {
@@ -351,7 +365,7 @@
     "id": "ee342a2cf9deebfaeb005720eb517b420c7909dd98f7a69fc3a39c341d0ca6b4",
     "name": "Electric vehicle charging stations in France 🇫🇷",
     "expected": 223747,
-    "actual": 189473,
+    "actual": 189596,
     "expectedSource": "https://www.data.gouv.fr/datasets/base-nationale-des-irve-infrastructures-de-recharge-pour-vehicules-electriques/",
     "actualSource": "taginfo",
     "tags": [
@@ -465,7 +479,7 @@
   {
     "id": "839d2ae61d82edc4d60cd020dd4491b0aa2aa04e62574093bac5be16744f8265",
     "name": "Gas stations in Italy 🇮🇹",
-    "expected": 23824,
+    "expected": 23823,
     "actual": 22865,
     "expectedSource": "https://www.mimit.gov.it/images/exportCSV/anagrafica_impianti_attivi.csv",
     "actualSource": "taginfo",
@@ -536,7 +550,7 @@
   {
     "id": "618d455f20de0fc57391795eb6857e7ad0343ae82314129cded8f49d1e780184",
     "name": "Car chargers",
-    "expected": 183704,
+    "expected": 215845,
     "actual": 20597,
     "expectedSource": "https://duurzamemobiliteit.databank.nl/mosaic/nl-nl/elektrisch-vervoer/laad--en-tankinfrastructuur-in-nederland",
     "actualSource": "taginfo",
@@ -545,7 +559,7 @@
       "🚗"
     ],
     "description": "Electric car charging stations will be more important than ever. The Netherlands has {{expected}} car chargers. Are they all in OSM?",
-    "lastUpdated": "2024-08-04",
+    "lastUpdated": "2026-05-25",
     "country": "NL"
   },
   {
@@ -658,21 +672,21 @@
       "📮"
     ],
     "description": "Mailboxes are big and orange in the Netherlands. The prefect color for spotting them in OSM!",
-    "lastUpdated": "2024-08-04",
+    "lastUpdated": "2026-05-25",
     "country": "NL"
   },
   {
     "id": "e25f43d2f95cb5907a29ef7934405b05fdff5162c44ce9781b4542e8c334c0fe",
     "name": "Surveillance cameras in the Netherlands",
-    "expected": 337609,
+    "expected": 338751,
     "actual": 9343,
-    "expectedSource": "https://eenvandaag.avrotros.nl/item/steeds-meer-cameras-in-de-openbare-ruimte-dit-zijn-de-gevolgen-voor-jouw-privacy/",
+    "expectedSource": "https://www.tweedekamer.nl/kamerstukken/brieven_regering/detail?id=2024D47535&did=2024D47535",
     "actualSource": "taginfo",
     "tags": [
       "👀"
     ],
     "description": "Is the Netherlands turning into a surveillance state? Let's make sure that we know if it does!",
-    "lastUpdated": "2024-08-19",
+    "lastUpdated": "2026-05-25",
     "country": "NL"
   },
   {
@@ -686,7 +700,7 @@
       "🚗"
     ],
     "description": "Running out of gas is never fun. Especially when that gas is hydrogen. So let's make sure that the precious few hydrogen refueling stations are in OSM!",
-    "lastUpdated": "2025-01-05",
+    "lastUpdated": "2026-05-25",
     "country": "NL"
   },
   {
@@ -700,7 +714,7 @@
       "💰"
     ],
     "description": "Geldmaat is a provider of ATMs in the Netherlands. What is the number of Geldmaat ATMs in OSM?",
-    "lastUpdated": "2024-07-28",
+    "lastUpdated": "2026-05-25",
     "country": "NL"
   },
   {
@@ -848,7 +862,7 @@
     "id": "e8abbe6249e1c3bc1273888049b5e49146cc4de019208c8295c94231d6c696bc",
     "name": "Dollar Tree & Family Dollar",
     "expected": 16774,
-    "actual": 9764,
+    "actual": 9765,
     "expectedSource": "https://corporate.dollartree.com/_assets/_4a3a5283aa3f850b49f9ea2652af1540/dollartreeinfo/db/893/10332/annual_report/2023+Annual+Report+PDF+Version+for+IR+Website+v3.0.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -953,7 +967,7 @@
   {
     "id": "3d841cb7e2304ec56f21c5e6b23477afd658e33e9de5e0a139634794e25eb5a7",
     "name": "McDonald's in Vietnam",
-    "expected": 35,
+    "expected": 59,
     "actual": 24,
     "expectedSource": "https://mcdonalds.vn/cua-hang.html",
     "actualSource": "taginfo",
@@ -962,13 +976,13 @@
       "🛒"
     ],
     "description": "McDonald's was never able to enter the Vietnamese market. They only managed to open {{expected}} stores. To console them, we should have them all in OSM.",
-    "lastUpdated": "2024-07-28",
+    "lastUpdated": "2026-05-25",
     "country": "VN"
   },
   {
     "id": "ccffa70531149a1c4785fe503c4f296d8e373778e3677888751b1a02b292f4be",
     "name": "Burger King in Vietnam",
-    "expected": 11,
+    "expected": 4,
     "actual": 14,
     "expectedSource": "https://burgerking.vn/storepickup",
     "actualSource": "taginfo",
@@ -977,7 +991,7 @@
       "🛒"
     ],
     "description": "Burger King is also not very successful in Vietnam. They only have {{expected}} stores. Are they all in OSM?",
-    "lastUpdated": "2024-07-28",
+    "lastUpdated": "2026-05-25",
     "country": "VN"
   },
   {
@@ -1024,7 +1038,7 @@
     "id": "f0c59ddec204c478382d6632125f2afaa12f1bf052d5e5401e461002b4989a73",
     "name": "Match OurAirports on airports",
     "expected": 72280,
-    "actual": 52838,
+    "actual": 52837,
     "expectedSource": "https://davidmegginson.github.io/ourairports-data/airports.csv",
     "actualSource": "taginfo",
     "tags": [
@@ -1037,8 +1051,8 @@
   {
     "id": "a574f409f513f14521a0edcd526947e24b92b79eebeabb829a9c034e88cc0b72",
     "name": "Museums",
-    "expected": 78709,
-    "actual": 109636,
+    "expected": 78710,
+    "actual": 109644,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",
     "description": "The number of museums in the world",
@@ -1053,7 +1067,7 @@
     "id": "0f02185f1ff53b9c2907901467e26944334d33f2e0406c2bdc9e773a507e2858",
     "name": "Zoos",
     "expected": 2862,
-    "actual": 9145,
+    "actual": 9148,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",
     "description": "The number of zoos in the world",
@@ -1067,7 +1081,7 @@
     "id": "b49289e9872d8d663f3c41459f7e54fa7a337db8640c60ed49f2baaf79e89c8c",
     "name": "Aquariums",
     "expected": 558,
-    "actual": 1662,
+    "actual": 1663,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",
     "description": "The number of aquariums in the world",

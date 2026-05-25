@@ -44,7 +44,8 @@ export default function draw_chronology_chart(
         const w = determine_chart_width(margin.left, margin.right);
         const h = 400;
 
-        uncleanData.push({ date: tomorrow(), value: d3.max(uncleanData, (d) => d.value) ?? 0 });
+        const lastExpected = [...uncleanData].reverse().find((d) => d.expected !== undefined)?.expected;
+        uncleanData.push({ date: tomorrow(), value: d3.max(uncleanData, (d) => d.value) ?? 0, expected: lastExpected });
 
         const data = uncleanData.map((d) => ({
             ...d,
@@ -55,7 +56,8 @@ export default function draw_chronology_chart(
         const t0 = data[0].date;
         const t1 = data.at(-1)?.date ?? new Date();
 
-        const max = Math.max(d3.max(data, (d) => d.value) ?? 0, goal) * 1.1; // Added 10% headroom
+        const maxExpected = d3.max(data.filter((d) => d.expected !== undefined), (d) => d.expected ?? 0) ?? 0;
+        const max = Math.max(d3.max(data, (d) => d.value) ?? 0, maxExpected, goal) * 1.1; // Added 10% headroom
 
         const scale_x = d3.scaleTime()
             .domain([t0, t1])
@@ -126,7 +128,22 @@ export default function draw_chronology_chart(
             .attr('stroke-linecap', 'round')
             .attr('d', line);
 
-        if (goal !== 0) {
+        const expectedData = data.filter((d) => d.expected !== undefined) as (typeof data[0] & { expected: number })[];
+
+        if (expectedData.length > 0) {
+            const expectedLine = d3.line<(typeof expectedData)[0]>()
+                .curve(d3.curveStepAfter)
+                .x((d) => scale_x(d.date))
+                .y((d) => scale_y(d.expected));
+
+            chart.append('path')
+                .datum(expectedData)
+                .attr('fill', 'none')
+                .attr('stroke', '#22c55e')
+                .attr('stroke-width', 2)
+                .attr('stroke-dasharray', '5,5')
+                .attr('d', expectedLine);
+        } else if (goal !== 0) {
             chart.append('line')
                 .style('stroke', '#22c55e')
                 .style('stroke-width', 2)

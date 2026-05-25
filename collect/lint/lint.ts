@@ -81,14 +81,14 @@ for (const file of graphDataFilesWithExtension) {
         unhappy = true;
     }
 
-    // all lines should have 2 parts (date and number)
+    // all lines should have 3 parts (date, actual, expected)
     for (const line of lines) {
         const lineNumber = lines.indexOf(line) + 1;
 
         const parts = line.split(',');
 
-        if (parts.length !== 2) {
-            console.info(`Line ${lineNumber} in ${file}:${lineNumber} does not have 2 parts`);
+        if (parts.length !== 3) {
+            console.info(`Line ${lineNumber} in ${file}:${lineNumber} does not have 3 parts (date, actual, expected)`);
             unhappy = true;
         }
 
@@ -99,10 +99,17 @@ for (const file of graphDataFilesWithExtension) {
             unhappy = true;
         }
 
-        // the second part should be a number
-        const number = Number.parseInt(parts[1], 10);
-        if (Number.isNaN(number)) {
-            console.info(`Line ${lineNumber} in ${file}:${lineNumber} does not have a valid number`);
+        // the second part should be a number (actual)
+        const actual = Number.parseInt(parts[1], 10);
+        if (Number.isNaN(actual)) {
+            console.info(`Line ${lineNumber} in ${file}:${lineNumber} does not have a valid actual number`);
+            unhappy = true;
+        }
+
+        // the third part should be a number (expected)
+        const expected = Number.parseInt(parts[2], 10);
+        if (Number.isNaN(expected)) {
+            console.info(`Line ${lineNumber} in ${file}:${lineNumber} does not have a valid expected number`);
             unhappy = true;
         }
     }

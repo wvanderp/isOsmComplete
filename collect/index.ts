@@ -84,10 +84,13 @@ function saveGraphData(comparisons: Comparison[]) {
         const dataObject = new Date();
         const date = `${dataObject.getFullYear()}-${dataObject.getMonth() + 1}-${dataObject.getDate()}`;
 
-        const [lastDate, lastActual] = lastLine.trim().split(',');
+        const [lastDate, lastActual, lastExpected] = lastLine.trim().split(',');
 
-        if ((lastActual !== comparison.actual.toString() && (lastDate !== date))) {
-            const line = `${date},${comparison.actual}`;
+        const actualChanged = lastActual !== comparison.actual.toString();
+        const expectedChanged = lastExpected !== comparison.expected.toString();
+
+        if ((actualChanged || expectedChanged) && lastDate !== date) {
+            const line = `${date},${comparison.actual},${comparison.expected}`;
 
             // check if the file is empty to prevent adding an empty line
             if (lastLine !== ',') {

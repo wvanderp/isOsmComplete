@@ -63,6 +63,7 @@
     "url-join": "^5.0.0"
   },
   "scripts": {
+    "start": "npm run app",
     "app": "vite",
     "build": "vite build",
     "lint": "npm-run-all -c -s tsc eslint",

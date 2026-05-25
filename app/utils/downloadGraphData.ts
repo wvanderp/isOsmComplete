@@ -1,7 +1,7 @@
 import axios from 'axios';
 import urlJoin from 'url-join';
 
-export type GraphData = {date: string, value: number}
+export type GraphData = {date: string, value: number, expected?: number}
 
 export default async function downloadGraphData(hash: string): Promise<GraphData[]> {
     const {data} = await axios.get<string>(urlJoin(window.location.href, 'graphs/', `${hash}.csv`));
@@ -12,6 +12,10 @@ export default async function downloadGraphData(hash: string): Promise<GraphData
         .map((string_) => {
             const parts = string_.split(',');
 
-            return {date: parts[0], value: Number.parseInt(parts[1], 10)};
+            return {
+                date: parts[0],
+                value: Number.parseInt(parts[1], 10),
+                expected: parts[2] ? Number.parseInt(parts[2], 10) : undefined
+            };
         });
 }
