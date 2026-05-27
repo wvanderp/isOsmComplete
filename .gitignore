@@ -3,5 +3,6 @@ dist
 .cache
 .idea
 build
+gitBuild
 scratch.ts
 scrap.ts
