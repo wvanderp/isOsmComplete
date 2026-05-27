@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+    --font-display: "Twemoji Country Flags", "Helvetica", "Comic Sans", serif;
+    --color-card: #f8f9fa;
+    --color-filter-active: #add8e6;
+}
+
+body {
+    @apply mx-auto max-w-[1200px] p-2 font-display;
+}
+
+.card {
+    @apply mx-1 my-3 rounded-md border border-neutral-300 bg-card;
+}
+
+.card-body {
+    @apply p-4;
+}
+
+.card-title {
+    @apply mb-2 text-xl font-semibold;
+}
+
+.filterBtn {
+    @apply m-1 rounded border border-neutral-300 bg-white px-2 py-1;
+}
+
+.filterBtn--active {
+    @apply bg-filter-active;
+}
+
+.header .logo {
+    @apply float-left mr-2 h-[50px] w-[50px] p-0;
+}
+
+.header h1 {
+    @apply p-2;
+}
+
+h2 {
+    @apply text-[1.6em];
+}
+
+.cardText {
+    @apply mt-3;
+}
+
+#intro {
+    @apply text-[1.2em];
+}

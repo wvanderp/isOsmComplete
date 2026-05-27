@@ -44,7 +44,7 @@ function FilterButton(
 ) {
     return (
         <button
-            className="filterBtn"
+            className={`filterBtn${props.state.includes(props.text) ? ' filterBtn--active' : ''}`}
             type="button"
             onClick={() => {
                 if (props.state.includes(props.text)) {
@@ -52,9 +52,6 @@ function FilterButton(
                 } else {
                     props.setState([...props.state, props.text]);
                 }
-            }}
-            style={{
-                backgroundColor: props.state.includes(props.text) ? 'lightblue' : 'white'
             }}
             title={props.alt}
         >

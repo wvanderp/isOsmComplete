@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Card, CardBody, CardText, CardTitle, Progress } from 'reactstrap';
 import { Converter } from 'showdown';
 
 import { countryCodeEmoji } from 'country-code-emoji';
@@ -54,62 +53,57 @@ export function ComparisonCard(props: {
         .replace('{{expected}}', props.comparison.expected.toString());
 
     return (
-        <Card color="light">
-
-            <CardBody>
-                <CardTitle tag="h3">
+        <div className="card">
+            <div className="card-body">
+                <h3 className="card-title">
                     {props.comparison.name}
-                </CardTitle>
-                <CardText>
+                </h3>
+                <p>
                     {cardDescription}
-                </CardText>
+                </p>
                 <ProgressBar
                     value={props.comparison.actual}
                     max={props.comparison.expected}
                 />
-                <CardText className="cardText">
+                <p className="cardText">
                     Expected: {props.comparison.expected} <br />
                     Actual: {props.comparison.actual}<br />
                     Percentage: {Math.floor((props.comparison.actual / props.comparison.expected) * 100)}% <br />
                     {/* I love seeing the referers in my analytics, so I will give it to others too */}
                     <a href={props.comparison.expectedSource} target="_blank" rel="noopener">Source of Expected</a>
-                </CardText>
+                </p>
                 <Graph comparison={props.comparison} />
                 {/* eslint-disable-next-line @eslint-react/dom-no-dangerously-set-innerhtml -- trusted markdown content from repository */}
                 <div id="thanks" dangerouslySetInnerHTML={{ __html: props.comparison.thanks ? markdownConverter.makeHtml(props.comparison.thanks) : '' }} />
-            </CardBody>
-        </Card>
+            </div>
+        </div>
     );
 }
 
 export function ProgressBar(props: { value: number, max: number }) {
+    const max = props.max > 0 ? props.max : 1;
+
     if (props.value > props.max) {
+        const total = props.value + max;
+        const baseWidth = `${(max / total) * 100}%`;
+        const overflowWidth = `${((props.value - max) / total) * 100}%`;
+
         return (
-            <Progress multi>
-                <Progress
-                    bar
-                    color="success"
-                    max={props.max}
-                    value={props.max}
-                />
-                <Progress
-                    bar
-                    color="warning"
-                    max={props.value + props.max}
-                    value={props.value - props.max}
-                >
+            <div className="mt-2 flex h-5 w-full overflow-hidden rounded bg-neutral-200 text-xs font-semibold text-white" role="progressbar" aria-valuemin={0} aria-valuenow={props.value} aria-valuemax={props.value + max}>
+                <div className="bg-green-600" style={{ width: baseWidth }} />
+                <div className="flex items-center justify-center bg-yellow-500" style={{ width: overflowWidth }}>
                     {props.value - props.max}
-                </Progress>
-            </Progress>
+                </div>
+            </div>
         );
     }
 
+    const width = `${Math.min((props.value / max) * 100, 100)}%`;
+
     return (
-        <Progress
-            color="success"
-            value={props.value}
-            max={props.max}
-        />
+        <div className="mt-2 h-4 w-full overflow-hidden rounded bg-neutral-200" role="progressbar" aria-valuemin={0} aria-valuenow={props.value} aria-valuemax={props.max}>
+            <div className="h-full bg-green-600" style={{ width }} />
+        </div>
     );
 }
 
