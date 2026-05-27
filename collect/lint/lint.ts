@@ -1,8 +1,6 @@
-/* eslint-disable no-console */
-
-import Ajv from 'ajv';
 import fs from 'fs';
 import path from 'path';
+import AjvClass from 'ajv';
 import dataSchema from './dataSchema';
 
 import data from '../../data/compare.json';
@@ -15,7 +13,7 @@ let unhappy = false;
 // validate data.json
 // see if it matches the schema
 
-const ajv = new Ajv();
+const ajv = new AjvClass();
 
 const validateData = ajv.compile(dataSchema);
 
@@ -125,7 +123,6 @@ const graphDataFilesWithoutExtensionTwo = graphDataFilesWithExtensionTwo.map((fi
 
 const dataIDS = new Set(data.map((item) => item.id));
 
-// eslint-disable-next-line unicorn/prefer-spread
 const missingIDs = graphDataFilesWithoutExtensionTwo.filter((id) => !dataIDS.has(id));
 
 if (missingIDs.length > 0) {

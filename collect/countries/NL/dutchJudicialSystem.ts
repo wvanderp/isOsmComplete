@@ -1,4 +1,3 @@
-/* eslint-disable sonarjs/no-duplicate-string */
 import axios from 'axios';
 import { Comparison, PolitieApi } from '../../types';
 import appendCountry from '../../utils/appendData';

@@ -1,9 +1,6 @@
-/* eslint-disable unicorn/prefer-ternary */
 import React from 'react';
 import * as d3 from 'd3';
 import { GraphData } from './downloadGraphData';
-
-// eslint-disable-next-line import-x/first -- for the d3 bug
 
 function tomorrow() {
     const d = new Date();
@@ -44,14 +41,14 @@ export default function draw_chronology_chart(
         const w = determine_chart_width(margin.left, margin.right);
         const h = 400;
 
-        const lastExpected = [...uncleanData].reverse().find((d) => d.expected !== undefined)?.expected;
+        const lastExpected = uncleanData.toReversed().find((d) => d.expected !== undefined)?.expected;
         uncleanData.push({ date: tomorrow(), value: d3.max(uncleanData, (d) => d.value) ?? 0, expected: lastExpected });
 
         const data = uncleanData.map((d) => ({
             ...d,
             date: new Date(d.date)
         }))
-            .sort((a, b) => a.date.getTime() - b.date.getTime());
+            .toSorted((a, b) => a.date.getTime() - b.date.getTime());
 
         const t0 = data[0].date;
         const t1 = data.at(-1)?.date ?? new Date();

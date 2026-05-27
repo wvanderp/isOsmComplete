@@ -4,7 +4,6 @@ import { randomDelay } from '../utils/delay';
 
 function cleanServer(server: string): string {
     if (server.at(-1) === '/') {
-        // eslint-disable-next-line no-param-reassign
         server = server.slice(0, -1);
     }
 
@@ -38,7 +37,8 @@ async function callApi(url: string): Promise<number> {
             const axiosError = error as AxiosError;
             throw new Error(
                 `Error calling ${url
-                }: ${axiosError.message} ${axiosError.response?.statusText} (${axiosError.response?.status})`
+                }: ${axiosError.message} ${axiosError.response?.statusText} (${axiosError.response?.status})`,
+                { cause: error }
             );
         }
 

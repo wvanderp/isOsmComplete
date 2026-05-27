@@ -1,18 +1,17 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Card, CardBody, CardText, CardTitle, Progress } from 'reactstrap';
-
-import showdown from 'showdown';
+import { Converter } from 'showdown';
 
 import { countryCodeEmoji } from 'country-code-emoji';
-import countries from 'i18n-iso-countries';
+import { getName, registerLocale } from 'i18n-iso-countries';
 import english from 'i18n-iso-countries/langs/en.json';
 
 import { Comparison, CountryCodes } from '../collect/types';
 import draw_chronology_chart from './utils/drawGraph';
 import downloadGraphData from './utils/downloadGraphData';
 
-countries.registerLocale(english);
-const markdownConverter = new showdown.Converter();
+registerLocale(english);
+const markdownConverter = new Converter();
 
 function countryCodeToEmoji(code: CountryCodes): string {
     if (code === 'Worldwide') return '🌎';
@@ -22,7 +21,7 @@ function countryCodeToEmoji(code: CountryCodes): string {
 function countryCodeToName(code: CountryCodes): string {
     if (code === 'Worldwide') return 'Worldwide';
     if (code === 'EU') return 'European Union';
-    return countries.getName(code, 'en') ?? code;
+    return getName(code, 'en') ?? code;
 }
 
 export default function Country(props: {
@@ -72,12 +71,11 @@ export function ComparisonCard(props: {
                     Expected: {props.comparison.expected} <br />
                     Actual: {props.comparison.actual}<br />
                     Percentage: {Math.floor((props.comparison.actual / props.comparison.expected) * 100)}% <br />
-
-                    { /* eslint-disable-next-line @eslint-react/dom-no-unsafe-target-blank -- I love seeing the referrer myself so I will give it to others */}
+                    {/* I love seeing the referers in my analytics, so I will give it to others too */}
                     <a href={props.comparison.expectedSource} target="_blank" rel="noopener">Source of Expected</a>
                 </CardText>
                 <Graph comparison={props.comparison} />
-                {/* eslint-disable-next-line @eslint-react/dom-no-dangerously-set-innerhtml -- this is markdown */}
+                {/* eslint-disable-next-line @eslint-react/dom-no-dangerously-set-innerhtml -- trusted markdown content from repository */}
                 <div id="thanks" dangerouslySetInnerHTML={{ __html: props.comparison.thanks ? markdownConverter.makeHtml(props.comparison.thanks) : '' }} />
             </CardBody>
         </Card>
@@ -116,7 +114,7 @@ export function ProgressBar(props: { value: number, max: number }) {
 }
 
 function Graph({ comparison }: { comparison: Comparison }) {
-    const [graph, setGraph] = React.useState<React.ReactNode>(null);
+    const [graph, setGraph] = useState<React.ReactNode>(null);
 
     useEffect(() => {
         function handleResize() {

@@ -1,4 +1,5 @@
 import axios, { AxiosError } from 'axios';
+import { randomInt } from 'node:crypto';
 import { Comparison } from '../../../../types';
 import getHash from '../../../../utils/getHash';
 import taginfoKeyValue from '../../../../api/taginfo';
@@ -22,7 +23,7 @@ async function executeWikidataSparql(sparqlQuery: string, name: string): Promise
     for (let attempt = 1; attempt <= MAX_RETRIES; attempt++) {
         try {
             // Add jitter to avoid thundering herd
-            const jitter = Math.random() * 2000;
+            const jitter = randomInt(0, 2001);
             const backoffDelay = attempt === 1 ? 1000 : INITIAL_DELAY_MS * 2 ** (attempt - 2) + jitter;
 
             console.info(

@@ -25,12 +25,12 @@ import { Comparison } from './types';
 const directory = path.join(__dirname, '../data');
 const tagsFile = path.join(__dirname, 'tags.json');
 
-async function tryCollect(name: string, fn: () => Promise<Comparison | Comparison[]>): Promise<Comparison[]> {
+async function tryCollect(name: string, collector: () => Promise<Comparison | Comparison[]>): Promise<Comparison[]> {
     try {
-        const result = await fn();
+        const result = await collector();
         return Array.isArray(result) ? result : [result];
-    } catch (err) {
-        console.error(`Collection "${name}" failed:`, err);
+    } catch (error) {
+        console.error(`Collection "${name}" failed:`, error);
         return [];
     }
 }
@@ -55,7 +55,7 @@ async function tryCollect(name: string, fn: () => Promise<Comparison | Compariso
         // fromSource
         tryCollect('allThePlaces', allThePlaces),
         tryCollect('airports', airports),
-        tryCollect('wikidata', wikidata),
+        tryCollect('wikidata', wikidata)
     ]);
 
     const data: Comparison[] = results.flatMap((r) => (r.status === 'fulfilled' ? r.value : []));

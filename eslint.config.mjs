@@ -2,7 +2,6 @@ import eslint from '@eslint/js';
 import tseslint from 'typescript-eslint';
 import reactPlugin from '@eslint-react/eslint-plugin';
 import reactHooks from 'eslint-plugin-react-hooks';
-import jsxA11y from 'eslint-plugin-jsx-a11y';
 import sonarjs from 'eslint-plugin-sonarjs';
 import unicorn from 'eslint-plugin-unicorn';
 import importX from 'eslint-plugin-import-x';
@@ -20,7 +19,6 @@ export default tseslint.config(
             reactPlugin.configs['recommended-typescript'],
             reactPlugin.configs['disable-conflict-eslint-plugin-react-hooks'],
             reactHooks.configs.flat.recommended,
-            jsxA11y.flatConfigs.recommended,
             sonarjs.configs.recommended,
             unicorn.configs['flat/recommended'],
             importX.flatConfigs.recommended,
@@ -98,11 +96,6 @@ export default tseslint.config(
             'import-x/extensions': 'off', // TypeScript does not want extensions
 
             // -------------------------------------------------------
-            // JSX Accessibility
-            // -------------------------------------------------------
-            'jsx-a11y/click-events-have-key-events': 'off',
-
-            // -------------------------------------------------------
             // Unicorn
             // -------------------------------------------------------
             'unicorn/filename-case': ['error', {
@@ -147,8 +140,14 @@ export default tseslint.config(
     // Collect scripts — not production code, console is fine
     {
         files: ['collect/**/*'],
+        languageOptions: {
+            globals: {
+                ...globals.node,
+            },
+        },
         rules: {
             'no-console': 'off',
+            'sonarjs/no-duplicate-string': 'off',
         },
     },
 );

@@ -2,7 +2,7 @@
 // Note for LLMs: All text content in this file should use HTML entities for apostrophes (&apos;)
 // instead of single quotes to ensure proper rendering and accessibility.
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Comparison, CountryCodes } from '../collect/types';
 import Country, { ComparisonCard as ComparisonComponent, ProgressBar } from './Country';
 
@@ -65,7 +65,7 @@ function FilterButton(
 
 export default function App() {
     // Set up the state for the filter buttons
-    const [countryFilter, setCountryFilter] = React.useState<string[]>([]);
+    const [countryFilter, setCountryFilter] = useState<string[]>([]);
     const countryButtons = data
         .map((comparison) => comparison.country)
         .filter((country, index, self) => self.indexOf(country) === index)
@@ -79,7 +79,7 @@ export default function App() {
         ));
 
     // Set up state for the tag filter buttons
-    const [tagFilter, setTagFilter] = React.useState<string[]>([]);
+    const [tagFilter, setTagFilter] = useState<string[]>([]);
     const tagButtons = Object.values(data)
         .flat()
         .flatMap((comparison: Comparison) => comparison.tags)
@@ -124,11 +124,11 @@ export default function App() {
             },
             []
         )
-        .sort(sortCountries)
+        .toSorted(sortCountries)
         .flatMap((country) => <Country key={country[0]} code={country[0] as CountryCodes} comparisons={country[1]} />);
 
     // Each day we select one of the comparisons to show on the front page
-    const today = new Date();
+    const [today] = useState(() => new Date());
     const comparisonOfTheDay = data[(dayOfTheWeek(today) * dayOfTheYear(today) * dayOfTheMonth(today)) % data.length];
     const comparisonOfTheDayComponent = <ComparisonComponent comparison={comparisonOfTheDay} />;
     const comparisonOfTheDayMatchesFilter = matchesFilters(comparisonOfTheDay);

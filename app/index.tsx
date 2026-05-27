@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import { createRoot } from 'react-dom/client';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style/main.sass';
@@ -17,5 +17,5 @@ if (app === null) {
     throw new Error('#app not found');
 }
 
-const root = ReactDOM.createRoot(app);
+const root = createRoot(app);
 root.render(<App />);
