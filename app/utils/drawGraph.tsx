@@ -11,12 +11,12 @@ function tomorrow() {
 // calculates the width of the chart
 function determine_chart_width(leftMargin: number, rightMargin: number): number {
     const leftRightMargin = leftMargin + rightMargin;
-    if (window.innerWidth < 1200) {
-        // smaller then 1200px
-        return window.innerWidth - leftRightMargin - (window.innerWidth * 0.1);
-    }
-    // bigger then 1200px
-    return 1200 - leftRightMargin - 50;
+    const page = document.querySelector('.page') as HTMLElement | null;
+    const availableWidth = page?.clientWidth ?? Math.min(window.innerWidth, 1200);
+    const horizontalPaddingAllowance = 64;
+    const minChartWidth = 260;
+
+    return Math.max(minChartWidth, availableWidth - leftRightMargin - horizontalPaddingAllowance);
 }
 
 function debounce(function_: () => void, wait: number) {
@@ -69,9 +69,14 @@ export default function draw_chronology_chart(
             .x((d) => scale_x(d.date))
             .y((d) => scale_y(d.value));
 
+        const chartWidth = w + margin.left + margin.right;
+        const chartHeight = h + margin.top + margin.bottom;
+
         const chart = d3.select(container).append('svg')
-            .attr('width', w + margin.left + margin.right)
-            .attr('height', h + margin.top + margin.bottom)
+            .attr('width', '100%')
+            .attr('height', chartHeight)
+            .attr('viewBox', `0 0 ${chartWidth} ${chartHeight}`)
+            .attr('preserveAspectRatio', 'xMinYMin meet')
             .append('g')
             .attr('transform', `translate(${margin.left}, ${margin.top})`);
 

@@ -32,15 +32,16 @@ export default function Country(props: {
     );
 
     return (
-        <>
-            <hr />
-            <h1>
-                {countryCodeToEmoji(props.code)}
-                {' '}
-                {countryCodeToName(props.code)}
-            </h1>
+        <section className="countrySection">
+            <header className="countryHeader">
+                <h2 className="countryTitle">
+                    {countryCodeToEmoji(props.code)}
+                    {' '}
+                    {countryCodeToName(props.code)}
+                </h2>
+            </header>
             {comparisons}
-        </>
+        </section>
     );
 }
 
@@ -128,7 +129,7 @@ function Graph({ comparison }: { comparison: Comparison }) {
     }, [comparison]);
 
     return (
-        <div>
+        <div className="graphWrapper">
             {graph}
         </div>
     );
