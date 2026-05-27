@@ -44,7 +44,7 @@ function FilterButton(
 ) {
     return (
         <button
-            className="filterBtn"
+            className={`filterBtn${props.state.includes(props.text) ? ' filterBtn--active' : ''}`}
             type="button"
             onClick={() => {
                 if (props.state.includes(props.text)) {
@@ -52,9 +52,6 @@ function FilterButton(
                 } else {
                     props.setState([...props.state, props.text]);
                 }
-            }}
-            style={{
-                backgroundColor: props.state.includes(props.text) ? 'lightblue' : 'white'
             }}
             title={props.alt}
         >
@@ -145,10 +142,10 @@ export default function App() {
     const weightedAverage = (actualEntities / expectedEntities) * 100;
 
     return (
-        <>
+        <div className="page">
             <div className="header">
                 <img src={logo} alt="OSM Complete Logo" className="logo" />
-                <h1>Is OSM Complete?</h1>
+                <h1 className="headerTitle">Is OSM Complete?</h1>
             </div>
             <p id="intro">
                 How complete is the OpenStreetMap, really? That&apos;s the question this website sets out to answer.<br />
@@ -189,22 +186,20 @@ export default function App() {
             </ul>
             <br />
 
-            <div>
+            <div className="filtersSection">
                 <b>Filters</b><br />
                 <span>Country:</span>{countryButtons}<br />
                 <span>Tag:</span>{tagButtons}<br />
             </div>
 
             {comparisonOfTheDayMatchesFilter && (
-                <>
-                    <hr />
+                <section className="spotlightSection">
                     <h2>🌟 Comparison of the Day</h2>
                     {comparisonOfTheDayComponent}
-                    <hr />
-                </>
+                </section>
             )}
 
             {countries}
-        </>
+        </div>
     );
 }

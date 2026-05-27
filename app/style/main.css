@@ -1,0 +1,89 @@
+@import "tailwindcss";
+
+@theme {
+    --font-display: "Twemoji Country Flags", "Helvetica", "Comic Sans", serif;
+    --font-title: "Trebuchet MS", "Avenir Next", "Segoe UI", sans-serif;
+    --color-card: #f8f9fa;
+    --color-filter-active: #add8e6;
+}
+
+body {
+    @apply mx-auto max-w-[1200px] p-4 font-display md:p-6;
+}
+
+.page>*+* {
+    @apply mt-6 md:mt-8;
+}
+
+.card {
+    @apply mx-1 my-3 rounded-md bg-card;
+}
+
+.card-body {
+    @apply p-4;
+}
+
+.card-title {
+    @apply mb-2 text-xl font-semibold;
+}
+
+.filterBtn {
+    @apply m-1 rounded border border-neutral-300 bg-white px-2 py-1;
+}
+
+.filterBtn--active {
+    @apply bg-filter-active;
+}
+
+.header .logo {
+    @apply h-[50px] w-[50px] p-0;
+}
+
+.header {
+    @apply flex items-center gap-3 rounded-md bg-white px-3 py-2;
+}
+
+.headerTitle {
+    @apply p-0 text-[1.45rem] font-semibold leading-tight tracking-tight text-neutral-900 md:text-[1.7rem];
+    font-family: var(--font-title);
+}
+
+h2 {
+    @apply text-[1.6em];
+}
+
+.cardText {
+    @apply mt-3;
+}
+
+.graphWrapper {
+    @apply mt-4 w-full overflow-hidden;
+}
+
+.graphWrapper svg {
+    @apply block h-auto max-w-full;
+}
+
+#intro {
+    @apply text-[1.2em];
+}
+
+.filtersSection {
+    @apply rounded-md border border-neutral-300 bg-card p-3;
+}
+
+.spotlightSection {
+    @apply rounded-md border border-neutral-300 bg-card p-4;
+}
+
+.countrySection {
+    @apply mt-10;
+}
+
+.countryHeader {
+    @apply mb-5 border-b border-neutral-300 pb-2;
+}
+
+.countryTitle {
+    @apply text-[1.7em] font-semibold;
+}
