@@ -1,18 +1,24 @@
-import { Comparison, CountryCodes } from '../types';
+import { CountryCodes } from '../types';
+import { ComparisonFunction } from '../types/ComparisonFunction';
 
 export default function appendCountry(
     country: CountryCodes,
-    comparison: Comparison[]
-): Comparison[] {
-    return comparison.map((c) => ({ ...c, country }));
+    comparisonFunction: ComparisonFunction | ComparisonFunction[]
+): ComparisonFunction[] {
+    const comparisonFunctions = Array.isArray(comparisonFunction) ? comparisonFunction : [comparisonFunction];
+
+    return () => comparisonFunctions.map((cf) => ({
+        ...(cf()),
+        country
+    }));
 }
 
 export function appendThanks(
-    comparison: Comparison,
+    comparisonFunction: ComparisonFunction,
     thanks: string
-): Comparison {
-    return {
-        ...comparison,
+): ComparisonFunction {
+    return () => ({
+        ...comparisonFunction(),
         thanks
-    };
+    });
 }

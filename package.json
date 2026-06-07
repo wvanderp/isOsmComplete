@@ -26,6 +26,7 @@
     "@types/react-dom": "^19.2.3",
     "@types/showdown": "^2.0.6",
     "@vitejs/plugin-react": "^6.0.2",
+    "@vitest/coverage-v8": "^4.1.7",
     "eslint": "^10.4.0",
     "eslint-import-resolver-typescript": "^4.4.4",
     "eslint-plugin-import-x": "^4.16.2",
@@ -71,6 +72,6 @@
     "tsc": "tsc --noEmit",
     "collect": "ts-node collect && npm run lintData",
     "clean": "rimraf build gitBuild",
-    "test": "vitest run"
+    "test": "vitest run --coverage"
   }
 }

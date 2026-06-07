@@ -21,42 +21,35 @@ import wikidata from './countries/fromSource/wikidata/wikidata';
 import allThePlaces from './countries/fromSource/alltheplaces/alltheplaces';
 
 import { Comparison } from './types';
+import { ComparisonFunction } from './types/ComparisonFunction';
 
 const directory = path.join(__dirname, '../data');
 const tagsFile = path.join(__dirname, 'tags.json');
 
-async function tryCollect(name: string, collector: () => Promise<Comparison | Comparison[]>): Promise<Comparison[]> {
-    try {
-        const result = await collector();
-        return Array.isArray(result) ? result : [result];
-    } catch (error) {
-        console.error(`Collection "${name}" failed:`, error);
-        return [];
-    }
-}
-
 (async () => {
-    const results = await Promise.allSettled([
-        tryCollect('worldwide', worldwide),
-        tryCollect('europe', europe),
+    const comparisonFunctions: ComparisonFunction[] = [
+        worldwide,
+        europe,
 
-        tryCollect('canada', canada),
-        tryCollect('china', china),
-        tryCollect('france', france),
-        tryCollect('germany', germany),
-        tryCollect('greatBritain', greatBritain),
-        tryCollect('italy', italy),
-        tryCollect('japan', japan),
-        tryCollect('netherlands', netherlands),
-        tryCollect('russia', russia),
-        tryCollect('unitedStates', unitedStates),
-        tryCollect('vietnam', vietnam),
+        canada,
+        china,
+        france,
+        germany,
+        greatBritain,
+        italy,
+        japan,
+        netherlands,
+        russia,
+        unitedStates,
+        vietnam,
 
         // fromSource
-        tryCollect('allThePlaces', allThePlaces),
-        tryCollect('airports', airports),
-        tryCollect('wikidata', wikidata)
-    ]);
+        allThePlaces,
+        airports,
+        wikidata
+    ];
+
+    const results = await Promise.allSettled(comparisonFunctions.map((f) => f()));
 
     const data: Comparison[] = results.flatMap((r) => (r.status === 'fulfilled' ? r.value : []));
 

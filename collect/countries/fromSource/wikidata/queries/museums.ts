@@ -46,11 +46,11 @@ SELECT (COUNT(DISTINCT ?museumShip) AS ?count) WHERE {
   }
 `;
 
-export default async function museum(): Promise<Comparison[]> {
-    return appendCountry(
+export default function museum(): Comparison[] {
+    const wrapper = appendCountry(
         'Worldwide',
         [
-            await wikidataComparison(
+            () => wikidataComparison(
                 'Museums',
                 museumSparqlQuery,
                 'tourism',
@@ -59,7 +59,7 @@ export default async function museum(): Promise<Comparison[]> {
                 ['🏛️', '🎨'],
                 '2025-01-05'
             ),
-            await wikidataComparison(
+            () => wikidataComparison(
                 'Zoos',
                 zooSparqlQuery,
                 'tourism',
@@ -68,7 +68,7 @@ export default async function museum(): Promise<Comparison[]> {
                 ['🦁'],
                 '2025-01-05'
             ),
-            await wikidataComparison(
+            () => wikidataComparison(
                 'Aquariums',
                 aquariumSparqlQuery,
                 'tourism',
@@ -77,7 +77,7 @@ export default async function museum(): Promise<Comparison[]> {
                 ['🦁'],
                 '2025-01-05'
             ),
-            await wikidataComparison(
+            () => wikidataComparison(
                 'Museum ships',
                 museumShipsSparqlQuery,
                 'historic',
@@ -87,5 +87,6 @@ export default async function museum(): Promise<Comparison[]> {
                 '2025-01-05'
             )
         ]
-    );
+    ) as unknown as () => Comparison[];
+    return wrapper();
 }

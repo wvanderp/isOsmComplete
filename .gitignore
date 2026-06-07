@@ -5,3 +5,4 @@ dist
 build
 scratch.ts
 scrap.ts
+coverage

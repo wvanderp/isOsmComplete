@@ -2,7 +2,7 @@ import { beforeEach, describe, expect, it, vi } from 'vitest';
 import type { Comparison } from '../../../../../../collect/types';
 
 const { wikidataComparisonMock } = vi.hoisted(() => ({
-    wikidataComparisonMock: vi.fn(async (...comparisonArguments: [string, string, ...unknown[]]) => ({
+    wikidataComparisonMock: vi.fn((...comparisonArguments: [string, string, ...unknown[]]) => ({
         id: comparisonArguments[0],
         name: comparisonArguments[0],
         expected: 0,
@@ -27,8 +27,8 @@ describe('museum', () => {
 
     it('builds Wikidata queries without unsupported bounded property path syntax', async () => {
         const museumModule = await import('../../../../../../collect/countries/fromSource/wikidata/queries/museums.js');
-        const museum = museumModule.default as unknown as () => Promise<Comparison[]>;
-        const comparisons = await museum();
+        const museum = museumModule.default as unknown as () => Comparison[];
+        const comparisons = museum();
         const queries = wikidataComparisonMock.mock.calls.map(([, sparqlQuery]) => sparqlQuery as string);
 
         expect(comparisons).toHaveLength(4);
