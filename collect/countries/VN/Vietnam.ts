@@ -8,7 +8,7 @@ const taginfoServer = taginfoServers.VN;
 export default appendCountry(
     'VN',
     [
-        () => taginfoComparisonMultipleTags(
+        taginfoComparisonMultipleTags(
             'McDonald\'s in Vietnam',
             brandWikidata,
             ['Q38076', 'Q12061542'],
@@ -19,7 +19,7 @@ export default appendCountry(
             '2026-05-25',
             taginfoServer
         ),
-        () => taginfoComparisons(
+        taginfoComparisons(
             'Burger King in Vietnam',
             brandWikidata,
             'Q177054',

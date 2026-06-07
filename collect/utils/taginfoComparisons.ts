@@ -1,5 +1,6 @@
 import taginfoKeyValue, { taginfoKey } from '../api/taginfo';
 import { Comparison } from '../types';
+import { ComparisonFunction } from '../types/ComparisonFunction';
 import getHash from './getHash';
 
 export const osmTagInfoServer = 'https://taginfo.openstreetmap.org';
@@ -17,7 +18,7 @@ export const osmTagInfoServer = 'https://taginfo.openstreetmap.org';
  * @param server the taginfo server to use for the comparison
  * @returns a comparison object
  */
-export default async function taginfoComparisons(
+export default function taginfoComparisons(
     name: string,
     key: string,
     value: string,
@@ -27,21 +28,23 @@ export default async function taginfoComparisons(
     tags: string[],
     lastUpdated: string,
     server = osmTagInfoServer
-): Promise<Comparison> {
-    console.info(`Starting on ${name}`);
+): ComparisonFunction {
+    return async (): Promise<Comparison> => {
+        console.info(`Starting on ${name}`);
 
-    const count = await taginfoKeyValue(key, value, server);
+        const count = await taginfoKeyValue(key, value, server);
 
-    return {
-        id: getHash(`${key}${value}${server}`),
-        name,
-        expected,
-        actual: count,
-        expectedSource,
-        actualSource: 'taginfo',
-        tags,
-        description,
-        lastUpdated
+        return {
+            id: getHash(`${key}${value}${server}`),
+            name,
+            expected,
+            actual: count,
+            expectedSource,
+            actualSource: 'taginfo',
+            tags,
+            description,
+            lastUpdated
+        };
     };
 }
 
@@ -59,7 +62,7 @@ export default async function taginfoComparisons(
  * @param server the taginfo server to use for the comparison
  * @returns a comparison object
  */
-export async function taginfoComparisonKeyOnly(
+export function taginfoComparisonKeyOnly(
     name: string,
     key: string,
     expected: number,
@@ -68,20 +71,22 @@ export async function taginfoComparisonKeyOnly(
     tags: string[],
     lastUpdated: string,
     server = osmTagInfoServer
-): Promise<Comparison> {
-    console.info(`Starting on ${name}`);
-    const count = await taginfoKey(key, server);
+): ComparisonFunction {
+    return async (): Promise<Comparison> => {
+        console.info(`Starting on ${name}`);
+        const count = await taginfoKey(key, server);
 
-    return {
-        id: getHash(`${key}${server}`),
-        name,
-        expected,
-        actual: count,
-        expectedSource,
-        actualSource: 'taginfo',
-        tags,
-        description,
-        lastUpdated
+        return {
+            id: getHash(`${key}${server}`),
+            name,
+            expected,
+            actual: count,
+            expectedSource,
+            actualSource: 'taginfo',
+            tags,
+            description,
+            lastUpdated
+        };
     };
 }
 
@@ -99,7 +104,7 @@ export async function taginfoComparisonKeyOnly(
  * @param server the taginfo server to use for the comparison
  * @returns a comparison object
  */
-export async function taginfoComparisonMultipleTags(
+export function taginfoComparisonMultipleTags(
     name: string,
     key: string,
     values: string[],
@@ -109,25 +114,27 @@ export async function taginfoComparisonMultipleTags(
     tags: string[],
     lastUpdated: string,
     server = osmTagInfoServer
-): Promise<Comparison> {
-    console.info(`Starting on ${name}`);
+): ComparisonFunction {
+    return async (): Promise<Comparison> => {
+        console.info(`Starting on ${name}`);
 
-    const taginfos = await Promise.all(
-        values.map((tag) => taginfoKeyValue(key, tag, server))
-    );
+        const taginfos = await Promise.all(
+            values.map((tag) => taginfoKeyValue(key, tag, server))
+        );
 
-    const count = taginfos.reduce((a, b) => a + b, 0);
+        const count = taginfos.reduce((a, b) => a + b, 0);
 
-    return {
-        id: getHash(`${key}${values.join('')}${server}`),
-        name,
-        expected,
-        actual: count,
-        expectedSource,
-        actualSource: 'taginfo',
-        tags,
-        description,
-        lastUpdated
+        return {
+            id: getHash(`${key}${values.join('')}${server}`),
+            name,
+            expected,
+            actual: count,
+            expectedSource,
+            actualSource: 'taginfo',
+            tags,
+            description,
+            lastUpdated
+        };
     };
 }
 
@@ -144,7 +151,7 @@ export async function taginfoComparisonMultipleTags(
  * @param server the taginfo server to use for the comparison
  * @returns a comparison object
  */
-export async function taginfoComparisonMultipleKeyValuePairs(
+export function taginfoComparisonMultipleKeyValuePairs(
     name: string,
     keyValues: [string, string][],
     expected: number,
@@ -153,24 +160,26 @@ export async function taginfoComparisonMultipleKeyValuePairs(
     tags: string[],
     lastUpdated: string,
     server = osmTagInfoServer
-): Promise<Comparison> {
-    console.info(`Starting on ${name}`);
+): ComparisonFunction {
+    return async (): Promise<Comparison> => {
+        console.info(`Starting on ${name}`);
 
-    const taginfos = await Promise.all(
-        keyValues.map(([key, value]) => taginfoKeyValue(key, value, server))
-    );
+        const taginfos = await Promise.all(
+            keyValues.map(([key, value]) => taginfoKeyValue(key, value, server))
+        );
 
-    const count = taginfos.reduce((a, b) => a + b, 0);
+        const count = taginfos.reduce((a, b) => a + b, 0);
 
-    return {
-        id: getHash(`${keyValues.map(([key, value]) => key + value).join('')}${server}`),
-        name,
-        expected,
-        actual: count,
-        expectedSource,
-        actualSource: 'taginfo',
-        tags,
-        description,
-        lastUpdated
+        return {
+            id: getHash(`${keyValues.map(([key, value]) => key + value).join('')}${server}`),
+            name,
+            expected,
+            actual: count,
+            expectedSource,
+            actualSource: 'taginfo',
+            tags,
+            description,
+            lastUpdated
+        };
     };
 }

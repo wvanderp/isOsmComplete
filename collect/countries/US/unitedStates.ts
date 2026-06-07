@@ -9,7 +9,7 @@ const taginfoServer = taginfoServers.US;
 export default appendCountry(
     'US',
     [
-        () => taginfoComparisonKeyOnly(
+        taginfoComparisonKeyOnly(
             'FAA tags ✈️',
             'faa',
             26697,
@@ -19,7 +19,7 @@ export default appendCountry(
             '2025-01-05',
             taginfoServer
         ),
-        () => taginfoComparisons(
+        taginfoComparisons(
             'Walmart',
             brandWikidata,
             'Q483551',
@@ -30,7 +30,7 @@ export default appendCountry(
             '2025-01-05',
             taginfoServer
         ),
-        () => taginfoComparisons(
+        taginfoComparisons(
             'Sam\'s club',
             brandWikidata,
             'Q1972120',
@@ -41,7 +41,7 @@ export default appendCountry(
             '2025-01-05',
             taginfoServer
         ),
-        () => taginfoComparisons(
+        taginfoComparisons(
             'Dollar General',
             brandWikidata,
             'Q145168', // DG Market, DGX not in Wikidata
@@ -52,7 +52,7 @@ export default appendCountry(
             '2025-01-05',
             taginfoServer
         ),
-        () => taginfoComparisonMultipleTags(
+        taginfoComparisonMultipleTags(
             'Dollar Tree & Family Dollar',
             brandWikidata,
             ['Q5289230', 'Q5433101'],
@@ -64,7 +64,7 @@ export default appendCountry(
             '2025-01-14'
             // using the worldwide taginfo server because they are located in us and canada
         ),
-        () => taginfoComparisons(
+        taginfoComparisons(
             'CVS',
             brandWikidata,
             'Q2078880',
@@ -76,7 +76,7 @@ export default appendCountry(
             '2025-01-14',
             taginfoServer
         ),
-        () => taginfoComparisons(
+        taginfoComparisons(
             'Walgreens',
             brandWikidata,
             'Q1591889',
@@ -87,7 +87,7 @@ export default appendCountry(
             '2025-02-02',
             taginfoServer
         ),
-        () => taginfoComparisons(
+        taginfoComparisons(
             'Pharmacies in the US of A',
             healthcare,
             pharmacy,
@@ -98,7 +98,7 @@ export default appendCountry(
             '2025-02-02',
             taginfoServer
         ),
-        () => taginfoComparisons(
+        taginfoComparisons(
             'ShotSpotter',
             'surveillance:type',
             'gunshot_detector',
@@ -109,7 +109,7 @@ export default appendCountry(
             '2025-01-05',
             taginfoServer
         ),
-        () => taginfoComparisons(
+        taginfoComparisons(
             'Flock Safety ALPR',
             'manufacturer:wikidata',
             'Q108485435',

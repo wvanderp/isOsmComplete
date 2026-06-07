@@ -3,7 +3,7 @@ import type { Comparison } from '../../../../../../collect/types';
 import type { ComparisonFunction } from '../../../../../../collect/types/ComparisonFunction';
 
 const { wikidataComparisonMock } = vi.hoisted(() => ({
-    wikidataComparisonMock: vi.fn((...comparisonArguments: [string, string, ...unknown[]]) => ({
+    wikidataComparisonMock: vi.fn((...comparisonArguments: [string, string, ...unknown[]]) => async () => ({
         id: comparisonArguments[0],
         name: comparisonArguments[0],
         expected: 0,

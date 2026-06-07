@@ -2,7 +2,7 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './style/main.sass';
+import './style/main.css';
 
 import { polyfillCountryFlagEmojis } from 'country-flag-emoji-polyfill';
 import App from './App';

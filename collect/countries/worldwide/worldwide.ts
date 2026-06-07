@@ -7,7 +7,7 @@ import openBenches from './OpenBenches';
 export default appendCountry(
     'Worldwide',
     [
-        () => taginfoComparisonKeyOnly(
+        taginfoComparisonKeyOnly(
             'Match Google on building',
             'building',
             1600000000 + 1800000000, // 1.6B from the google i/o 2022 keynote, plus 1.8B from google open buildings dataset
@@ -16,7 +16,7 @@ export default appendCountry(
             ['🏠'],
             '2026-05-25'
         ),
-        () => overpassComparisonMultiple(
+        overpassComparisonMultiple(
             'Stolpersteine',
             [['memorial:type', 'stolperstein'], ['memorial', 'stolperstein']],
             'or',
@@ -26,7 +26,7 @@ export default appendCountry(
             [],
             '2026-05-25'
         ),
-        () => overpassComparisonMultiple(
+        overpassComparisonMultiple(
             'IKEA stores',
             [[brandWikidata, 'Q54078'], ['shop', 'furniture']],
             'and',
@@ -36,7 +36,7 @@ export default appendCountry(
             ['🛒'],
             '2025-01-05'
         ),
-        () => taginfoComparisons(
+        taginfoComparisons(
             '7-Eleven stores',
             brandWikidata,
             'Q259340',
@@ -46,7 +46,7 @@ export default appendCountry(
             ['🛒', '🍔'],
             '2026-05-25'
         ),
-        () => taginfoComparisons(
+        taginfoComparisons(
             'Subway stores',
             brandWikidata,
             'Q244457',
@@ -56,7 +56,7 @@ export default appendCountry(
             ['🍔', '🛒'],
             '2025-01-05'
         ),
-        () => taginfoComparisons(
+        taginfoComparisons(
             'Starbucks',
             brandWikidata,
             'Q37158',
@@ -66,7 +66,7 @@ export default appendCountry(
             ['🛒', '🍔'],
             '2025-01-05'
         ),
-        () => taginfoComparisonMultipleTags(
+        taginfoComparisonMultipleTags(
             'McDonald\'s',
             brandWikidata,
             ['Q38076', 'Q12061542'],
@@ -76,7 +76,7 @@ export default appendCountry(
             ['🍔', '🛒'],
             '2026-05-25'
         ),
-        () => taginfoComparisons(
+        taginfoComparisons(
             'KFC',
             brandWikidata,
             'Q524757',
@@ -86,7 +86,7 @@ export default appendCountry(
             ['🍔', '🛒'],
             '2025-01-14'
         ),
-        () => taginfoComparisons(
+        taginfoComparisons(
             'Taco Bell',
             brandWikidata,
             'Q752941',
@@ -96,7 +96,7 @@ export default appendCountry(
             ['🍔', '🛒'],
             '2025-01-14'
         ),
-        () => taginfoComparisons(
+        taginfoComparisons(
             'Pizza Hut',
             brandWikidata,
             'Q191615',
@@ -106,7 +106,7 @@ export default appendCountry(
             ['🍔', '🛒'],
             '2025-01-14'
         ),
-        () => taginfoComparisons(
+        taginfoComparisons(
             'Burger King',
             brandWikidata,
             'Q177054',
@@ -116,7 +116,7 @@ export default appendCountry(
             ['🍔', '🛒'],
             '2025-02-14'
         ),
-        () => overpassComparisonMultiple(
+        overpassComparisonMultiple(
             'Tesla superchargers',
             [['amenity', 'charging_station'], ['brand:wikidata', 'Q478214']],
             'and',
@@ -126,7 +126,7 @@ export default appendCountry(
             ['🔋', '🚗'],
             '2025-02-02'
         ),
-        () => taginfoComparisons(
+        taginfoComparisons(
             'Data centers',
             'telecom',
             'data_center',
@@ -136,7 +136,7 @@ export default appendCountry(
             ['🌐'],
             '2025-01-05'
         ),
-        () => taginfoComparisons(
+        taginfoComparisons(
             'UNESCO World Heritage Sites',
             'heritage:operator',
             'whc',
@@ -146,7 +146,7 @@ export default appendCountry(
             ['🌳', '🏛️'],
             '2025-01-05'
         ),
-        () => overpassComparisonRaw(
+        overpassComparisonRaw(
             'US Overseas Military Bases',
             `
                 [out:json][timeout:180];
@@ -173,7 +173,7 @@ export default appendCountry(
             ['🪖'],
             '2025-01-25'
         ),
-        () => overpassComparisonRaw(
+        overpassComparisonRaw(
             'UN Member States',
             `
                 [out:json][timeout:180];

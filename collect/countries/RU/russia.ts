@@ -8,7 +8,7 @@ const taginfoServer = taginfoServers.RU;
 export default appendCountry(
     'RU',
     [
-        () => taginfoComparisons(
+        taginfoComparisons(
             'Pyaterochka',
             brandWikidata,
             'Q1768969',
@@ -19,7 +19,7 @@ export default appendCountry(
             '2025-01-05',
             taginfoServer
         ),
-        () => taginfoComparisonMultipleTags(
+        taginfoComparisonMultipleTags(
             'McDonald\'s leaves Russia',
             brandWikidata,
             ['Q38076', 'Q12061542'],

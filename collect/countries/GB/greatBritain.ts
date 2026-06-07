@@ -9,7 +9,7 @@ const taginfoServer = taginfoServers.GB;
 export default appendCountry(
     'GB',
     [
-        () => taginfoComparisons(
+        taginfoComparisons(
             'Pubs in the UK',
             'amenity',
             'pub',
@@ -20,7 +20,7 @@ export default appendCountry(
             '2025-01-05',
             taginfoServer
         ),
-        () => taginfoComparisons(
+        taginfoComparisons(
             'Royal Mail post boxes',
             brandWikidata,
             'Q638098',
@@ -31,7 +31,7 @@ export default appendCountry(
             '2024-12-30',
             taginfoServer
         ),
-        () => taginfoComparisonMultipleTags(
+        taginfoComparisonMultipleTags(
             'Tesco',
             brandWikidata,
             [
@@ -48,7 +48,7 @@ export default appendCountry(
             '2025-01-05',
             taginfoServer
         ),
-        () => taginfoComparisons(
+        taginfoComparisons(
             'National Car Parks',
             operatorWikidata,
             'Q6971273',

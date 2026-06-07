@@ -11,7 +11,7 @@ const taginfoServerEuropa = taginfoServers.EU;
 export default appendCountry(
     'NL',
     [
-        () => taginfoComparisons(
+        taginfoComparisons(
             'Car chargers',
             'amenity',
             'charging_station',
@@ -23,7 +23,7 @@ export default appendCountry(
             '2026-05-25',
             taginfoServer
         ),
-        () => taginfoComparisonMultipleTags(
+        taginfoComparisonMultipleTags(
             'Hospitals',
             'amenity',
             ['hospital', 'clinic'],
@@ -34,7 +34,7 @@ export default appendCountry(
             '2025-01-05',
             taginfoServer
         ),
-        () => taginfoComparisons(
+        taginfoComparisons(
             'Wind turbines',
             'generator:source',
             'wind',
@@ -45,7 +45,7 @@ export default appendCountry(
             '2025-01-05',
             taginfoServer
         ),
-        () => taginfoComparisons(
+        taginfoComparisons(
             'Traffic enforcement camera',
             'highway',
             'speed_camera',
@@ -56,7 +56,7 @@ export default appendCountry(
             '2025-01-05',
             taginfoServer
         ),
-        () => taginfoComparisonMultipleTags(
+        taginfoComparisonMultipleTags(
             "Albert Heijn's",
             brandWikidata,
             ['Q1653985', 'Q78163765'],
@@ -68,7 +68,7 @@ export default appendCountry(
             // use the Europe server because Albert Heijn is also in Belgium
             taginfoServerEuropa
         ),
-        () => taginfoComparisons(
+        taginfoComparisons(
             'Gall & Gall',
             brandWikidata,
             'Q13639185',
@@ -79,7 +79,7 @@ export default appendCountry(
             '2025-01-05',
             taginfoServer
         ),
-        () => taginfoComparisons(
+        taginfoComparisons(
             'Etos',
             brandWikidata,
             'Q2609459',
@@ -90,7 +90,7 @@ export default appendCountry(
             '2025-01-05',
             taginfoServer
         ),
-        () => taginfoComparisons(
+        taginfoComparisons(
             'Civil defense siren',
             'emergency',
             'siren',
@@ -101,7 +101,7 @@ export default appendCountry(
             '2025-01-05',
             taginfoServer
         ),
-        () => taginfoComparisons(
+        taginfoComparisons(
             'Mailboxes in the Netherlands',
             'operator:wikidata',
             'Q5921598',
@@ -112,7 +112,7 @@ export default appendCountry(
             '2026-05-25',
             taginfoServer
         ),
-        () => taginfoComparisons(
+        taginfoComparisons(
             'Surveillance cameras in the Netherlands',
             'surveillance:type',
             'camera',
@@ -123,7 +123,7 @@ export default appendCountry(
             '2026-05-25',
             taginfoServer
         ),
-        () => taginfoComparisonMultipleKeyValuePairs(
+        taginfoComparisonMultipleKeyValuePairs(
             'Hydrogen refueling stations',
             [
                 ['fuel:h35', 'yes'],

@@ -9,7 +9,7 @@ const taginfoServer = taginfoServers.CN;
 export default appendCountry(
     'CN',
     [
-        () => overpassComparisonMultiple(
+        overpassComparisonMultiple(
             'Train stations in China',
             [['railway', 'station'], ['train', 'yes']],
             'and',
@@ -20,7 +20,7 @@ export default appendCountry(
             '2026-05-25',
             chinaArea
         ),
-        () => taginfoComparisons(
+        taginfoComparisons(
             'Coal power plants in China',
             'generator:source',
             'coal',

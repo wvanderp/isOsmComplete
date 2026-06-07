@@ -1,5 +1,6 @@
 import { overpassSimpleQuery, overpassRawQuery } from '../api/overpass';
 import { Comparison } from '../types';
+import { ComparisonFunction } from '../types/ComparisonFunction';
 import getHash from './getHash';
 
 /**
@@ -17,7 +18,7 @@ import getHash from './getHash';
  * @param areaID - Optional area ID to restrict the query to
  * @returns Promise containing the comparison result
  */
-export default async function overpassComparison(
+export default function overpassComparison(
     name: string,
     key: string,
     value: string,
@@ -27,21 +28,23 @@ export default async function overpassComparison(
     tags: string[],
     lastUpdated: string,
     areaID?: number
-): Promise<Comparison> {
-    console.info(`Starting on ${name}`);
+): ComparisonFunction {
+    return async (): Promise<Comparison> => {
+        console.info(`Starting on ${name}`);
 
-    const count = await overpassSimpleQuery([[key, value]], areaID);
+        const count = await overpassSimpleQuery([[key, value]], areaID);
 
-    return {
-        id: getHash(`${key}${value}`),
-        name,
-        expected,
-        actual: count,
-        expectedSource,
-        actualSource: 'overpass',
-        tags,
-        description,
-        lastUpdated
+        return {
+            id: getHash(`${key}${value}`),
+            name,
+            expected,
+            actual: count,
+            expectedSource,
+            actualSource: 'overpass',
+            tags,
+            description,
+            lastUpdated
+        };
     };
 }
 
@@ -60,7 +63,7 @@ export default async function overpassComparison(
  * @param areaID - Optional area ID to restrict the query to
  * @returns Promise containing the comparison result
  */
-export async function overpassComparisonMultiple(
+export function overpassComparisonMultiple(
     name: string,
     query: [string, string][],
     operator: 'and' | 'or',
@@ -70,21 +73,23 @@ export async function overpassComparisonMultiple(
     tags: string[],
     lastUpdated: string,
     areaID?: number
-): Promise<Comparison> {
-    console.info(`Starting on ${name}`);
+): ComparisonFunction {
+    return async (): Promise<Comparison> => {
+        console.info(`Starting on ${name}`);
 
-    const count = await overpassSimpleQuery(query, areaID, operator);
+        const count = await overpassSimpleQuery(query, areaID, operator);
 
-    return {
-        id: getHash(JSON.stringify(query)),
-        name,
-        expected,
-        actual: count,
-        expectedSource,
-        actualSource: 'overpass',
-        tags,
-        description,
-        lastUpdated
+        return {
+            id: getHash(JSON.stringify(query)),
+            name,
+            expected,
+            actual: count,
+            expectedSource,
+            actualSource: 'overpass',
+            tags,
+            description,
+            lastUpdated
+        };
     };
 }
 
@@ -101,7 +106,7 @@ export async function overpassComparisonMultiple(
  * @param lastUpdated - Date string of when the comparison was last updated
  * @returns Promise containing the comparison result
  */
-export async function overpassComparisonRaw(
+export function overpassComparisonRaw(
     name: string,
     rawQuery: string,
     expected: number,
@@ -109,20 +114,22 @@ export async function overpassComparisonRaw(
     description: string,
     tags: string[],
     lastUpdated: string
-): Promise<Comparison> {
-    console.info(`Starting on ${name}`);
+): ComparisonFunction {
+    return async (): Promise<Comparison> => {
+        console.info(`Starting on ${name}`);
 
-    const count = await overpassRawQuery(rawQuery);
+        const count = await overpassRawQuery(rawQuery);
 
-    return {
-        id: getHash(rawQuery),
-        name,
-        expected,
-        actual: count,
-        expectedSource,
-        actualSource: 'overpass',
-        tags,
-        description,
-        lastUpdated
+        return {
+            id: getHash(rawQuery),
+            name,
+            expected,
+            actual: count,
+            expectedSource,
+            actualSource: 'overpass',
+            tags,
+            description,
+            lastUpdated
+        };
     };
 }

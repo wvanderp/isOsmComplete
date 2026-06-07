@@ -8,7 +8,7 @@ const taginfoServer = taginfoServers.DE;
 export default appendCountry(
     'DE',
     [
-        () => taginfoComparisons(
+        taginfoComparisons(
             'REWE',
             brandWikidata,
             'Q16968817',
@@ -19,7 +19,7 @@ export default appendCountry(
             '2025-01-05',
             taginfoServer
         ),
-        () => taginfoComparisons(
+        taginfoComparisons(
             'PENNY',
             brandWikidata,
             'Q284688',

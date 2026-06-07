@@ -63,7 +63,7 @@ export default appendCountry(
             'The number of airports with IATA codes in OSM',
             ['✈️'],
             '2025-01-05'
-        ),
+        )(),
         async () => taginfoComparisonKeyOnly(
             'Airports with ICAO codes ✈️',
             'icao',
@@ -72,7 +72,7 @@ export default appendCountry(
             'The number of airports with ICAO codes in OSM',
             ['✈️'],
             '2025-01-05'
-        ),
+        )(),
         async () => taginfoComparisonMultipleTags(
             'Match OurAirports on airports',
             'aeroway',
@@ -82,6 +82,6 @@ export default appendCountry(
             'OurAirports is a crowdsourced database of airports. Let\'s see if OSM can add something to it.',
             ['✈️'],
             '2025-01-05'
-        )
+        )()
     ]
 );

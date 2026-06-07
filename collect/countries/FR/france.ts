@@ -28,7 +28,7 @@ export default appendCountry(
     'FR',
     [
         appendThanks(
-            () => taginfoComparisons(
+            taginfoComparisons(
                 'Bakeries in France 🇫🇷',
                 shop,
                 bakery,
@@ -52,7 +52,7 @@ export default appendCountry(
                 ['🎱'],
                 '2025-05-28',
                 taginfoServer
-            ),
+            )(),
             'Thanks again to [@Binnette](https://github.com/Binnette) for reading through French government datasets and suggesting this one!'
         ),
         appendThanks(
@@ -65,7 +65,7 @@ export default appendCountry(
                 ['🚂'],
                 '2025-12-07',
                 taginfoServer
-            ),
+            )(),
             'And another thanks to [@Binnette](https://github.com/Binnette) for this suggestion as well!'
         ),
         appendThanks(
@@ -78,7 +78,7 @@ export default appendCountry(
                 'The French government maintains a database of EV charging infrastructure. OSM is charging towards full coverage! ⚡',
                 ['🔋', '🚗'],
                 '2025-12-07'
-            ),
+            )(),
             'Thanks to [@Binnette](https://github.com/Binnette) for finding this dataset! 🚗⚡'
         )
     ]

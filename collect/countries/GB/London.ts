@@ -7,7 +7,7 @@ const taginfoServer = taginfoServers.London;
 export default appendCountry(
     'GB',
     [
-        () => taginfoComparisons(
+        taginfoComparisons(
             'Surveillance cameras in London',
             'surveillance:type',
             'camera',

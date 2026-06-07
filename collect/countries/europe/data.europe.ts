@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { parse } from 'csv-parse/sync';
+import { Comparison } from '../../types';
 import appendCountry from '../../utils/appendData';
 import { taginfoComparisonKeyOnly, taginfoComparisonMultipleTags } from '../../utils/taginfoComparisons';
 import taginfoServers from '../../utils/tagInfoServers';
@@ -56,7 +57,7 @@ export default appendCountry(
                 ['🚗'],
                 '2025-01-05',
                 taginfoServer
-            );
+            )() as Comparison;
 
             const all = await taginfoComparisonKeyOnly(
                 'Retail stores in Europe',
@@ -67,7 +68,7 @@ export default appendCountry(
                 ['🛒'],
                 '2025-01-05',
                 taginfoServer
-            );
+            )() as Comparison;
 
             return {
                 ...all,

@@ -8,7 +8,7 @@ const taginfoServer = taginfoServers.JP;
 export default appendCountry(
     'JP',
     [
-        () => taginfoComparisons(
+        taginfoComparisons(
             '7-Eleven in Japan',
             brandWikidata,
             'Q259340',
@@ -19,7 +19,7 @@ export default appendCountry(
             '2025-02-02',
             taginfoServer
         ),
-        () => taginfoComparisonMultipleTags(
+        taginfoComparisonMultipleTags(
             'FamilyMart',
             brandWikidata,
             ['Q11247682', 'Q1191685'],
@@ -30,7 +30,7 @@ export default appendCountry(
             '2025-02-02',
             taginfoServer
         ),
-        () => taginfoComparisons(
+        taginfoComparisons(
             'Lawson',
             brandWikidata,
             'Q1557223',
@@ -41,7 +41,7 @@ export default appendCountry(
             '2025-02-02',
             taginfoServer
         ),
-        () => taginfoComparisons(
+        taginfoComparisons(
             'Shinto shrines',
             'religion',
             'shinto',

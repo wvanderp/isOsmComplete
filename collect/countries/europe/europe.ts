@@ -49,7 +49,7 @@ export default appendCountry(
             ['🔋', '🚗'],
             '2025-01-05',
             taginfoServer
-        ),
+        )(),
 
         ...retailStoresInEurope
     ]

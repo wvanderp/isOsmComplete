@@ -95,7 +95,7 @@ async function getPoliceStations(): Promise<number> {
 export default appendCountry(
     'NL',
     [
-        () => taginfoComparisons(
+        taginfoComparisons(
             'Palaces of justice in the Netherlands',
             'amenity',
             'courthouse',
@@ -118,8 +118,8 @@ export default appendCountry(
             ['⚖️'],
             '2025-01-05',
             taginfoServer
-        ),
-        () => taginfoComparisons(
+        )(),
+        taginfoComparisons(
             'Fire stations in the Netherlands',
             'amenity',
             'fire_station',
@@ -131,7 +131,7 @@ export default appendCountry(
             '2025-01-05',
             taginfoServer
         ),
-        () => taginfoComparisons(
+        taginfoComparisons(
             'Prisons in the Netherlands',
             'amenity',
             'prison',

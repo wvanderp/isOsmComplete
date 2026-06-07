@@ -4,7 +4,7 @@ import overpassComparison from '../../utils/overpassComparisons';
 export default appendCountry(
     'US',
     [
-        () => overpassComparison(
+        overpassComparison(
             'Automatic number-plate recognition in San Francisco',
             'surveillance:type',
             'ALPR',

@@ -1,6 +1,7 @@
 import axios, { AxiosError } from 'axios';
 import { randomInt } from 'node:crypto';
 import { Comparison } from '../../../../types';
+import { ComparisonFunction } from '../../../../types/ComparisonFunction';
 import getHash from '../../../../utils/getHash';
 import taginfoKeyValue from '../../../../api/taginfo';
 import { osmTagInfoServer } from '../../../../utils/taginfoComparisons';
@@ -81,7 +82,7 @@ async function executeWikidataSparql(sparqlQuery: string, name: string): Promise
  * @param {string} [server=osmTagInfoServer] - The Taginfo server to use.
  * @returns {Promise<Comparison>} A promise that resolves to a Comparison object.
  */
-export default async function wikidataComparison(
+export default function wikidataComparison(
     name: string,
     sparqlQuery: string,
     key: string,
@@ -90,21 +91,23 @@ export default async function wikidataComparison(
     tags: string[],
     lastUpdated: string,
     server = osmTagInfoServer
-): Promise<Comparison> {
-    console.info(`Starting on ${name}`);
+): ComparisonFunction {
+    return async (): Promise<Comparison> => {
+        console.info(`Starting on ${name}`);
 
-    const expected = await executeWikidataSparql(sparqlQuery, name);
-    const actual = await taginfoKeyValue(key, value, server);
+        const expected = await executeWikidataSparql(sparqlQuery, name);
+        const actual = await taginfoKeyValue(key, value, server);
 
-    return {
-        id: getHash(sparqlQuery),
-        name,
-        expected,
-        actual,
-        expectedSource: 'Wikidata query service',
-        actualSource: 'taginfo',
-        description,
-        tags,
-        lastUpdated
+        return {
+            id: getHash(sparqlQuery),
+            name,
+            expected,
+            actual,
+            expectedSource: 'Wikidata query service',
+            actualSource: 'taginfo',
+            description,
+            tags,
+            lastUpdated
+        };
     };
 }

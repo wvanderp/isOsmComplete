@@ -48,7 +48,7 @@ SELECT (COUNT(DISTINCT ?museumShip) AS ?count) WHERE {
 export default appendCountry(
     'Worldwide',
     [
-        () => wikidataComparison(
+        wikidataComparison(
             'Museums',
             museumSparqlQuery,
             'tourism',
@@ -57,7 +57,7 @@ export default appendCountry(
             ['🏛️', '🎨'],
             '2025-01-05'
         ),
-        () => wikidataComparison(
+        wikidataComparison(
             'Zoos',
             zooSparqlQuery,
             'tourism',
@@ -66,7 +66,7 @@ export default appendCountry(
             ['🦁'],
             '2025-01-05'
         ),
-        () => wikidataComparison(
+        wikidataComparison(
             'Aquariums',
             aquariumSparqlQuery,
             'tourism',
@@ -75,7 +75,7 @@ export default appendCountry(
             ['🦁'],
             '2025-01-05'
         ),
-        () => wikidataComparison(
+        wikidataComparison(
             'Museum ships',
             museumShipsSparqlQuery,
             'historic',

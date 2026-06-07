@@ -25,7 +25,7 @@ const airportIdentifiers = [
 export default appendCountry(
     'CA',
     [
-        () => taginfoComparisonKeyOnly(
+        taginfoComparisonKeyOnly(
             'Transport Canada identifier',
             'tclid',
             airportIdentifiers.reduce((a, b) => a + b, 0),

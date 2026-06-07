@@ -12,7 +12,7 @@ export default async function geldmaat(): Promise<Comparison> {
 
     const expected = data.data.length;
 
-    return taginfoComparisons(
+    return await taginfoComparisons(
         'Geldmaat ATMs',
         brandWikidata,
         'Q74051230',
@@ -22,5 +22,5 @@ export default async function geldmaat(): Promise<Comparison> {
         ['💰'],
         new Date().toISOString().split('T')[0], // Continuously updated, so we just use the current date as the last updated date
         taginfoServer
-    );
+    )() as Comparison;
 }

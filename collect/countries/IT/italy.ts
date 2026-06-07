@@ -25,7 +25,7 @@ export default appendCountry(
                 ['🚗'],
                 '2025-12-07',
                 taginfoServer
-            ),
+            )(),
             'Thanks to [@ivanbranco](https://github.com/ivanbranco) for providing the data from the Italian Ministry of Business and Made in Italy!'
         )
     ]

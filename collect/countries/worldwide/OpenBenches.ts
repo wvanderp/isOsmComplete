@@ -16,7 +16,7 @@ export default async function openBenches(): Promise<Comparison> {
         };
     });
 
-    return taginfoComparisons(
+    return await taginfoComparisons(
         'Memorial benches',
         'memorial',
         'bench',
@@ -25,5 +25,5 @@ export default async function openBenches(): Promise<Comparison> {
         'OpenBenches collects memorial benches. Wouldn\'t it be nice to have them in OSM as well?',
         ['🪑'],
         new Date().toISOString().split('T')[0] // continuously updated, so we just use the current date as the last updated date
-    );
+    )() as Comparison;
 }
