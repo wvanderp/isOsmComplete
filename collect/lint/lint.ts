@@ -60,6 +60,7 @@ const graphDataPath = path.join(__dirname, '../../data/graphs');
 
 const graphDataFiles = fs.readdirSync(graphDataPath);
 const graphDataFilesWithExtension = graphDataFiles.filter((file) => file.endsWith('.csv'));
+const graphDataFileNames = new Set(graphDataFilesWithExtension);
 
 for (const file of graphDataFilesWithExtension) {
     const filePath = path.join(graphDataPath, file);
@@ -110,6 +111,40 @@ for (const file of graphDataFilesWithExtension) {
             console.info(`Line ${lineNumber} in ${file}:${lineNumber} does not have a valid expected number`);
             unhappy = true;
         }
+    }
+}
+
+// --------------------------------------------
+// see if the latest csv row matches data.json
+console.info('Checking if the latest csv rows match data.json...');
+
+for (const item of data) {
+    const file = `${item.id}.csv`;
+    const filePath = path.join(graphDataPath, file);
+
+    if (!graphDataFileNames.has(file)) {
+        console.info(`Graph data is missing for ${item.name} (${item.id})`);
+        unhappy = true;
+        continue;
+    }
+
+    const lastLine = fs.readFileSync(filePath, 'utf8').trim().split('\n').at(-1);
+    const parts = lastLine?.split(',') ?? [];
+
+    if (parts.length !== 3) {
+        console.info(`The latest row in ${file} does not have 3 parts (date, actual, expected)`);
+        unhappy = true;
+        continue;
+    }
+
+    const [, actual, expected] = parts;
+
+    if (actual !== item.actual.toString() || expected !== item.expected.toString()) {
+        console.info(`The latest row in ${file} does not match data.json for ${item.name}`);
+        console.info(
+            `csv actual=${actual}, expected=${expected}; data.json actual=${item.actual}, expected=${item.expected}`
+        );
+        unhappy = true;
     }
 }
 

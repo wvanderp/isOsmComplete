@@ -49,9 +49,16 @@ const tagsFile = path.join(__dirname, 'tags.json');
         ...wikidata
     ];
 
-    const results = await Promise.allSettled(comparisonFunctions.map((f) => callWithRetry(f)));
+    const data: Comparison[] = [];
 
-    const data: Comparison[] = results.flatMap((r) => (r.status === 'fulfilled' ? normalizeComparisons(r.value) : []));
+    for (const comparisonFunction of comparisonFunctions) {
+        try {
+            const result = await callWithRetry(comparisonFunction);
+            data.push(...normalizeComparisons(result));
+        } catch {
+            // callWithRetry already logs the failed collection.
+        }
+    }
 
     saveGraphData(data);
 
@@ -102,14 +109,20 @@ function saveGraphData(comparisons: Comparison[]) {
         const actualChanged = lastActual !== comparison.actual.toString();
         const expectedChanged = lastExpected !== comparison.expected.toString();
 
-        if ((actualChanged || expectedChanged) && lastDate !== date) {
+        if (actualChanged || expectedChanged) {
             const line = `${date},${comparison.actual},${comparison.expected}`;
 
-            // check if the file is empty to prevent adding an empty line
-            if (lastLine !== ',') {
-                fs.appendFileSync(file, '\n');
+            if (lastDate === date) {
+                const lines = fs.readFileSync(file, 'utf8').trimEnd().split('\n');
+                lines[lines.length - 1] = line;
+                fs.writeFileSync(file, lines.join('\n'));
+            } else {
+                // check if the file is empty to prevent adding an empty line
+                if (lastLine !== ',') {
+                    fs.appendFileSync(file, '\n');
+                }
+                fs.appendFileSync(file, line);
             }
-            fs.appendFileSync(file, line);
         }
     }
 }
