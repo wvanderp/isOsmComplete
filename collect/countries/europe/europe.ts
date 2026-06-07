@@ -1,5 +1,4 @@
 import axios from 'axios';
-import { Comparison } from '../../types';
 import appendCountry from '../../utils/appendData';
 import taginfoServers from '../../utils/tagInfoServers';
 import taginfoComparisons from '../../utils/taginfoComparisons';
@@ -37,23 +36,21 @@ async function numberOfFastnedChargers(): Promise<number> {
     return parseFastnedLocations(response.data);
 }
 
-export default async function europe(): Promise<Comparison[]> {
-    return appendCountry(
-        'EU',
-        [
-            await taginfoComparisons(
-                'Fastned chargers in the EU',
-                'operator:wikidata',
-                'Q19935749',
-                await numberOfFastnedChargers(),
-                'https://www.fastnedcharging.com/en/locations',
-                'Fastned is a provider of charging stations in Europe. What is the charge of Fastneds network in OSM?',
-                ['🔋', '🚗'],
-                '2025-01-05',
-                taginfoServer
-            ),
+export default appendCountry(
+    'EU',
+    [
+        async () => taginfoComparisons(
+            'Fastned chargers in the EU',
+            'operator:wikidata',
+            'Q19935749',
+            await numberOfFastnedChargers(),
+            'https://www.fastnedcharging.com/en/locations',
+            'Fastned is a provider of charging stations in Europe. What is the charge of Fastneds network in OSM?',
+            ['🔋', '🚗'],
+            '2025-01-05',
+            taginfoServer
+        ),
 
-            ...(await retailStoresInEurope())
-        ]
-    );
-}
+        ...retailStoresInEurope
+    ]
+);

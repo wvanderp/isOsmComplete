@@ -1,4 +1,3 @@
-import { Comparison } from '../../../../types';
 import appendCountry from '../../../../utils/appendData';
 import wikidataComparison from '../utils/wikidataComparison';
 
@@ -46,47 +45,44 @@ SELECT (COUNT(DISTINCT ?museumShip) AS ?count) WHERE {
   }
 `;
 
-export default function museum(): Comparison[] {
-    const wrapper = appendCountry(
-        'Worldwide',
-        [
-            () => wikidataComparison(
-                'Museums',
-                museumSparqlQuery,
-                'tourism',
-                'museum',
-                'The number of museums in the world',
-                ['🏛️', '🎨'],
-                '2025-01-05'
-            ),
-            () => wikidataComparison(
-                'Zoos',
-                zooSparqlQuery,
-                'tourism',
-                'zoo',
-                'The number of zoos in the world',
-                ['🦁'],
-                '2025-01-05'
-            ),
-            () => wikidataComparison(
-                'Aquariums',
-                aquariumSparqlQuery,
-                'tourism',
-                'aquarium',
-                'The number of aquariums in the world',
-                ['🦁'],
-                '2025-01-05'
-            ),
-            () => wikidataComparison(
-                'Museum ships',
-                museumShipsSparqlQuery,
-                'historic',
-                'ship',
-                'The number of museum ships in the world',
-                ['🚢', '🏛️'],
-                '2025-01-05'
-            )
-        ]
-    ) as unknown as () => Comparison[];
-    return wrapper();
-}
+export default appendCountry(
+    'Worldwide',
+    [
+        () => wikidataComparison(
+            'Museums',
+            museumSparqlQuery,
+            'tourism',
+            'museum',
+            'The number of museums in the world',
+            ['🏛️', '🎨'],
+            '2025-01-05'
+        ),
+        () => wikidataComparison(
+            'Zoos',
+            zooSparqlQuery,
+            'tourism',
+            'zoo',
+            'The number of zoos in the world',
+            ['🦁'],
+            '2025-01-05'
+        ),
+        () => wikidataComparison(
+            'Aquariums',
+            aquariumSparqlQuery,
+            'tourism',
+            'aquarium',
+            'The number of aquariums in the world',
+            ['🦁'],
+            '2025-01-05'
+        ),
+        () => wikidataComparison(
+            'Museum ships',
+            museumShipsSparqlQuery,
+            'historic',
+            'ship',
+            'The number of museum ships in the world',
+            ['🚢', '🏛️'],
+            '2025-01-05'
+        )
+    ]
+);

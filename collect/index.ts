@@ -28,30 +28,30 @@ const tagsFile = path.join(__dirname, 'tags.json');
 
 (async () => {
     const comparisonFunctions: ComparisonFunction[] = [
-        worldwide,
-        europe,
+        ...worldwide,
+        ...europe,
 
-        canada,
-        china,
-        france,
-        germany,
-        greatBritain,
-        italy,
-        japan,
-        netherlands,
-        russia,
-        unitedStates,
-        vietnam,
+        ...canada,
+        ...china,
+        ...france,
+        ...germany,
+        ...greatBritain,
+        ...italy,
+        ...japan,
+        ...netherlands,
+        ...russia,
+        ...unitedStates,
+        ...vietnam,
 
         // fromSource
-        allThePlaces,
-        airports,
-        wikidata
+        ...allThePlaces,
+        ...airports,
+        ...wikidata
     ];
 
-    const results = await Promise.allSettled(comparisonFunctions.map((f) => f()));
+    const results = await Promise.allSettled(comparisonFunctions.map((f) => callWithRetry(f)));
 
-    const data: Comparison[] = results.flatMap((r) => (r.status === 'fulfilled' ? r.value : []));
+    const data: Comparison[] = results.flatMap((r) => (r.status === 'fulfilled' ? normalizeComparisons(r.value) : []));
 
     saveGraphData(data);
 
@@ -64,6 +64,26 @@ const tagsFile = path.join(__dirname, 'tags.json');
     // copy the tags file
     fs.copyFileSync(tagsFile, `${directory}/tags.json`);
 })();
+
+async function callWithRetry(comparisonFunction: ComparisonFunction, retries = 2) {
+    for (let attempt = 0; attempt <= retries; attempt += 1) {
+        try {
+            return await comparisonFunction();
+        } catch (error) {
+            if (attempt === retries) {
+                console.error('Comparison failed after retries', error);
+                throw error;
+            }
+            console.warn(`Comparison failed. Retrying (${attempt + 1}/${retries})`, error);
+        }
+    }
+
+    throw new Error('Comparison failed');
+}
+
+function normalizeComparisons(comparisonResult: Comparison | Comparison[]): Comparison[] {
+    return Array.isArray(comparisonResult) ? comparisonResult : [comparisonResult];
+}
 
 function saveGraphData(comparisons: Comparison[]) {
     const dataDirectory = path.join(directory, 'graphs');

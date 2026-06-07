@@ -1,4 +1,3 @@
-import { Comparison } from '../../types';
 import appendCountry from '../../utils/appendData';
 import { taginfoComparisonKeyOnly } from '../../utils/taginfoComparisons';
 // The document is called CANADA FLIGHT SUPPLEMENT and if you search for 'FLT PLN' you can subtract the other uses
@@ -23,19 +22,17 @@ const airportIdentifiers = [
     134
 ];
 
-export default async function canada(): Promise<Comparison[]> {
-    return appendCountry(
-        'CA',
-        [
-            await taginfoComparisonKeyOnly(
-                'Transport Canada identifier',
-                'tclid',
-                airportIdentifiers.reduce((a, b) => a + b, 0),
-                'https://www.navcanada.ca/en/ecfs_07_en.pdf',
-                'Canada is a bit special and designed their own codes for airports. Fortunately, there are only a few to add.',
-                ['✈️'],
-                '2025-01-05'
-            )
-        ]
-    );
-}
+export default appendCountry(
+    'CA',
+    [
+        () => taginfoComparisonKeyOnly(
+            'Transport Canada identifier',
+            'tclid',
+            airportIdentifiers.reduce((a, b) => a + b, 0),
+            'https://www.navcanada.ca/en/ecfs_07_en.pdf',
+            'Canada is a bit special and designed their own codes for airports. Fortunately, there are only a few to add.',
+            ['✈️'],
+            '2025-01-05'
+        )
+    ]
+);

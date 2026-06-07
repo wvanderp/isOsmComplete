@@ -6,7 +6,7 @@ import { AllThePlacesRunHistory } from './AllThePlacesHistoryType';
 
 const allThePlacesRunHistoryUrl = 'https://alltheplaces-data.openaddresses.io/runs/history.json';
 
-export default async function allThePlaces(): Promise<Comparison> {
+async function allThePlaces(): Promise<Comparison> {
     const { data: runs } = await axios.get<AllThePlacesRunHistory[]>(allThePlacesRunHistoryUrl);
 
     const latestRun = runs.at(-1);
@@ -51,3 +51,7 @@ export default async function allThePlaces(): Promise<Comparison> {
         country: 'Worldwide'
     };
 }
+
+export default [
+    allThePlaces
+];

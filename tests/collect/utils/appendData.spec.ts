@@ -15,13 +15,14 @@ const baseComparison: Comparison = {
     lastUpdated: '2025-01-01'
 };
 
-const baseComparisonFunction = (() => baseComparison) as unknown as ComparisonFunction;
+const baseComparisonFunction: ComparisonFunction = async () => baseComparison;
 
 describe('appendCountry', () => {
-    it('should add the country to each comparison', () => {
-        const wrapped = appendCountry('NL', baseComparisonFunction) as unknown as () => Comparison[];
-        const comparisons = wrapped();
-        expect(comparisons[0].country).toBe('NL');
+    it('should add the country to each comparison', async () => {
+        const [wrapped] = appendCountry('NL', baseComparisonFunction);
+        const comparison = await wrapped();
+        expect(Array.isArray(comparison)).toBe(false);
+        expect((comparison as Comparison).country).toBe('NL');
     });
 
     it('should not mutate the original comparison', () => {
@@ -30,25 +31,24 @@ describe('appendCountry', () => {
     });
 
     it('should handle an empty array', () => {
-        const wrapped = appendCountry('FR', []) as unknown as () => Comparison[];
-        const comparisons = wrapped();
-        expect(comparisons).toHaveLength(0);
+        const wrapped = appendCountry('FR', []);
+        expect(wrapped).toHaveLength(0);
     });
 
-    it('should apply the country to all comparisons in the array', () => {
+    it('should apply the country to all comparisons in the array', async () => {
         const second: Comparison = { ...baseComparison, id: 'def456', name: 'Second' };
-        const secondFunction = (() => second) as unknown as ComparisonFunction;
-        const wrapped = appendCountry('JP', [baseComparisonFunction, secondFunction]) as unknown as () => Comparison[];
-        const comparisons = wrapped();
+        const secondFunction: ComparisonFunction = async () => second;
+        const wrapped = appendCountry('JP', [baseComparisonFunction, secondFunction]);
+        const comparisons = (await Promise.all(wrapped.map((comparisonFunction) => comparisonFunction()))) as Comparison[];
         expect(comparisons).toHaveLength(2);
         expect(comparisons.every((c) => c.country === 'JP')).toBe(true);
     });
 });
 
 describe('appendThanks', () => {
-    it('should add the thanks field to a comparison', () => {
+    it('should add the thanks field to a comparison', async () => {
         const wrapped = appendThanks(baseComparisonFunction, 'Thanks, contributor!');
-        const comparison = wrapped() as unknown as Comparison;
+        const comparison = await wrapped() as Comparison;
         expect(comparison.thanks).toBe('Thanks, contributor!');
     });
 
@@ -57,9 +57,9 @@ describe('appendThanks', () => {
         expect(baseComparison.thanks).toBeUndefined();
     });
 
-    it('should preserve all existing fields', () => {
+    it('should preserve all existing fields', async () => {
         const wrapped = appendThanks(baseComparisonFunction, 'Thanks!');
-        const comparison = wrapped() as unknown as Comparison;
+        const comparison = await wrapped() as Comparison;
         expect(comparison.id).toBe(baseComparison.id);
         expect(comparison.name).toBe(baseComparison.name);
         expect(comparison.expected).toBe(baseComparison.expected);
