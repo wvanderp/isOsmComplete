@@ -53,7 +53,7 @@ if (missingTags.length > 0) {
 
 // --------------------------------------------
 // validate graph data
-// see if all the csv files are valid csv files
+// see if all the CSV files are valid CSV files
 console.info('Linting graph data...');
 
 const graphDataPath = path.join(__dirname, '../../data/graphs');
@@ -99,14 +99,14 @@ for (const file of graphDataFilesWithExtension) {
         }
 
         // the second part should be a number (actual)
-        const actual = Number.parseInt(parts[1], 10);
+        const actual = Number(parts[1]);
         if (Number.isNaN(actual)) {
             console.info(`Line ${lineNumber} in ${file}:${lineNumber} does not have a valid actual number`);
             unhappy = true;
         }
 
         // the third part should be a number (expected)
-        const expected = Number.parseInt(parts[2], 10);
+        const expected = Number(parts[2]);
         if (Number.isNaN(expected)) {
             console.info(`Line ${lineNumber} in ${file}:${lineNumber} does not have a valid expected number`);
             unhappy = true;
@@ -115,12 +115,11 @@ for (const file of graphDataFilesWithExtension) {
 }
 
 // --------------------------------------------
-// see if the latest csv row matches data.json
-console.info('Checking if the latest csv rows match data.json...');
+// see if the latest CSV row matches data.json
+console.info('Checking if the latest CSV rows match data.json...');
 
 for (const item of data) {
     const file = `${item.id}.csv`;
-    const filePath = path.join(graphDataPath, file);
 
     if (!graphDataFileNames.has(file)) {
         console.info(`Graph data is missing for ${item.name} (${item.id})`);
@@ -128,8 +127,8 @@ for (const item of data) {
         continue;
     }
 
-    const lastLine = fs.readFileSync(filePath, 'utf8').trim().split('\n').at(-1);
-    const parts = lastLine?.split(',') ?? [];
+    const filePath = path.join(graphDataPath, file);
+    const parts = fs.readFileSync(filePath, 'utf8').trim().split('\n').at(-1)?.split(',') ?? [];
 
     if (parts.length !== 3) {
         console.info(`The latest row in ${file} does not have 3 parts (date, actual, expected)`);
@@ -149,8 +148,8 @@ for (const item of data) {
 }
 
 // --------------------------------------------
-// see if all the csv files are in data.json
-console.info('Are all the csv files in data.json?...');
+// see if all the CSV files are in data.json
+console.info('Are all the CSV files in data.json?...');
 
 const graphDataFilesTwo = fs.readdirSync(graphDataPath);
 const graphDataFilesWithExtensionTwo = graphDataFilesTwo.filter((file) => file.endsWith('.csv'));

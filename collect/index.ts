@@ -134,7 +134,9 @@ function lintTags(data: Comparison[]) {
     const tagExplanations = JSON.parse(fs.readFileSync(tagsFile).toString()) as Record<string, string>;
 
     for (const tag of tags) {
-        if (!tagExplanations[tag]) {
+        const tagExplanation = tagExplanations[tag];
+
+        if (!tagExplanation) {
             console.warn(`Tag ${tag} is not explained`);
         }
 

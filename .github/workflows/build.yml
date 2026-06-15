@@ -30,7 +30,7 @@ jobs:
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
       - name: git add
-        run: git add gitBuild && git commit -m "Initial build subtree commit"
+        run: git add -f gitBuild && git commit -m "Initial build subtree commit"
 
       - name: git push
         run: |

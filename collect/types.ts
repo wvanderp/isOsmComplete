@@ -65,7 +65,7 @@ export interface OverpassCount {
     ]
 }
 
-// politie api
+// politie API
 
 export interface PolitieApi {
     iterator: {

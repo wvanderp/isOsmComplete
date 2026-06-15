@@ -41,7 +41,7 @@ export default function draw_chronology_chart(
         const w = determine_chart_width(margin.left, margin.right);
         const h = 400;
 
-        const lastExpected = uncleanData.toReversed().find((d) => d.expected !== undefined)?.expected;
+        const lastExpected = uncleanData.findLast((d) => d.expected !== undefined)?.expected;
         uncleanData.push({ date: tomorrow(), value: d3.max(uncleanData, (d) => d.value) ?? 0, expected: lastExpected });
 
         const data = uncleanData.map((d) => ({

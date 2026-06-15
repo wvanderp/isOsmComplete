@@ -11,6 +11,7 @@ export default async function geldmaat(): Promise<Comparison> {
     const { data } = await axios.get(geldmaatApi);
 
     const expected = data.data.length;
+    const today = new Date();
 
     return await taginfoComparisons(
         'Geldmaat ATMs',
@@ -20,7 +21,7 @@ export default async function geldmaat(): Promise<Comparison> {
         geldmaatApi,
         'Geldmaat is a provider of ATMs in the Netherlands. What is the number of Geldmaat ATMs in OSM?',
         ['💰'],
-        new Date().toISOString().split('T')[0], // Continuously updated, so we just use the current date as the last updated date
+        today.toISOString().split('T', 1)[0], // Continuously updated, so we just use the current date as the last updated date
         taginfoServer
     )() as Comparison;
 }

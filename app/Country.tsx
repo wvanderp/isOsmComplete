@@ -10,8 +10,17 @@ import { Comparison, CountryCodes } from '../collect/types';
 import draw_chronology_chart from './utils/drawGraph';
 import downloadGraphData from './utils/downloadGraphData';
 
-registerLocale(english);
 const markdownConverter = new Converter();
+let isLocaleRegistered = false;
+
+function ensureLocaleRegistered(): void {
+    if (isLocaleRegistered) {
+        return;
+    }
+
+    registerLocale(english);
+    isLocaleRegistered = true;
+}
 
 function countryCodeToEmoji(code: CountryCodes): string {
     if (code === 'Worldwide') return '🌎';
@@ -28,6 +37,8 @@ export default function Country(props: {
     code: CountryCodes
     comparisons: Comparison[];
 }) {
+    ensureLocaleRegistered();
+
     const comparisons = props.comparisons.map(
         (comparison) => <ComparisonCard key={comparison.name} comparison={comparison} />
     );
@@ -50,8 +61,8 @@ export function ComparisonCard(props: {
 }) {
     // replace the templates in the description with the actual values
     const cardDescription = props.comparison.description
-        .replace('{{actual}}', props.comparison.actual.toString())
-        .replace('{{expected}}', props.comparison.expected.toString());
+        .replace('{{actual}}', () => props.comparison.actual.toString())
+        .replace('{{expected}}', () => props.comparison.expected.toString());
 
     return (
         <Card color="light">
@@ -71,7 +82,7 @@ export function ComparisonCard(props: {
                     Expected: {props.comparison.expected} <br />
                     Actual: {props.comparison.actual}<br />
                     Percentage: {Math.floor((props.comparison.actual / props.comparison.expected) * 100)}% <br />
-                    {/* I love seeing the referers in my analytics, so I will give it to others too */}
+                    {/* I love seeing the referrers in my analytics, so I will give it to others too */}
                     <a href={props.comparison.expectedSource} target="_blank" rel="noopener">Source of Expected</a>
                 </CardText>
                 <Graph comparison={props.comparison} />
@@ -117,12 +128,9 @@ function Graph({ comparison }: { comparison: Comparison }) {
     const [graph, setGraph] = useState<React.ReactNode>(null);
 
     useEffect(() => {
-        function handleResize() {
-            downloadGraphData(comparison.id).then(
-                (data) => {
-                    setGraph(draw_chronology_chart(data, comparison.expected));
-                }
-            );
+        async function handleResize() {
+            const data = await downloadGraphData(comparison.id);
+            setGraph(draw_chronology_chart(data, comparison.expected));
         }
 
         handleResize();

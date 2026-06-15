@@ -47,7 +47,7 @@ async function executeWikidataSparql(sparqlQuery: string, name: string): Promise
                 }
             );
 
-            const count = Number.parseInt(data.results.bindings[0].count.value, 10);
+            const count = Number(data.results.bindings[0].count.value);
             console.info(`[${name}] Success! Count: ${count}`);
             return count;
         } catch (error) {
