@@ -118,7 +118,8 @@ export default tseslint.config(
             'unicorn/numeric-separators-style': 'off',
             'unicorn/prefer-top-level-await': 'off',
             'unicorn/no-array-reduce': 'off',
-            'unicorn/filename-case': 'off', 
+            'unicorn/filename-case': 'off',
+            'unicorn/prefer-https': 'off',
 
             // -------------------------------------------------------
             // SonarJS
