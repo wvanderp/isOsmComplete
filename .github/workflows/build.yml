@@ -2,41 +2,37 @@ name: Build
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   workflow_run:
     workflows: ["Collect"]
     branches: [main]
-    types: 
+    types:
       - completed
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    
+
     steps:
-    - uses: actions/checkout@v6
-    - uses: actions/setup-node@v5
-      with:
-        node-version: 'latest'
-        cache: 'npm'
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
 
-    - name: npm install
-      run: npm install
-      
-    - name: npm run build
-      run: npm run build
+      - name: pnpm install
+        run: pnpm install
 
-    - name: push changes to remote
-      run: |
-        git config --global user.name "github-actions[bot]"
-        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      - name: pnpm run build
+        run: pnpm run build
 
+      - name: push changes to remote
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-    - name: git add
-      run: git add gitBuild && git commit -m "Initial build subtree commit"
+      - name: git add
+        run: git add gitBuild && git commit -m "Initial build subtree commit"
 
-    - name: git push
-      run: |
-        git subtree split --prefix gitBuild -b gh-pages
-        git push -f origin gh-pages:gh-pages
-        git branch -D gh-pages
+      - name: git push
+        run: |
+          git subtree split --prefix gitBuild -b gh-pages
+          git push -f origin gh-pages:gh-pages
+          git branch -D gh-pages

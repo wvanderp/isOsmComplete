@@ -2,32 +2,29 @@ name: test
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   test:
     runs-on: ubuntu-latest
-    
+
     steps:
-    - uses: actions/checkout@v6
-    - uses: actions/setup-node@v5
-      with:
-        node-version: '24'
-        cache: 'npm'
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
 
-    - name: npm install
-      run: npm install
+      - name: pnpm install
+        run: pnpm install
 
-    - name: npm run lint
-      run: npm run lint
+      - name: pnpm run lint
+        run: pnpm run lint
 
-    - name: npm run test
-      run: npm run test
+      - name: pnpm run test
+        run: pnpm run test
 
-    - name: npm run collect
-      run: npm run collect
-      
-    - name: npm run build
-      run: npm run build
+      - name: pnpm run collect
+        run: pnpm run collect
+
+      - name: pnpm run build
+        run: pnpm run build
