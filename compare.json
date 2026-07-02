@@ -1,0 +1,1109 @@
+[
+  {
+    "id": "f86b36460a37c5a45dea617f3fbd10c18027319318d2283be3f8318a7a793bca",
+    "name": "Match Google on building",
+    "expected": 3400000000,
+    "actual": 698918282,
+    "expectedSource": "https://sites.research.google/gr/open-buildings/",
+    "actualSource": "taginfo",
+    "tags": [
+      "🏠"
+    ],
+    "description": "Google just casually dropped a dataset of 1.8 billion building footprints in the global south. This might be in addition to the 1.6 billion building footprints they already had in 2022. So can osm ever catch up to Google on mapping buildings?",
+    "lastUpdated": "2026-05-25",
+    "country": "Worldwide"
+  },
+  {
+    "id": "7db310de75fd52cb02a885303658ba574e5e5262b439fc3c6116a6661811782e",
+    "name": "Stolpersteine",
+    "expected": 116000,
+    "actual": 51741,
+    "expectedSource": "https://www.stolpersteine.eu/en/information/facts-and-figures",
+    "actualSource": "overpass",
+    "tags": [],
+    "description": "Stolpersteine are monuments to the victims of World War Two. They should be in OSM.",
+    "lastUpdated": "2026-05-25",
+    "country": "Worldwide"
+  },
+  {
+    "id": "a18d3e40ae9fc681bce81114b28db33c050281ab197e033ee141a6990a55a738",
+    "name": "IKEA stores",
+    "expected": 480,
+    "actual": 675,
+    "expectedSource": "https://www.ikea.com/global/en/our-business/how-we-work/",
+    "actualSource": "overpass",
+    "tags": [
+      "🛒"
+    ],
+    "description": "IKEA is a furniture store. They have {{expected}} stores in 63 countries. Are they all in OSM?",
+    "lastUpdated": "2025-01-05",
+    "country": "Worldwide"
+  },
+  {
+    "id": "34d881bb4626ac285c1c64c08944d6d8883e5bfdef1d5bb2c0d2eeab9db0d20e",
+    "name": "7-Eleven stores",
+    "expected": 85816,
+    "actual": 44610,
+    "expectedSource": "https://www.7andi.com/en/ir/file/library/mr/pdf/2026_01_all_en.pdf",
+    "actualSource": "taginfo",
+    "tags": [
+      "🛒",
+      "🍔"
+    ],
+    "description": "A 7-Eleven is always nearby because there are {{expected}} of them in 18 countries. Is your closest 7-Eleven in OSM?",
+    "lastUpdated": "2026-05-25",
+    "country": "Worldwide"
+  },
+  {
+    "id": "ceafc782f32e77207571d2c2de651c13d6f8704acbe2221a9a7af3dd68313bf8",
+    "name": "Subway stores",
+    "expected": 37000,
+    "actual": 23863,
+    "expectedSource": "https://newsroom.subway.com/2024-10-01-Subway-Continues-to-Expand-Its-Global-Presence-with-Over-10,000-Future-Restaurant-Commitments",
+    "actualSource": "taginfo",
+    "tags": [
+      "🍔",
+      "🛒"
+    ],
+    "description": "Subway and McDonald's are the two largest fast-food chains in the world. Who has more stores?",
+    "lastUpdated": "2025-01-05",
+    "country": "Worldwide"
+  },
+  {
+    "id": "0aa0000d49cbd3eaabb7d62b87d0695922a6cdc09c0f80d1684aadaeb49f4e95",
+    "name": "Starbucks",
+    "expected": 41129,
+    "actual": 23218,
+    "expectedSource": "https://s203.q4cdn.com/326826266/files/doc_financials/2026/q2/FY26-Q2-Store-Counts-By-Market.xlsx",
+    "actualSource": "taginfo",
+    "tags": [
+      "🛒",
+      "🍔"
+    ],
+    "description": "Starbucks seems to be everywhere. But can you find them all in OSM?",
+    "lastUpdated": "2025-01-05",
+    "country": "Worldwide"
+  },
+  {
+    "id": "bc00755018404ae08e7791edeacb749806f755a7a684108cdc730b7dc96d35bd",
+    "name": "McDonald's",
+    "expected": 45356,
+    "actual": 36347,
+    "expectedSource": "https://corporate.mcdonalds.com/content/dam/sites/corp/nfl/pdf/MCD%202025%20Annual%20Report.pdf",
+    "actualSource": "taginfo",
+    "tags": [
+      "🍔",
+      "🛒"
+    ],
+    "description": "McDonald's is the largest fast-food chain in the world. Their corporate website says that the company has 38,000 stores in the world. Are they all in OSM?",
+    "lastUpdated": "2026-05-25",
+    "country": "Worldwide"
+  },
+  {
+    "id": "ff163beb19543f2cb53c300637cac009272968c01b3511a40effa32489074e82",
+    "name": "KFC",
+    "expected": 31143,
+    "actual": 16540,
+    "expectedSource": "https://s2.q4cdn.com/890585342/files/doc_financials/2024/q3/Yum-Brands-Q3-24-Earnings-Release.pdf",
+    "actualSource": "taginfo",
+    "tags": [
+      "🍔",
+      "🛒"
+    ],
+    "description": "KFC expanded out of Kentucky in 1964. They now have {{expected}} stores in 135 countries. Are they all in OSM?",
+    "lastUpdated": "2025-01-14",
+    "country": "Worldwide"
+  },
+  {
+    "id": "1741ef1701505db0c126d61364820e8e2d485d96751eaa8ef3e3850ee0595b22",
+    "name": "Taco Bell",
+    "expected": 8594,
+    "actual": 7349,
+    "expectedSource": "https://s2.q4cdn.com/890585342/files/doc_financials/2024/q3/Yum-Brands-Q3-24-Earnings-Release.pdf",
+    "actualSource": "taginfo",
+    "tags": [
+      "🍔",
+      "🛒"
+    ],
+    "description": "Taco Bell is a fast-food chain. They have {{expected}} stores in 30 countries. Are they all in OSM?",
+    "lastUpdated": "2025-01-14",
+    "country": "Worldwide"
+  },
+  {
+    "id": "248346ad79386b814c4c361474a0eede7d7d254e1302feeacd7a2db3965ac5ba",
+    "name": "Pizza Hut",
+    "expected": 19927,
+    "actual": 8313,
+    "expectedSource": "https://s2.q4cdn.com/890585342/files/doc_financials/2024/q3/Yum-Brands-Q3-24-Earnings-Release.pdf",
+    "actualSource": "taginfo",
+    "tags": [
+      "🍔",
+      "🛒"
+    ],
+    "description": "Pizza Hut is a fast-food chain. They have {{expected}} stores in 100 countries. Are they all in OSM?",
+    "lastUpdated": "2025-01-14",
+    "country": "Worldwide"
+  },
+  {
+    "id": "ebf58077453c74c27a1a8384024439568732ce333c09c0899c6156177657d513",
+    "name": "Burger King",
+    "expected": 19384,
+    "actual": 15300,
+    "expectedSource": "https://s26.q4cdn.com/317237604/files/doc_financials/2023/ar/RBI-Global-Store-Counts-Across-Brands-by-Market-February-13-2024.pdf",
+    "actualSource": "taginfo",
+    "tags": [
+      "🍔",
+      "🛒"
+    ],
+    "description": "Burger King is a fast-food chain. They have {{expected}} stores in 100 countries. Are they all in OSM?",
+    "lastUpdated": "2025-02-14",
+    "country": "Worldwide"
+  },
+  {
+    "id": "72b7bf05d23320f5325ae692c0c8de3fb12445f9c049e002e5dbe1976f8f1f4b",
+    "name": "Tesla superchargers",
+    "expected": 6975,
+    "actual": 849,
+    "expectedSource": "https://digitalassets.tesla.com/tesla-contents/image/upload/IR/TSLA-Q4-2024-Update.pdf",
+    "actualSource": "overpass",
+    "tags": [
+      "🔋",
+      "🚗"
+    ],
+    "description": "When you want to charge your Tesla but the middle screen is dead and you don't have the app, you can find a supercharger in OSM. Or can you?",
+    "lastUpdated": "2025-02-02",
+    "country": "Worldwide"
+  },
+  {
+    "id": "73c662317d2a4e93f6b2d96626dd2667624f8fe48292bce3a735025fb3df82c4",
+    "name": "Data centers",
+    "expected": 10978,
+    "actual": 4335,
+    "expectedSource": "https://brightlio.com/data-center-stats/",
+    "actualSource": "taginfo",
+    "tags": [
+      "🌐"
+    ],
+    "description": "Data centers are the backbone of the internet. There are {{expected}} of them in the world. Are they all in OSM?",
+    "lastUpdated": "2025-01-05",
+    "country": "Worldwide"
+  },
+  {
+    "id": "ed897f43e805d3b55c3d7356a3421f53aea469e83c629cc476decc4dff2d3a57",
+    "name": "UNESCO World Heritage Sites",
+    "expected": 1223,
+    "actual": 2581,
+    "expectedSource": "https://whc.unesco.org/en/list/",
+    "actualSource": "taginfo",
+    "tags": [
+      "🌳",
+      "🏛️"
+    ],
+    "description": "UNESCO World Heritage Sites are places of special cultural or physical significance. They have marked {{expected}} of them. Can you find them all in OSM?",
+    "lastUpdated": "2025-01-05",
+    "country": "Worldwide"
+  },
+  {
+    "id": "a90bc46eebce2e68ee15cab6ffc3498c530f94fefbc31e224d0cb8c4d75a5e7a",
+    "name": "US Overseas Military Bases",
+    "expected": 750,
+    "actual": 108,
+    "expectedSource": "https://quincyinst.org/research/drawdown-improving-u-s-and-global-security-through-military-base-closures-abroad/#executive-summary",
+    "actualSource": "overpass",
+    "tags": [
+      "🪖"
+    ],
+    "description": "The US provides freedom anywhere in the world. Let's make a map of all {{expected}} locations where freedom can be received.",
+    "lastUpdated": "2025-01-25",
+    "country": "Worldwide"
+  },
+  {
+    "id": "01170b0207bc9d24f099c3dd3abeae597f964f3a0b3c4177a370f319f9591e8d",
+    "name": "UN Member States",
+    "expected": 193,
+    "actual": 238,
+    "expectedSource": "https://www.un.org/en/about-us/member-states",
+    "actualSource": "overpass",
+    "tags": [
+      "🌍"
+    ],
+    "description": "The UN says there are {{expected}} countries in the world. How many has OSM bothered to draw a border around?",
+    "lastUpdated": "2026-05-25",
+    "country": "Worldwide"
+  },
+  {
+    "id": "681037426fe19e62eba5d82fa128583b311ed6368eb25d638242103510647c5a",
+    "name": "Memorial benches",
+    "expected": 42252,
+    "actual": 1552,
+    "expectedSource": "https://openbenches.org/",
+    "actualSource": "taginfo",
+    "tags": [
+      "🪑"
+    ],
+    "description": "OpenBenches collects memorial benches. Wouldn't it be nice to have them in OSM as well?",
+    "lastUpdated": "2026-07-02",
+    "country": "Worldwide"
+  },
+  {
+    "id": "16f17dead727d54cdeea1a744885af7be858826c05e1ac342da754d457dd1b15",
+    "name": "Fastned chargers in the EU",
+    "expected": 433,
+    "actual": 359,
+    "expectedSource": "https://www.fastnedcharging.com/en/locations",
+    "actualSource": "taginfo",
+    "tags": [
+      "🔋",
+      "🚗"
+    ],
+    "description": "Fastned is a provider of charging stations in Europe. What is the charge of Fastneds network in OSM?",
+    "lastUpdated": "2025-01-05",
+    "country": "EU"
+  },
+  {
+    "id": "fcba5aaec2e6bac985428897470d2881bb4d9df7668db7fdc1e0f2fd416afb01",
+    "name": "Retail stores in Europe",
+    "expected": 2575171,
+    "actual": 3098680,
+    "expectedSource": "https://data.europa.eu/data/datasets/6k2ldtwgaa2lvoudvtbbq?locale=en",
+    "actualSource": "taginfo",
+    "tags": [
+      "🛒"
+    ],
+    "description": "How much shopping can be done in Europe?",
+    "lastUpdated": "2025-01-05",
+    "country": "EU"
+  },
+  {
+    "id": "3de3d8e0a7f1057b7608c2bf0a495c8777172cf173c7fadb09219628d00af605",
+    "name": "Transport Canada identifier",
+    "expected": 1718,
+    "actual": 133,
+    "expectedSource": "https://www.navcanada.ca/en/ecfs_07_en.pdf",
+    "actualSource": "taginfo",
+    "tags": [
+      "✈️"
+    ],
+    "description": "Canada is a bit special and designed their own codes for airports. Fortunately, there are only a few to add.",
+    "lastUpdated": "2025-01-05",
+    "country": "CA"
+  },
+  {
+    "id": "dace299682b6e90a3ec0b6e29d2ea57da76e3a7f30223cc01164bad12ae8f7d2",
+    "name": "Train stations in China",
+    "expected": 5470,
+    "actual": 5843,
+    "expectedSource": "https://en.wikipedia.org/wiki/Rail_transport_in_China#cite_note-CNCRCC-4",
+    "actualSource": "overpass",
+    "tags": [
+      "🚂"
+    ],
+    "description": "China transports a lot of people by train. Can they find their stations in OSM?",
+    "lastUpdated": "2026-05-25",
+    "country": "CN"
+  },
+  {
+    "id": "c36d0cf963a5575f58ba8bae8b2f8ddee715472f45cacecb2557e6d081535fa8",
+    "name": "Coal power plants in China",
+    "expected": 3317,
+    "actual": 4341,
+    "expectedSource": "https://globalenergymonitor.org/projects/global-coal-plant-tracker?popup=2628",
+    "actualSource": "taginfo",
+    "tags": [
+      "⚡"
+    ],
+    "description": "Coal is a big part of China's energy production. Reducing carbon emissions means reducing coal power plants. Can OSM help with that?",
+    "lastUpdated": "2026-05-25",
+    "country": "CN"
+  },
+  {
+    "id": "8ac45dae95ef22e2d219113f4e80215c865efa2424a819760f3f577e0cea5c1d",
+    "name": "Bakeries in France 🇫🇷",
+    "expected": 57300,
+    "actual": 29389,
+    "expectedSource": "https://github.com/wvanderp/isOsmComplete/issues/1",
+    "actualSource": "taginfo",
+    "tags": [
+      "🛒"
+    ],
+    "description": "Tu aimes les baguettes? 🥖🥖🥖 Then you better make sure that OSM knows where the nearest bakery is.",
+    "lastUpdated": "2025-01-05",
+    "thanks": "Merci beaucoup à [@Binnette](https://github.com/Binnette) for the suggestion and for providing the data!",
+    "country": "FR"
+  },
+  {
+    "id": "94a0bda2b1827b197dd747cd6c456594f23f6252b7f12d789cad82198e6fc8a5",
+    "name": "Jeux de boules (Boulodromes) in France 🇫🇷",
+    "expected": 28681,
+    "actual": 20066,
+    "expectedSource": "https://equipements.sports.gouv.fr/api/explore/v2.1/catalog/datasets/data-es/records?limit=0&refine=equip_type_famille%3A%22Boulodrome%22",
+    "actualSource": "taginfo",
+    "tags": [
+      "🎱"
+    ],
+    "description": "The French government says there are 28,664 places to play boules. OSM is still rolling towards that number. Vive la pétanque!",
+    "lastUpdated": "2025-05-28",
+    "thanks": "Thanks again to [@Binnette](https://github.com/Binnette) for reading through French government datasets and suggesting this one!",
+    "country": "FR"
+  },
+  {
+    "id": "b141c7a370535b0fed19af73c5ad17e2e23585145be708727b59c89ab9e226c5",
+    "name": "Rail stations in France 🇫🇷",
+    "expected": 2782,
+    "actual": 2937,
+    "expectedSource": "https://www.data.gouv.fr/datasets/gares-de-voyageurs-1/",
+    "actualSource": "taginfo",
+    "tags": [
+      "🚂"
+    ],
+    "description": "All aboard! 🚂 The French government tracks {{expected}} rail stations across France. Let's make sure they're all mapped in OSM!",
+    "lastUpdated": "2025-12-07",
+    "thanks": "And another thanks to [@Binnette](https://github.com/Binnette) for this suggestion as well!",
+    "country": "FR"
+  },
+  {
+    "id": "ee342a2cf9deebfaeb005720eb517b420c7909dd98f7a69fc3a39c341d0ca6b4",
+    "name": "Electric vehicle charging stations in France 🇫🇷",
+    "expected": 227232,
+    "actual": 193031,
+    "expectedSource": "https://www.data.gouv.fr/datasets/base-nationale-des-irve-infrastructures-de-recharge-pour-vehicules-electriques/",
+    "actualSource": "taginfo",
+    "tags": [
+      "🔋",
+      "🚗"
+    ],
+    "description": "The French government maintains a database of EV charging infrastructure. OSM is charging towards full coverage! ⚡",
+    "lastUpdated": "2025-12-07",
+    "thanks": "Thanks to [@Binnette](https://github.com/Binnette) for finding this dataset! 🚗⚡",
+    "country": "FR"
+  },
+  {
+    "id": "5b0731306e515667e43a1bff6d2ae879f80da3791d96eef8abb59f6c30304876",
+    "name": "REWE",
+    "expected": 3690,
+    "actual": 3786,
+    "expectedSource": "https://www.rewe-group.com/content/uploads/2024/05/rewe-financal-report-31.12.2023.pdf?t=2024052702",
+    "actualSource": "taginfo",
+    "tags": [
+      "🛒"
+    ],
+    "description": "Are all the REWE stores in OSM?",
+    "lastUpdated": "2025-01-05",
+    "country": "DE"
+  },
+  {
+    "id": "eff3c039efd5fc3fdd18a79fe91422c4024bcf602215b91d7691d00697409296",
+    "name": "PENNY",
+    "expected": 2123,
+    "actual": 2090,
+    "expectedSource": "https://www.rewe-group.com/content/uploads/2024/05/rewe-financal-report-31.12.2023.pdf?t=2024052702",
+    "actualSource": "taginfo",
+    "tags": [
+      "🛒"
+    ],
+    "description": "Are all the PENNY stores in OSM?",
+    "lastUpdated": "2025-01-05",
+    "country": "DE"
+  },
+  {
+    "id": "154c2bbd2b34ed2924ae6fefbc7a995465c3e80817984f658d2598095d80c9bb",
+    "name": "Pubs in the UK",
+    "expected": 45350,
+    "actual": 38625,
+    "expectedSource": "https://beerandpub.com/data-statistics",
+    "actualSource": "taginfo",
+    "tags": [
+      "🍺",
+      "🛒"
+    ],
+    "description": "Are all the locations for Britain's favorite pastime in OSM?",
+    "lastUpdated": "2025-01-05",
+    "country": "GB"
+  },
+  {
+    "id": "68ade438a47fe782c8ec2ddd1ef9bf20dcb26a0198125f4f076c34eba80504d4",
+    "name": "Royal Mail post boxes",
+    "expected": 115000,
+    "actual": 22311,
+    "expectedSource": "https://personal.help.royalmail.com/app/answers/detail/a_id/135/~/royal-mails-postbox-network---your-questions-answered",
+    "actualSource": "taginfo",
+    "tags": [
+      "📮"
+    ],
+    "description": "If you have the sudden urge to send a letter, you can find one of the {{expected}} Royal Mail post boxes in the UK. Some of them are in OSM too.",
+    "lastUpdated": "2024-12-30",
+    "country": "GB"
+  },
+  {
+    "id": "6f09a43068073da389b49c4c581736b667886098a6866adaa929601bab513fe4",
+    "name": "Tesco",
+    "expected": 2857,
+    "actual": 3957,
+    "expectedSource": "https://www.tescoplc.com/media/qjejufrm/tesco-plc-interim-results-2425-press-release.pdf",
+    "actualSource": "taginfo",
+    "tags": [
+      "🛒"
+    ],
+    "description": "Are all the Tesco stores in OSM?",
+    "lastUpdated": "2025-01-05",
+    "country": "GB"
+  },
+  {
+    "id": "0321c72333ab103de5ae07a761be0b833177b8825e99f8d3ef189a140d2f2631",
+    "name": "National Car Parks",
+    "expected": 642,
+    "actual": 232,
+    "expectedSource": "https://www.ncp.co.uk/help-centre/about-us/",
+    "actualSource": "taginfo",
+    "tags": [
+      "🚗"
+    ],
+    "description": "NCP claims to sprinkle \"beautiful\" parking spots all over Britain. Fancy using OSM to uncover the one they deem closest to your majestic presence?",
+    "lastUpdated": "2025-01-05",
+    "country": "GB"
+  },
+  {
+    "id": "df3831a1efe183797884a1cbc42055262e7061e54970bc6ec964f6e37008deec",
+    "name": "Surveillance cameras in London",
+    "expected": 942562,
+    "actual": 1858,
+    "expectedSource": "https://clarionuk.com/resources/how-many-cctv-cameras-are-in-london/",
+    "actualSource": "taginfo",
+    "tags": [
+      "👀"
+    ],
+    "description": "London might be the most watched city in the world. But who watches the watchers?",
+    "lastUpdated": "2025-01-05",
+    "country": "GB"
+  },
+  {
+    "id": "839d2ae61d82edc4d60cd020dd4491b0aa2aa04e62574093bac5be16744f8265",
+    "name": "Gas stations in Italy 🇮🇹",
+    "expected": 23967,
+    "actual": 22870,
+    "expectedSource": "https://www.mimit.gov.it/images/exportCSV/anagrafica_impianti_attivi.csv",
+    "actualSource": "taginfo",
+    "tags": [
+      "🚗"
+    ],
+    "description": "Italy has {{expected}} gas stations according to government data. Time to fuel up OSM with complete coverage! ⛽",
+    "lastUpdated": "2025-12-07",
+    "thanks": "Thanks to [@ivanbranco](https://github.com/ivanbranco) for providing the data from the Italian Ministry of Business and Made in Italy!",
+    "country": "IT"
+  },
+  {
+    "id": "0b8d0a7e9c4d47412cfcd43f49ade9f42a01778dc1fee6c267709068b25bf79c",
+    "name": "7-Eleven in Japan",
+    "expected": 21651,
+    "actual": 14667,
+    "expectedSource": "https://www.sej.co.jp/company/en/n_stores.html",
+    "actualSource": "taginfo",
+    "tags": [
+      "🛒"
+    ],
+    "description": "7-Eleven is everywhere in Japan. There should be {{expected}} corners in Japan with a 7-Eleven.",
+    "lastUpdated": "2025-02-02",
+    "country": "JP"
+  },
+  {
+    "id": "e18056e340450a86b40c3345da1813d618e1e90cc539fca122d06446b74969d9",
+    "name": "FamilyMart",
+    "expected": 16245,
+    "actual": 10947,
+    "expectedSource": "https://www.family.co.jp/english/company/store.html",
+    "actualSource": "taginfo",
+    "tags": [
+      "🛒"
+    ],
+    "description": "The FamilyMart family is huge in Japan. But have we found all of our relatives in OSM?",
+    "lastUpdated": "2025-02-02",
+    "country": "JP"
+  },
+  {
+    "id": "4e08b590ccfa28307f67fcd9fa13e863ceeb9df3a0680cda85576bb376551956",
+    "name": "Lawson",
+    "expected": 14608,
+    "actual": 8703,
+    "expectedSource": "https://www.lawson.jp/en/store/japan/",
+    "actualSource": "taginfo",
+    "tags": [
+      "🛒"
+    ],
+    "description": "Lawson is a convenience store in Japan. There are {{expected}} of them in Japan. Are they all in OSM?",
+    "lastUpdated": "2025-02-02",
+    "country": "JP"
+  },
+  {
+    "id": "c0159ac244342b48d193898c693bdcd4ae9aea7fab0b48f7e5b3d13436bf4fcf",
+    "name": "Shinto shrines",
+    "expected": 80394,
+    "actual": 52730,
+    "expectedSource": "https://en.wikipedia.org/wiki/Shinto_shrine",
+    "actualSource": "taginfo",
+    "tags": [
+      "⛩️"
+    ],
+    "description": "Shinto shrines are everywhere in Japan. There should be {{expected}} of them in Japan.",
+    "lastUpdated": "2025-02-02",
+    "country": "JP"
+  },
+  {
+    "id": "618d455f20de0fc57391795eb6857e7ad0343ae82314129cded8f49d1e780184",
+    "name": "Car chargers",
+    "expected": 215845,
+    "actual": 21105,
+    "expectedSource": "https://duurzamemobiliteit.databank.nl/mosaic/nl-nl/elektrisch-vervoer/laad--en-tankinfrastructuur-in-nederland",
+    "actualSource": "taginfo",
+    "tags": [
+      "🔋",
+      "🚗"
+    ],
+    "description": "Electric car charging stations will be more important than ever. The Netherlands has {{expected}} car chargers. Are they all in OSM?",
+    "lastUpdated": "2026-05-25",
+    "country": "NL"
+  },
+  {
+    "id": "b36e45ea67ee7caebab45e72995bc4bd94b4452bd4cc5432d64bf1f39c4d5db5",
+    "name": "Hospitals",
+    "expected": 782,
+    "actual": 763,
+    "expectedSource": "https://www.zorgkaartnederland.nl/ziekenhuis",
+    "actualSource": "taginfo",
+    "tags": [
+      "🏥"
+    ],
+    "description": "The Netherlands has {{expected}} hospitals and clinics. Are they all in OSM?",
+    "lastUpdated": "2025-01-05",
+    "country": "NL"
+  },
+  {
+    "id": "902133b15f0e1713baf285972581ebe1e8ae52860098b1a90212e544f516baf2",
+    "name": "Wind turbines",
+    "expected": 3029,
+    "actual": 3435,
+    "expectedSource": "https://nl.wikipedia.org/wiki/Windturbines_in_Nederland",
+    "actualSource": "taginfo",
+    "tags": [
+      "⚡"
+    ],
+    "description": "Wind energy is the new hotness. But how hot is the current wind turbine coverage in OSM?",
+    "lastUpdated": "2025-01-05",
+    "country": "NL"
+  },
+  {
+    "id": "24bd6d67bee4f7c61cf54fdc835eddc747fff751af8d7fccdafe27e948aaaaa5",
+    "name": "Traffic enforcement camera",
+    "expected": 1019,
+    "actual": 872,
+    "expectedSource": "https://www.cjib.nl/sites/default/files/2025-01/Instroom%20wahv%20per%20flitspaal%20per%20provincie_2024.pdf",
+    "actualSource": "taginfo",
+    "tags": [
+      "🚗",
+      "👀"
+    ],
+    "description": "Getting a ticket is really annoying! Maybe OSM can help you obey the law extremely locally.",
+    "lastUpdated": "2025-01-05",
+    "country": "NL"
+  },
+  {
+    "id": "33252528d584f4e383f479cc2ef63e8e9dd81ef4b728ccba6680c417451417f1",
+    "name": "Albert Heijn's",
+    "expected": 1268,
+    "actual": 1115,
+    "expectedSource": "https://media.aholddelhaize.com/media/clkbibno/ad_ar23_interactive.pdf?t=638459189069470000",
+    "actualSource": "taginfo",
+    "tags": [
+      "🛒"
+    ],
+    "description": "Albert Heijn is the biggest supermarket chain in the Netherlands. Are they all in OSM?",
+    "lastUpdated": "2025-01-05",
+    "country": "NL"
+  },
+  {
+    "id": "cdbed7a45ed2ad1c1ca6bf63e8ec05d2626610408ed194b5f0f3e0befedd8019",
+    "name": "Gall & Gall",
+    "expected": 628,
+    "actual": 485,
+    "expectedSource": "https://media.aholddelhaize.com/media/clkbibno/ad_ar23_interactive.pdf?t=638459189069470000",
+    "actualSource": "taginfo",
+    "tags": [
+      "🛒"
+    ],
+    "description": "Gall & Gall is a liquor store chain in the Netherlands. Are they all in OSM?",
+    "lastUpdated": "2025-01-05",
+    "country": "NL"
+  },
+  {
+    "id": "3ba07a7ca047a4ef09524bbb691697a5be740dabac9b7e32a02b9604032b21a2",
+    "name": "Etos",
+    "expected": 523,
+    "actual": 491,
+    "expectedSource": "https://media.aholddelhaize.com/media/clkbibno/ad_ar23_interactive.pdf?t=638459189069470000",
+    "actualSource": "taginfo",
+    "tags": [
+      "🛒"
+    ],
+    "description": "Etos is a drugstore chain in the Netherlands. Are they all in OSM?",
+    "lastUpdated": "2025-01-05",
+    "country": "NL"
+  },
+  {
+    "id": "23178549810ddfaaae84a0f38a238565476ee6426edc61ba20622a9825d7f22c",
+    "name": "Civil defense siren",
+    "expected": 4278,
+    "actual": 4223,
+    "expectedSource": "https://www.brandweer.nl/onderwerpen/sirenes/",
+    "actualSource": "taginfo",
+    "tags": [
+      "🚒"
+    ],
+    "description": "At this critical point in time, civil defense sirens are facing extinction in The Netherlands, they deserve to be mapped.",
+    "lastUpdated": "2025-01-05",
+    "country": "NL"
+  },
+  {
+    "id": "be4dab2607d9f1299d9ededa89929f3a2649b47841587587722a72ec265b81e3",
+    "name": "Mailboxes in the Netherlands",
+    "expected": 11000,
+    "actual": 6722,
+    "expectedSource": "https://nos.nl/artikel/2530705-oranje-brievenbussen-verdwijnen-op-steeds-meer-plekken",
+    "actualSource": "taginfo",
+    "tags": [
+      "📮"
+    ],
+    "description": "Mailboxes are big and orange in the Netherlands. The prefect color for spotting them in OSM!",
+    "lastUpdated": "2026-05-25",
+    "country": "NL"
+  },
+  {
+    "id": "e25f43d2f95cb5907a29ef7934405b05fdff5162c44ce9781b4542e8c334c0fe",
+    "name": "Surveillance cameras in the Netherlands",
+    "expected": 338751,
+    "actual": 9733,
+    "expectedSource": "https://www.tweedekamer.nl/kamerstukken/brieven_regering/detail?id=2024D47535&did=2024D47535",
+    "actualSource": "taginfo",
+    "tags": [
+      "👀"
+    ],
+    "description": "Is the Netherlands turning into a surveillance state? Let's make sure that we know if it does!",
+    "lastUpdated": "2026-05-25",
+    "country": "NL"
+  },
+  {
+    "id": "f1c8d9d5c5551e805492e7e22a4adbe2531d62ff6c218e10d80c5841ee934550",
+    "name": "Hydrogen refueling stations",
+    "expected": 25,
+    "actual": 18,
+    "expectedSource": "https://duurzamemobiliteit.databank.nl/mosaic/nl-nl/elektrisch-vervoer/laad--en-tankinfrastructuur-in-nederland",
+    "actualSource": "taginfo",
+    "tags": [
+      "🚗"
+    ],
+    "description": "Running out of gas is never fun. Especially when that gas is hydrogen. So let's make sure that the precious few hydrogen refueling stations are in OSM!",
+    "lastUpdated": "2026-05-25",
+    "country": "NL"
+  },
+  {
+    "id": "7d7cc1074bdd3b5e2609fe5f1c5b941f78e42281f270b579ffa71ff2a5ae831a",
+    "name": "Geldmaat ATMs",
+    "expected": 759,
+    "actual": 4559,
+    "expectedSource": "https://api.prod.locator-backend.geldmaat.nl/locations",
+    "actualSource": "taginfo",
+    "tags": [
+      "💰"
+    ],
+    "description": "Geldmaat is a provider of ATMs in the Netherlands. What is the number of Geldmaat ATMs in OSM?",
+    "lastUpdated": "2026-07-02",
+    "country": "NL"
+  },
+  {
+    "id": "2d7d693f20708d0bd0673b98979bef31728cbbada8fcf74dc512c135dfc07d04",
+    "name": "Palaces of justice in the Netherlands",
+    "expected": 44,
+    "actual": 48,
+    "expectedSource": "https://www.rechtspraak.nl/Organisatie-en-contact/Organisatie/Rechtbanken",
+    "actualSource": "taginfo",
+    "tags": [
+      "⚖️"
+    ],
+    "description": "In the Netherlands, courts are sometimes called palaces of justice. We expect {{expected}} of them.",
+    "lastUpdated": "2025-01-05",
+    "country": "NL"
+  },
+  {
+    "id": "910291ad6b615144a5cca4463175c2fbfb0f7eed8a2f6770f8cdbd622cae7810",
+    "name": "Police stations in the Netherlands",
+    "expected": 359,
+    "actual": 463,
+    "expectedSource": "https://api.politie.nl/v4/politiebureaus/all",
+    "actualSource": "taginfo",
+    "tags": [
+      "⚖️"
+    ],
+    "description": "The Netherlands has {{expected}} police stations. Are they all in OSM?",
+    "lastUpdated": "2025-01-05",
+    "country": "NL"
+  },
+  {
+    "id": "f8893b7dedf3c700a59a6124ea5fe52d4f1177cd94e4c190cd82efa3e5a51f23",
+    "name": "Fire stations in the Netherlands",
+    "expected": 961,
+    "actual": 1012,
+    "expectedSource": "https://kerncijfers.nipv.nl/mosaic/kerncijfers-veiligheidsregio-s/kerncijfers-kazernes",
+    "actualSource": "taginfo",
+    "tags": [
+      "🚒"
+    ],
+    "description": "The Netherlands has {{expected}} fire stations. Are they all in OSM?",
+    "lastUpdated": "2025-01-05",
+    "country": "NL"
+  },
+  {
+    "id": "a11d416ecb8b6694ce2e2d8f3f204051fd4ac6a33ea188486e8671787cc63be3",
+    "name": "Prisons in the Netherlands",
+    "expected": 47,
+    "actual": 46,
+    "expectedSource": "https://www.dji.nl/locaties",
+    "actualSource": "taginfo",
+    "tags": [
+      "⚖️"
+    ],
+    "description": "The Netherlands has {{expected}} prisons. Are they all in OSM?",
+    "lastUpdated": "2025-01-05",
+    "country": "NL"
+  },
+  {
+    "id": "a1b5f8d936156d6b7f182995a4e1f0e5edb3a15084f932282737bd059321f616",
+    "name": "Pyaterochka",
+    "expected": 21308,
+    "actual": 16073,
+    "expectedSource": "https://www.x5.ru/wp-content/uploads/reports/2023/en/financial-statements/",
+    "actualSource": "taginfo",
+    "tags": [
+      "🛒"
+    ],
+    "description": "Pyaterochka (Пятёрочка), literally translated to \"Five\", is a Russian convenience store. There should be {{expected}} of them in OSM.",
+    "lastUpdated": "2025-01-05",
+    "country": "RU"
+  },
+  {
+    "id": "4aaf577ade087fcfc1e02a4f673365216ceacea18758910e836d5965bbeb1440",
+    "name": "McDonald's leaves Russia",
+    "expected": 0,
+    "actual": 61,
+    "expectedSource": "https://corporate.mcdonalds.com/corpmcd/our-stories/article/mcd-exit-russia.html",
+    "actualSource": "taginfo",
+    "tags": [
+      "🍔",
+      "🛒"
+    ],
+    "description": "Many companies have left Russia due to the very \"Special\" Military Operation in Ukraine. McDonald's is one of them. Are all the McDonald's in Russia removed from OSM?",
+    "lastUpdated": "2025-01-05",
+    "country": "RU"
+  },
+  {
+    "id": "9d5c0df008dd2cd881f6559e5fe5e75942d8b455ccfa7925ae091f84357d841c",
+    "name": "FAA tags ✈️",
+    "expected": 26697,
+    "actual": 11021,
+    "expectedSource": "https://www.faa.gov/air_traffic/flight_info/aeronav/aero_data/Loc_ID_Search/Encodes_Decodes/",
+    "actualSource": "taginfo",
+    "tags": [
+      "✈️"
+    ],
+    "description": "Do all the airports in the US have an FAA tag?",
+    "lastUpdated": "2025-01-05",
+    "country": "US"
+  },
+  {
+    "id": "672c11a3ce96b3a1220ab8c35eb8cee0959397cccc7ee8f3a718d0b3bbd7fdaf",
+    "name": "Walmart",
+    "expected": 4606,
+    "actual": 5935,
+    "expectedSource": "https://corporate.walmart.com/about/location-facts",
+    "actualSource": "taginfo",
+    "tags": [
+      "🛒"
+    ],
+    "description": "Walmart is the largest company in the world by revenue. Are all the Walmart stores in the US tagged?",
+    "lastUpdated": "2025-01-05",
+    "country": "US"
+  },
+  {
+    "id": "9f1d9e36c241ec5015672f9021d172ad264bf2b828ffee865616688870580652",
+    "name": "Sam's club",
+    "expected": 600,
+    "actual": 1036,
+    "expectedSource": "https://corporate.walmart.com/about/location-facts",
+    "actualSource": "taginfo",
+    "tags": [
+      "🛒"
+    ],
+    "description": "Sam's Club is a membership-only retail warehouse club. Are all of Sam's Clubhouses in the US tagged?",
+    "lastUpdated": "2025-01-05",
+    "country": "US"
+  },
+  {
+    "id": "3f9e77cd45a114b1e686eeba3cbca311458f447e3a19a8212f440adfa6ca3757",
+    "name": "Dollar General",
+    "expected": 20345,
+    "actual": 11001,
+    "expectedSource": "https://investor.dollargeneral.com/websites/dollargeneral/English/0/investor-relations.html",
+    "actualSource": "taginfo",
+    "tags": [
+      "🛒"
+    ],
+    "description": "This general store, also known as DG Market, DGX, and pOpshelf, sells everything for $1. How much money would we have if we got a dollar for every Dollar General store on the map?",
+    "lastUpdated": "2025-01-05",
+    "country": "US"
+  },
+  {
+    "id": "e8abbe6249e1c3bc1273888049b5e49146cc4de019208c8295c94231d6c696bc",
+    "name": "Dollar Tree & Family Dollar",
+    "expected": 16774,
+    "actual": 9853,
+    "expectedSource": "https://corporate.dollartree.com/_assets/_4a3a5283aa3f850b49f9ea2652af1540/dollartreeinfo/db/893/10332/annual_report/2023+Annual+Report+PDF+Version+for+IR+Website+v3.0.pdf",
+    "actualSource": "taginfo",
+    "tags": [
+      "🛒"
+    ],
+    "description": "Dollar Trees pop out of the ground like... trees. Its sister, Family Dollar, can be compared to rabbits. But are these Family Dollar & Dollar Trees documented?",
+    "lastUpdated": "2025-01-14",
+    "country": "US"
+  },
+  {
+    "id": "431c3520a26be03937166e9dbfed5a56d41e24de9e0f2530c7bea24eb70af3a6",
+    "name": "CVS",
+    "expected": 9395,
+    "actual": 8576,
+    "expectedSource": "https://d18rn0p25nwr6d.cloudfront.net/CIK-0000064803/28e54055-44dd-4a6d-a517-6ffc18161213.pdf",
+    "actualSource": "taginfo",
+    "tags": [
+      "🛒",
+      "🏥"
+    ],
+    "description": "Having a pharmacy in every corner of the US is a great thing. Does every corner of OSM have a CVS pharmacy?",
+    "lastUpdated": "2025-01-14",
+    "country": "US"
+  },
+  {
+    "id": "9dbf8e0d4c94858e8b152c16048d24705a9f3a744229e49ea85f8bae7e5ccead",
+    "name": "Walgreens",
+    "expected": 8560,
+    "actual": 9158,
+    "expectedSource": "https://investor.walgreensbootsalliance.com/static-files/6ff421c2-4c3c-4da6-bc84-158a9be81e61",
+    "actualSource": "taginfo",
+    "tags": [
+      "🛒",
+      "🏥"
+    ],
+    "description": "Walgreens is the second largest pharmacy store chain in the US. Are all the Walgreens stores in the US tagged?",
+    "lastUpdated": "2025-02-02",
+    "country": "US"
+  },
+  {
+    "id": "c5f2cbfcb3b055f1c40fe5d1551d6aee2da24379eb4e83d5a13efb13bb1afe0f",
+    "name": "Pharmacies in the US of A",
+    "expected": 40000,
+    "actual": 19960,
+    "expectedSource": "https://investor.walgreensbootsalliance.com/static-files/6ff421c2-4c3c-4da6-bc84-158a9be81e61",
+    "actualSource": "taginfo",
+    "tags": [
+      "🛒",
+      "🏥"
+    ],
+    "description": "There are a lot of places to pay too much for your medicine in the US. But can you find them in OSM?",
+    "lastUpdated": "2025-02-02",
+    "country": "US"
+  },
+  {
+    "id": "a8187a5e4030cd77fad97e7f665e21eff7bf05bb423a4449f46b55e9b68bc0a2",
+    "name": "ShotSpotter",
+    "expected": 25580,
+    "actual": 2337,
+    "expectedSource": "https://www.wired.com/story/shotspotter-secret-sensor-locations-leak/",
+    "actualSource": "taginfo",
+    "tags": [
+      "👀",
+      "⚖️"
+    ],
+    "description": "ShotSpotter is a surveillance system that listens for gunshots. The company behind them (SoundThinking) don't want you to know where they are. So lets add them to OSM!",
+    "lastUpdated": "2025-01-05",
+    "country": "US"
+  },
+  {
+    "id": "9abfeb99536f5a1889b2c18a5dd995c304bd8a82ae8c6a1a1cc76b842c2c8d75",
+    "name": "Flock Safety ALPR",
+    "expected": 90000,
+    "actual": 86891,
+    "expectedSource": "https://data.aclum.org/2025/10/07/flock-gives-law-enforcement-all-over-the-country-access-to-your-location/",
+    "actualSource": "taginfo",
+    "tags": [
+      "👀",
+      "⚖️",
+      "🚗"
+    ],
+    "description": "Flock Safety operates a network of ~90,000 ALPR cameras across the US, giving law enforcement access to location tracking. These surveillance cameras should be documented in OSM!",
+    "lastUpdated": "2025-12-07",
+    "country": "US"
+  },
+  {
+    "id": "3822544fb7dc2b50617b988e2c8a8a675ada5f72d5f015b3e69c5d3571252d59",
+    "name": "Automatic number-plate recognition in San Francisco",
+    "expected": 400,
+    "actual": 464,
+    "expectedSource": "https://sfist.com/2025/01/03/sfpd-refuses-to-say-where-theyve-placed-those-400-automated-license-plate-readers-all-over-town/",
+    "actualSource": "overpass",
+    "tags": [
+      "👀",
+      "⚖️",
+      "🚗"
+    ],
+    "description": "The SFPD has placed 400 ALPRs all over town, but they refuse to say where they are. Maybe we can help them find them?",
+    "lastUpdated": "2025-01-05",
+    "country": "US"
+  },
+  {
+    "id": "3d841cb7e2304ec56f21c5e6b23477afd658e33e9de5e0a139634794e25eb5a7",
+    "name": "McDonald's in Vietnam",
+    "expected": 59,
+    "actual": 25,
+    "expectedSource": "https://mcdonalds.vn/cua-hang.html",
+    "actualSource": "taginfo",
+    "tags": [
+      "🍔",
+      "🛒"
+    ],
+    "description": "McDonald's was never able to enter the Vietnamese market. They only managed to open {{expected}} stores. To console them, we should have them all in OSM.",
+    "lastUpdated": "2026-05-25",
+    "country": "VN"
+  },
+  {
+    "id": "ccffa70531149a1c4785fe503c4f296d8e373778e3677888751b1a02b292f4be",
+    "name": "Burger King in Vietnam",
+    "expected": 4,
+    "actual": 14,
+    "expectedSource": "https://burgerking.vn/storepickup",
+    "actualSource": "taginfo",
+    "tags": [
+      "🍔",
+      "🛒"
+    ],
+    "description": "Burger King is also not very successful in Vietnam. They only have {{expected}} stores. Are they all in OSM?",
+    "lastUpdated": "2026-05-25",
+    "country": "VN"
+  },
+  {
+    "id": "584fc774358fc5effb44d8d99e39853e0e2192637ec7ffd761f7eb010893cc12",
+    "name": "All The Places",
+    "expected": 3966870,
+    "actual": 2838863,
+    "expectedSource": "https://www.alltheplaces.xyz/",
+    "actualSource": "https://www.alltheplaces.xyz/",
+    "tags": [],
+    "description": "\n            All The Places is a project to collect and maintain a database of all the places in the world\n            by scraping the websites of businesses, government agencies, or other open data sources.\n            We can use this to find out what the better way to map is: scraping websites or using local knowledge.\n        ",
+    "lastUpdated": "2025-01-05",
+    "country": "Worldwide"
+  },
+  {
+    "id": "0a275c5789b11d5b72921303db8373e97342f2d81af43e22d3c768d58df03206",
+    "name": "Airports with IATA codes ✈️",
+    "expected": 9056,
+    "actual": 9867,
+    "expectedSource": "https://davidmegginson.github.io/ourairports-data/airports.csv",
+    "actualSource": "taginfo",
+    "tags": [
+      "✈️"
+    ],
+    "description": "The number of airports with IATA codes in OSM",
+    "lastUpdated": "2025-01-05",
+    "country": "Worldwide"
+  },
+  {
+    "id": "45bc39b4b3b48b01c0818ca97beabb4aad95ee48232cd8c79603a6c02a84dafc",
+    "name": "Airports with ICAO codes ✈️",
+    "expected": 19265,
+    "actual": 18392,
+    "expectedSource": "https://davidmegginson.github.io/ourairports-data/airports.csv",
+    "actualSource": "taginfo",
+    "tags": [
+      "✈️"
+    ],
+    "description": "The number of airports with ICAO codes in OSM",
+    "lastUpdated": "2025-01-05",
+    "country": "Worldwide"
+  },
+  {
+    "id": "f0c59ddec204c478382d6632125f2afaa12f1bf052d5e5401e461002b4989a73",
+    "name": "Match OurAirports on airports",
+    "expected": 72367,
+    "actual": 52874,
+    "expectedSource": "https://davidmegginson.github.io/ourairports-data/airports.csv",
+    "actualSource": "taginfo",
+    "tags": [
+      "✈️"
+    ],
+    "description": "OurAirports is a crowdsourced database of airports. Let's see if OSM can add something to it.",
+    "lastUpdated": "2025-01-05",
+    "country": "Worldwide"
+  },
+  {
+    "id": "a574f409f513f14521a0edcd526947e24b92b79eebeabb829a9c034e88cc0b72",
+    "name": "Museums",
+    "expected": 79093,
+    "actual": 110054,
+    "expectedSource": "Wikidata query service",
+    "actualSource": "taginfo",
+    "description": "The number of museums in the world",
+    "tags": [
+      "🏛️",
+      "🎨"
+    ],
+    "lastUpdated": "2025-01-05",
+    "country": "Worldwide"
+  },
+  {
+    "id": "0f02185f1ff53b9c2907901467e26944334d33f2e0406c2bdc9e773a507e2858",
+    "name": "Zoos",
+    "expected": 2873,
+    "actual": 9197,
+    "expectedSource": "Wikidata query service",
+    "actualSource": "taginfo",
+    "description": "The number of zoos in the world",
+    "tags": [
+      "🦁"
+    ],
+    "lastUpdated": "2025-01-05",
+    "country": "Worldwide"
+  },
+  {
+    "id": "b49289e9872d8d663f3c41459f7e54fa7a337db8640c60ed49f2baaf79e89c8c",
+    "name": "Aquariums",
+    "expected": 560,
+    "actual": 1665,
+    "expectedSource": "Wikidata query service",
+    "actualSource": "taginfo",
+    "description": "The number of aquariums in the world",
+    "tags": [
+      "🦁"
+    ],
+    "lastUpdated": "2025-01-05",
+    "country": "Worldwide"
+  },
+  {
+    "id": "23f7312a11a1ca317b2fccbfd22e973c587d8b69f42a29ff922408b8fa6acdc6",
+    "name": "Museum ships",
+    "expected": 269,
+    "actual": 1197,
+    "expectedSource": "Wikidata query service",
+    "actualSource": "taginfo",
+    "description": "The number of museum ships in the world",
+    "tags": [
+      "🚢",
+      "🏛️"
+    ],
+    "lastUpdated": "2025-01-05",
+    "country": "Worldwide"
+  }
+]
