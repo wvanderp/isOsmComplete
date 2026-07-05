@@ -17,7 +17,7 @@
     "id": "7db310de75fd52cb02a885303658ba574e5e5262b439fc3c6116a6661811782e",
     "name": "Stolpersteine",
     "expected": 116000,
-    "actual": 51759,
+    "actual": 51777,
     "expectedSource": "https://www.stolpersteine.eu/en/information/facts-and-figures",
     "actualSource": "overpass",
     "tags": [],
@@ -29,7 +29,7 @@
     "id": "a18d3e40ae9fc681bce81114b28db33c050281ab197e033ee141a6990a55a738",
     "name": "IKEA stores",
     "expected": 480,
-    "actual": 677,
+    "actual": 678,
     "expectedSource": "https://www.ikea.com/global/en/our-business/how-we-work/",
     "actualSource": "overpass",
     "tags": [
@@ -163,7 +163,7 @@
     "id": "72b7bf05d23320f5325ae692c0c8de3fb12445f9c049e002e5dbe1976f8f1f4b",
     "name": "Tesla superchargers",
     "expected": 6975,
-    "actual": 849,
+    "actual": 850,
     "expectedSource": "https://digitalassets.tesla.com/tesla-contents/image/upload/IR/TSLA-Q4-2024-Update.pdf",
     "actualSource": "overpass",
     "tags": [
@@ -234,7 +234,7 @@
   {
     "id": "681037426fe19e62eba5d82fa128583b311ed6368eb25d638242103510647c5a",
     "name": "Memorial benches",
-    "expected": 42298,
+    "expected": 42308,
     "actual": 1557,
     "expectedSource": "https://openbenches.org/",
     "actualSource": "taginfo",
@@ -242,7 +242,7 @@
       "🪑"
     ],
     "description": "OpenBenches collects memorial benches. Wouldn't it be nice to have them in OSM as well?",
-    "lastUpdated": "2026-07-04",
+    "lastUpdated": "2026-07-05",
     "country": "Worldwide"
   },
   {
@@ -264,7 +264,7 @@
     "id": "fcba5aaec2e6bac985428897470d2881bb4d9df7668db7fdc1e0f2fd416afb01",
     "name": "Retail stores in Europe",
     "expected": 2575171,
-    "actual": 3099480,
+    "actual": 3099876,
     "expectedSource": "https://data.europa.eu/data/datasets/6k2ldtwgaa2lvoudvtbbq?locale=en",
     "actualSource": "taginfo",
     "tags": [
@@ -292,7 +292,7 @@
     "id": "dace299682b6e90a3ec0b6e29d2ea57da76e3a7f30223cc01164bad12ae8f7d2",
     "name": "Train stations in China",
     "expected": 5470,
-    "actual": 5843,
+    "actual": 5844,
     "expectedSource": "https://en.wikipedia.org/wiki/Rail_transport_in_China#cite_note-CNCRCC-4",
     "actualSource": "overpass",
     "tags": [
@@ -335,7 +335,7 @@
     "id": "94a0bda2b1827b197dd747cd6c456594f23f6252b7f12d789cad82198e6fc8a5",
     "name": "Jeux de boules (Boulodromes) in France 🇫🇷",
     "expected": 28680,
-    "actual": 20077,
+    "actual": 20082,
     "expectedSource": "https://equipements.sports.gouv.fr/api/explore/v2.1/catalog/datasets/data-es/records?limit=0&refine=equip_type_famille%3A%22Boulodrome%22",
     "actualSource": "taginfo",
     "tags": [
@@ -350,7 +350,7 @@
     "id": "b141c7a370535b0fed19af73c5ad17e2e23585145be708727b59c89ab9e226c5",
     "name": "Rail stations in France 🇫🇷",
     "expected": 2782,
-    "actual": 2935,
+    "actual": 2933,
     "expectedSource": "https://www.data.gouv.fr/datasets/gares-de-voyageurs-1/",
     "actualSource": "taginfo",
     "tags": [
@@ -409,7 +409,7 @@
     "id": "154c2bbd2b34ed2924ae6fefbc7a995465c3e80817984f658d2598095d80c9bb",
     "name": "Pubs in the UK",
     "expected": 45350,
-    "actual": 38627,
+    "actual": 38629,
     "expectedSource": "https://beerandpub.com/data-statistics",
     "actualSource": "taginfo",
     "tags": [
@@ -424,7 +424,7 @@
     "id": "68ade438a47fe782c8ec2ddd1ef9bf20dcb26a0198125f4f076c34eba80504d4",
     "name": "Royal Mail post boxes",
     "expected": 115000,
-    "actual": 22314,
+    "actual": 22313,
     "expectedSource": "https://personal.help.royalmail.com/app/answers/detail/a_id/135/~/royal-mails-postbox-network---your-questions-answered",
     "actualSource": "taginfo",
     "tags": [
@@ -438,7 +438,7 @@
     "id": "6f09a43068073da389b49c4c581736b667886098a6866adaa929601bab513fe4",
     "name": "Tesco",
     "expected": 2857,
-    "actual": 3958,
+    "actual": 3959,
     "expectedSource": "https://www.tescoplc.com/media/qjejufrm/tesco-plc-interim-results-2425-press-release.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -479,8 +479,8 @@
   {
     "id": "839d2ae61d82edc4d60cd020dd4491b0aa2aa04e62574093bac5be16744f8265",
     "name": "Gas stations in Italy 🇮🇹",
-    "expected": 23973,
-    "actual": 22870,
+    "expected": 23983,
+    "actual": 22871,
     "expectedSource": "https://www.mimit.gov.it/images/exportCSV/anagrafica_impianti_attivi.csv",
     "actualSource": "taginfo",
     "tags": [
@@ -495,7 +495,7 @@
     "id": "0b8d0a7e9c4d47412cfcd43f49ade9f42a01778dc1fee6c267709068b25bf79c",
     "name": "7-Eleven in Japan",
     "expected": 21651,
-    "actual": 14667,
+    "actual": 14669,
     "expectedSource": "https://www.sej.co.jp/company/en/n_stores.html",
     "actualSource": "taginfo",
     "tags": [
@@ -509,7 +509,7 @@
     "id": "e18056e340450a86b40c3345da1813d618e1e90cc539fca122d06446b74969d9",
     "name": "FamilyMart",
     "expected": 16245,
-    "actual": 10948,
+    "actual": 10947,
     "expectedSource": "https://www.family.co.jp/english/company/store.html",
     "actualSource": "taginfo",
     "tags": [
@@ -523,7 +523,7 @@
     "id": "4e08b590ccfa28307f67fcd9fa13e863ceeb9df3a0680cda85576bb376551956",
     "name": "Lawson",
     "expected": 14608,
-    "actual": 8708,
+    "actual": 8709,
     "expectedSource": "https://www.lawson.jp/en/store/japan/",
     "actualSource": "taginfo",
     "tags": [
@@ -537,7 +537,7 @@
     "id": "c0159ac244342b48d193898c693bdcd4ae9aea7fab0b48f7e5b3d13436bf4fcf",
     "name": "Shinto shrines",
     "expected": 80394,
-    "actual": 52734,
+    "actual": 52741,
     "expectedSource": "https://en.wikipedia.org/wiki/Shinto_shrine",
     "actualSource": "taginfo",
     "tags": [
@@ -551,7 +551,7 @@
     "id": "618d455f20de0fc57391795eb6857e7ad0343ae82314129cded8f49d1e780184",
     "name": "Car chargers",
     "expected": 215845,
-    "actual": 21132,
+    "actual": 21152,
     "expectedSource": "https://duurzamemobiliteit.databank.nl/mosaic/nl-nl/elektrisch-vervoer/laad--en-tankinfrastructuur-in-nederland",
     "actualSource": "taginfo",
     "tags": [
@@ -665,7 +665,7 @@
     "id": "be4dab2607d9f1299d9ededa89929f3a2649b47841587587722a72ec265b81e3",
     "name": "Mailboxes in the Netherlands",
     "expected": 11000,
-    "actual": 6723,
+    "actual": 6724,
     "expectedSource": "https://nos.nl/artikel/2530705-oranje-brievenbussen-verdwijnen-op-steeds-meer-plekken",
     "actualSource": "taginfo",
     "tags": [
@@ -707,14 +707,14 @@
     "id": "7d7cc1074bdd3b5e2609fe5f1c5b941f78e42281f270b579ffa71ff2a5ae831a",
     "name": "Geldmaat ATMs",
     "expected": 760,
-    "actual": 4558,
+    "actual": 4559,
     "expectedSource": "https://api.prod.locator-backend.geldmaat.nl/locations",
     "actualSource": "taginfo",
     "tags": [
       "💰"
     ],
     "description": "Geldmaat is a provider of ATMs in the Netherlands. What is the number of Geldmaat ATMs in OSM?",
-    "lastUpdated": "2026-07-04",
+    "lastUpdated": "2026-07-05",
     "country": "NL"
   },
   {
@@ -777,7 +777,7 @@
     "id": "a1b5f8d936156d6b7f182995a4e1f0e5edb3a15084f932282737bd059321f616",
     "name": "Pyaterochka",
     "expected": 21308,
-    "actual": 16084,
+    "actual": 16086,
     "expectedSource": "https://www.x5.ru/wp-content/uploads/reports/2023/en/financial-statements/",
     "actualSource": "taginfo",
     "tags": [
@@ -891,7 +891,7 @@
     "id": "9dbf8e0d4c94858e8b152c16048d24705a9f3a744229e49ea85f8bae7e5ccead",
     "name": "Walgreens",
     "expected": 8560,
-    "actual": 9159,
+    "actual": 9160,
     "expectedSource": "https://investor.walgreensbootsalliance.com/static-files/6ff421c2-4c3c-4da6-bc84-158a9be81e61",
     "actualSource": "taginfo",
     "tags": [
@@ -906,7 +906,7 @@
     "id": "c5f2cbfcb3b055f1c40fe5d1551d6aee2da24379eb4e83d5a13efb13bb1afe0f",
     "name": "Pharmacies in the US of A",
     "expected": 40000,
-    "actual": 19955,
+    "actual": 19954,
     "expectedSource": "https://investor.walgreensbootsalliance.com/static-files/6ff421c2-4c3c-4da6-bc84-158a9be81e61",
     "actualSource": "taginfo",
     "tags": [
@@ -921,7 +921,7 @@
     "id": "a8187a5e4030cd77fad97e7f665e21eff7bf05bb423a4449f46b55e9b68bc0a2",
     "name": "ShotSpotter",
     "expected": 25580,
-    "actual": 2339,
+    "actual": 2345,
     "expectedSource": "https://www.wired.com/story/shotspotter-secret-sensor-locations-leak/",
     "actualSource": "taginfo",
     "tags": [
@@ -936,7 +936,7 @@
     "id": "9abfeb99536f5a1889b2c18a5dd995c304bd8a82ae8c6a1a1cc76b842c2c8d75",
     "name": "Flock Safety ALPR",
     "expected": 90000,
-    "actual": 87634,
+    "actual": 87955,
     "expectedSource": "https://data.aclum.org/2025/10/07/flock-gives-law-enforcement-all-over-the-country-access-to-your-location/",
     "actualSource": "taginfo",
     "tags": [
@@ -968,7 +968,7 @@
     "id": "3d841cb7e2304ec56f21c5e6b23477afd658e33e9de5e0a139634794e25eb5a7",
     "name": "McDonald's in Vietnam",
     "expected": 59,
-    "actual": 26,
+    "actual": 27,
     "expectedSource": "https://mcdonalds.vn/cua-hang.html",
     "actualSource": "taginfo",
     "tags": [
@@ -1009,7 +1009,7 @@
   {
     "id": "0a275c5789b11d5b72921303db8373e97342f2d81af43e22d3c768d58df03206",
     "name": "Airports with IATA codes ✈️",
-    "expected": 9056,
+    "expected": 9057,
     "actual": 9868,
     "expectedSource": "https://davidmegginson.github.io/ourairports-data/airports.csv",
     "actualSource": "taginfo",
@@ -1023,7 +1023,7 @@
   {
     "id": "45bc39b4b3b48b01c0818ca97beabb4aad95ee48232cd8c79603a6c02a84dafc",
     "name": "Airports with ICAO codes ✈️",
-    "expected": 19265,
+    "expected": 19266,
     "actual": 18401,
     "expectedSource": "https://davidmegginson.github.io/ourairports-data/airports.csv",
     "actualSource": "taginfo",
@@ -1037,7 +1037,7 @@
   {
     "id": "f0c59ddec204c478382d6632125f2afaa12f1bf052d5e5401e461002b4989a73",
     "name": "Match OurAirports on airports",
-    "expected": 72378,
+    "expected": 72380,
     "actual": 52883,
     "expectedSource": "https://davidmegginson.github.io/ourairports-data/airports.csv",
     "actualSource": "taginfo",
@@ -1051,7 +1051,7 @@
   {
     "id": "a574f409f513f14521a0edcd526947e24b92b79eebeabb829a9c034e88cc0b72",
     "name": "Museums",
-    "expected": 79219,
+    "expected": 79221,
     "actual": 110060,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",
