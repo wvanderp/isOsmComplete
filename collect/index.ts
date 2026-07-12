@@ -22,6 +22,7 @@ import allThePlaces from './countries/fromSource/alltheplaces/alltheplaces';
 
 import { Comparison } from './types';
 import { ComparisonFunction } from './types/ComparisonFunction';
+import mergeComparisons from './utils/mergeComparisons';
 
 const directory = path.join(__dirname, '../data');
 const tagsFile = path.join(__dirname, 'tags.json');
@@ -49,16 +50,21 @@ const tagsFile = path.join(__dirname, 'tags.json');
         ...wikidata
     ];
 
-    const data: Comparison[] = [];
+    const existingData = loadExistingComparisons();
+    const collectedData: Comparison[] = [];
 
     for (const comparisonFunction of comparisonFunctions) {
         try {
             const result = await callWithRetry(comparisonFunction);
-            data.push(...normalizeComparisons(result));
+            collectedData.push(...normalizeComparisons(result));
         } catch {
             // callWithRetry already logs the failed collection.
         }
     }
+
+    // A failed collection must not remove its previous result (or orphan its
+    // graph CSV). Fresh results replace old ones using their stable hash.
+    const data = mergeComparisons(existingData, collectedData);
 
     saveGraphData(data);
 
@@ -71,6 +77,16 @@ const tagsFile = path.join(__dirname, 'tags.json');
     // copy the tags file
     fs.copyFileSync(tagsFile, `${directory}/tags.json`);
 })();
+
+function loadExistingComparisons(): Comparison[] {
+    const compareFile = path.join(directory, 'compare.json');
+
+    if (!fs.existsSync(compareFile)) {
+        return [];
+    }
+
+    return JSON.parse(fs.readFileSync(compareFile, 'utf8')) as Comparison[];
+}
 
 async function callWithRetry(comparisonFunction: ComparisonFunction, retries = 2) {
     for (let attempt = 0; attempt <= retries; attempt += 1) {
