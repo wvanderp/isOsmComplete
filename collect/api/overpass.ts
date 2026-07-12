@@ -9,8 +9,9 @@ const MAX_RATE_LIMIT_BACKOFF_MS = 60000;
 const MAX_RATE_LIMIT_RETRIES_PER_ENDPOINT = 3;
 const OVERPASS_ENDPOINTS = [
     'https://overpass-api.de/api/interpreter',
-    'https://overpass.kumi.systems/api/interpreter',
-    'https://lz4.overpass-api.de/api/interpreter'
+    'https://maps.mail.ru/osm/tools/overpass/api/interpreter',
+    'https://overpass.private.coffee/api/interpreter',
+    'https://api.fairwaymapper.com/api/interpreter'
 ];
 const RETRYABLE_STATUS_CODES = new Set([408, 429, 500, 502, 503, 504]);
 
@@ -33,7 +34,7 @@ function orQuery(queries: [string, string][], area?: number): string {
 export async function overpassSimpleQuery(queries: [string, string][], area?: number, operator: 'and' | 'or' = 'and'): Promise<number> {
     const queryPart = (operator === 'and' ? andQuery : orQuery)(queries, area);
     const query = `
-    [out:json][timeout:25];
+    [out:json][timeout:900];
     ${area ? `area(id:${area})->.searchArea;` : ''}
     (
     ${queryPart}
