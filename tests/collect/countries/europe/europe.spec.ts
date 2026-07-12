@@ -7,8 +7,8 @@ const sampleLocations = [
     { id: 3, name: 'Location C' }
 ];
 
-function htmlEncode(str: string): string {
-    return str
+function htmlEncode(value: string): string {
+    return value
         .replaceAll('&', '&amp;')
         .replaceAll('"', '&quot;')
         .replaceAll("'", '&#39;')

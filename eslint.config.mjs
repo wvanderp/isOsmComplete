@@ -9,10 +9,10 @@ import globals from 'globals';
 
 export default tseslint.config(
     {
-        ignores: ['node_modules/**', 'dist/**', 'build/**', 'gitBuild/**'],
+        ignores: ['node_modules/**', 'coverage/**', 'dist/**', 'build/**', 'gitBuild/**']
     },
     {
-        files: ['**/*.ts', '**/*.tsx', '**/*.js'],
+        files: ['**/*.{js,cjs,mjs,jsx,ts,cts,mts,tsx}'],
         extends: [
             eslint.configs.recommended,
             ...tseslint.configs.recommended,
@@ -22,23 +22,23 @@ export default tseslint.config(
             sonarjs.configs.recommended,
             unicorn.configs['flat/recommended'],
             importX.flatConfigs.recommended,
-            importX.flatConfigs.typescript,
+            importX.flatConfigs.typescript
         ],
         languageOptions: {
             globals: {
                 ...globals.browser,
-                ...globals.es2021,
+                ...globals.es2021
             },
             parserOptions: {
-                sourceType: 'module',
-            },
+                sourceType: 'module'
+            }
         },
         settings: {
             'import-x/resolver': {
                 typescript: {
-                    alwaysTryTypes: true,
-                },
-            },
+                    alwaysTryTypes: true
+                }
+            }
         },
         rules: {
             // -------------------------------------------------------
@@ -59,7 +59,7 @@ export default tseslint.config(
             // Style — kept from original config
             // -------------------------------------------------------
             indent: ['error', 4, { SwitchCase: 1 }],
-            'linebreak-style': 'off', // git handles line endings
+            'linebreak-style': 'off', // Git handles line endings
             'comma-dangle': ['error', 'never'],
             'object-curly-spacing': 'off',
             'object-curly-newline': 'off',
@@ -68,7 +68,7 @@ export default tseslint.config(
                 ignoreComments: true,
                 ignoreTrailingComments: true,
                 ignoreStrings: true,
-                ignoreRegExpLiterals: true,
+                ignoreRegExpLiterals: true
             }],
 
             // -------------------------------------------------------
@@ -101,8 +101,8 @@ export default tseslint.config(
             'unicorn/filename-case': ['error', {
                 cases: {
                     camelCase: true,
-                    pascalCase: true,
-                },
+                    pascalCase: true
+                }
             }],
             'unicorn/no-null': 'off',
             'unicorn/prevent-abbreviations': ['error', {
@@ -110,8 +110,8 @@ export default tseslint.config(
                     q: { query: true },
                     props: { properties: false },
                     params: { parameters: false },
-                    pkg: { package: false },
-                },
+                    pkg: { package: false }
+                }
             }],
             'unicorn/prefer-node-protocol': 'off',
             'unicorn/prefer-module': 'off',
@@ -124,19 +124,28 @@ export default tseslint.config(
             // -------------------------------------------------------
             // SonarJS
             // -------------------------------------------------------
-            'sonarjs/no-duplicate-string': ['error', { threshold: 5 }],
-        },
+            'sonarjs/no-duplicate-string': ['error', { threshold: 5 }]
+        }
+    },
+
+    // The config consumes plugin default exports according to their documented APIs.
+    {
+        files: ['eslint.config.{js,cjs,mjs,ts,cts,mts}'],
+        rules: {
+            'import-x/no-named-as-default': 'off',
+            'import-x/no-named-as-default-member': 'off'
+        }
     },
 
     // Test file overrides
     {
-        files: ['**/*Spec.ts', '**/*Spec.xts'],
+        files: ['**/*.{spec,test}.{ts,tsx,cts,mts}', '**/*{Spec,Test}.{ts,tsx,cts,mts}'],
         rules: {
             'prefer-arrow-callback': 'off',
             'func-names': 'off',
             'no-unused-expressions': 'off',
-            '@typescript-eslint/no-explicit-any': 'off',
-        },
+            '@typescript-eslint/no-explicit-any': 'off'
+        }
     },
 
     // Collect scripts — not production code, console is fine
@@ -144,12 +153,12 @@ export default tseslint.config(
         files: ['collect/**/*'],
         languageOptions: {
             globals: {
-                ...globals.node,
-            },
+                ...globals.node
+            }
         },
         rules: {
             'no-console': 'off',
-            'sonarjs/no-duplicate-string': 'off',
-        },
-    },
+            'sonarjs/no-duplicate-string': 'off'
+        }
+    }
 );

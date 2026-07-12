@@ -39,7 +39,9 @@ describe('appendCountry', () => {
         const second: Comparison = { ...baseComparison, id: 'def456', name: 'Second' };
         const secondFunction: ComparisonFunction = async () => second;
         const wrapped = appendCountry('JP', [baseComparisonFunction, secondFunction]);
-        const comparisons = (await Promise.all(wrapped.map((comparisonFunction) => comparisonFunction()))) as Comparison[];
+        const comparisons = (await Promise.all(
+            wrapped.map((comparisonFunction) => comparisonFunction())
+        )) as Comparison[];
         expect(comparisons).toHaveLength(2);
         expect(comparisons.every((c) => c.country === 'JP')).toBe(true);
     });

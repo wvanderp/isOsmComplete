@@ -4,8 +4,8 @@ import { overpassRawQuery } from '../../../collect/api/overpass';
 
 const { overpassJsonMock, delayMock, randomDelayMock } = vi.hoisted(() => ({
     overpassJsonMock: vi.fn(),
-    delayMock: vi.fn(async () => { }),
-    randomDelayMock: vi.fn(async () => { })
+    delayMock: vi.fn(async () => {}),
+    randomDelayMock: vi.fn(async () => {})
 }));
 
 vi.mock('overpass-ts', async (importOriginal) => {

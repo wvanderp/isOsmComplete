@@ -68,7 +68,7 @@
     "build": "vite build",
     "lint": "npm-run-all -c -s tsc eslint",
     "lintData": "ts-node -T collect/lint/lint.ts",
-    "eslint": "eslint app/ collect/",
+    "eslint": "eslint .",
     "tsc": "tsc --noEmit",
     "collect": "ts-node collect && npm run lintData",
     "clean": "rimraf build gitBuild",
