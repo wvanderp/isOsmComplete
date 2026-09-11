@@ -17,7 +17,7 @@
     "id": "7db310de75fd52cb02a885303658ba574e5e5262b439fc3c6116a6661811782e",
     "name": "Stolpersteine",
     "expected": 116000,
-    "actual": 53483,
+    "actual": 53538,
     "expectedSource": "https://www.stolpersteine.eu/en/information/facts-and-figures",
     "actualSource": "overpass",
     "tags": [],
@@ -43,7 +43,7 @@
     "id": "34d881bb4626ac285c1c64c08944d6d8883e5bfdef1d5bb2c0d2eeab9db0d20e",
     "name": "7-Eleven stores",
     "expected": 85816,
-    "actual": 45107,
+    "actual": 45109,
     "expectedSource": "https://www.7andi.com/en/ir/file/library/mr/pdf/2026_01_all_en.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -58,7 +58,7 @@
     "id": "ceafc782f32e77207571d2c2de651c13d6f8704acbe2221a9a7af3dd68313bf8",
     "name": "Subway stores",
     "expected": 37000,
-    "actual": 23950,
+    "actual": 23953,
     "expectedSource": "https://newsroom.subway.com/2024-10-01-Subway-Continues-to-Expand-Its-Global-Presence-with-Over-10,000-Future-Restaurant-Commitments",
     "actualSource": "taginfo",
     "tags": [
@@ -73,7 +73,7 @@
     "id": "0aa0000d49cbd3eaabb7d62b87d0695922a6cdc09c0f80d1684aadaeb49f4e95",
     "name": "Starbucks",
     "expected": 41129,
-    "actual": 23466,
+    "actual": 23470,
     "expectedSource": "https://s203.q4cdn.com/326826266/files/doc_financials/2026/q2/FY26-Q2-Store-Counts-By-Market.xlsx",
     "actualSource": "taginfo",
     "tags": [
@@ -88,7 +88,7 @@
     "id": "bc00755018404ae08e7791edeacb749806f755a7a684108cdc730b7dc96d35bd",
     "name": "McDonald's",
     "expected": 45356,
-    "actual": 36561,
+    "actual": 36569,
     "expectedSource": "https://corporate.mcdonalds.com/content/dam/sites/corp/nfl/pdf/MCD%202025%20Annual%20Report.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -103,7 +103,7 @@
     "id": "ff163beb19543f2cb53c300637cac009272968c01b3511a40effa32489074e82",
     "name": "KFC",
     "expected": 31143,
-    "actual": 16722,
+    "actual": 16718,
     "expectedSource": "https://s2.q4cdn.com/890585342/files/doc_financials/2024/q3/Yum-Brands-Q3-24-Earnings-Release.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -133,7 +133,7 @@
     "id": "248346ad79386b814c4c361474a0eede7d7d254e1302feeacd7a2db3965ac5ba",
     "name": "Pizza Hut",
     "expected": 19927,
-    "actual": 8388,
+    "actual": 8389,
     "expectedSource": "https://s2.q4cdn.com/890585342/files/doc_financials/2024/q3/Yum-Brands-Q3-24-Earnings-Release.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -148,7 +148,7 @@
     "id": "ebf58077453c74c27a1a8384024439568732ce333c09c0899c6156177657d513",
     "name": "Burger King",
     "expected": 19384,
-    "actual": 15446,
+    "actual": 15450,
     "expectedSource": "https://s26.q4cdn.com/317237604/files/doc_financials/2023/ar/RBI-Global-Store-Counts-Across-Brands-by-Market-February-13-2024.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -163,7 +163,7 @@
     "id": "72b7bf05d23320f5325ae692c0c8de3fb12445f9c049e002e5dbe1976f8f1f4b",
     "name": "Tesla superchargers",
     "expected": 6975,
-    "actual": 960,
+    "actual": 963,
     "expectedSource": "https://digitalassets.tesla.com/tesla-contents/image/upload/IR/TSLA-Q4-2024-Update.pdf",
     "actualSource": "overpass",
     "tags": [
@@ -192,7 +192,7 @@
     "id": "ed897f43e805d3b55c3d7356a3421f53aea469e83c629cc476decc4dff2d3a57",
     "name": "UNESCO World Heritage Sites",
     "expected": 1223,
-    "actual": 2723,
+    "actual": 2722,
     "expectedSource": "https://whc.unesco.org/en/list/",
     "actualSource": "taginfo",
     "tags": [
@@ -234,7 +234,7 @@
   {
     "id": "681037426fe19e62eba5d82fa128583b311ed6368eb25d638242103510647c5a",
     "name": "Memorial benches",
-    "expected": 43671,
+    "expected": 43675,
     "actual": 1771,
     "expectedSource": "https://openbenches.org/",
     "actualSource": "taginfo",
@@ -242,14 +242,14 @@
       "🪑"
     ],
     "description": "OpenBenches collects memorial benches. Wouldn't it be nice to have them in OSM as well?",
-    "lastUpdated": "2026-09-10",
+    "lastUpdated": "2026-09-11",
     "country": "Worldwide"
   },
   {
     "id": "16f17dead727d54cdeea1a744885af7be858826c05e1ac342da754d457dd1b15",
     "name": "Fastned chargers in the EU",
     "expected": 447,
-    "actual": 381,
+    "actual": 388,
     "expectedSource": "https://www.fastnedcharging.com/en/locations",
     "actualSource": "taginfo",
     "tags": [
@@ -264,7 +264,7 @@
     "id": "fcba5aaec2e6bac985428897470d2881bb4d9df7668db7fdc1e0f2fd416afb01",
     "name": "Retail stores in Europe",
     "expected": 2575171,
-    "actual": 3136122,
+    "actual": 3136543,
     "expectedSource": "https://data.europa.eu/data/datasets/6k2ldtwgaa2lvoudvtbbq?locale=en",
     "actualSource": "taginfo",
     "tags": [
@@ -306,7 +306,7 @@
     "id": "c36d0cf963a5575f58ba8bae8b2f8ddee715472f45cacecb2557e6d081535fa8",
     "name": "Coal power plants in China",
     "expected": 3317,
-    "actual": 4341,
+    "actual": 4340,
     "expectedSource": "https://globalenergymonitor.org/projects/global-coal-plant-tracker?popup=2628",
     "actualSource": "taginfo",
     "tags": [
@@ -364,8 +364,8 @@
   {
     "id": "ee342a2cf9deebfaeb005720eb517b420c7909dd98f7a69fc3a39c341d0ca6b4",
     "name": "Electric vehicle charging stations in France 🇫🇷",
-    "expected": 228810,
-    "actual": 203459,
+    "expected": 229000,
+    "actual": 203599,
     "expectedSource": "https://www.data.gouv.fr/datasets/base-nationale-des-irve-infrastructures-de-recharge-pour-vehicules-electriques/",
     "actualSource": "taginfo",
     "tags": [
@@ -479,7 +479,7 @@
   {
     "id": "839d2ae61d82edc4d60cd020dd4491b0aa2aa04e62574093bac5be16744f8265",
     "name": "Gas stations in Italy 🇮🇹",
-    "expected": 23987,
+    "expected": 23991,
     "actual": 22855,
     "expectedSource": "https://www.mimit.gov.it/images/exportCSV/anagrafica_impianti_attivi.csv",
     "actualSource": "taginfo",
@@ -714,7 +714,7 @@
       "💰"
     ],
     "description": "Geldmaat is a provider of ATMs in the Netherlands. What is the number of Geldmaat ATMs in OSM?",
-    "lastUpdated": "2026-09-10",
+    "lastUpdated": "2026-09-11",
     "country": "NL"
   },
   {
@@ -777,7 +777,7 @@
     "id": "a1b5f8d936156d6b7f182995a4e1f0e5edb3a15084f932282737bd059321f616",
     "name": "Pyaterochka",
     "expected": 21308,
-    "actual": 16245,
+    "actual": 16247,
     "expectedSource": "https://www.x5.ru/wp-content/uploads/reports/2023/en/financial-statements/",
     "actualSource": "taginfo",
     "tags": [
@@ -862,7 +862,7 @@
     "id": "e8abbe6249e1c3bc1273888049b5e49146cc4de019208c8295c94231d6c696bc",
     "name": "Dollar Tree & Family Dollar",
     "expected": 16774,
-    "actual": 9992,
+    "actual": 9994,
     "expectedSource": "https://corporate.dollartree.com/_assets/_4a3a5283aa3f850b49f9ea2652af1540/dollartreeinfo/db/893/10332/annual_report/2023+Annual+Report+PDF+Version+for+IR+Website+v3.0.pdf",
     "actualSource": "taginfo",
     "tags": [
@@ -1009,8 +1009,8 @@
   {
     "id": "0a275c5789b11d5b72921303db8373e97342f2d81af43e22d3c768d58df03206",
     "name": "Airports with IATA codes ✈️",
-    "expected": 9056,
-    "actual": 9944,
+    "expected": 9055,
+    "actual": 9945,
     "expectedSource": "https://davidmegginson.github.io/ourairports-data/airports.csv",
     "actualSource": "taginfo",
     "tags": [
@@ -1024,7 +1024,7 @@
     "id": "45bc39b4b3b48b01c0818ca97beabb4aad95ee48232cd8c79603a6c02a84dafc",
     "name": "Airports with ICAO codes ✈️",
     "expected": 19281,
-    "actual": 18984,
+    "actual": 18991,
     "expectedSource": "https://davidmegginson.github.io/ourairports-data/airports.csv",
     "actualSource": "taginfo",
     "tags": [
@@ -1037,8 +1037,8 @@
   {
     "id": "f0c59ddec204c478382d6632125f2afaa12f1bf052d5e5401e461002b4989a73",
     "name": "Match OurAirports on airports",
-    "expected": 72558,
-    "actual": 52997,
+    "expected": 72555,
+    "actual": 53005,
     "expectedSource": "https://davidmegginson.github.io/ourairports-data/airports.csv",
     "actualSource": "taginfo",
     "tags": [
@@ -1051,8 +1051,8 @@
   {
     "id": "a574f409f513f14521a0edcd526947e24b92b79eebeabb829a9c034e88cc0b72",
     "name": "Museums",
-    "expected": 79634,
-    "actual": 111075,
+    "expected": 79638,
+    "actual": 111097,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",
     "description": "The number of museums in the world",
@@ -1067,7 +1067,7 @@
     "id": "0f02185f1ff53b9c2907901467e26944334d33f2e0406c2bdc9e773a507e2858",
     "name": "Zoos",
     "expected": 2889,
-    "actual": 9273,
+    "actual": 9275,
     "expectedSource": "Wikidata query service",
     "actualSource": "taginfo",
     "description": "The number of zoos in the world",
