@@ -25,8 +25,9 @@ vi.mock('../../../collect/utils/delay', () => ({
 const query = '[out:json];node(1);out count;';
 const overpassEndpoints = [
     'https://overpass-api.de/api/interpreter',
-    'https://overpass.kumi.systems/api/interpreter',
-    'https://lz4.overpass-api.de/api/interpreter'
+    'https://maps.mail.ru/osm/tools/overpass/api/interpreter',
+    'https://overpass.private.coffee/api/interpreter',
+    'https://api.fairwaymapper.com/api/interpreter'
 ];
 const attemptsPerEndpoint = 4;
 
@@ -92,7 +93,8 @@ describe('overpassRawQuery', () => {
         expect(getAttemptedEndpoints()).toEqual([
             ...Array.from({ length: attemptsPerEndpoint }, () => overpassEndpoints[0]),
             ...Array.from({ length: attemptsPerEndpoint }, () => overpassEndpoints[1]),
-            ...Array.from({ length: attemptsPerEndpoint }, () => overpassEndpoints[2])
+            ...Array.from({ length: attemptsPerEndpoint }, () => overpassEndpoints[2]),
+            ...Array.from({ length: attemptsPerEndpoint }, () => overpassEndpoints[3])
         ]);
         expect(randomDelayMock).toHaveBeenCalledTimes(overpassEndpoints.length * attemptsPerEndpoint);
         expect(delayMock).toHaveBeenCalledTimes(overpassEndpoints.length * (attemptsPerEndpoint - 1));
