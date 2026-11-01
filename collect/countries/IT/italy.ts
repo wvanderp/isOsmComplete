@@ -2,7 +2,7 @@ import { countCsvRows, countPharmacies, countParaPharmacies, pharmacySource, par
 import appendCountry, { appendThanks } from '../../utils/appendData';
 import { overpassComparisonMultiple } from '../../utils/overpassComparisons';
 import taginfoServers from '../../utils/tagInfoServers';
-import taginfoComparisons from '../../utils/taginfoComparisons';
+import taginfoComparisons, { taginfoComparisonKeyOnly } from '../../utils/taginfoComparisons';
 
 const taginfoServer = taginfoServers.IT;
 
@@ -51,6 +51,21 @@ export default appendCountry(
                 3600365331
             )(),
             'Thanks to [@ivanbranco](https://github.com/ivanbranco) for the suggestion and the Italian Ministry of Health for the data!'
+        ),
+        appendThanks(
+            taginfoComparisonKeyOnly(
+                'Monumental trees and tree groups in Italy 🇮🇹',
+                'ref:masaf',
+                5008,
+                'https://www.masaf.gov.it/flex/cm/pages/ServeBLOB.php/L/IT/IDPagina/11260',
+                // Registry entries include groups; individual trees are not the comparison unit.
+                // Taginfo counts tagged OSM objects, so duplicated references may inflate coverage.
+                'Italy lists {{expected}} monumental trees and tree groups (July 2026 registry). OSM objects with ref:masaf show how coverage is growing! 🌳 Groups count as one registry entry; duplicate references in OSM can inflate coverage.',
+                ['🌳'],
+                '2026-07-24',
+                taginfoServer
+            ),
+            'Thanks to [@ivanbranco](https://github.com/ivanbranco) for the suggestion and MASAF for the monumental tree registry!'
         )
     ]
 );
