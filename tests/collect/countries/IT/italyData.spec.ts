@@ -4,17 +4,18 @@ import { countCsvRows, countPharmacies, countParaPharmacies, pharmacySource, par
 
 vi.mock('axios');
 const get = vi.mocked(axios.get);
+const csvUrl = 'https://example.com/data.csv';
 afterEach(() => vi.resetAllMocks());
 
 describe('Italian CSV counts', () => {
     it.each(['\n', '\r\n'])('counts records with %j endings, quoted newlines and trailing blanks', async (newline) => {
         get.mockResolvedValue({ data: '\u{FEFF}id;name\n1;"A;B\nC"\n2;D\n\n'.replaceAll('\n', () => newline) });
-        expect(await countCsvRows('https://example.com/data.csv')).toBe(2);
+        expect(await countCsvRows(csvUrl)).toBe(2);
     });
 
     it('counts the final row without a trailing newline', async () => {
         get.mockResolvedValue({ data: 'id;name\n1;A' });
-        expect(await countCsvRows('https://example.com/data.csv')).toBe(1);
+        expect(await countCsvRows(csvUrl)).toBe(1);
     });
 
     it('skips the fuel refresh timestamp before parsing the header', async () => {
@@ -24,12 +25,24 @@ describe('Italian CSV counts', () => {
 
     it('counts a header-only CSV as zero', async () => {
         get.mockResolvedValue({ data: 'id;name\n' });
-        expect(await countCsvRows('https://example.com/data.csv')).toBe(0);
+        expect(await countCsvRows(csvUrl)).toBe(0);
+    });
+
+    it('filters parsed records using column values, including quoted delimiters', async () => {
+        get.mockResolvedValue({ data: 'id;name;active\n1;"A;B";yes\n2;C;no\n3;D;yes' });
+        expect(await countCsvRows(csvUrl, 1,
+            (row) => row.active === 'yes' && row.name === 'A;B')).toBe(1);
+    });
+
+    it('propagates download failures', async () => {
+        const error = new Error('Download failed');
+        get.mockRejectedValue(error);
+        await expect(countCsvRows(csvUrl)).rejects.toBe(error);
     });
 
     it('rejects malformed CSV instead of publishing an incorrect count', async () => {
         get.mockResolvedValue({ data: 'id;name\n1;"unclosed' });
-        await expect(countCsvRows('https://example.com/data.csv')).rejects.toThrow();
+        await expect(countCsvRows(csvUrl)).rejects.toThrow();
     });
 });
 
@@ -45,7 +58,9 @@ describe.each([
                 '1;01/07/2023;-',
                 '2;01/12/2026;-',
                 '3;01/01/2026;30/11/2026',
-                '4;01/11/2026;01/11/2026'
+                '4;01/11/2026;01/11/2026',
+                '5;01/01/2026;31/10/2026',
+                '6;02/11/2026;-'
             ].join('\n') });
 
         expect(await count('2026-11-01')).toBe(3);

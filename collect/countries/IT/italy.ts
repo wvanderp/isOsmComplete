@@ -22,7 +22,8 @@ export default appendCountry(
                 '2025-12-07',
                 taginfoServer
             )(),
-            'Thanks to [@ivanbranco](https://github.com/ivanbranco) for providing the data from the Italian Ministry of Business and Made in Italy!'
+            // Suggestion: https://github.com/wvanderp/isOsmComplete/issues/6; dataset details: https://github.com/wvanderp/isOsmComplete/issues/6#issuecomment-2709070921
+            'Grazie a [@ivanbranco](https://github.com/ivanbranco) for suggesting the Italian gas station comparison and locating the ministry dataset of active fuel stations!'
         ),
         appendThanks(
             async () => taginfoComparisons(
@@ -36,7 +37,8 @@ export default appendCountry(
                 '2026-03-31',
                 taginfoServer
             )(),
-            'Thanks to the Italian Ministry of Health for providing the pharmacy data via [dati.salute.gov.it](https://www.dati.salute.gov.it/it/dataset/farmacie/)!'
+            // Suggestion: https://github.com/wvanderp/isOsmComplete/issues/7; validity filtering: https://github.com/wvanderp/isOsmComplete/issues/7#issuecomment-2709068256
+            'Grazie ancora a [@ivanbranco](https://github.com/ivanbranco) for another Italian comparison: proposing pharmacies and explaining how to exclude closed locations from the Ministry of Health data!'
         ),
         appendThanks(
             async () => overpassComparisonMultiple(
@@ -50,7 +52,8 @@ export default appendCountry(
                 '2026-11-01',
                 3600365331
             )(),
-            'Thanks to [@ivanbranco](https://github.com/ivanbranco) for the suggestion and the Italian Ministry of Health for the data!'
+            // Suggestion: https://github.com/wvanderp/isOsmComplete/issues/8; filtering and OSM query: https://github.com/wvanderp/isOsmComplete/issues/8#issuecomment-2709064005
+            'Un altro grazie a [@ivanbranco](https://github.com/ivanbranco) for extending the Italian comparisons to over-the-counter pharmacies and supplying both the validity filter and OSM query!'
         ),
         appendThanks(
             taginfoComparisonKeyOnly(
@@ -65,7 +68,8 @@ export default appendCountry(
                 '2026-07-24',
                 taginfoServer
             ),
-            'Thanks to [@ivanbranco](https://github.com/ivanbranco) for the suggestion and MASAF for the monumental tree registry!'
+            // Suggestion: https://github.com/wvanderp/isOsmComplete/issues/9
+            'Grazie ancora una volta a [@ivanbranco](https://github.com/ivanbranco) for continuing to contribute ideas by proposing monumental trees and tree groups in Italy and recommending the ref:masaf tag for matching the registry!'
         )
     ]
 );

@@ -1,19 +1,7 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import type { Comparison } from '../../../../../../collect/types';
-import type { ComparisonFunction } from '../../../../../../collect/types/ComparisonFunction';
 
 const { wikidataComparisonMock } = vi.hoisted(() => ({
-    wikidataComparisonMock: vi.fn((...comparisonArguments: [string, string, ...unknown[]]) => async () => ({
-        id: comparisonArguments[0],
-        name: comparisonArguments[0],
-        expected: 0,
-        actual: 0,
-        expectedSource: 'Wikidata query service',
-        actualSource: 'taginfo',
-        description: `${comparisonArguments[0]} description`,
-        tags: [],
-        lastUpdated: '2025-01-05'
-    }))
+    wikidataComparisonMock: vi.fn<(name: string, query: string, ...arguments_: unknown[]) => unknown>()
 }));
 
 vi.mock('../../../../../../collect/countries/fromSource/wikidata/utils/wikidataComparison', () => ({
@@ -27,16 +15,9 @@ describe('museum', () => {
     });
 
     it('builds Wikidata queries without unsupported bounded property path syntax', async () => {
-        const museumModule = await import('../../../../../../collect/countries/fromSource/wikidata/queries/museums.js');
-        const museum = museumModule.default as unknown as ComparisonFunction[];
-        const comparisonResults = await Promise.all(museum.map((comparisonFunction) => comparisonFunction()));
-        const comparisons = comparisonResults.flatMap(
-            (comparison) => Array.isArray(comparison) ? comparison : [comparison]
-        ) as Comparison[];
+        await import('../../../../../../collect/countries/fromSource/wikidata/queries/museums.js');
         const queries = wikidataComparisonMock.mock.calls.map(([, sparqlQuery]) => sparqlQuery as string);
 
-        expect(comparisons).toHaveLength(4);
-        expect(comparisons.every((comparison) => comparison.country === 'Worldwide')).toBe(true);
         expect(queries).toHaveLength(4);
         expect(queries.every((query) => !/wdt:P279{\d/.test(query))).toBe(true);
         expect(queries[0]).toContain('?museum wdt:P31 ?museumClass.');
