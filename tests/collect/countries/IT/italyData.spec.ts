@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { afterEach, describe, expect, it, vi } from 'vitest';
-import { countCsvRows, countPharmacies, pharmacySource } from '../../../../collect/countries/IT/italyData';
+import { countCsvRows, countPharmacies, countParaPharmacies, pharmacySource, paraPharmacySource } from '../../../../collect/countries/IT/italyData';
 
 vi.mock('axios');
 const get = vi.mocked(axios.get);
@@ -33,9 +33,12 @@ describe('Italian CSV counts', () => {
     });
 });
 
-describe('pharmacy dataset', () => {
+describe.each([
+    ['pharmacy', countPharmacies, pharmacySource, 'FRM_FARMA_5'],
+    ['para-pharmacy', countParaPharmacies, paraPharmacySource, 'FRM_PFARMA_7']
+] as const)('%s dataset', (_name, count, source, filename) => {
     it('discovers the dated CSV and counts only registrations valid on the collection date', async () => {
-        get.mockResolvedValueOnce({ data: '<a href="/sites/default/files/opendata/FRM_FARMA_5_20261031.csv">CSV</a>' })
+        get.mockResolvedValueOnce({ data: `<a href="/sites/default/files/opendata/${filename}_20261031.csv">CSV</a>` })
             .mockResolvedValueOnce({ data: [
                 'cod_farmacia;data_inizio_validita;data_fine_validita',
                 '1;01/01/2005;30/06/2023',
@@ -45,20 +48,20 @@ describe('pharmacy dataset', () => {
                 '4;01/11/2026;01/11/2026'
             ].join('\n') });
 
-        expect(await countPharmacies('2026-11-01')).toBe(3);
-        expect(get).toHaveBeenNthCalledWith(1, pharmacySource);
+        expect(await count('2026-11-01')).toBe(3);
+        expect(get).toHaveBeenNthCalledWith(1, source);
         expect(get).toHaveBeenNthCalledWith(2,
-            'https://www.dati.salute.gov.it/sites/default/files/opendata/FRM_FARMA_5_20261031.csv');
+            `https://www.dati.salute.gov.it/sites/default/files/opendata/${filename}_20261031.csv`);
     });
 
     it('fails clearly when the dataset page no longer links to the CSV', async () => {
         get.mockResolvedValue({ data: '<html>Unavailable</html>' });
-        await expect(countPharmacies()).rejects.toThrow('Could not find the pharmacy CSV download');
+        await expect(count()).rejects.toThrow('Could not find the pharmacy CSV download');
     });
 
     it('rejects unexpected validity dates', async () => {
-        get.mockResolvedValueOnce({ data: "<a href='/sites/default/files/opendata/FRM_FARMA_5_20261031.csv'>CSV</a>" })
+        get.mockResolvedValueOnce({ data: `<a href='/sites/default/files/opendata/${filename}_20261031.csv'>CSV</a>` })
             .mockResolvedValueOnce({ data: 'data_inizio_validita;data_fine_validita\nunknown;-\n' });
-        await expect(countPharmacies()).rejects.toThrow('Invalid pharmacy validity date');
+        await expect(count()).rejects.toThrow('Invalid pharmacy validity date');
     });
 });

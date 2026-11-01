@@ -1,5 +1,6 @@
-import { countCsvRows, countPharmacies, pharmacySource } from './italyData';
+import { countCsvRows, countPharmacies, countParaPharmacies, pharmacySource, paraPharmacySource } from './italyData';
 import appendCountry, { appendThanks } from '../../utils/appendData';
+import { overpassComparisonMultiple } from '../../utils/overpassComparisons';
 import taginfoServers from '../../utils/tagInfoServers';
 import taginfoComparisons from '../../utils/taginfoComparisons';
 
@@ -36,6 +37,20 @@ export default appendCountry(
                 taginfoServer
             )(),
             'Thanks to the Italian Ministry of Health for providing the pharmacy data via [dati.salute.gov.it](https://www.dati.salute.gov.it/it/dataset/farmacie/)!'
+        ),
+        appendThanks(
+            async () => overpassComparisonMultiple(
+                'Over-the-counter pharmacies in Italy 🇮🇹',
+                [['amenity', 'pharmacy'], ['dispensing', 'no']],
+                'and',
+                await countParaPharmacies(),
+                paraPharmacySource,
+                'Italy has {{expected}} active over-the-counter pharmacies. Give OSM a healthy dose of coverage! 💊',
+                ['🏥'],
+                '2026-11-01',
+                3600365331
+            )(),
+            'Thanks to [@ivanbranco](https://github.com/ivanbranco) for the suggestion and the Italian Ministry of Health for the data!'
         )
     ]
 );
