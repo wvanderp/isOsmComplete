@@ -328,7 +328,7 @@
     ],
     "description": "Tu aimes les baguettes? 🥖🥖🥖 Then you better make sure that OSM knows where the nearest bakery is.",
     "lastUpdated": "2025-01-05",
-    "thanks": "Merci beaucoup à [@Binnette](https://github.com/Binnette) for the suggestion and for providing the data!",
+    "thanks": "Merci beaucoup à [@Binnette](https://github.com/Binnette) for proposing the French bakery comparison and developing a method to count bakery locations!",
     "country": "FR"
   },
   {
@@ -343,7 +343,7 @@
     ],
     "description": "The French government says there are 28,664 places to play boules. OSM is still rolling towards that number. Vive la pétanque!",
     "lastUpdated": "2025-05-28",
-    "thanks": "Thanks again to [@Binnette](https://github.com/Binnette) for reading through French government datasets and suggesting this one!",
+    "thanks": "Encore merci à [@Binnette](https://github.com/Binnette) for another contribution: suggesting the French boulodrome comparison and identifying the government dataset and filter!",
     "country": "FR"
   },
   {
@@ -358,7 +358,7 @@
     ],
     "description": "All aboard! 🚂 The French government tracks {{expected}} rail stations across France. Let's make sure they're all mapped in OSM!",
     "lastUpdated": "2025-12-07",
-    "thanks": "And another thanks to [@Binnette](https://github.com/Binnette) for this suggestion as well!",
+    "thanks": "Un grand merci, une fois de plus, à [@Binnette](https://github.com/Binnette) for proposing French rail stations as another comparison and sharing the passenger station dataset!",
     "country": "FR"
   },
   {
@@ -374,7 +374,7 @@
     ],
     "description": "The French government maintains a database of EV charging infrastructure. OSM is charging towards full coverage! ⚡",
     "lastUpdated": "2025-12-07",
-    "thanks": "Thanks to [@Binnette](https://github.com/Binnette) for finding this dataset! 🚗⚡",
+    "thanks": "2025-12-07",
     "country": "FR"
   },
   {
@@ -488,7 +488,7 @@
     ],
     "description": "Italy has {{expected}} gas stations according to government data. Time to fuel up OSM with complete coverage! ⛽",
     "lastUpdated": "2025-12-07",
-    "thanks": "Thanks to [@ivanbranco](https://github.com/ivanbranco) for providing the data from the Italian Ministry of Business and Made in Italy!",
+    "thanks": "Grazie a [@ivanbranco](https://github.com/ivanbranco) for suggesting the Italian gas station comparison and locating the ministry dataset of active fuel stations!",
     "country": "IT"
   },
   {
