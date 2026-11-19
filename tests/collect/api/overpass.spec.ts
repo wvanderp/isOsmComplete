@@ -1,5 +1,5 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
-import { OverpassRateLimitError } from 'overpass-ts';
+import { OverpassGatewayTimeoutError, OverpassRateLimitError } from 'overpass-ts';
 import { overpassRawQuery } from '../../../collect/api/overpass';
 
 const { overpassJsonMock, delayMock, randomDelayMock } = vi.hoisted(() => ({
@@ -109,4 +109,36 @@ describe('overpassRawQuery', () => {
         expect(getAttemptedEndpoints()).toEqual([overpassEndpoints[0]]);
         expect(delayMock).not.toHaveBeenCalled();
     });
+    it.each([
+        new OverpassGatewayTimeoutError(),
+        ...[408, 429, 500, 502, 504].map((status) => new Error(`${status} Server error`))
+    ])('recovers from a retryable failure: %s', async (error) => {
+        overpassJsonMock.mockRejectedValueOnce(error)
+            .mockResolvedValueOnce({ elements: [{ tags: { total: '0' } }] });
+
+        await expect(overpassRawQuery(query)).resolves.toBe(0);
+        expect(overpassJsonMock).toHaveBeenCalledTimes(2);
+        expect(getAttemptedEndpoints()).toEqual([overpassEndpoints[0], overpassEndpoints[0]]);
+        expect(delayMock).toHaveBeenCalledExactlyOnceWith(15000);
+    });
+
+    it.each(['400 Bad Request', '401 Unauthorized', '404 Not Found', 'Request failed with 503']) (
+        'does not retry an error without a retryable leading status: %s', async (message) => {
+            const error = new Error(message);
+            overpassJsonMock.mockRejectedValueOnce(error);
+            await expect(overpassRawQuery(query)).rejects.toBe(error);
+            expect(overpassJsonMock).toHaveBeenCalledTimes(1);
+            expect(delayMock).not.toHaveBeenCalled();
+        }
+    );
+
+    it.each([
+        ['node(1);out count;', 'Query must include [out:json]'],
+        ['[out:json];node(1);out;', 'Query must include out count']
+    ])('rejects invalid query %s before requesting the API', async (invalidQuery, message) => {
+        await expect(overpassRawQuery(invalidQuery)).rejects.toThrow(message);
+        expect(overpassJsonMock).not.toHaveBeenCalled();
+        expect(randomDelayMock).not.toHaveBeenCalled();
+    });
+
 });

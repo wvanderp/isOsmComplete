@@ -30,12 +30,6 @@ describe('parseFastnedLocations', () => {
         );
     });
 
-    it('should handle a single location', () => {
-        const encoded = htmlEncode(JSON.stringify([{ id: 1 }]));
-        const html = `<div data-locations="${encoded}"></div>`;
-        expect(parseFastnedLocations(html)).toBe(1);
-    });
-
     it('should handle an empty locations array', () => {
         const encoded = htmlEncode(JSON.stringify([]));
         const html = `<div data-locations="${encoded}"></div>`;

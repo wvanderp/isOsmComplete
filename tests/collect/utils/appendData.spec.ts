@@ -17,54 +17,51 @@ const baseComparison: Comparison = {
 
 const baseComparisonFunction: ComparisonFunction = async () => baseComparison;
 
-describe('appendCountry', () => {
-    it('should add the country to each comparison', async () => {
-        const [wrapped] = appendCountry('NL', baseComparisonFunction);
-        const comparison = await wrapped();
-        expect(Array.isArray(comparison)).toBe(false);
-        expect((comparison as Comparison).country).toBe('NL');
+describe.each([
+    ['country', (source: ComparisonFunction) => appendCountry('NL', source)[0], { country: 'NL' }],
+    ['thanks', (source: ComparisonFunction) => appendThanks(source, 'Thanks!'), { thanks: 'Thanks!' }]
+] as const)('append %s', (_name, wrap, addedFields) => {
+    it('adds metadata while preserving the complete source object', async () => {
+        const original = { ...baseComparison };
+        const result = await wrap(async () => original)();
+
+        expect(result).toEqual({ ...baseComparison, ...addedFields });
+        expect(result).not.toBe(original);
+        expect(original).toEqual(baseComparison);
     });
 
-    it('should not mutate the original comparison', () => {
-        appendCountry('DE', baseComparisonFunction);
-        expect(baseComparison.country).toBeUndefined();
+    it('decorates every result in a batch without mutating the source array or its objects', async () => {
+        const originals = [{ ...baseComparison }, { ...baseComparison, id: 'second', actual: 42 }];
+        const snapshot = structuredClone(originals);
+        const result = await wrap(async () => originals)();
+
+        expect(result).toEqual(snapshot.map((comparison) => ({ ...comparison, ...addedFields })));
+        expect(result).not.toBe(originals);
+        expect(originals).toEqual(snapshot);
+        for (const [index, comparison] of (result as Comparison[]).entries()) {
+            expect(comparison).not.toBe(originals[index]);
+        }
     });
 
-    it('should handle an empty array', () => {
-        const wrapped = appendCountry('FR', []);
-        expect(wrapped).toHaveLength(0);
+    it('preserves an empty batch', async () => {
+        expect(await wrap(async () => [])()).toEqual([]);
     });
 
-    it('should apply the country to all comparisons in the array', async () => {
-        const second: Comparison = { ...baseComparison, id: 'def456', name: 'Second' };
-        const secondFunction: ComparisonFunction = async () => second;
-        const wrapped = appendCountry('JP', [baseComparisonFunction, secondFunction]);
-        const comparisons = (await Promise.all(
-            wrapped.map((comparisonFunction) => comparisonFunction())
-        )) as Comparison[];
-        expect(comparisons).toHaveLength(2);
-        expect(comparisons.every((c) => c.country === 'JP')).toBe(true);
+    it('propagates collection failures', async () => {
+        const error = new Error('Collection failed');
+        const wrapped = wrap(async () => { throw error; });
+        await expect(wrapped()).rejects.toBe(error);
     });
 });
 
-describe('appendThanks', () => {
-    it('should add the thanks field to a comparison', async () => {
-        const wrapped = appendThanks(baseComparisonFunction, 'Thanks, contributor!');
-        const comparison = await wrapped() as Comparison;
-        expect(comparison.thanks).toBe('Thanks, contributor!');
-    });
+describe('appendCountry', () => {
+    it('decorates independent collectors and preserves their order', async () => {
+        const second = { ...baseComparison, id: 'second', actual: 42 };
+        const wrapped = appendCountry('JP', [baseComparisonFunction, async () => second]);
 
-    it('should not mutate the original comparison', () => {
-        appendThanks(baseComparisonFunction, 'Thanks!');
-        expect(baseComparison.thanks).toBeUndefined();
-    });
-
-    it('should preserve all existing fields', async () => {
-        const wrapped = appendThanks(baseComparisonFunction, 'Thanks!');
-        const comparison = await wrapped() as Comparison;
-        expect(comparison.id).toBe(baseComparison.id);
-        expect(comparison.name).toBe(baseComparison.name);
-        expect(comparison.expected).toBe(baseComparison.expected);
-        expect(comparison.actual).toBe(baseComparison.actual);
+        expect(await Promise.all(wrapped.map((collect) => collect()))).toEqual([
+            { ...baseComparison, country: 'JP' },
+            { ...second, country: 'JP' }
+        ]);
     });
 });
