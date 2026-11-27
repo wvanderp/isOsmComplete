@@ -39,7 +39,8 @@ export default appendCountry(
                 '2025-01-05',
                 taginfoServer
             ),
-            'Merci beaucoup à [@Binnette](https://github.com/Binnette) for the suggestion and for providing the data!'
+            // Suggestion: https://github.com/wvanderp/isOsmComplete/issues/1; counting method: https://github.com/wvanderp/isOsmComplete/issues/1#issuecomment-1763027391
+            'Merci beaucoup à [@Binnette](https://github.com/Binnette) for proposing the French bakery comparison and developing a method to count bakery locations!'
         ),
         appendThanks(
             async () => taginfoComparisons(
@@ -53,7 +54,8 @@ export default appendCountry(
                 '2025-05-28',
                 taginfoServer
             )(),
-            'Thanks again to [@Binnette](https://github.com/Binnette) for reading through French government datasets and suggesting this one!'
+            // Suggestion: https://github.com/wvanderp/isOsmComplete/issues/14
+            'Encore merci à [@Binnette](https://github.com/Binnette) for another contribution: suggesting the French boulodrome comparison and identifying the government dataset and filter!'
         ),
         appendThanks(
             async () => taginfoComparisonMultipleKeyValuePairs(
@@ -66,7 +68,8 @@ export default appendCountry(
                 '2025-12-07',
                 taginfoServer
             )(),
-            'And another thanks to [@Binnette](https://github.com/Binnette) for this suggestion as well!'
+            // Suggestion: https://github.com/wvanderp/isOsmComplete/issues/16
+            'Un grand merci, une fois de plus, à [@Binnette](https://github.com/Binnette) for proposing French rail stations as another comparison and sharing the passenger station dataset!'
         ),
         appendThanks(
             async () => taginfoComparisons(
@@ -79,7 +82,8 @@ export default appendCountry(
                 ['🔋', '🚗'],
                 '2025-12-07'
             )(),
-            'Thanks to [@Binnette](https://github.com/Binnette) for finding this dataset! 🚗⚡'
+            // Suggestion: https://github.com/wvanderp/isOsmComplete/issues/15
+            'Merci à nouveau à [@Binnette](https://github.com/Binnette) for continuing to expand the French comparisons with an electric vehicle charging station suggestion and its government data source!'
         )
     ]
 );
